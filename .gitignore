@@ -1,0 +1,38 @@
+# Secrets and credentials — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*credentials*
+*secret*
+*token*
+*_api_key*
+auth.json
+secrets.json
+
+# Python/runtime noise
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+*.pid
+*.tmp
+*.swp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local staging and transient locks
+backup_staging/
+*.lock
