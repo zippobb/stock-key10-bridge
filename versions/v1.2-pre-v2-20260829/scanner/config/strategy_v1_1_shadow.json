@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1-shadow-1",
+  "shadow_only": true,
+  "expected_observation_pool_count": 237,
+  "expected_focus_pool_count": 83,
+  "signal_completion": {
+    "normalization_formula": {
+      "gte_or_gt": "clip((value - (threshold - soft_span)) / soft_span, 0, 1) * 100",
+      "lte": "clip(((threshold + soft_span) - value) / soft_span, 0, 1) * 100",
+      "abs_lte": "clip(((threshold + soft_span) - abs(value)) / soft_span, 0, 1) * 100",
+      "family_score": "sum(condition_score_0_to_1 * weight) / sum(weight) * 100"
+    },
+    "families": {
+      "horizontal": [
+        {"label": "20日振幅<=18", "metric": "range_20d_pct", "operator": "lte", "threshold": 18, "soft_span": 10, "weight": 0.15},
+        {"label": "中心区占比>=70", "metric": "center_band_ratio_20d_pct", "operator": "gte", "threshold": 70, "soft_span": 30, "weight": 0.18},
+        {"label": "MA20斜率绝对值<=3", "metric": "ma20_slope_5d_pct", "operator": "abs_lte", "threshold": 3, "soft_span": 3, "weight": 0.15},
+        {"label": "量比>=1.5", "metric": "volume_ratio_1d_prior_10d", "operator": "gte", "threshold": 1.5, "soft_span": 1.0, "weight": 0.20},
+        {"label": "突破偏离>=-2", "metric": "breakout_vs_prior_20d_high_pct", "operator": "gte", "threshold": -2, "soft_span": 5, "weight": 0.20},
+        {"label": "当日涨幅>=0", "metric": "return_1d_pct", "operator": "gte", "threshold": 0, "soft_span": 4, "weight": 0.12}
+      ],
+      "bottom_right_side": [
+        {"label": "量比>=1.5", "metric": "volume_ratio_1d_prior_10d", "operator": "gte", "threshold": 1.5, "soft_span": 1.0, "weight": 0.20},
+        {"label": "5日收益>0", "metric": "return_5d_pct", "operator": "gt", "threshold": 0, "soft_span": 10, "weight": 0.15},
+        {"label": "MA5斜率>0", "metric": "ma5_slope_3d_pct", "operator": "gt", "threshold": 0, "soft_span": 3, "weight": 0.18},
+        {"label": "60日位置<=60", "metric": "position_60d_pct", "operator": "lte", "threshold": 60, "soft_span": 25, "weight": 0.12},
+        {"label": "行业5日百分位>=70", "metric": "return_5d_industry_percentile", "operator": "gte", "threshold": 70, "soft_span": 30, "weight": 0.20},
+        {"label": "距MA10>=-2", "metric": "distance_ma10_pct", "operator": "gte", "threshold": -2, "soft_span": 5, "weight": 0.15}
+      ],
+      "bottom_right_side_leader_relaxed": [
+        {"label": "板块百分位>=75", "metric": "sector_rank_percentile", "operator": "gte", "threshold": 75, "soft_span": 25, "weight": 0.20},
+        {"label": "行业5日百分位>=80", "metric": "return_5d_industry_percentile", "operator": "gte", "threshold": 80, "soft_span": 20, "weight": 0.20},
+        {"label": "量比>=1.5", "metric": "volume_ratio_1d_prior_10d", "operator": "gte", "threshold": 1.5, "soft_span": 1.0, "weight": 0.20},
+        {"label": "5日收益>0", "metric": "return_5d_pct", "operator": "gt", "threshold": 0, "soft_span": 10, "weight": 0.15},
+        {"label": "MA5斜率>0", "metric": "ma5_slope_3d_pct", "operator": "gt", "threshold": 0, "soft_span": 3, "weight": 0.15},
+        {"label": "60日位置<=75", "metric": "position_60d_pct", "operator": "lte", "threshold": 75, "soft_span": 25, "weight": 0.10}
+      ],
+      "contraction": [
+        {"label": "量比<=0.8", "metric": "volume_ratio_1d_prior_10d", "operator": "lte", "threshold": 0.8, "soft_span": 0.8, "weight": 0.20},
+        {"label": "当日涨幅>=-3", "metric": "return_1d_pct", "operator": "gte", "threshold": -3, "soft_span": 5, "weight": 0.10},
+        {"label": "MA5/MA10间距<=2", "metric": "ma5_ma10_gap_pct", "operator": "lte", "threshold": 2, "soft_span": 3, "weight": 0.15},
+        {"label": "20日收益>0", "metric": "return_20d_pct", "operator": "gt", "threshold": 0, "soft_span": 15, "weight": 0.15},
+        {"label": "距MA20>=-2", "metric": "distance_ma20_pct", "operator": "gte", "threshold": -2, "soft_span": 5, "weight": 0.15},
+        {"label": "距20日高点回撤>=-10", "metric": "drawdown_from_20d_high_pct", "operator": "gte", "threshold": -10, "soft_span": 10, "weight": 0.15},
+        {"label": "5日量/20日量>=1", "metric": "volume_ratio_5d_20d", "operator": "gte", "threshold": 1, "soft_span": 0.6, "weight": 0.10}
+      ]
+    }
+  },
+  "setup_rules": {
+    "horizontal_base": {"max_range_20d_pct": 18, "min_center_band_ratio_pct": 60, "max_abs_ma20_slope_pct": 4},
+    "horizontal_upgrade": {"min_volume_ratio": 1.5, "min_ma5_slope_pct": 0, "min_breakout_pct": -2, "min_return_1d_pct": 0, "allowed_sector_stages": ["右侧", "稳定趋势"]},
+    "oversold_repair": {"max_return_20d_pct": -10, "min_return_5d_pct": 0, "min_ma5_slope_pct": 0},
+    "right_side_confirmation": {"min_distance_ma20_pct": 0, "min_ma5_slope_pct": 0}
+  },
+  "sector_stage": {
+    "mature_crowded": {"min_percentile": 85, "min_return_20d_pct": 15, "min_volume_ratio": 1.5},
+    "retreat": {"rank_drop_min": 20, "weak_percentile_max": 25},
+    "stable_trend": {"top_percentile_min": 60, "up_ratio_min_pct": 55},
+    "right_side": {"rank_improvement_min": 5, "up_ratio_min_pct": 55}
+  },
+  "profit_taking_risk": {
+    "return_5d_hot_pct": 15,
+    "distance_ma20_atr_high": 3,
+    "ma5_ma10_gap_atr_high": 1.5,
+    "volume_ratio_high": 2,
+    "low_gain_pct": 2,
+    "upper_shadow_high_pct": 40,
+    "rebound_profit_return_5d_pct": 10,
+    "high_crowding_return_20d_pct": 15
+  },
+  "sector_downgrade": {
+    "rank_drop_min": 20,
+    "weak_percentile_max": 25
+  },
+  "concentration_warning_threshold": 3,
+  "review_fields": ["theme_tags", "dominant_driver", "event_risk", "fundamental_review"]
+}
