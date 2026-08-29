@@ -1,0 +1,44 @@
+# /etc/systemd/system/stock-key10-github-publish.service
+[Unit]
+Description=Publish sanitized Stock Key10 results to private GitHub repository
+Wants=network-online.target
+After=network-online.target stock-key10-daily.service stock-key10-result-mcp.service
+ConditionPathExists=/var/lib/stock-key10-mcp/key10_bundle_latest.json
+ConditionPathExists=/etc/stock-key10-github/publisher.env
+
+[Service]
+Type=oneshot
+User=stockpublisher
+Group=stockpublisher
+SupplementaryGroups=stockmcp
+WorkingDirectory=/var/lib/stock-key10-github
+EnvironmentFile=/etc/stock-key10-github/publisher.env
+ExecStart=/usr/bin/python3 -B /opt/stock-key10-github-publisher/publish_key10_github.py
+TimeoutStartSec=5min
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectClock=true
+ProtectHostname=true
+ProtectProc=invisible
+ProcSubset=pid
+RestrictSUIDSGID=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/var/lib/stock-key10-github
+ReadOnlyPaths=/var/lib/stock-key10-mcp /opt/stock-key10-github-publisher
+InaccessiblePaths=/opt/tushare-mcp /opt/stock-automation
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=stock-key10-github-publish
+
+[Install]
+WantedBy=multi-user.target
