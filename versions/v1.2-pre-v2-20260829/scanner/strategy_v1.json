@@ -1,0 +1,104 @@
+{
+  "model_version": "v1.0.0",
+  "exclude_from_stock_scoring": [
+    "three_days_no_break_prior_20d_low"
+  ],
+  "return_evaluation": {
+    "short_days": [
+      3,
+      5
+    ],
+    "short_target_pct": 10,
+    "medium_days": 20,
+    "medium_target_pct": 20,
+    "main_board_stop_pct": -6,
+    "chinext_star_stop_pct": -10
+  },
+  "sector": {
+    "sector_top_fraction": 0.5
+  },
+  "sideways_breakout": {
+    "lookback_days": 20,
+    "acceptable_lookback_min": 15,
+    "acceptable_lookback_max": 30,
+    "max_range_pct": 18,
+    "center_band_pct": 6,
+    "min_center_ratio_pct": 70,
+    "max_abs_ma20_slope_pct": 3,
+    "large_volume_ratio": 2.0,
+    "small_volume_ratio": 1.5
+  },
+  "volume_contraction_no_drop": {
+    "contraction_ratio": 0.8,
+    "strong_contraction_ratio": 0.7,
+    "max_price_decline_pct": -3,
+    "strong_max_price_decline_pct": -1.5,
+    "max_ma5_ma10_gap_pct": 2
+  },
+  "wave": {
+    "pullback_min_pct": 10,
+    "pullback_max_pct": 30,
+    "max_buyable_wave": 2,
+    "reset_pullback_pct": 30,
+    "wave_reversal_pct": 10,
+    "wave_reset_pullback_pct": 30,
+    "wave_lookback_days": 180
+  },
+  "score_weights": {
+    "pattern": 30,
+    "volume_price": 20,
+    "stage": 20,
+    "sector_sync": 15,
+    "relative_strength_elasticity": 15,
+    "strong_candidate_min": 80,
+    "normal_candidate_min": 70,
+    "watch_candidate_min": 60
+  },
+  "market": {
+    "hard_gate": false,
+    "score_weights": {
+      "above_ma20_ratio": 30,
+      "bullish_alignment_ratio": 15,
+      "positive_5d_ratio": 20,
+      "positive_20d_ratio": 15,
+      "median_return_5d": 8,
+      "median_return_20d": 8,
+      "median_ma20_slope": 4
+    },
+    "thresholds": {
+      "up_score_min": 60,
+      "up_above_ma20_min_pct": 50,
+      "down_score_max": 45,
+      "down_above_ma20_max_pct": 45,
+      "rebound_positive_5d_min_pct": 50
+    }
+  },
+  "overheat": {
+    "return_5d_warning_pct": 15,
+    "distance_ma20_atr_warning": 3,
+    "ma5_ma10_gap_atr_warning": 1.5,
+    "cross_section_hot_percentile": 90,
+    "return_5d_hot_percentile": 95,
+    "overheat_min_flags": 2,
+    "distance_cross_percentile_warning": 90,
+    "ma_gap_cross_percentile_warning": 90,
+    "return_5d_cross_percentile_warning": 95,
+    "slope_cross_percentile_warning": 90,
+    "upper_shadow_warning_pct": 40,
+    "high_volume_ratio": 2,
+    "low_gain_warning_pct": 2,
+    "support_buffer_pct": 0
+  },
+  "risk": {
+    "risk_downgrade_points": 10
+  },
+  "review_queue": {
+    "target_size": 20,
+    "per_signal_seed": 5,
+    "max_per_industry": 4,
+    "exclude_risk_adjusted_grades": [
+      "watch_risk"
+    ],
+    "prioritize_pass": true
+  }
+}
