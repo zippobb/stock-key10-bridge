@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.1-risk-1",
+  "layer_status": "formal_risk",
+  "expected_observation_pool_count": 237,
+  "expected_focus_pool_count": 83,
+  "risk_mapping": {
+    "fail_original_statuses": ["VETO"],
+    "warning_original_statuses": ["WARNING"],
+    "warning_profit_taking_levels": ["HIGH"],
+    "sector_downgrade_is_warning": true,
+    "hard_risk_can_be_offset": false
+  },
+  "setup_rules": {
+    "horizontal_base": {"max_range_20d_pct": 18, "min_center_band_ratio_pct": 60, "max_abs_ma20_slope_pct": 4},
+    "horizontal_upgrade": {"min_volume_ratio": 1.5, "min_ma5_slope_pct": 0, "min_breakout_pct": -2, "min_return_1d_pct": 0, "allowed_sector_stages": ["右侧", "稳定趋势"]},
+    "oversold_repair": {"max_return_20d_pct": -10, "min_return_5d_pct": 0, "min_ma5_slope_pct": 0},
+    "right_side_confirmation": {"min_distance_ma20_pct": 0, "min_ma5_slope_pct": 0}
+  },
+  "sector_stage": {
+    "mature_crowded": {"min_percentile": 85, "min_return_20d_pct": 15, "min_volume_ratio": 1.5},
+    "retreat": {"rank_drop_min": 20, "weak_percentile_max": 25},
+    "stable_trend": {"top_percentile_min": 60, "up_ratio_min_pct": 55},
+    "right_side": {"rank_improvement_min": 5, "up_ratio_min_pct": 55}
+  },
+  "profit_taking_risk": {
+    "return_5d_hot_pct": 15,
+    "distance_ma20_atr_high": 3,
+    "ma5_ma10_gap_atr_high": 1.5,
+    "volume_ratio_high": 2,
+    "low_gain_pct": 2,
+    "upper_shadow_high_pct": 40,
+    "rebound_profit_return_5d_pct": 10,
+    "high_crowding_return_20d_pct": 15
+  },
+  "sector_downgrade": {"rank_drop_min": 20, "weak_percentile_max": 25},
+  "concentration_warning_threshold": 3,
+  "review_fields": ["theme_tags", "dominant_driver", "event_risk", "fundamental_review"]
+}
