@@ -1,0 +1,45 @@
+# /etc/systemd/system/stock-key10-result-mcp.service
+[Unit]
+Description=Stock Key10 Read-Only Result MCP
+After=network.target stock-key10-daily.service
+ConditionPathExists=/var/lib/stock-key10-mcp/key10_bundle_latest.json
+
+[Service]
+Type=simple
+User=stockmcp
+Group=stockmcp
+WorkingDirectory=/opt/stock-key10-result-mcp
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/stock-key10-result-mcp/venv/bin/python -B /opt/stock-key10-result-mcp/stock_key10_result_mcp.py
+Restart=on-failure
+RestartSec=5s
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectClock=true
+ProtectHostname=true
+ProtectProc=invisible
+ProcSubset=pid
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET
+IPAddressDeny=any
+IPAddressAllow=localhost
+ReadOnlyPaths=/var/lib/stock-key10-mcp
+InaccessiblePaths=/opt/stock-automation /opt/tushare-mcp
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=stock-key10-result-mcp
+
+[Install]
+WantedBy=multi-user.target
