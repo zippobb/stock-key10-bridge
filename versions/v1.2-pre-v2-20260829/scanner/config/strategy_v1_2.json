@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.2-fusion-1",
+  "layer_status": "formal_fusion",
+  "expected_observation_pool_count": 237,
+  "expected_focus_pool_count": 83,
+  "sector_wind": {
+    "weights": {
+      "strength_1d_3d": 35,
+      "rank_acceleration": 25,
+      "advance_breadth": 20,
+      "volume_expansion": 20
+    },
+    "strength_1d_3d_formula": "mean(strength_percentile_1d, strength_percentile_3d)",
+    "rank_acceleration_formula": "clip(50 + rank_improvement * 2.5, 0, 100)",
+    "advance_breadth_formula": "clip(up_1d_ratio_pct, 0, 100)",
+    "volume_expansion_formula": "clip(volume_ratio_percentile, 0, 100)"
+  },
+  "stock_wind": {
+    "weights": {
+      "relative_sector_strength": 40,
+      "volume_price_confirmation": 30,
+      "leader_persistence": 20,
+      "trend_quality": 10
+    },
+    "relative_sector_strength_formula": "mean(industry_return_1d_percentile, industry_return_3d_percentile)",
+    "volume_price_confirmation_formula": "volume_ratio_industry_percentile * 0.60 + clip(50 + return_1d_pct * 5, 0, 100) * 0.40",
+    "leader_persistence_formula": "industry_return_3d_percentile * 0.40 + industry_return_5d_percentile * 0.35 + industry_return_20d_percentile * 0.25",
+    "trend_quality_formula": "25 points each for close>=MA20, MA5>=MA10, MA10>=MA20, MA5 3-day slope>0"
+  },
+  "wind_fusion": {
+    "sector_weight": 70,
+    "stock_weight": 30,
+    "formula": "sector_wind_score * 0.70 + stock_wind_score * 0.30",
+    "concept_bonus": 0,
+    "concept_rule": "产业概念没有板块和个股价格确认时不得加分；当前版本完全不使用概念加分"
+  },
+  "formal_fusion": {
+    "v1_0_weight": 70,
+    "v1_2_weight": 30,
+    "v1_0_normalization": "clip(total_score, 0, 100)",
+    "formula": "v1_0_normalized_score * 0.70 + v1_2_wind_score * 0.30",
+    "minimum_final_score": 60,
+    "recommendation_size": 10,
+    "alternate_size": 10,
+    "formal_output_max": 10
+  },
+  "expansion": {
+    "top_sector_count": 5,
+    "include_ties": true,
+    "minimum_sector_wind_score": 65,
+    "minimum_stock_wind_score": 55,
+    "minimum_v1_0_score": 45,
+    "minimum_listing_calendar_days": 120,
+    "max_candidates_per_sector_before_fusion": 8,
+    "history_days": 300
+  },
+  "market_bottom": {
+    "exclude_st_and_delist": true,
+    "minimum_listing_calendar_days": 120,
+    "minimum_valid_trading_days_20d": 15,
+    "liquidity_bottom_fraction": 0.20,
+    "stress_new_low_peak_10d_min_pct": 5,
+    "stress_market_score_5d_max": 45,
+    "stress_index_drawdown_20d_min_pct": 5,
+    "stress_index_count_min": 2,
+    "breadth_initial_pct": 80,
+    "breadth_clear_pct": 85,
+    "breadth_strong_pct": 90,
+    "turnover_is_hard_gate": false
+  },
+  "output": {
+    "recommendation_label": "推荐",
+    "alternate_label": "备选",
+    "fail_is_output": false,
+    "preserve_three_layer_attribution": true
+  }
+}
