@@ -1,0 +1,6 @@
+{
+  "version": "V2.0",
+  "release_date": "2026-08-29",
+  "github_previous_version_backup": "zippobb/stock-key10-bridge@backup/pre-v2-20260829",
+  "server_previous_version_backup_pattern": "/opt/stock-automation/versions/previous_pre_v2_*.tar.gz"
+}
