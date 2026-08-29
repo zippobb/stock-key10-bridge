@@ -9,6 +9,7 @@ fi
 PACKAGE_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 SCANNER_DIR=/opt/stock-automation/scanner
 PYTHON_BIN=${SCANNER_DIR}/venv/bin/python
+PILLOW_WHEEL=${PACKAGE_DIR}/wheels/pillow-11.3.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
 SYSTEMD_DIR=/etc/systemd/system
 VERSIONS_DIR=/opt/stock-automation/versions
 STAMP=$(date -u +%Y%m%dT%H%M%SZ)
@@ -24,6 +25,23 @@ test -f "${SCANNER_DIR}/config/observation_pool.csv"
 test -f "${PACKAGE_DIR}/scanner/stock_key10_v2_daily.py"
 test -f "${PACKAGE_DIR}/scanner/config/strategy_v2.json"
 test -f "${PACKAGE_DIR}/scanner/config/NotoSansSC-Regular.ttf"
+test -f "${PILLOW_WHEEL}"
+
+if [[ $(uname -m) != "x86_64" ]]; then
+  echo "离线Pillow轮包仅适用于x86_64，当前架构：$(uname -m)" >&2
+  exit 1
+fi
+"${PYTHON_BIN}" - <<'PY'
+import sys
+if sys.version_info[:2] != (3, 10):
+    raise SystemExit(f"V2.0离线依赖要求Python 3.10，当前为{sys.version.split()[0]}")
+PY
+"${PYTHON_BIN}" -m pip --version >/dev/null
+
+(
+  cd "${PACKAGE_DIR}"
+  sha256sum -c SHA256SUMS
+)
 
 "${PYTHON_BIN}" -m py_compile \
   "${PACKAGE_DIR}/scanner/stock_key10_v2_common.py" \
@@ -35,9 +53,6 @@ test -f "${PACKAGE_DIR}/scanner/config/NotoSansSC-Regular.ttf"
   "${PACKAGE_DIR}/scanner/export_key10_v2_bundle.py" \
   "${PACKAGE_DIR}/scanner/build_key10_v2_review_template.py"
 "${PYTHON_BIN}" -m json.tool "${PACKAGE_DIR}/scanner/config/strategy_v2.json" >/dev/null
-PYTHONPATH="${PACKAGE_DIR}/scanner" \
-STOCK_V2_FONT="${PACKAGE_DIR}/scanner/config/NotoSansSC-Regular.ttf" \
-"${PYTHON_BIN}" "${PACKAGE_DIR}/scanner/tests/run_tests.py"
 
 mkdir -p "${VERSIONS_DIR}"
 TMP_BACKUP=$(mktemp "${VERSIONS_DIR}/.previous_pre_v2.XXXXXX.tar.gz")
@@ -59,6 +74,61 @@ tar -C / -czf "${TMP_BACKUP}" \
   }
 mv -- "${TMP_BACKUP}" "${BACKUP_PATH}"
 sha256sum "${BACKUP_PATH}" > "${BACKUP_PATH}.sha256"
+
+PIL_PREEXISTED=false
+if "${PYTHON_BIN}" -c 'from PIL import Image' >/dev/null 2>&1; then
+  PIL_PREEXISTED=true
+else
+  if ! "${PYTHON_BIN}" -m pip install --no-index --no-deps "${PILLOW_WHEEL}"; then
+    "${PYTHON_BIN}" -m pip uninstall -y Pillow >/dev/null 2>&1 || true
+    echo "离线Pillow安装失败；业务系统未修改，旧版备份已保留：${BACKUP_PATH}" >&2
+    exit 1
+  fi
+fi
+
+"${PYTHON_BIN}" - <<'PY'
+import PIL
+from PIL import Image
+print(f"Pillow预检通过：{PIL.__version__}")
+PY
+
+if ! PYTHONPATH="${PACKAGE_DIR}/scanner" \
+  STOCK_V2_FONT="${PACKAGE_DIR}/scanner/config/NotoSansSC-Regular.ttf" \
+  "${PYTHON_BIN}" "${PACKAGE_DIR}/scanner/tests/run_tests.py"; then
+  if ! ${PIL_PREEXISTED}; then
+    "${PYTHON_BIN}" -m pip uninstall -y Pillow >/dev/null 2>&1 || true
+  fi
+  echo "V2.0回归测试失败；业务系统未修改，旧版备份已保留：${BACKUP_PATH}" >&2
+  exit 1
+fi
+
+MUTATION_STARTED=true
+rollback_on_error() {
+  local exit_code=$?
+  trap - ERR
+  set +e
+  if ${MUTATION_STARTED}; then
+    echo "部署写入阶段失败，正在恢复上一版本：${BACKUP_PATH}" >&2
+    systemctl stop stock-key10-daily.timer stock-key10-github-publish.timer
+    rm -f -- \
+      "${SCANNER_DIR}/stock_key10_v2_common.py" \
+      "${SCANNER_DIR}/stock_key10_v2_data.py" \
+      "${SCANNER_DIR}/stock_key10_v2_scoring.py" \
+      "${SCANNER_DIR}/stock_key10_v2_daily.py" \
+      "${SCANNER_DIR}/stock_key10_v2_finalize.py" \
+      "${SCANNER_DIR}/render_key10_v2.py" \
+      "${SCANNER_DIR}/export_key10_v2_bundle.py" \
+      "${SCANNER_DIR}/build_key10_v2_review_template.py" \
+      "${SCANNER_DIR}/config/strategy_v2.json" \
+      "${SCANNER_DIR}/VERSION.json"
+    tar -C / -xzf "${BACKUP_PATH}"
+    systemctl daemon-reload
+    systemctl enable --now stock-key10-daily.timer
+    systemctl enable --now stock-key10-github-publish.timer
+  fi
+  exit "${exit_code}"
+}
+trap rollback_on_error ERR
 
 install -m 0755 "${PACKAGE_DIR}/scanner/stock_key10_v2_common.py" "${SCANNER_DIR}/"
 install -m 0755 "${PACKAGE_DIR}/scanner/stock_key10_v2_data.py" "${SCANNER_DIR}/"
@@ -130,4 +200,5 @@ done < <(find "${VERSIONS_DIR}" -maxdepth 1 -type f -name 'previous_pre_v2_*.tar
 
 systemctl cat stock-key10-daily.service
 systemctl list-timers stock-key10-daily.timer stock-key10-github-publish.timer --no-pager
+trap - ERR
 echo "V2.0部署完成；服务器保留的上一版本备份：${BACKUP_PATH}"
