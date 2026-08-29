@@ -1,0 +1,13 @@
+# /etc/systemd/system/stock-key10-github-publish.timer
+[Unit]
+Description=Publish Stock Key10 results to GitHub twice on weekdays
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 18:40:00 Asia/Shanghai
+OnCalendar=Mon..Fri *-*-* 18:55:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=stock-key10-github-publish.service
+
+[Install]
+WantedBy=timers.target
