@@ -1,0 +1,35 @@
+# /etc/systemd/system/stock-key10-daily.service
+[Unit]
+Description=Stock Key10 Daily Lightweight Technical Calculation
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/opt/stock-automation/scanner/stock_key10_daily.py
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/stock-automation/scanner
+EnvironmentFile=-/opt/tushare-mcp/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/stock-automation/scanner/venv/bin/python /opt/stock-automation/scanner/stock_key10_daily.py
+TimeoutStartSec=30min
+KillSignal=SIGTERM
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=stock-key10-daily
+
+[Install]
+WantedBy=multi-user.target
+
+# /etc/systemd/system/stock-key10-daily.service.d/10-v11-shadow.conf
+[Service]
+ExecStartPost=/opt/stock-automation/scanner/venv/bin/python -B /opt/stock-automation/scanner/stock_key10_v11_risk.py
+
+# /etc/systemd/system/stock-key10-daily.service.d/20-v12-fusion.conf
+[Service]
+ExecStartPost=/opt/stock-automation/scanner/venv/bin/python -B /opt/stock-automation/scanner/stock_key10_v12_fusion.py
+
+# /etc/systemd/system/stock-key10-daily.service.d/export.conf
+[Service]
+ExecStartPost=/opt/stock-automation/scanner/venv/bin/python -B /opt/stock-automation/scanner/export_key10_bundle.py
