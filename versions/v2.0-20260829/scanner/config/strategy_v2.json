@@ -1,0 +1,99 @@
+{
+  "model_version": "V2.0",
+  "timezone": "Asia/Shanghai",
+  "universe": {
+    "observation_pool_path": "config/observation_pool.csv",
+    "expected_observation_pool_count": 237,
+    "external": {
+      "enabled": true,
+      "allowed_segments": [
+        "沪市主板",
+        "深市主板",
+        "创业板",
+        "科创板"
+      ],
+      "minimum_total_market_value_yi": 30.0,
+      "exclude_delisting_risk": true,
+      "review_limit": 10,
+      "final_limit": 3,
+      "manual_pool_admission": true
+    }
+  },
+  "schedule": {
+    "quantitative_run": "21:30",
+    "final_review": "22:00"
+  },
+  "quantitative": {
+    "market_fit_max": 5.0,
+    "sector_strength_max": 15.0,
+    "technical_quality_max": 30.0,
+    "technical_minimum": 18.0,
+    "review_limit": 30,
+    "minimum_subscore_completeness": 0.7,
+    "tie_break": [
+      "quant_score_desc",
+      "technical_score_desc",
+      "sector_score_desc",
+      "market_fit_score_desc",
+      "ts_code_asc"
+    ]
+  },
+  "sector": {
+    "minimum_sample_count": null,
+    "excluded_industries": [],
+    "strong_minimum_score": 9.0,
+    "strong_top_fraction": 0.3,
+    "weights": {
+      "price_strength": 4.0,
+      "advance_breadth": 3.0,
+      "capital_diffusion": 3.0,
+      "persistence": 3.0,
+      "rank_acceleration": 2.0
+    }
+  },
+  "technical": {
+    "weights": {
+      "trend_structure": 8.0,
+      "stage_pattern": 8.0,
+      "volume_price": 6.0,
+      "momentum_relative_strength": 5.0,
+      "structure_health": 3.0
+    },
+    "stage_patterns": [
+      "trend_continuation",
+      "bottom_right_side"
+    ]
+  },
+  "final_review": {
+    "logic_purity_max": 15.0,
+    "elasticity_max": 20.0,
+    "fundamental_max": 10.0,
+    "major_positive_max": 5.0,
+    "major_risk_score_effect": 0.0,
+    "minimum_final_score": 60.0,
+    "official_limit": 10,
+    "tie_break": [
+      "final_score_desc",
+      "technical_score_desc",
+      "elasticity_score_desc",
+      "sector_score_desc",
+      "logic_purity_score_desc",
+      "ts_code_asc"
+    ]
+  },
+  "execution": {
+    "buy_point_affects_score": false,
+    "high_open_do_not_chase_pct": 3.0,
+    "risk_affects_score": false,
+    "risk_affects_rank": false,
+    "future_data_allowed": false
+  },
+  "output": {
+    "review_payload_latest": "output/key10_v2_review_payload_latest.json",
+    "final_latest": "output/key10_v2_final_latest.json",
+    "image_latest": "output/key10_v2_final_latest.png",
+    "image_width": 1024,
+    "image_height": 2048,
+    "single_image": true
+  }
+}
