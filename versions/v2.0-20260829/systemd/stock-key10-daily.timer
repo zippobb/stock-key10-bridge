@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Stock Key10 V2.0 quantitative selection at 21:30 Asia/Shanghai
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 21:30:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=stock-key10-daily.service
+
+[Install]
+WantedBy=timers.target
