@@ -8,6 +8,7 @@ fi
 
 PACKAGE_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 SCANNER_DIR=/opt/stock-automation/scanner
+PYTHON_BIN=${SCANNER_DIR}/venv/bin/python
 SYSTEMD_DIR=/etc/systemd/system
 VERSIONS_DIR=/opt/stock-automation/versions
 STAMP=$(date -u +%Y%m%dT%H%M%SZ)
@@ -18,12 +19,13 @@ if [[ ${1:-} == "--run-now" ]]; then
 fi
 
 test -d "${SCANNER_DIR}"
+test -x "${PYTHON_BIN}"
 test -f "${SCANNER_DIR}/config/observation_pool.csv"
 test -f "${PACKAGE_DIR}/scanner/stock_key10_v2_daily.py"
 test -f "${PACKAGE_DIR}/scanner/config/strategy_v2.json"
 test -f "${PACKAGE_DIR}/scanner/config/NotoSansSC-Regular.ttf"
 
-python3 -m py_compile \
+"${PYTHON_BIN}" -m py_compile \
   "${PACKAGE_DIR}/scanner/stock_key10_v2_common.py" \
   "${PACKAGE_DIR}/scanner/stock_key10_v2_data.py" \
   "${PACKAGE_DIR}/scanner/stock_key10_v2_scoring.py" \
@@ -32,10 +34,10 @@ python3 -m py_compile \
   "${PACKAGE_DIR}/scanner/render_key10_v2.py" \
   "${PACKAGE_DIR}/scanner/export_key10_v2_bundle.py" \
   "${PACKAGE_DIR}/scanner/build_key10_v2_review_template.py"
-python3 -m json.tool "${PACKAGE_DIR}/scanner/config/strategy_v2.json" >/dev/null
+"${PYTHON_BIN}" -m json.tool "${PACKAGE_DIR}/scanner/config/strategy_v2.json" >/dev/null
 PYTHONPATH="${PACKAGE_DIR}/scanner" \
 STOCK_V2_FONT="${PACKAGE_DIR}/scanner/config/NotoSansSC-Regular.ttf" \
-python3 "${PACKAGE_DIR}/scanner/tests/run_tests.py"
+"${PYTHON_BIN}" "${PACKAGE_DIR}/scanner/tests/run_tests.py"
 
 mkdir -p "${VERSIONS_DIR}"
 TMP_BACKUP=$(mktemp "${VERSIONS_DIR}/.previous_pre_v2.XXXXXX.tar.gz")
