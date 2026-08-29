@@ -1,0 +1,11 @@
+[Unit]
+Description=Fallback publish for Stock Key10 V2.0 review bundle
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 21:45:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=stock-key10-github-publish.service
+
+[Install]
+WantedBy=timers.target
