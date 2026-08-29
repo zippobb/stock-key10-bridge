@@ -1,0 +1,24 @@
+[Unit]
+Description=Stock Key10 V2.0 21:30 Quantitative Preselection
+Wants=network-online.target
+After=network-online.target
+OnSuccess=stock-key10-github-publish.service
+ConditionPathExists=/opt/stock-automation/scanner/stock_key10_v2_daily.py
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/stock-automation/scanner
+EnvironmentFile=-/opt/tushare-mcp/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/stock-automation/scanner/venv/bin/python -B /opt/stock-automation/scanner/stock_key10_v2_daily.py
+ExecStartPost=/opt/stock-automation/scanner/venv/bin/python -B /opt/stock-automation/scanner/export_key10_v2_bundle.py
+TimeoutStartSec=30min
+KillSignal=SIGTERM
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=stock-key10-daily
+
+[Install]
+WantedBy=multi-user.target
