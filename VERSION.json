@@ -1,0 +1,8 @@
+{
+  "version": "V2.0.1",
+  "release_date": "2026-08-29",
+  "parent_version": "V2.0",
+  "change": "首次运行只处理最新已完成交易日；后续真实积压仍保持最多10个交易日的安全上限",
+  "github_previous_version_backup": "zippobb/stock-key10-bridge@backup/pre-v2-20260829",
+  "server_previous_version_backup_pattern": "/opt/stock-automation/versions/previous_pre_v2_*.tar.gz"
+}
