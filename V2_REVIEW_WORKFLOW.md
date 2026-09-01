@@ -41,3 +41,10 @@
 5. 每次重试前先检查当日日期回执、latest回执及结果JSON。若status为“已完成”或“结果未变化”且结果可回读，立即停止且不得重复计算；若同一bundle_sha256已有成功结果，同样停止。
 6. attempt_no=2仍未成功时，写入retry_exhausted=true，状态为“数据未就绪”或“执行失败”，记录最后错误、已完成阶段和人工恢复起点；不得继续自动重试。
 7. 没有执行重试（因为已经成功或当前attempt_no已处理）时可以静默；一旦实际发起重试，无论结果如何都必须写入持久回执并发送可见状态。
+
+
+六、并发锁与运行状态
+1. 每次实际运行前维护 delivery/runs/YYYY/MM/key10_review_run_YYYYMMDD.json，字段至少包括run_date、state、attempt_no、started_at、heartbeat_at、finished_at和owner。state只允许running、completed、failed。
+2. 写入running前先读取现有运行状态及SHA。若发现另一尝试处于running且heartbeat_at距当前不足90分钟，本次不得启动、不得重复检索或评分；记录“已有运行进行中”后静默退出。若超过90分钟，标记前一运行stale后才可接管。
+3. 每完成一个阶段更新heartbeat_at和已完成阶段；结束时将state改为completed或failed。所有更新必须基于最新SHA，发生冲突时重新读取一次；仍冲突则停止，禁止并发盲写。
+4. 运行锁只防止重叠，不增加重试次数；被“已有运行进行中”拦截的计划点不计入已执行重试。
