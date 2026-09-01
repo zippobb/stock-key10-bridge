@@ -6,10 +6,10 @@
 ## 元数据
 
 - 状态文件版本：1.0
-- 最后更新：2026-09-01 22:31 Asia/Shanghai
+- 最后更新：2026-09-02 00:54 Asia/Shanghai
 - GitHub 仓库：`zippobb/stock-key10-bridge`
 - 服务器项目目录（历史记录，当前会话未实时验证）：`/opt/stock-automation/scanner`
-- 当前总体状态：存在未解决的调度口径冲突；2026-09-01 数据尚未发布到 GitHub
+- 当前总体状态：服务器实时核验通道已建立；仍存在调度口径冲突，且2026-09-01数据未发布问题尚未定位
 
 ## 权威性与冲突处理
 
@@ -120,6 +120,19 @@
 
 旧V1.x选股任务、融合重跑任务和一次性补跑任务已暂停或完成，不应被当成当前主任务。
 
+### 服务器实时核验通道
+
+实时验收时间：2026-09-02 00:50前后 Asia/Shanghai。
+
+- Windows SSH别名：`stock-server`
+- 服务器主机名：`iZuf6fp4j1j3s3wlgdtzfyZ`
+- 服务器用户：`root`
+- 项目目录：`/opt/stock-automation/scanner`
+- Windows本地Codex项目：`C:\\Users\\ROG\\stock-key10-remote`
+- 工作方式：Codex在Windows运行，通过 `ssh stock-server` 执行服务器命令；不在服务器上运行Codex。
+- 已验证：SSH密钥认证成功；systemd为`running`；`stock-key10-result-mcp.service`为active/running；`stock-key10-daily.timer`和`stock-key10-github-publish.timer`为active/waiting。
+- 安全收尾：服务器上的临时 `/root/.codex/auth.json` 副本已删除。
+
 ## 待验证与明确冲突
 
 以下事项未解决前，不得对外声称“现行配置已经完全确认”：
@@ -131,7 +144,7 @@
    - 必须读取真实服务器timer/service和最终用户决定后确定唯一时间轴。
 2. 当前终审任务20:00运行，却要求 `stage=21:30_quantitative_review_payload`。若阶段名对应真实生成时间，两者顺序不可能成立；若阶段名只是旧名称，需要明确记录。
 3. 历史用户要求V1.1风险层与V1.2风向层直接参与正式结果；当前V2.0任务要求移除V1.x、影子层和PASS/WARNING/FAIL字段。现有证据不足以证明用户明确批准彻底替代关系，必须单独确认，不能自行解释。
-4. 当前会话环境不是服务器项目仓库，且没有systemd，无法验证服务器真实运行状态。
+4. 当前Work会话本身仍不是服务器环境；但已通过Windows桌面版Codex本地项目和SSH别名 `stock-server` 建立可重复的服务器实时核验通道。
 5. 2026-09-01数据未发布的根因尚未定位。
 
 ## 禁止事项
@@ -160,3 +173,5 @@
 
 - 2026-09-01：建立长期事实源；记录V2.0已确认规则、GitHub与定时任务实时快照；保留时间轴和V1.x/V2.0替代关系冲突，等待验证。
 - 2026-09-01：已修改启用中的“V2.0 选股终审”任务，强制每次先读取本文件，并在规则或实时状态冲突时停止推断、明确报告。
+- 2026-09-02：完成第7项修复；建立Windows桌面版Codex经 `stock-server` 实时核验服务器的通道，并验证主机、目录、systemd、service和timer。
+- 2026-09-02：完成第6项结构优化；V2.0终审改为分阶段增量流程，先JSON后PNG、按板块批量取证、复用可验证静态资料、隔离制图失败并强制可见回执，评分与输出规则不变。
