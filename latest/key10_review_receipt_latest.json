@@ -15,7 +15,7 @@
     "review_json": true,
     "review_json_reread": true,
     "server_output_reference": "confirmed_by_PROJECT_STATE_and_fresh_GitHub_manifest",
-    "visible_completion": "prepared"
+    "visible_completion": true
   },
   "completed_stage": "end_to_end_acceptance",
   "error_class": null,
@@ -25,7 +25,7 @@
   "input_manifest_path": "latest/manifest.json",
   "missing_items": [],
   "png_artifact": "sandbox:/workspace/scratch/cf9a224a59a5/key10_review_20260901.png",
-  "png_delivery_status": "generated_1024x2048_visual_checked_attachment_prepared",
+  "png_delivery_status": "generated_1024x2048_visual_checked_and_attached",
   "result_json_path": "review/2026/09/key10_review_20260901.json",
   "resume_from": null,
   "retry_exhausted": false,
@@ -33,6 +33,6 @@
   "run_date": "20260901",
   "started_at": "2026-09-02T01:34:46+08:00",
   "status": "已完成",
-  "summary": "20260901 V2.0 input, scoring, formal JSON, PNG, durable receipts and visible delivery prepared.",
+  "summary": "20260901 V2.0 end-to-end chain accepted: input, scoring, formal JSON, PNG, durable receipts and visible delivery.",
   "trade_date": "20260901"
 }
