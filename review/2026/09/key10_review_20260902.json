@@ -1,0 +1,2632 @@
+{
+  "schema_version": "2.0.0",
+  "model_version": "V2.0",
+  "stage": "final_review",
+  "trade_date": "20260902",
+  "generated_at": "2026-09-02T20:00:00+08:00",
+  "evidence_as_of": "2026-09-02T20:00:00+08:00",
+  "source_bundle": {
+    "manifest_path": "latest/manifest.json",
+    "archive_path": "archive/2026/09/key10_bundle_20260902.json",
+    "latest_path": "latest/key10_bundle_latest.json",
+    "bundle_sha256": "dc7c1f28b48c0f2f80a3811ea935284c2e6a5d5f67d0221f75d017df633cf47b",
+    "content_match": true
+  },
+  "rules": {
+    "weights": {
+      "market_fit": 5,
+      "sector": 15,
+      "technical": 30,
+      "logic_purity": 15,
+      "elasticity": 20,
+      "fundamentals": 10,
+      "major_positive": 5
+    },
+    "minimum_final_score": 60,
+    "risk_policy": "annotation_only_no_score_no_rank_no_veto",
+    "official_limit": 10,
+    "external_limit": 3,
+    "v2_fully_replaces_v1_shadow_layers": true
+  },
+  "market_environment": {
+    "above_ma20_ratio_pct": 57.2562,
+    "advance_count": 1541,
+    "advance_ratio_pct": 27.7808,
+    "decline_count": 3901,
+    "major_indices": [
+      {
+        "close": 3941.3862,
+        "ma20": 3935.9247,
+        "name": "上证综指",
+        "return_1d_pct": -0.9674,
+        "return_5d_pct": 0.7377,
+        "trend": "上涨",
+        "ts_code": "000001.SH"
+      },
+      {
+        "close": 13611.5472,
+        "ma20": 14111.0961,
+        "name": "深证成指",
+        "return_1d_pct": -1.8802,
+        "return_5d_pct": -1.6601,
+        "trend": "下跌",
+        "ts_code": "399001.SZ"
+      },
+      {
+        "close": 3312.2432,
+        "ma20": 3511.3125,
+        "name": "创业板指",
+        "return_1d_pct": -2.3925,
+        "return_5d_pct": -3.0057,
+        "trend": "下跌",
+        "ts_code": "399006.SZ"
+      }
+    ],
+    "market_amount_yi": 18202.976,
+    "market_median_return_1d_pct": -0.9474,
+    "phase": "退潮",
+    "posture": "防守",
+    "trade_date": "20260902",
+    "unchanged_count": 105
+  },
+  "official_records": [
+    {
+      "ts_code": "002490.SZ",
+      "name": "山东墨龙",
+      "sector": "化工机械",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 1,
+      "scores": {
+        "market_fit": 4.69,
+        "sector": 9.801,
+        "technical": 28.938,
+        "logic_purity": 11,
+        "elasticity": 11,
+        "fundamentals": 3,
+        "major_positive": 2,
+        "total": 70.429
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 2,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "盈利基础偏弱且油气装备业务周期波动较大",
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "盈利基础偏弱且油气装备业务周期波动较大",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002490"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 3.9474,
+        "return_5d_pct": 7.950310559006191,
+        "return_20d_pct": 15.712383488681759,
+        "amount_ratio_1d_20d": 2.1317109093239877,
+        "rsi14": 70.07575757575762
+      }
+    },
+    {
+      "ts_code": "300757.SZ",
+      "name": "罗博特科",
+      "sector": "专用机械",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 2,
+      "scores": {
+        "market_fit": 4.81,
+        "sector": 7.892,
+        "technical": 29.048,
+        "logic_purity": 14,
+        "elasticity": 12,
+        "fundamentals": 7,
+        "major_positive": 3,
+        "total": 77.75
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 2,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/index"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 3.5911,
+        "return_5d_pct": 10.172055208924192,
+        "return_20d_pct": 22.673684210526336,
+        "amount_ratio_1d_20d": 1.1962709631372648,
+        "rsi14": 63.79386286888857
+      },
+      "inclusion_rationale": "综合分77.8，技术29.0，专用机械方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "000816.SZ",
+      "name": "智慧农业",
+      "sector": "农用机械",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 3,
+      "scores": {
+        "market_fit": 3.483,
+        "sector": 10.813,
+        "technical": 26.863,
+        "logic_purity": 10,
+        "elasticity": 9,
+        "fundamentals": 4,
+        "major_positive": 1,
+        "total": 65.159
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "业务结构较杂，主业盈利稳定性仍需观察",
+        "收盘低于当日VWAP，次日需确认承接",
+        "当日回撤较大，需观察次日修复力度"
+      ],
+      "main_risk": "业务结构较杂，主业盈利稳定性仍需观察",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-18/1225476586.PDF"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -3.2787,
+        "return_5d_pct": 3.5087719298245723,
+        "return_20d_pct": 10.486891385767795,
+        "amount_ratio_1d_20d": 1.2256852070872233,
+        "rsi14": 60.20408163265306
+      }
+    },
+    {
+      "ts_code": "002829.SZ",
+      "name": "星网宇达",
+      "sector": "航空",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 4,
+      "scores": {
+        "market_fit": 4.207,
+        "sector": 11.243,
+        "technical": 24.985,
+        "logic_purity": 14,
+        "elasticity": 11,
+        "fundamentals": 5,
+        "major_positive": 3,
+        "total": 73.435
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/index"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 0.0,
+        "return_5d_pct": 10.445468509984623,
+        "return_20d_pct": 3.9017341040462394,
+        "amount_ratio_1d_20d": 1.197736855357197,
+        "rsi14": 51.325757575757585
+      },
+      "inclusion_rationale": "综合分73.4，技术25.0，航空方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "688183.SH",
+      "name": "生益电子",
+      "sector": "元器件",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 5,
+      "scores": {
+        "market_fit": 4.75,
+        "sector": 7.694,
+        "technical": 26.754,
+        "logic_purity": 15,
+        "elasticity": 15,
+        "fundamentals": 9,
+        "major_positive": 4,
+        "total": 82.198
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 2,
+        "capital_acceptance": 3,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688183"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 1.8102,
+        "return_5d_pct": 17.294504462188808,
+        "return_20d_pct": 16.116432623453925,
+        "amount_ratio_1d_20d": 1.342583783475771,
+        "rsi14": 60.35600938319305
+      },
+      "inclusion_rationale": "综合分82.2，技术26.8，元器件方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "600227.SH",
+      "name": "赤天化",
+      "sector": "农药化肥",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 6,
+      "scores": {
+        "market_fit": 3.968,
+        "sector": 7.839,
+        "technical": 27.282,
+        "logic_purity": 9,
+        "elasticity": 12,
+        "fundamentals": 4,
+        "major_positive": 1,
+        "total": 65.089
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 1,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "业绩基础偏弱，短线涨幅较大",
+        "RSI偏高，存在短线拥挤与回撤风险",
+        "20日涨幅较大，获利回吐风险上升",
+        "当日回撤较大，需观察次日修复力度"
+      ],
+      "main_risk": "业绩基础偏弱，短线涨幅较大",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=600227"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -5.029,
+        "return_5d_pct": 17.183770883054894,
+        "return_20d_pct": 52.012383900928796,
+        "amount_ratio_1d_20d": 1.9211778991341595,
+        "rsi14": 76.01476014760148
+      }
+    },
+    {
+      "ts_code": "301306.SZ",
+      "name": "西测测试",
+      "sector": "航空",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 7,
+      "scores": {
+        "market_fit": 4.095,
+        "sector": 11.243,
+        "technical": 23.488,
+        "logic_purity": 14,
+        "elasticity": 11,
+        "fundamentals": 5,
+        "major_positive": 3,
+        "total": 71.826
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 4,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-29/1225530266.PDF"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -1.6304,
+        "return_5d_pct": 14.228341939185295,
+        "return_20d_pct": 8.916849015317286,
+        "amount_ratio_1d_20d": 1.1435429444365166,
+        "rsi14": 53.6500102817191
+      }
+    },
+    {
+      "ts_code": "601890.SH",
+      "name": "亚星锚链",
+      "sector": "船舶",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 8,
+      "scores": {
+        "market_fit": 3.508,
+        "sector": 9.909,
+        "technical": 25.289,
+        "logic_purity": 14,
+        "elasticity": 11,
+        "fundamentals": 7,
+        "major_positive": 2,
+        "total": 72.706
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 2,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=601890"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 1.6968,
+        "return_5d_pct": 3.096330275229353,
+        "return_20d_pct": 5.023364485981308,
+        "amount_ratio_1d_20d": 1.699314561703699,
+        "rsi14": 59.34579439252336
+      }
+    },
+    {
+      "ts_code": "300857.SZ",
+      "name": "协创数据",
+      "sector": "IT设备",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 9,
+      "scores": {
+        "market_fit": 4.381,
+        "sector": 8.016,
+        "technical": 26.22,
+        "logic_purity": 13,
+        "elasticity": 14,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 76.617
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 2,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=300857"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.9706,
+        "return_5d_pct": 10.930025822291833,
+        "return_20d_pct": 4.045898515048041,
+        "amount_ratio_1d_20d": 1.0982890712424556,
+        "rsi14": 52.994752994753
+      },
+      "inclusion_rationale": "综合分76.6，技术26.2，IT设备方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "301603.SZ",
+      "name": "乔锋智能",
+      "sector": "机床制造",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 10,
+      "scores": {
+        "market_fit": 4.349,
+        "sector": 8.656,
+        "technical": 25.511,
+        "logic_purity": 14,
+        "elasticity": 11,
+        "fundamentals": 7,
+        "major_positive": 2,
+        "total": 72.516
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/index"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 0.4931,
+        "return_5d_pct": 9.137310685298306,
+        "return_20d_pct": 9.247005611860292,
+        "amount_ratio_1d_20d": 0.8397405182876497,
+        "rsi14": 53.618857901726436
+      }
+    },
+    {
+      "ts_code": "600722.SH",
+      "name": "金牛化工",
+      "sector": "化工原料",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 11,
+      "scores": {
+        "market_fit": 4.984,
+        "sector": 6.901,
+        "technical": 26.566,
+        "logic_purity": 10,
+        "elasticity": 13,
+        "fundamentals": 5,
+        "major_positive": 1,
+        "total": 67.451
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 1,
+        "capital_acceptance": 3,
+        "expectation_gap": 3,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "RSI偏高，存在短线拥挤与回撤风险",
+        "20日涨幅较大，获利回吐风险上升",
+        "偏离MA20较远，追高风险较高"
+      ],
+      "main_risk": "RSI偏高，存在短线拥挤与回撤风险",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600722"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 6.6445,
+        "return_5d_pct": 36.209335219236216,
+        "return_20d_pct": 75.89041095890414,
+        "amount_ratio_1d_20d": 1.7976225981357166,
+        "rsi14": 81.1460258780037
+      }
+    },
+    {
+      "ts_code": "688028.SH",
+      "name": "沃尔德",
+      "sector": "机械基件",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 12,
+      "scores": {
+        "market_fit": 4.212,
+        "sector": 9.277,
+        "technical": 24.532,
+        "logic_purity": 14,
+        "elasticity": 9,
+        "fundamentals": 7,
+        "major_positive": 2,
+        "total": 70.021
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688028"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -1.1864,
+        "return_5d_pct": 4.0374749051974135,
+        "return_20d_pct": 18.075949367088604,
+        "amount_ratio_1d_20d": 0.8602701231766345,
+        "rsi14": 52.039691289966925
+      }
+    },
+    {
+      "ts_code": "601869.SH",
+      "name": "长飞光纤",
+      "sector": "通信设备",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 13,
+      "scores": {
+        "market_fit": 4.317,
+        "sector": 8.809,
+        "technical": 24.754,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 74.88
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 2,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "20日涨幅较大，获利回吐风险上升"
+      ],
+      "main_risk": "20日涨幅较大，获利回吐风险上升",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=601869"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 1.9424,
+        "return_5d_pct": 5.097675377557875,
+        "return_20d_pct": 30.53777208706787,
+        "amount_ratio_1d_20d": 0.9378251085019047,
+        "rsi14": 66.45750409740107
+      },
+      "inclusion_rationale": "综合分74.9，技术24.8，通信设备方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "600186.SH",
+      "name": "莲花控股",
+      "sector": "食品",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 14,
+      "scores": {
+        "market_fit": 4.143,
+        "sector": 6.286,
+        "technical": 27.406,
+        "logic_purity": 9,
+        "elasticity": 11,
+        "fundamentals": 5,
+        "major_positive": 2,
+        "total": 64.835
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 1,
+        "capital_acceptance": 2,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "食品主业与算力概念并存，逻辑纯度受限"
+      ],
+      "main_risk": "食品主业与算力概念并存，逻辑纯度受限",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600186"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 1.9776,
+        "return_5d_pct": 4.493392070484581,
+        "return_20d_pct": 23.79958246346554,
+        "amount_ratio_1d_20d": 1.0799394398627686,
+        "rsi14": 56.76855895196507
+      }
+    },
+    {
+      "ts_code": "688167.SH",
+      "name": "炬光科技",
+      "sector": "元器件",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 15,
+      "scores": {
+        "market_fit": 4.269,
+        "sector": 7.694,
+        "technical": 25.837,
+        "logic_purity": 15,
+        "elasticity": 9,
+        "fundamentals": 6,
+        "major_positive": 3,
+        "total": 70.8
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "20日涨幅较大，获利回吐风险上升"
+      ],
+      "main_risk": "20日涨幅较大，获利回吐风险上升",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688167"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -2.1192,
+        "return_5d_pct": 6.477099236641237,
+        "return_20d_pct": 33.894888408927294,
+        "amount_ratio_1d_20d": 0.7982326215919106,
+        "rsi14": 57.926871098305554
+      }
+    },
+    {
+      "ts_code": "603011.SH",
+      "name": "合锻智能",
+      "sector": "专用机械",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 16,
+      "scores": {
+        "market_fit": 4.349,
+        "sector": 7.892,
+        "technical": 24.797,
+        "logic_purity": 11,
+        "elasticity": 10,
+        "fundamentals": 4,
+        "major_positive": 2,
+        "total": 64.038
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 1,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "盈利波动与概念驱动特征较明显",
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "盈利波动与概念驱动特征较明显",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=603011"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -0.3103,
+        "return_5d_pct": 12.472647702406991,
+        "return_20d_pct": 26.66338097585017,
+        "amount_ratio_1d_20d": 0.9273151393864304,
+        "rsi14": 53.75989445910291
+      }
+    },
+    {
+      "ts_code": "300454.SZ",
+      "name": "深信服",
+      "sector": "软件服务",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 17,
+      "scores": {
+        "market_fit": 3.508,
+        "sector": 6.702,
+        "technical": 26.781,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 73.991
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接",
+        "当日回撤较大，需观察次日修复力度",
+        "量能偏弱，趋势延续性待确认"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-22/1225490796.PDF"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": -3.4373,
+        "return_5d_pct": 15.732930835478998,
+        "return_20d_pct": 1.8598108931780821,
+        "amount_ratio_1d_20d": 0.5841720412676172,
+        "rsi14": 60.558402544619184
+      },
+      "inclusion_rationale": "综合分74.0，技术26.8，软件服务方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "603186.SH",
+      "name": "华正新材",
+      "sector": "元器件",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 18,
+      "scores": {
+        "market_fit": 4.429,
+        "sector": 7.694,
+        "technical": 24.789,
+        "logic_purity": 14,
+        "elasticity": 13,
+        "fundamentals": 7,
+        "major_positive": 3,
+        "total": 73.912
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 1,
+        "capital_acceptance": 2,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "20日涨幅较大，获利回吐风险上升"
+      ],
+      "main_risk": "20日涨幅较大，获利回吐风险上升",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=603186"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 5.9859,
+        "return_5d_pct": 3.3989164528086757,
+        "return_20d_pct": 51.96546810828933,
+        "amount_ratio_1d_20d": 1.1641191831752369,
+        "rsi14": 63.31649058337162
+      },
+      "inclusion_rationale": "综合分73.9，技术24.8，元器件方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "002837.SZ",
+      "name": "英维克",
+      "sector": "专用机械",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 19,
+      "scores": {
+        "market_fit": 4.707,
+        "sector": 7.892,
+        "technical": 24.265,
+        "logic_purity": 15,
+        "elasticity": 9,
+        "fundamentals": 9,
+        "major_positive": 4,
+        "total": 73.864
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 1,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002837"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 0.5008,
+        "return_5d_pct": 6.702110520380211,
+        "return_20d_pct": 26.562201414102816,
+        "amount_ratio_1d_20d": 1.219623465504687,
+        "rsi14": 67.62589928057557
+      },
+      "inclusion_rationale": "综合分73.9，技术24.3，专用机械方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "600176.SH",
+      "name": "中国巨石",
+      "sector": "玻璃",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 20,
+      "scores": {
+        "market_fit": 4.127,
+        "sector": 6.681,
+        "technical": 25.607,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 9,
+        "major_positive": 2,
+        "total": 73.415
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 1,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600176"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.5802,
+        "return_5d_pct": 11.721518987341772,
+        "return_20d_pct": 12.347250509164965,
+        "amount_ratio_1d_20d": 1.112111016362597,
+        "rsi14": 55.3995157384988
+      },
+      "inclusion_rationale": "综合分73.4，技术25.6，玻璃方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "688313.SH",
+      "name": "仕佳光子",
+      "sector": "通信设备",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 21,
+      "scores": {
+        "market_fit": 3.558,
+        "sector": 8.809,
+        "technical": 23.996,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 73.363
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 1,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "量能偏弱，趋势延续性待确认"
+      ],
+      "main_risk": "量能偏弱，趋势延续性待确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688313"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -1.7574,
+        "return_5d_pct": -0.9163266671125658,
+        "return_20d_pct": 29.255736846697488,
+        "amount_ratio_1d_20d": 0.6036504178383778,
+        "rsi14": 55.41785105173392
+      }
+    },
+    {
+      "ts_code": "600487.SH",
+      "name": "亨通光电",
+      "sector": "通信设备",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 22,
+      "scores": {
+        "market_fit": 3.889,
+        "sector": 8.809,
+        "technical": 23.617,
+        "logic_purity": 14,
+        "elasticity": 9,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 70.315
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600487"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -0.6534,
+        "return_5d_pct": 3.1929662193429076,
+        "return_20d_pct": 22.955339092078674,
+        "amount_ratio_1d_20d": 0.7069787827105561,
+        "rsi14": 63.805436337625196
+      }
+    },
+    {
+      "ts_code": "300164.SZ",
+      "name": "通源石油",
+      "sector": "石油开采",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 23,
+      "scores": {
+        "market_fit": 4.111,
+        "sector": 8.567,
+        "technical": 23.494,
+        "logic_purity": 13,
+        "elasticity": 11,
+        "fundamentals": 6,
+        "major_positive": 2,
+        "total": 68.172
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "油服行业受油价与资本开支周期影响",
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "油服行业受油价与资本开支周期影响",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=300164"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 1.1289,
+        "return_5d_pct": 10.824742268041243,
+        "return_20d_pct": 0.8442776735459567,
+        "amount_ratio_1d_20d": 1.53971997609307,
+        "rsi14": 48.45360824742269
+      }
+    },
+    {
+      "ts_code": "688227.SH",
+      "name": "品高股份",
+      "sector": "软件服务",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 24,
+      "scores": {
+        "market_fit": 3.846,
+        "sector": 6.702,
+        "technical": 25.62,
+        "logic_purity": 14,
+        "elasticity": 15,
+        "fundamentals": 4,
+        "major_positive": 2,
+        "total": 71.168
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 2,
+        "capital_acceptance": 3,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "盈利规模较小，项目兑现存在不确定性"
+      ],
+      "main_risk": "盈利规模较小，项目兑现存在不确定性",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688227"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": 5.06,
+        "return_5d_pct": 13.096461606225219,
+        "return_20d_pct": -3.1069182389937056,
+        "amount_ratio_1d_20d": 1.6621239620388526,
+        "rsi14": 40.67607726597326
+      }
+    },
+    {
+      "ts_code": "000938.SZ",
+      "name": "紫光股份",
+      "sector": "IT设备",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 25,
+      "scores": {
+        "market_fit": 3.914,
+        "sector": 8.016,
+        "technical": 24.071,
+        "logic_purity": 13,
+        "elasticity": 9,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 69.001
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接",
+        "量能偏弱，趋势延续性待确认"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/index"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -0.8612,
+        "return_5d_pct": 8.853868194842418,
+        "return_20d_pct": 2.842447211694643,
+        "amount_ratio_1d_20d": 0.6271907811514789,
+        "rsi14": 45.28964306612055
+      }
+    },
+    {
+      "ts_code": "301123.SZ",
+      "name": "奕东电子",
+      "sector": "元器件",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 26,
+      "scores": {
+        "market_fit": 4.095,
+        "sector": 7.694,
+        "technical": 24.147,
+        "logic_purity": 13,
+        "elasticity": 7,
+        "fundamentals": 5,
+        "major_positive": 2,
+        "total": 62.936
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 1,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=301123"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -0.2596,
+        "return_5d_pct": 2.3581135091926386,
+        "return_20d_pct": 17.29770992366413,
+        "amount_ratio_1d_20d": 0.8422106632717467,
+        "rsi14": 55.39600628225264
+      }
+    },
+    {
+      "ts_code": "002655.SZ",
+      "name": "共达电声",
+      "sector": "元器件",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 27,
+      "scores": {
+        "market_fit": 3.793,
+        "sector": 7.694,
+        "technical": 24.206,
+        "logic_purity": 14,
+        "elasticity": 7,
+        "fundamentals": 6,
+        "major_positive": 2,
+        "total": 64.693
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 1,
+        "theme_elasticity": 1,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "20日涨幅较大，获利回吐风险上升",
+        "量能偏弱，趋势延续性待确认"
+      ],
+      "main_risk": "20日涨幅较大，获利回吐风险上升",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002655"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -1.5441,
+        "return_5d_pct": -0.6601531555320839,
+        "return_20d_pct": 38.9730328777244,
+        "amount_ratio_1d_20d": 0.5520134222482371,
+        "rsi14": 62.35657546337156
+      }
+    },
+    {
+      "ts_code": "688668.SH",
+      "name": "鼎通科技",
+      "sector": "通信设备",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 28,
+      "scores": {
+        "market_fit": 4.346,
+        "sector": 8.809,
+        "technical": 22.496,
+        "logic_purity": 15,
+        "elasticity": 13,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 74.651
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688668"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.1969,
+        "return_5d_pct": 4.9511854951185486,
+        "return_20d_pct": 12.57039774727209,
+        "amount_ratio_1d_20d": 0.8022102500814963,
+        "rsi14": 50.54633512491879
+      },
+      "inclusion_rationale": "综合分74.7，技术22.5，通信设备方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "603533.SH",
+      "name": "掌阅科技",
+      "sector": "互联网",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 29,
+      "scores": {
+        "market_fit": 2.937,
+        "sector": 6.636,
+        "technical": 25.897,
+        "logic_purity": 13,
+        "elasticity": 12,
+        "fundamentals": 5,
+        "major_positive": 2,
+        "total": 67.47
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 1,
+        "capital_acceptance": 3,
+        "expectation_gap": 3,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-27/1225510832.PDF"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -2.8169,
+        "return_5d_pct": 16.329479768786115,
+        "return_20d_pct": 1.7699115044247815,
+        "amount_ratio_1d_20d": 4.023494439454056,
+        "rsi14": 59.450897571277714
+      }
+    },
+    {
+      "ts_code": "002046.SZ",
+      "name": "国机精工",
+      "sector": "机械基件",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 30,
+      "scores": {
+        "market_fit": 4.19,
+        "sector": 9.277,
+        "technical": 21.925,
+        "logic_purity": 13,
+        "elasticity": 8,
+        "fundamentals": 7,
+        "major_positive": 2,
+        "total": 65.392
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接",
+        "量能偏弱，趋势延续性待确认"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002046"
+      ],
+      "selected": false,
+      "exclusion_reason": "合格但排序未进入池内前10",
+      "market_snapshot": {
+        "return_1d_pct": -1.4291,
+        "return_5d_pct": 4.01467291624209,
+        "return_20d_pct": 12.546857772877607,
+        "amount_ratio_1d_20d": 0.5606348503721725,
+        "rsi14": 60.49440298507463
+      }
+    }
+  ],
+  "external_records": [
+    {
+      "ts_code": "002059.SZ",
+      "name": "云南旅游",
+      "sector": "旅游景点",
+      "segment": "深市主板",
+      "origin": "external_pool",
+      "quant_rank": 1,
+      "scores": {
+        "market_fit": 4.715,
+        "sector": 13.261,
+        "technical": 26.661,
+        "logic_purity": 13,
+        "elasticity": 17,
+        "fundamentals": 3,
+        "major_positive": 2,
+        "total": 79.637
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 4,
+        "capital_acceptance": 4,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "旅游业务盈利弹性大但稳定性偏弱",
+        "RSI偏高，存在短线拥挤与回撤风险",
+        "偏离MA20较远，追高风险较高"
+      ],
+      "main_risk": "旅游业务盈利弹性大但稳定性偏弱",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002059"
+      ],
+      "selected": false,
+      "exclusion_reason": "符合池外条件但排序未进入前3",
+      "market_snapshot": {
+        "return_1d_pct": 10.0629,
+        "return_5d_pct": 14.379084967320255,
+        "return_20d_pct": 16.666666666666675,
+        "amount_ratio_1d_20d": 6.30791227084927,
+        "rsi14": 80.5084745762712
+      }
+    },
+    {
+      "ts_code": "000558.SZ",
+      "name": "天府文旅",
+      "sector": "旅游景点",
+      "segment": "深市主板",
+      "origin": "external_pool",
+      "quant_rank": 2,
+      "scores": {
+        "market_fit": 4.041,
+        "sector": 13.261,
+        "technical": 26.347,
+        "logic_purity": 9,
+        "elasticity": 14,
+        "fundamentals": 3,
+        "major_positive": 1,
+        "total": 70.649
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 4,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "资产整合与经营修复仍需持续验证"
+      ],
+      "main_risk": "资产整合与经营修复仍需持续验证",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=000558"
+      ],
+      "selected": false,
+      "exclusion_reason": "符合池外条件但排序未进入前3",
+      "market_snapshot": {
+        "return_1d_pct": 0.2591,
+        "return_5d_pct": 8.100558659217882,
+        "return_20d_pct": 11.849710982658967,
+        "amount_ratio_1d_20d": 1.901535065698555,
+        "rsi14": 69.41176470588235
+      }
+    },
+    {
+      "ts_code": "603402.SH",
+      "name": "陕西旅游",
+      "sector": "旅游景点",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 3,
+      "scores": {
+        "market_fit": 4.682,
+        "sector": 13.261,
+        "technical": 25.617,
+        "logic_purity": 15,
+        "elasticity": 18,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 87.56
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 4,
+        "capital_acceptance": 4,
+        "expectation_gap": 2,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "RSI偏高，存在短线拥挤与回撤风险",
+        "偏离MA20较远，追高风险较高"
+      ],
+      "main_risk": "RSI偏高，存在短线拥挤与回撤风险",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=603402"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 5.9673,
+        "return_5d_pct": 19.422693075387688,
+        "return_20d_pct": 18.27858880778588,
+        "amount_ratio_1d_20d": 2.590673773070515,
+        "rsi14": 76.47058823529414
+      },
+      "inclusion_rationale": "旅游景点为强势板块且无同板块池内合格股；综合分87.6，仅列池外观察。"
+    },
+    {
+      "ts_code": "688231.SH",
+      "name": "隆达股份",
+      "sector": "航空",
+      "segment": "科创板",
+      "origin": "external_pool",
+      "quant_rank": 4,
+      "scores": {
+        "market_fit": 5.0,
+        "sector": 11.243,
+        "technical": 26.908,
+        "logic_purity": 14,
+        "elasticity": 18,
+        "fundamentals": 7,
+        "major_positive": 3,
+        "total": 85.151
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 4,
+        "capital_acceptance": 3,
+        "expectation_gap": 3,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688231"
+      ],
+      "selected": false,
+      "exclusion_reason": "同板块存在池内综合分不低于60的合格个股",
+      "market_snapshot": {
+        "return_1d_pct": 6.1888,
+        "return_5d_pct": 17.587412587412587,
+        "return_20d_pct": 20.408163265306122,
+        "amount_ratio_1d_20d": 1.7359600398086683,
+        "rsi14": 61.352391423859274
+      }
+    },
+    {
+      "ts_code": "603270.SH",
+      "name": "金帝股份",
+      "sector": "机械基件",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 5,
+      "scores": {
+        "market_fit": 4.744,
+        "sector": 9.277,
+        "technical": 29.124,
+        "logic_purity": 14,
+        "elasticity": 17,
+        "fundamentals": 7,
+        "major_positive": 2,
+        "total": 83.145
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 2,
+        "capital_acceptance": 4,
+        "expectation_gap": 3,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=603270"
+      ],
+      "selected": false,
+      "exclusion_reason": "同板块存在池内综合分不低于60的合格个股",
+      "market_snapshot": {
+        "return_1d_pct": 10.0069,
+        "return_5d_pct": 15.025343953656755,
+        "return_20d_pct": 25.67246835443038,
+        "amount_ratio_1d_20d": 3.280379711153143,
+        "rsi14": 62.383345297918154
+      }
+    },
+    {
+      "ts_code": "300859.SZ",
+      "name": "西域旅游",
+      "sector": "旅游服务",
+      "segment": "创业板",
+      "origin": "external_pool",
+      "quant_rank": 6,
+      "scores": {
+        "market_fit": 4.044,
+        "sector": 12.156,
+        "technical": 26.868,
+        "logic_purity": 15,
+        "elasticity": 15,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 84.068
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 4,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=300859"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.7254,
+        "return_5d_pct": 8.167770419426045,
+        "return_20d_pct": 8.969607116382505,
+        "amount_ratio_1d_20d": 3.3363120073538006,
+        "rsi14": 65.14657980456025
+      },
+      "inclusion_rationale": "旅游服务为强势板块且无同板块池内合格股；综合分84.1，仅列池外观察。"
+    },
+    {
+      "ts_code": "600391.SH",
+      "name": "航发科技",
+      "sector": "航空",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 7,
+      "scores": {
+        "market_fit": 4.329,
+        "sector": 11.243,
+        "technical": 27.315,
+        "logic_purity": 13,
+        "elasticity": 15,
+        "fundamentals": 6,
+        "major_positive": 3,
+        "total": 79.887
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "航空制造订单兑现和盈利波动"
+      ],
+      "main_risk": "航空制造订单兑现和盈利波动",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600391"
+      ],
+      "selected": false,
+      "exclusion_reason": "同板块存在池内综合分不低于60的合格个股",
+      "market_snapshot": {
+        "return_1d_pct": 2.4702,
+        "return_5d_pct": 10.880503144654075,
+        "return_20d_pct": 14.443362544628368,
+        "amount_ratio_1d_20d": 1.3848731724259842,
+        "rsi14": 71.38584247258223
+      }
+    },
+    {
+      "ts_code": "601996.SH",
+      "name": "丰林集团",
+      "sector": "家居用品",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 8,
+      "scores": {
+        "market_fit": 4.401,
+        "sector": 10.195,
+        "technical": 28.259,
+        "logic_purity": 14,
+        "elasticity": 14,
+        "fundamentals": 6,
+        "major_positive": 1,
+        "total": 77.855
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "家居景气度及原料价格波动"
+      ],
+      "main_risk": "家居景气度及原料价格波动",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=601996"
+      ],
+      "selected": false,
+      "exclusion_reason": "符合池外条件但排序未进入前3",
+      "market_snapshot": {
+        "return_1d_pct": 3.321,
+        "return_5d_pct": 7.692307692307687,
+        "return_20d_pct": 17.647058823529417,
+        "amount_ratio_1d_20d": 1.7123128930150764,
+        "rsi14": 71.01449275362323
+      }
+    },
+    {
+      "ts_code": "600054.SH",
+      "name": "黄山旅游",
+      "sector": "旅游景点",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 9,
+      "scores": {
+        "market_fit": 3.093,
+        "sector": 13.261,
+        "technical": 26.496,
+        "logic_purity": 15,
+        "elasticity": 15,
+        "fundamentals": 8,
+        "major_positive": 2,
+        "total": 82.85
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 4,
+        "capital_acceptance": 4,
+        "expectation_gap": 1,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600054"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 1.5584,
+        "return_5d_pct": 3.16622691292876,
+        "return_20d_pct": 4.359430604982206,
+        "amount_ratio_1d_20d": 2.5735363393643382,
+        "rsi14": 69.92481203007532
+      },
+      "inclusion_rationale": "旅游景点为强势板块且无同板块池内合格股；综合分82.8，仅列池外观察。"
+    },
+    {
+      "ts_code": "002627.SZ",
+      "name": "三峡旅游",
+      "sector": "旅游景点",
+      "segment": "深市主板",
+      "origin": "external_pool",
+      "quant_rank": 10,
+      "scores": {
+        "market_fit": 3.918,
+        "sector": 13.261,
+        "technical": 25.649,
+        "logic_purity": 12,
+        "elasticity": 12,
+        "fundamentals": 7,
+        "major_positive": 2,
+        "total": 75.828
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 4,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "旅游客运需求具有季节性",
+        "RSI偏高，存在短线拥挤与回撤风险"
+      ],
+      "main_risk": "旅游客运需求具有季节性",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002627"
+      ],
+      "selected": false,
+      "exclusion_reason": "符合池外条件但排序未进入前3",
+      "market_snapshot": {
+        "return_1d_pct": 0.551,
+        "return_5d_pct": 4.584527220630363,
+        "return_20d_pct": 13.70716510903427,
+        "amount_ratio_1d_20d": 1.2167866020031655,
+        "rsi14": 80.0
+      }
+    }
+  ],
+  "final_official": [
+    {
+      "ts_code": "688183.SH",
+      "name": "生益电子",
+      "sector": "元器件",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 5,
+      "scores": {
+        "market_fit": 4.75,
+        "sector": 7.694,
+        "technical": 26.754,
+        "logic_purity": 15,
+        "elasticity": 15,
+        "fundamentals": 9,
+        "major_positive": 4,
+        "total": 82.198
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 2,
+        "capital_acceptance": 3,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688183"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 1.8102,
+        "return_5d_pct": 17.294504462188808,
+        "return_20d_pct": 16.116432623453925,
+        "amount_ratio_1d_20d": 1.342583783475771,
+        "rsi14": 60.35600938319305
+      },
+      "inclusion_rationale": "综合分82.2，技术26.8，元器件方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "300757.SZ",
+      "name": "罗博特科",
+      "sector": "专用机械",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 2,
+      "scores": {
+        "market_fit": 4.81,
+        "sector": 7.892,
+        "technical": 29.048,
+        "logic_purity": 14,
+        "elasticity": 12,
+        "fundamentals": 7,
+        "major_positive": 3,
+        "total": 77.75
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 2,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/index"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 3.5911,
+        "return_5d_pct": 10.172055208924192,
+        "return_20d_pct": 22.673684210526336,
+        "amount_ratio_1d_20d": 1.1962709631372648,
+        "rsi14": 63.79386286888857
+      },
+      "inclusion_rationale": "综合分77.8，技术29.0，专用机械方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "300857.SZ",
+      "name": "协创数据",
+      "sector": "IT设备",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 9,
+      "scores": {
+        "market_fit": 4.381,
+        "sector": 8.016,
+        "technical": 26.22,
+        "logic_purity": 13,
+        "elasticity": 14,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 76.617
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 2,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=300857"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.9706,
+        "return_5d_pct": 10.930025822291833,
+        "return_20d_pct": 4.045898515048041,
+        "amount_ratio_1d_20d": 1.0982890712424556,
+        "rsi14": 52.994752994753
+      },
+      "inclusion_rationale": "综合分76.6，技术26.2，IT设备方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "601869.SH",
+      "name": "长飞光纤",
+      "sector": "通信设备",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 13,
+      "scores": {
+        "market_fit": 4.317,
+        "sector": 8.809,
+        "technical": 24.754,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 74.88
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 2,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "20日涨幅较大，获利回吐风险上升"
+      ],
+      "main_risk": "20日涨幅较大，获利回吐风险上升",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=601869"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 1.9424,
+        "return_5d_pct": 5.097675377557875,
+        "return_20d_pct": 30.53777208706787,
+        "amount_ratio_1d_20d": 0.9378251085019047,
+        "rsi14": 66.45750409740107
+      },
+      "inclusion_rationale": "综合分74.9，技术24.8，通信设备方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "688668.SH",
+      "name": "鼎通科技",
+      "sector": "通信设备",
+      "segment": "科创板",
+      "origin": "official_pool",
+      "quant_rank": 28,
+      "scores": {
+        "market_fit": 4.346,
+        "sector": 8.809,
+        "technical": 22.496,
+        "logic_purity": 15,
+        "elasticity": 13,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 74.651
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688668"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.1969,
+        "return_5d_pct": 4.9511854951185486,
+        "return_20d_pct": 12.57039774727209,
+        "amount_ratio_1d_20d": 0.8022102500814963,
+        "rsi14": 50.54633512491879
+      },
+      "inclusion_rationale": "综合分74.7，技术22.5，通信设备方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "300454.SZ",
+      "name": "深信服",
+      "sector": "软件服务",
+      "segment": "创业板",
+      "origin": "official_pool",
+      "quant_rank": 17,
+      "scores": {
+        "market_fit": 3.508,
+        "sector": 6.702,
+        "technical": 26.781,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 73.991
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 2,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 1
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接",
+        "当日回撤较大，需观察次日修复力度",
+        "量能偏弱，趋势延续性待确认"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://static.cninfo.com.cn/finalpage/2026-08-22/1225490796.PDF"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": -3.4373,
+        "return_5d_pct": 15.732930835478998,
+        "return_20d_pct": 1.8598108931780821,
+        "amount_ratio_1d_20d": 0.5841720412676172,
+        "rsi14": 60.558402544619184
+      },
+      "inclusion_rationale": "综合分74.0，技术26.8，软件服务方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "603186.SH",
+      "name": "华正新材",
+      "sector": "元器件",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 18,
+      "scores": {
+        "market_fit": 4.429,
+        "sector": 7.694,
+        "technical": 24.789,
+        "logic_purity": 14,
+        "elasticity": 13,
+        "fundamentals": 7,
+        "major_positive": 3,
+        "total": 73.912
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 1,
+        "capital_acceptance": 2,
+        "expectation_gap": 3,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "20日涨幅较大，获利回吐风险上升"
+      ],
+      "main_risk": "20日涨幅较大，获利回吐风险上升",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=603186"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 5.9859,
+        "return_5d_pct": 3.3989164528086757,
+        "return_20d_pct": 51.96546810828933,
+        "amount_ratio_1d_20d": 1.1641191831752369,
+        "rsi14": 63.31649058337162
+      },
+      "inclusion_rationale": "综合分73.9，技术24.8，元器件方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "002837.SZ",
+      "name": "英维克",
+      "sector": "专用机械",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 19,
+      "scores": {
+        "market_fit": 4.707,
+        "sector": 7.892,
+        "technical": 24.265,
+        "logic_purity": 15,
+        "elasticity": 9,
+        "fundamentals": 9,
+        "major_positive": 4,
+        "total": 73.864
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 1,
+        "capital_acceptance": 1,
+        "expectation_gap": 3,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002837"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 0.5008,
+        "return_5d_pct": 6.702110520380211,
+        "return_20d_pct": 26.562201414102816,
+        "amount_ratio_1d_20d": 1.219623465504687,
+        "rsi14": 67.62589928057557
+      },
+      "inclusion_rationale": "综合分73.9，技术24.3，专用机械方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "002829.SZ",
+      "name": "星网宇达",
+      "sector": "航空",
+      "segment": "深市主板",
+      "origin": "official_pool",
+      "quant_rank": 4,
+      "scores": {
+        "market_fit": 4.207,
+        "sector": 11.243,
+        "technical": 24.985,
+        "logic_purity": 14,
+        "elasticity": 11,
+        "fundamentals": 5,
+        "major_positive": 3,
+        "total": 73.435
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 3,
+        "capital_acceptance": 1,
+        "expectation_gap": 2,
+        "chip_efficiency": 2
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/index"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 0.0,
+        "return_5d_pct": 10.445468509984623,
+        "return_20d_pct": 3.9017341040462394,
+        "amount_ratio_1d_20d": 1.197736855357197,
+        "rsi14": 51.325757575757585
+      },
+      "inclusion_rationale": "综合分73.4，技术25.0，航空方向具备量价确认，逻辑与弹性匹配。"
+    },
+    {
+      "ts_code": "600176.SH",
+      "name": "中国巨石",
+      "sector": "玻璃",
+      "segment": "沪市主板",
+      "origin": "official_pool",
+      "quant_rank": 20,
+      "scores": {
+        "market_fit": 4.127,
+        "sector": 6.681,
+        "technical": 25.607,
+        "logic_purity": 15,
+        "elasticity": 11,
+        "fundamentals": 9,
+        "major_positive": 2,
+        "total": 73.415
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 1,
+        "capital_acceptance": 2,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600176"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.5802,
+        "return_5d_pct": 11.721518987341772,
+        "return_20d_pct": 12.347250509164965,
+        "amount_ratio_1d_20d": 1.112111016362597,
+        "rsi14": 55.3995157384988
+      },
+      "inclusion_rationale": "综合分73.4，技术25.6，玻璃方向具备量价确认，逻辑与弹性匹配。"
+    }
+  ],
+  "final_external": [
+    {
+      "ts_code": "603402.SH",
+      "name": "陕西旅游",
+      "sector": "旅游景点",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 3,
+      "scores": {
+        "market_fit": 4.682,
+        "sector": 13.261,
+        "technical": 25.617,
+        "logic_purity": 15,
+        "elasticity": 18,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 87.56
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 4,
+        "theme_elasticity": 4,
+        "capital_acceptance": 4,
+        "expectation_gap": 2,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "RSI偏高，存在短线拥挤与回撤风险",
+        "偏离MA20较远，追高风险较高"
+      ],
+      "main_risk": "RSI偏高，存在短线拥挤与回撤风险",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=603402"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 5.9673,
+        "return_5d_pct": 19.422693075387688,
+        "return_20d_pct": 18.27858880778588,
+        "amount_ratio_1d_20d": 2.590673773070515,
+        "rsi14": 76.47058823529414
+      },
+      "inclusion_rationale": "旅游景点为强势板块且无同板块池内合格股；综合分87.6，仅列池外观察。"
+    },
+    {
+      "ts_code": "300859.SZ",
+      "name": "西域旅游",
+      "sector": "旅游服务",
+      "segment": "创业板",
+      "origin": "external_pool",
+      "quant_rank": 6,
+      "scores": {
+        "market_fit": 4.044,
+        "sector": 12.156,
+        "technical": 26.868,
+        "logic_purity": 15,
+        "elasticity": 15,
+        "fundamentals": 8,
+        "major_positive": 3,
+        "total": 84.068
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 3,
+        "theme_elasticity": 4,
+        "capital_acceptance": 3,
+        "expectation_gap": 2,
+        "chip_efficiency": 3
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "收盘低于当日VWAP，次日需确认承接"
+      ],
+      "main_risk": "收盘低于当日VWAP，次日需确认承接",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=300859"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 2.7254,
+        "return_5d_pct": 8.167770419426045,
+        "return_20d_pct": 8.969607116382505,
+        "amount_ratio_1d_20d": 3.3363120073538006,
+        "rsi14": 65.14657980456025
+      },
+      "inclusion_rationale": "旅游服务为强势板块且无同板块池内合格股；综合分84.1，仅列池外观察。"
+    },
+    {
+      "ts_code": "600054.SH",
+      "name": "黄山旅游",
+      "sector": "旅游景点",
+      "segment": "沪市主板",
+      "origin": "external_pool",
+      "quant_rank": 9,
+      "scores": {
+        "market_fit": 3.093,
+        "sector": 13.261,
+        "technical": 26.496,
+        "logic_purity": 15,
+        "elasticity": 15,
+        "fundamentals": 8,
+        "major_positive": 2,
+        "total": 82.85
+      },
+      "elasticity_detail": {
+        "rebound_efficiency": 2,
+        "theme_elasticity": 4,
+        "capital_acceptance": 4,
+        "expectation_gap": 1,
+        "chip_efficiency": 4
+      },
+      "data_completeness": {
+        "available_weight": 100,
+        "ratio": 1.0,
+        "scaled": false
+      },
+      "risk_annotations": [
+        "板块持续性与次日量价承接仍需确认"
+      ],
+      "main_risk": "板块持续性与次日量价承接仍需确认",
+      "evidence_as_of": "2026-09-02T20:00:00+08:00",
+      "sources": [
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600054"
+      ],
+      "selected": true,
+      "exclusion_reason": null,
+      "market_snapshot": {
+        "return_1d_pct": 1.5584,
+        "return_5d_pct": 3.16622691292876,
+        "return_20d_pct": 4.359430604982206,
+        "amount_ratio_1d_20d": 2.5735363393643382,
+        "rsi14": 69.92481203007532
+      },
+      "inclusion_rationale": "旅游景点为强势板块且无同板块池内合格股；综合分82.8，仅列池外观察。"
+    }
+  ],
+  "validation": {
+    "future_data_rows_used": 0,
+    "input_gate_passed": true,
+    "official_record_count": 30,
+    "external_record_count": 10,
+    "official_selected_count": 10,
+    "external_selected_count": 3,
+    "all_elasticity_sums_valid": true,
+    "all_scores_reconciled": true,
+    "risk_score_effect": 0,
+    "risk_rank_effect": false,
+    "legacy_fields_present": false
+  }
+}
