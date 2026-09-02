@@ -31,5 +31,7 @@
     "official_candidate_count": 30,
     "external_candidate_count": 10
   },
-  "conflict_details": "PROJECT_STATE.md 明确保留未解决冲突：历史要求V1.1风险层与V1.2风向层参与正式结果，而V2.0工作流要求移除V1.x/影子层；状态文件要求必须单独确认，不得自行解释。"
+  "conflict_details": "PROJECT_STATE.md 明确保留未解决冲突：历史要求V1.1风险层与V1.2风向层参与正式结果，而V2.0工作流要求移除V1.x/影子层；状态文件要求必须单独确认，不得自行解释。",
+  "automation_status": "paused_pending_rule_confirmation",
+  "project_state_updated": true
 }
