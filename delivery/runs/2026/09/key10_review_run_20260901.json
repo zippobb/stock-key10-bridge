@@ -1,12 +1,12 @@
 {
   "run_date": "20260901",
-  "state": "running",
+  "state": "completed",
   "attempt_no": 0,
   "role": "acceptance",
   "owner": "9月1日全链路验收",
   "started_at": "2026-09-02T01:34:46+08:00",
-  "heartbeat_at": "2026-09-02T01:34:46+08:00",
-  "finished_at": null,
-  "completed_stage": "input_validation",
+  "heartbeat_at": "2026-09-02T01:47:00+08:00",
+  "finished_at": "2026-09-02T01:47:00+08:00",
+  "completed_stage": "end_to_end_acceptance",
   "bundle_sha256": "d31926dab165b33b2f62d20075386cd5f700e6a674822e9070a5f3de7ec8d4f0"
 }
