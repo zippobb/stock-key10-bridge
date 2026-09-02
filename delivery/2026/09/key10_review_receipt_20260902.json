@@ -1,0 +1,35 @@
+{
+  "run_date": "20260902",
+  "started_at": "2026-09-02T20:03:53.290+08:00",
+  "finished_at": "2026-09-02T20:05:25.603+08:00",
+  "status": "执行失败",
+  "trade_date": "20260902",
+  "bundle_sha256": "dc7c1f28b48c0f2f80a3811ea935284c2e6a5d5f67d0221f75d017df633cf47b",
+  "completed_stage": "data_gate",
+  "failure_stage": "rule_conflict_before_stage_A",
+  "missing_items": [
+    "用户需明确：V1.1风险层与V1.2风向层是否已被V2.0彻底替代"
+  ],
+  "result_json_path": null,
+  "png_delivery_status": "not_generated",
+  "summary": "当日V2.0数据门槛通过，但权威状态文件记录的影子层替代关系冲突未解决；按冲突处理规则停止评分。",
+  "attempt_no": 0,
+  "retryable": false,
+  "error_class": "rule_conflict",
+  "resume_from": "resolve_rule_conflict_then_stage_A",
+  "retry_exhausted": false,
+  "role": "primary",
+  "input_checks": {
+    "manifest_path": "latest/manifest.json",
+    "archive_path": "archive/2026/09/key10_bundle_20260902.json",
+    "latest_bundle_path": "latest/key10_bundle_latest.json",
+    "manifest_archive_latest_match": true,
+    "schema_version": "2.0.0",
+    "model_version": "V2.0",
+    "stage": "21:30_quantitative_review_payload",
+    "future_data_rows_used": 0,
+    "official_candidate_count": 30,
+    "external_candidate_count": 10
+  },
+  "conflict_details": "PROJECT_STATE.md 明确保留未解决冲突：历史要求V1.1风险层与V1.2风向层参与正式结果，而V2.0工作流要求移除V1.x/影子层；状态文件要求必须单独确认，不得自行解释。"
+}
