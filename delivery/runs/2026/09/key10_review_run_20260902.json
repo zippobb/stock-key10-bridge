@@ -1,18 +1,18 @@
 {
   "run_date": "20260902",
-  "state": "failed",
+  "state": "running",
   "attempt_no": 0,
   "role": "primary",
-  "owner": "primary",
+  "owner": "primary_manual_resume",
   "started_at": "2026-09-02T20:03:53.290+08:00",
-  "heartbeat_at": "2026-09-02T20:05:25.603+08:00",
-  "finished_at": "2026-09-02T20:05:25.603+08:00",
+  "heartbeat_at": "2026-09-02T20:09:12.226+08:00",
+  "finished_at": null,
   "completed_stage": "data_gate",
   "bundle_sha256": "dc7c1f28b48c0f2f80a3811ea935284c2e6a5d5f67d0221f75d017df633cf47b",
   "note": "Data gate passed; evaluating authoritative rule conflict before Stage A.",
-  "failure_stage": "rule_conflict_before_stage_A",
-  "error_class": "rule_conflict",
-  "retryable": false,
-  "resume_from": "用户明确确认V1影子层是否被V2.0彻底替代后，从阶段A开始",
-  "conflict_details": "PROJECT_STATE.md 明确保留未解决冲突：历史要求V1.1风险层与V1.2风向层参与正式结果，而V2.0工作流要求移除V1.x/影子层；状态文件要求必须单独确认，不得自行解释。"
+  "failure_stage": null,
+  "error_class": null,
+  "retryable": null,
+  "resume_from": "stage_A",
+  "user_resolution": "V2.0完全替代V1.1风险层、V1.2风向层及任何影子层"
 }
