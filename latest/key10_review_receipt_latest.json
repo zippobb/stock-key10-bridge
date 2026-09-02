@@ -1,24 +1,25 @@
 {
   "run_date": "20260902",
   "started_at": "2026-09-02T20:03:53.290+08:00",
-  "finished_at": "2026-09-02T20:05:25.603+08:00",
-  "status": "执行失败",
+  "finished_at": "2026-09-02T20:15:27.620+08:00",
+  "status": "已完成",
   "trade_date": "20260902",
   "bundle_sha256": "dc7c1f28b48c0f2f80a3811ea935284c2e6a5d5f67d0221f75d017df633cf47b",
-  "completed_stage": "data_gate",
-  "failure_stage": "rule_conflict_before_stage_A",
-  "missing_items": [
-    "用户需明确：V1.1风险层与V1.2风向层是否已被V2.0彻底替代"
-  ],
-  "result_json_path": null,
-  "png_delivery_status": "not_generated",
-  "summary": "当日V2.0数据门槛通过，但权威状态文件记录的影子层替代关系冲突未解决；按冲突处理规则停止评分。",
+  "completed_stage": "persistent_delivery",
+  "failure_stage": null,
+  "missing_items": [],
+  "result_json_path": "review/2026/09/key10_review_20260902.json",
+  "png_delivery_status": "generated_1024x2048_visual_checked_and_attached",
+  "png_artifact": "sandbox:/workspace/scratch/b93563179a73/key10_review_20260902.png",
+  "summary": "用户确认V2.0完全替代旧影子层后，从已通过的数据门槛检查点恢复；完成40只候选终审、正式JSON、池内10只、池外3只及PNG交付。",
   "attempt_no": 0,
   "retryable": false,
-  "error_class": "rule_conflict",
-  "resume_from": "resolve_rule_conflict_then_stage_A",
+  "error_class": null,
+  "resume_from": null,
   "retry_exhausted": false,
   "role": "primary",
+  "manual_resume_after_user_confirmation": true,
+  "automation_status": "enabled",
   "input_checks": {
     "manifest_path": "latest/manifest.json",
     "archive_path": "archive/2026/09/key10_bundle_20260902.json",
@@ -31,7 +32,22 @@
     "official_candidate_count": 30,
     "external_candidate_count": 10
   },
-  "conflict_details": "PROJECT_STATE.md 明确保留未解决冲突：历史要求V1.1风险层与V1.2风向层参与正式结果，而V2.0工作流要求移除V1.x/影子层；状态文件要求必须单独确认，不得自行解释。",
-  "automation_status": "paused_pending_rule_confirmation",
-  "project_state_updated": true
+  "output_checks": {
+    "review_json": true,
+    "review_json_reread": true,
+    "official_selected_count": 10,
+    "external_selected_count": 3,
+    "all_elasticity_sums_valid": true,
+    "all_scores_reconciled": true,
+    "risk_score_effect": 0,
+    "risk_rank_effect": false,
+    "legacy_fields_present": false,
+    "png": true,
+    "png_dimensions": "1024x2048",
+    "png_visual_check": true,
+    "date_receipt": true,
+    "latest_receipt": true,
+    "visible_completion": true
+  },
+  "rule_resolution": "V2.0完全替代V1.1风险层、V1.2风向层及任何影子层"
 }
