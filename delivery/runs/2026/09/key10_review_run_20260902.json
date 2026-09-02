@@ -1,0 +1,13 @@
+{
+  "run_date": "20260902",
+  "state": "running",
+  "attempt_no": 0,
+  "role": "primary",
+  "owner": "primary",
+  "started_at": "2026-09-02T20:03:53.290+08:00",
+  "heartbeat_at": "2026-09-02T20:03:53.290+08:00",
+  "finished_at": null,
+  "completed_stage": "data_gate",
+  "bundle_sha256": "dc7c1f28b48c0f2f80a3811ea935284c2e6a5d5f67d0221f75d017df633cf47b",
+  "note": "Data gate passed; evaluating authoritative rule conflict before Stage A."
+}
