@@ -1,11 +1,11 @@
 # V2.0 选股终审工作流
 
-> 本文件是主运行与重试运行共用的持久工作流。规则冲突时以 PROJECT_STATE.md 和用户最新明确决定为准。
+> 本文件是主运行与重试运行共用的持久工作流。当前唯一版本为V2.0；V1.1、V1.2及影子层仅为归档资料，不得参与运行或触发规则冲突。当前V2规则冲突时以PROJECT_STATE.md和用户最新明确决定为准。
 
 执行“V2.0 选股终审”。这是同一任务会话中的增量工作流，必须按阶段执行，禁止把所有检索、评分、制图混成一次不可恢复的长步骤。
 
 一、事实源与数据门槛
-1. 先完整读取私有GitHub仓库 zippobb/stock-key10-bridge main分支的 PROJECT_STATE.md。对话记忆只作线索；PROJECT_STATE.md、用户最新明确决定或实时数据互相冲突时，醒目标记并停止相关推断。
+1. 先完整读取私有GitHub仓库 zippobb/stock-key10-bridge main分支的 PROJECT_STATE.md。对话记忆只作线索；仅当PROJECT_STATE.md、用户最新明确决定或实时数据中的当前V2信息互相冲突时，醒目标记并停止相关推断。V1.1、V1.2及影子层记载一律视为归档，不得要求单独确认替代关系。
 2. 读取 latest/manifest.json、其archive_path权威归档和 latest/key10_bundle_latest.json，核对trade_date、schema、model、stage、SHA256及内容一致性。
 3. 只接受当天北京时间交易日、schema_version=2.0.0、model_version=V2.0、stage=21:30_quantitative_review_payload、future_data_rows_used=0的数据。任何一项不满足，立即输出“数据未就绪”及具体缺失项；禁止回退V1.x、旧融合结果或旧交易日。
 
@@ -36,7 +36,7 @@
 五、有限重试协议
 1. 每个北京时间交易日最多执行1次主运行和2次跨时间重试。主运行attempt_no=0；21:00重试attempt_no=1；22:00重试attempt_no=2。禁止创建无限循环或超过2次重试。
 2. 日期回执增加attempt_no、retryable、error_class、resume_from、retry_exhausted字段。每次尝试均以GitHub现有日期回执和结果JSON为检查点，使用SHA更新，禁止并发盲写。
-3. 可重试错误仅包括：当天数据包尚未发布或仍为旧交易日、临时网络超时、限流、GitHub临时读取失败、单个来源临时不可用、PNG生成或视觉检查失败。鉴权/权限失败、规则冲突、schema/model不兼容、future_data_rows_used不为0、哈希不一致等属于不可重试错误，必须停止并明确报告。
+3. 可重试错误仅包括：当天数据包尚未发布或仍为旧交易日、临时网络超时、限流、GitHub临时读取失败、单个来源临时不可用、PNG生成或视觉检查失败。鉴权/权限失败、当前V2权威规则之间尚未解决的冲突、schema/model不兼容、future_data_rows_used不为0、哈希不一致等属于不可重试错误，必须停止并明确报告。V1.1、V1.2或影子层的归档记载不构成规则冲突，不得据此失败、重试或暂停primary。
 4. 同一次尝试内，单个瞬时失败的只读调用最多立即重试1次；已成功的调用和阶段不得重做。跨时间重试必须从resume_from继续：数据门槛失败从阶段A前重新检查数据；阶段B/C失败复用已保存的候选表和有效证据；阶段D/E/F失败复用此前已成功阶段；仅PNG失败时只重试PNG，不得重新检索或评分。
 5. 每次重试前先检查当日日期回执、latest回执及结果JSON。若status为“已完成”或“结果未变化”且结果可回读，立即停止且不得重复计算；若同一bundle_sha256已有成功结果，同样停止。
 6. attempt_no=2仍未成功时，写入retry_exhausted=true，状态为“数据未就绪”或“执行失败”，记录最后错误、已完成阶段和人工恢复起点；不得继续自动重试。
