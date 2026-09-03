@@ -6,10 +6,10 @@
 ## 元数据
 
 - 状态文件版本：1.0
-- 最后更新：2026-09-04 00:55 Asia/Shanghai
+- 最后更新：2026-09-04 01:26 Asia/Shanghai
 - GitHub 仓库：`zippobb/stock-key10-bridge`
 - 服务器项目目录（2026-09-02实时验证）：`/opt/stock-automation/scanner`
-- 当前总体状态：V2.0替代关系已确认为唯一现行权威；旧层冲突已清除；保留20260902既有回执与运行历史，等待新的primary复跑验收
+- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一，等待下一交易日端到端验收；正式JSON/PNG仍由ChatGPT终审任务生成
 
 ## 权威性与冲突处理
 
@@ -87,7 +87,7 @@
 ### 输出与职责
 
 - 正式结果包括JSON、七项分数、五项弹性明细、风险标记、信息截止时间、未来数据使用校验及PNG。
-- 网页版ChatGPT负责审核、终审与规则优化；桌面版Codex负责服务器实施，这是历史上已确认的职责分工。
+- 产物责任矩阵：ECS仅生成量化候选包并发布到GitHub；ChatGPT终审任务完成真实终审并生成正式JSON和PNG；Codex仅执行服务器检查与维护。
 - 不得把任务“已设置”当成任务“已成功执行”。
 - 成功、结果未变化、数据未就绪、执行失败均应提供用户可见回执；没有可见回执不得视为交付完成。
 
@@ -110,25 +110,25 @@
 
 ### ChatGPT定时任务
 
-实时检查时间：2026-09-02 20:05 Asia/Shanghai。
+实时检查时间：2026-09-04 01:26 Asia/Shanghai。
 
 任务快照：
 
 - `V2.0选股终审主任务`
   - 状态：已启用；2026-09-03重新创建，原同名历史任务已不可更新并保持禁用
-  - 配置时间：交易日17:00，Asia/Shanghai
+  - 配置时间：交易日18:35，Asia/Shanghai
   - 最近运行：新任务尚未运行，下一次按计划执行
   - 配置为只接受当天交易日、V2.0、`stage=21:30_quantitative_review_payload`、未来数据为0的数据包
-  - 调度：交易日17:00，`exact_schedule`
+  - 调度：交易日18:35，`exact_schedule`
   - `next_run_time` 仍不作为调度健康依据，改用运行回执和最终交付复核验收
 - `V2.0终审有限重试`
-  - 状态：已启用；第一次重试为交易日17:30，Asia/Shanghai，`exact_schedule`
-  - 第二次重试：原独立漏跑检查任务已改造为 `V2.0终审第二次重试`，交易日18:00，Asia/Shanghai，`exact_schedule`
+  - 状态：已启用；第一次重试为交易日18:45，Asia/Shanghai，`exact_schedule`
+  - 第二次重试：原独立漏跑检查任务已改造为 `V2.0终审第二次重试`，交易日18:55，Asia/Shanghai，`exact_schedule`
   - 主运行后最多重试2次；成功即停止，只重试数据迟到或瞬时故障，并从GitHub检查点恢复
   - 使用90分钟运行锁防止主任务或两次重试重叠；第二次失败后写入 `retry_exhausted=true`，不再自动重试
 - 独立漏跑检查已取消；原任务已改造为 `V2.0终审第二次重试`，不再占用额外调度名额。
 - `终审交付复核`
-  - 配置时间：交易日18:50，Asia/Shanghai，`exact_schedule`
+  - 配置时间：交易日18:58，Asia/Shanghai，`exact_schedule`
   - 每次都提供可见复核回执；核验当天日期回执、latest回执、正式结果JSON及字段一致性，缺失时明确告警
   - 主任务现须将正式结果写入 `review/YYYY/MM/`，并最后写入 `delivery/YYYY/MM/` 日期回执及 `latest/key10_review_receipt_latest.json`；持久回执回读成功且任务会话已回复才算完成
 - `标普周期与轮动`
@@ -145,7 +145,7 @@
 - 服务器用户：`root`
 - 项目目录：`/opt/stock-automation/scanner`
 - Windows本地Codex项目：`C:\\Users\\ROG\\stock-key10-remote`
-- 工作方式：Codex在Windows运行，通过 `ssh stock-server` 执行服务器命令；不在服务器上运行Codex。
+- 工作方式：本次由Codex通过ECS Workbench直连执行服务器命令；未使用SSH，且不在服务器上运行Codex。
 - 已验证：SSH密钥认证成功；systemd为`running`；`stock-key10-result-mcp.service`为active/running；`stock-key10-daily.timer`和`stock-key10-github-publish.timer`为active/waiting。
 - 安全收尾：服务器上的临时 `/root/.codex/auth.json` 副本已删除。
 
@@ -179,6 +179,19 @@
 - 20260903 正式结果 JSON、日期回执和最终 PNG 当前尚未生成。
 - `latest/key10_review_receipt_latest.json` 仍指向20260902已完成结果；下一次主终审应处理20260903最新 bundle，并生成对应正式结果与PNG。
 - 当前工作会话未能直接访问 ECS，服务器 timer/service 状态待下一次服务器连接验收；本段只确认 GitHub 桥接状态。
+
+## 本次实时调度重排核验
+
+核验时间：2026-09-04 01:26 Asia/Shanghai。核验方式：ECS Workbench直连；未读取 `.env`，未运行选股任务。
+
+- 完整当日行情可靠获取门槛保持为18:15；未修改V2入口中的数据截止逻辑。
+- `stock-key10-daily.timer`：交易日18:20 Asia/Shanghai，`enabled / active`。
+- `stock-key10-github-publish.timer`：交易日18:30 Asia/Shanghai，`enabled / active`。
+- `stock-key10-daily.service`：实际入口仍为V2.0量化脚本，18:20描述已同步；`ExecStartPost`仍负责bundle导出，`OnSuccess`仍连接GitHub发布服务。
+- `strategy_v2.json`：`schedule.quantitative_run=18:20`、`schedule.final_review=18:35`；顶层`final_review`评分配置对象未改；`21:30_quantitative_review_payload`仅保留为阶段兼容标签。
+- 本次仅执行配置同步与`systemctl daemon-reload`，未启动或重启任何服务。
+- ECS配置备份：`/root/stock-key10-backups/step_schedule_metadata_20260903T172641Z/`。
+- ChatGPT当前V2.0任务时间为18:35主终审、18:45第一次重试、18:55第二次重试、18:58交付复核；标普任务保持不变，其余非V2任务已停用。
 
 ## 禁止事项
 
@@ -235,3 +248,5 @@
 - 2026-09-02：按用户最新确认固化V2唯一权威：V2.0完全替代V1.1/V1.2，取消影子层，旧版本仅归档；清除由旧替代关系产生的重试分类冲突，保留20260902既有回执与运行历史。
 - 2026-09-04：发现旧版“V2.0 选股终审”和有限重试调度记录已不可更新；已新建并启用 V2.0 主终审（交易日20:00）与有限重试（交易日21:00、22:00），并将终审漏跑监控改为检查新主任务名称。
 - 2026-09-04：按用户要求将V2.0主终审调整为17:00，第一次重试17:30，第二次重试18:00，交付复核18:50，全部早于19:00；独立漏跑检查改造为第二次重试；标普任务保持不动；非V2任务全部停用。
+
+- 2026-09-04：根据完整当日行情可靠获取门槛18:15完成最终时间校准：ECS量化18:20、GitHub发布18:30、ChatGPT终审18:35、有限重试18:45/18:55、交付复核18:58，最晚不超过19:00；标普任务未改，其他任务已停用。ECS timer、service描述及V2.0配置调度字段已同步；正式JSON/PNG生产责任仍归ChatGPT终审任务。
