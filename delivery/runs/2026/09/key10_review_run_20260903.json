@@ -1,12 +1,12 @@
 {
   "run_date": "20260903",
-  "state": "running",
+  "state": "completed",
   "attempt_no": 0,
   "started_at": "2026-09-04T01:40:18+08:00",
-  "heartbeat_at": "2026-09-04T01:40:18+08:00",
-  "finished_at": null,
+  "heartbeat_at": "2026-09-04T01:52:49+08:00",
+  "finished_at": "2026-09-04T01:52:49+08:00",
   "owner": "temporary_acceptance",
-  "completed_stage": "input_validation",
+  "completed_stage": "persistent_delivery",
   "failure_stage": null,
-  "resume_from": "stage_A"
+  "resume_from": null
 }
