@@ -1,0 +1,33 @@
+{
+  "run_date": "20260903",
+  "started_at": "2026-09-04T01:40:18+08:00",
+  "finished_at": "2026-09-04T01:52:49+08:00",
+  "status": "已完成",
+  "trade_date": "20260903",
+  "attempt_no": 0,
+  "retryable": false,
+  "error_class": null,
+  "bundle_sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9",
+  "completed_stage": "persistent_delivery",
+  "failure_stage": null,
+  "missing_items": [],
+  "resume_from": null,
+  "retry_exhausted": false,
+  "result_json_path": "review/2026/09/key10_review_20260903.json",
+  "png_path": "review/2026/09/key10_review_20260903.png",
+  "png_sha256": "af0d309c91779b3f57d94e5312d7f0f85466962e3342b1180cb59995d7570779",
+  "png_delivery_status": "generated_1024x2048_visual_checked_and_uploaded",
+  "acceptance_scope": "end_to_end_20260903",
+  "chain_checks": {
+    "server_output_reference": "manifest/archive bridge verified",
+    "github_manifest": true,
+    "github_latest": true,
+    "github_archive": true,
+    "review_json": true,
+    "png": true,
+    "date_receipt": true,
+    "latest_receipt": true,
+    "visible_completion": true
+  },
+  "summary": "V2.0一次性端到端验收完成：量化包、权威归档、终审JSON、1024x2048 PNG及双回执均已写入并完成回读校验。"
+}
