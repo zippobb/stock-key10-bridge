@@ -1,0 +1,4163 @@
+{
+  "schema_version": "2.0.0",
+  "model_version": "V2.0",
+  "stage": "final_review",
+  "trade_date": "20260903",
+  "review_as_of": "2026-09-03T18:35:00+08:00",
+  "future_information_used": false,
+  "future_data_rows_used": 0,
+  "input": {
+    "manifest_path": "latest/manifest.json",
+    "archive_path": "archive/2026/09/key10_bundle_20260903.json",
+    "latest_bundle_path": "latest/key10_bundle_latest.json",
+    "bundle_sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+  },
+  "scoring": {
+    "weights": {
+      "elasticity": 20,
+      "fundamentals": 10,
+      "logic_purity": 15,
+      "major_positive": 5,
+      "market_fit": 5,
+      "sector": 15,
+      "technical": 30
+    },
+    "minimum_final_score": 60,
+    "official_limit": 10,
+    "external_limit": 3,
+    "risk_score_effect": 0,
+    "risk_rank_effect": false
+  },
+  "market_overview": {
+    "above_ma20_ratio_pct": 51.1263,
+    "advance_count": 1846,
+    "advance_ratio_pct": 33.2673,
+    "decline_count": 3570,
+    "major_indices": [
+      {
+        "close": 3942.0879,
+        "ma20": 3938.0115,
+        "name": "上证综指",
+        "return_1d_pct": 0.0178,
+        "return_5d_pct": -0.3661,
+        "trend": "震荡",
+        "ts_code": "000001.SH"
+      },
+      {
+        "close": 13625.1217,
+        "ma20": 14086.8462,
+        "name": "深证成指",
+        "return_1d_pct": 0.0997,
+        "return_5d_pct": -3.0163,
+        "trend": "下跌",
+        "ts_code": "399001.SZ"
+      },
+      {
+        "close": 3312.5411,
+        "ma20": 3501.1616,
+        "name": "创业板指",
+        "return_1d_pct": 0.009,
+        "return_5d_pct": -4.6299,
+        "trend": "下跌",
+        "ts_code": "399006.SZ"
+      }
+    ],
+    "market_amount_yi": 17802.3763,
+    "market_median_return_1d_pct": -0.6803,
+    "phase": "退潮",
+    "posture": "防守",
+    "trade_date": "20260903",
+    "unchanged_count": 133
+  },
+  "sector_rotation": {
+    "basis": "相邻交易日板块价格强度、排名、收益和量能字段的量化比较",
+    "warming_sectors": [
+      {
+        "sector": "水运",
+        "current_rank": 2,
+        "previous_rank": 99,
+        "current_score": 13.167273,
+        "previous_strength": 0.2181818181818182,
+        "current_strength": 0.9031818181818181,
+        "strength_change": 0.685,
+        "return_1d_mean_pct": 3.217678947368421,
+        "up_1d_ratio_pct": 89.47368421052632,
+        "volume_expansion_ratio_pct": 63.1578947368421
+      },
+      {
+        "sector": "保险",
+        "current_rank": 1,
+        "previous_rank": 60,
+        "current_score": 14.335455,
+        "previous_strength": 0.49545454545454537,
+        "current_strength": 0.9286363636363636,
+        "strength_change": 0.433182,
+        "return_1d_mean_pct": 2.5637,
+        "up_1d_ratio_pct": 100,
+        "volume_expansion_ratio_pct": 100
+      },
+      {
+        "sector": "铝",
+        "current_rank": 23,
+        "previous_rank": 95,
+        "current_score": 9.201515,
+        "previous_strength": 0.2540909090909091,
+        "current_strength": 0.6309090909090909,
+        "strength_change": 0.376818,
+        "return_1d_mean_pct": 0.8919833333333334,
+        "up_1d_ratio_pct": 60,
+        "volume_expansion_ratio_pct": 13.333333333333334
+      }
+    ],
+    "cooling_sectors": [
+      {
+        "sector": "化工机械",
+        "current_rank": 90,
+        "previous_rank": 27,
+        "current_score": 5.034476,
+        "previous_strength": 0.6622727272727273,
+        "current_strength": 0.21636363636363634,
+        "strength_change": -0.445909,
+        "return_1d_mean_pct": -2.250392307692308,
+        "up_1d_ratio_pct": 23.076923076923077,
+        "volume_expansion_ratio_pct": 30.76923076923077
+      },
+      {
+        "sector": "通信设备",
+        "current_rank": 86,
+        "previous_rank": 14,
+        "current_score": 5.212005,
+        "previous_strength": 0.7786363636363636,
+        "current_strength": 0.4331818181818183,
+        "strength_change": -0.345455,
+        "return_1d_mean_pct": -0.7812588235294118,
+        "up_1d_ratio_pct": 22.794117647058822,
+        "volume_expansion_ratio_pct": 16.911764705882355
+      },
+      {
+        "sector": "塑料",
+        "current_rank": 60,
+        "previous_rank": 10,
+        "current_score": 6.527955,
+        "previous_strength": 0.8036363636363636,
+        "current_strength": 0.47045454545454546,
+        "strength_change": -0.333182,
+        "return_1d_mean_pct": -1.381255,
+        "up_1d_ratio_pct": 23.75,
+        "volume_expansion_ratio_pct": 33.75
+      }
+    ],
+    "all_sector_count": 110
+  },
+  "candidates": [
+    {
+      "ts_code": "688028.SH",
+      "name": "沃尔德",
+      "origin": "official_pool",
+      "sector": "机械基件",
+      "segment": "科创板",
+      "trade_date": "20260903",
+      "quant_rank": 1,
+      "quant_score": 40.381539,
+      "market_fit_score": 4.923077,
+      "sector_score": 9.094565,
+      "technical_score": 26.363897,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 68.381539,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "机械基件处于强势板块范围，量化排名1，技术分26.36；量价与趋势结构形成共振，终审综合分68.38达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 8.9301,
+        "return_5d_pct": 7.912064570943089,
+        "return_10d_pct": 14.1685393258427,
+        "return_20d_pct": 23.163636363636364,
+        "rsi14": 61.269984237784286,
+        "atr14_pct": 6.626175713863932,
+        "distance_ma20_atr": 1.4643114788881813,
+        "close_location": 0.7485131690739172,
+        "close_vs_vwap_pct": 3.2537692585424383,
+        "amount_ratio_1d_20d": 2.0934576640741906,
+        "volume_ratio_1d_prior_10d": 2.406556039443822
+      }
+    },
+    {
+      "ts_code": "002272.SZ",
+      "name": "川润股份",
+      "origin": "official_pool",
+      "sector": "机械基件",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 2,
+      "quant_score": 39.56324,
+      "market_fit_score": 4.827586,
+      "sector_score": 9.094565,
+      "technical_score": 25.641089,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 3,
+          "capital_support": 3,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 67.56324,
+      "risk_annotations": [
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "机械基件处于强势板块范围，量化排名2，技术分25.64；量价与趋势结构形成共振，终审综合分67.56达到60分门槛。",
+      "main_risk": "偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 5.8407,
+        "return_5d_pct": 6.722189173111248,
+        "return_10d_pct": 24.238227146814427,
+        "return_20d_pct": 22.792607802874755,
+        "rsi14": 67.23716381418093,
+        "atr14_pct": 5.482560917343524,
+        "distance_ma20_atr": 2.1482933914306463,
+        "close_location": 0.8288288288288308,
+        "close_vs_vwap_pct": 0.4943787783564524,
+        "amount_ratio_1d_20d": 1.4635941593670225,
+        "volume_ratio_1d_prior_10d": 1.297280171046317
+      }
+    },
+    {
+      "ts_code": "000816.SZ",
+      "name": "智慧农业",
+      "origin": "official_pool",
+      "sector": "农用机械",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 3,
+      "quant_score": 39.560137,
+      "market_fit_score": 2.517241,
+      "sector_score": 11.452378,
+      "technical_score": 25.590518,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 9,
+        "factors": {
+          "rebound_efficiency": 1,
+          "theme_elasticity": 3,
+          "capital_support": 1,
+          "expectation_gap": 4,
+          "chip_push_efficiency": 0
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 62.560137,
+      "risk_annotations": [
+        "量能未明显放大，持续性待确认"
+      ],
+      "selection_reason": "农用机械处于强势板块范围，量化排名3，技术分25.59；量价与趋势结构形成共振，终审综合分62.56达到60分门槛。",
+      "main_risk": "量能未明显放大，持续性待确认",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": -1.6949,
+        "return_5d_pct": -4.605263157894745,
+        "return_10d_pct": 3.942652329749108,
+        "return_20d_pct": 8.208955223880587,
+        "rsi14": 57.84313725490194,
+        "atr14_pct": 4.679802955665025,
+        "distance_ma20_atr": 0.40526315789473805,
+        "close_location": 0.12499999999999722,
+        "close_vs_vwap_pct": -0.5685710707584168,
+        "amount_ratio_1d_20d": 0.8241222830995101,
+        "volume_ratio_1d_prior_10d": 0.692604412283491
+      }
+    },
+    {
+      "ts_code": "600186.SH",
+      "name": "莲花控股",
+      "origin": "official_pool",
+      "sector": "食品",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 4,
+      "quant_score": 39.516684,
+      "market_fit_score": 4.587302,
+      "sector_score": 5.956623,
+      "technical_score": 28.972759,
+      "logic_purity": {
+        "score": 8,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 64.516684,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "食品处于强势板块范围，量化排名4，技术分28.97；量价与趋势结构形成共振，终审综合分64.52达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 4.3845,
+        "return_5d_pct": 5.90248075278017,
+        "return_10d_pct": 12.34119782214158,
+        "return_20d_pct": 27.892561983471076,
+        "rsi14": 52.85714285714286,
+        "atr14_pct": 6.692822524809605,
+        "distance_ma20_atr": 0.9799999999999985,
+        "close_location": 0.8378378378378389,
+        "close_vs_vwap_pct": 1.4936876617024586,
+        "amount_ratio_1d_20d": 1.258613400124312,
+        "volume_ratio_1d_prior_10d": 1.4770127688111698
+      }
+    },
+    {
+      "ts_code": "002046.SZ",
+      "name": "国机精工",
+      "origin": "official_pool",
+      "sector": "机械基件",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 5,
+      "quant_score": 39.220115,
+      "market_fit_score": 4.448276,
+      "sector_score": 9.094565,
+      "technical_score": 25.677274,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 13,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 2,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 65.220115,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "机械基件处于强势板块范围，量化排名5，技术分25.68；量价与趋势结构形成共振，终审综合分65.22达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 4.232,
+        "return_5d_pct": 1.4299332697807365,
+        "return_10d_pct": 10.83333333333334,
+        "return_20d_pct": 14.927630157701465,
+        "rsi14": 62.915936952714546,
+        "atr14_pct": 6.040547798066594,
+        "distance_ma20_atr": 1.1339408757501683,
+        "close_location": 0.8544776119402987,
+        "close_vs_vwap_pct": 1.386824757132632,
+        "amount_ratio_1d_20d": 1.1035796296787863,
+        "volume_ratio_1d_prior_10d": 1.1848853302211768
+      }
+    },
+    {
+      "ts_code": "000807.SZ",
+      "name": "云铝股份",
+      "origin": "official_pool",
+      "sector": "铝",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 6,
+      "quant_score": 38.346681,
+      "market_fit_score": 4,
+      "sector_score": 9.201515,
+      "technical_score": 25.145166,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 13,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 64.346681,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "铝处于强势板块范围，量化排名6，技术分25.15；量价与趋势结构形成共振，终审综合分64.35达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 3.0486,
+        "return_5d_pct": 2.585237916822769,
+        "return_10d_pct": 8.392715756136182,
+        "return_20d_pct": 2.7006751687921993,
+        "rsi14": 62.22961730449251,
+        "atr14_pct": 2.900970468538034,
+        "distance_ma20_atr": 0.941726618705038,
+        "close_location": 0.5647058823529407,
+        "close_vs_vwap_pct": -0.35835328303136516,
+        "amount_ratio_1d_20d": 1.352075886106594,
+        "volume_ratio_1d_prior_10d": 1.5347740542654715
+      }
+    },
+    {
+      "ts_code": "002980.SZ",
+      "name": "华盛昌",
+      "origin": "official_pool",
+      "sector": "电器仪表",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 7,
+      "quant_score": 38.184458,
+      "market_fit_score": 4.862069,
+      "sector_score": 5.33101,
+      "technical_score": 27.991379,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 64.184458,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动"
+      ],
+      "selection_reason": "电器仪表处于强势板块范围，量化排名7，技术分27.99；量价与趋势结构形成共振，终审综合分64.18达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 10.0041,
+        "return_5d_pct": 4.517393434590877,
+        "return_10d_pct": 8.84784161649148,
+        "return_20d_pct": 34.961407060609886,
+        "rsi14": 60.32821976453799,
+        "atr14_pct": 7.3484503495754225,
+        "distance_ma20_atr": 1.4253257996901474,
+        "close_location": 1,
+        "close_vs_vwap_pct": 1.68032264199931,
+        "amount_ratio_1d_20d": 1.552894310173566,
+        "volume_ratio_1d_prior_10d": 1.444553310691167
+      }
+    },
+    {
+      "ts_code": "600172.SH",
+      "name": "黄河旋风",
+      "origin": "official_pool",
+      "sector": "矿物制品",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 8,
+      "quant_score": 38.180169,
+      "market_fit_score": 4.761905,
+      "sector_score": 5.39899,
+      "technical_score": 28.019274,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 2,
+          "capital_support": 4,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 65.180169,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "历史波动率较高，需控制隔夜波动"
+      ],
+      "selection_reason": "矿物制品处于强势板块范围，量化排名8，技术分28.02；量价与趋势结构形成共振，终审综合分65.18达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；历史波动率较高，需控制隔夜波动",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 7.9322,
+        "return_5d_pct": 8.966461327857633,
+        "return_10d_pct": 18.452380952380953,
+        "return_20d_pct": 35.60477001703577,
+        "rsi14": 72.91666666666669,
+        "atr14_pct": 7.578068916008614,
+        "distance_ma20_atr": 1.8977501480165766,
+        "close_location": 0.7891156462585032,
+        "close_vs_vwap_pct": 1.1774016373266472,
+        "amount_ratio_1d_20d": 2.2915302350063405,
+        "volume_ratio_1d_prior_10d": 2.085511904602345
+      }
+    },
+    {
+      "ts_code": "002829.SZ",
+      "name": "星网宇达",
+      "origin": "official_pool",
+      "sector": "航空",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 9,
+      "quant_score": 38.090538,
+      "market_fit_score": 3.844828,
+      "sector_score": 9.876587,
+      "technical_score": 24.369123,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 10,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 2,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 0
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 61.090538,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "航空处于强势板块范围，量化排名9，技术分24.37；量价与趋势结构形成共振，终审综合分61.09达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": -0.51,
+        "return_5d_pct": 8.32912670368502,
+        "return_10d_pct": 8.438605356240526,
+        "return_20d_pct": 3.571428571428581,
+        "rsi14": 54.09181636726547,
+        "atr14_pct": 3.7944348289175847,
+        "distance_ma20_atr": 1.0438596491228052,
+        "close_location": 0.13636363636364113,
+        "close_vs_vwap_pct": -0.6728546480269659,
+        "amount_ratio_1d_20d": 0.9843380493620051,
+        "volume_ratio_1d_prior_10d": 1.1223274504200833
+      }
+    },
+    {
+      "ts_code": "300757.SZ",
+      "name": "罗博特科",
+      "origin": "official_pool",
+      "sector": "专用机械",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 10,
+      "quant_score": 37.452473,
+      "market_fit_score": 4.349206,
+      "sector_score": 5.734638,
+      "technical_score": 27.368629,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 9,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 2,
+          "capital_support": 2,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 0
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 58.452473,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "专用机械处于强势板块范围，量化排名10，技术分27.37；量价与趋势结构形成共振，终审综合分58.45达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "终审综合分58.45低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 0.429,
+        "return_5d_pct": 5.993370886236438,
+        "return_10d_pct": 16.316511299715764,
+        "return_20d_pct": 24.2726693565513,
+        "rsi14": 62.984088862203556,
+        "atr14_pct": 5.369836929987303,
+        "distance_ma20_atr": 1.91418829840433,
+        "close_location": 0.21295089091699665,
+        "close_vs_vwap_pct": -0.904123700214865,
+        "amount_ratio_1d_20d": 1.0605414678447473,
+        "volume_ratio_1d_prior_10d": 0.998510965959064
+      }
+    },
+    {
+      "ts_code": "300454.SZ",
+      "name": "深信服",
+      "origin": "official_pool",
+      "sector": "软件服务",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 11,
+      "quant_score": 37.361807,
+      "market_fit_score": 4.460317,
+      "sector_score": 5.746623,
+      "technical_score": 27.154867,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 9,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 1,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 1
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 58.361807,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "软件服务处于强势板块范围，量化排名11，技术分27.15；量价与趋势结构形成共振，终审综合分58.36达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "终审综合分58.36低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 3.6824,
+        "return_5d_pct": 12.624999999999996,
+        "return_10d_pct": 13.973688649013338,
+        "return_20d_pct": 7.25339258788984,
+        "rsi14": 59.942569992821255,
+        "atr14_pct": 5.441572855557319,
+        "distance_ma20_atr": 1.6497183372183377,
+        "close_location": 0.48026315789473795,
+        "close_vs_vwap_pct": -0.6552293678576793,
+        "amount_ratio_1d_20d": 1.0026967849729234,
+        "volume_ratio_1d_prior_10d": 0.8939565768372079
+      }
+    },
+    {
+      "ts_code": "301123.SZ",
+      "name": "奕东电子",
+      "origin": "official_pool",
+      "sector": "元器件",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 12,
+      "quant_score": 37.316639,
+      "market_fit_score": 4.698413,
+      "sector_score": 5.890571,
+      "technical_score": 26.727655,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 63.316639,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "元器件处于强势板块范围，量化排名12，技术分26.73；量价与趋势结构形成共振，终审综合分63.32达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 7.9136,
+        "return_5d_pct": 5.029136052698258,
+        "return_10d_pct": 14.564045875362709,
+        "return_20d_pct": 18.24015972618367,
+        "rsi14": 55.144404332129966,
+        "atr14_pct": 6.946430725227012,
+        "distance_ma20_atr": 1.2418206622845094,
+        "close_location": 0.7707692307692293,
+        "close_vs_vwap_pct": 2.2432779879965503,
+        "amount_ratio_1d_20d": 1.7116984494358913,
+        "volume_ratio_1d_prior_10d": 1.9118481574310555
+      }
+    },
+    {
+      "ts_code": "603179.SH",
+      "name": "新泉股份",
+      "origin": "official_pool",
+      "sector": "汽车配件",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 13,
+      "quant_score": 36.939928,
+      "market_fit_score": 4.095238,
+      "sector_score": 8.504125,
+      "technical_score": 24.340565,
+      "logic_purity": {
+        "score": 8,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 3,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 62.939928,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "汽车配件处于强势板块范围，量化排名13，技术分24.34；量价与趋势结构形成共振，终审综合分62.94达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 3.1605,
+        "return_5d_pct": 4.948505400653103,
+        "return_10d_pct": 19.20114122681884,
+        "return_20d_pct": 7.569515962924811,
+        "rsi14": 55.024595924104,
+        "atr14_pct": 4.797237229022774,
+        "distance_ma20_atr": 1.3401282965074834,
+        "close_location": 0.6913580246913589,
+        "close_vs_vwap_pct": 0.156169216547708,
+        "amount_ratio_1d_20d": 1.2934838862780245,
+        "volume_ratio_1d_prior_10d": 1.2892508496493171
+      }
+    },
+    {
+      "ts_code": "601890.SH",
+      "name": "亚星锚链",
+      "origin": "official_pool",
+      "sector": "船舶",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 14,
+      "quant_score": 36.548874,
+      "market_fit_score": 3.444444,
+      "sector_score": 9.703636,
+      "technical_score": 23.400794,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 13,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 62.548874,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "船舶处于强势板块范围，量化排名14，技术分23.40；量价与趋势结构形成共振，终审综合分62.55达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": -0.5562,
+        "return_5d_pct": 2.2883295194507935,
+        "return_10d_pct": 5.548996458087352,
+        "return_20d_pct": 5.300353356890453,
+        "rsi14": 42.50000000000001,
+        "atr14_pct": 2.5886864813039328,
+        "distance_ma20_atr": 1.0543209876543194,
+        "close_location": 0.5555555555555545,
+        "close_vs_vwap_pct": 0.0748954756688347,
+        "amount_ratio_1d_20d": 0.9870743744309027,
+        "volume_ratio_1d_prior_10d": 1.3059306529031776
+      }
+    },
+    {
+      "ts_code": "301306.SZ",
+      "name": "西测测试",
+      "origin": "official_pool",
+      "sector": "航空",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 15,
+      "quant_score": 36.385027,
+      "market_fit_score": 4.365079,
+      "sector_score": 9.876587,
+      "technical_score": 22.143361,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 12,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 3,
+          "capital_support": 2,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 1
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 61.385027,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "航空处于强势板块范围，量化排名15，技术分22.14；量价与趋势结构形成共振，终审综合分61.39达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 1.4666,
+        "return_5d_pct": 11.453161204899054,
+        "return_10d_pct": 16.103448275862075,
+        "return_20d_pct": 8.438003220611922,
+        "rsi14": 54.82060533172981,
+        "atr14_pct": 6.395406395406394,
+        "distance_ma20_atr": 1.013003095975234,
+        "close_location": 0.32590051457976094,
+        "close_vs_vwap_pct": -0.843540893829231,
+        "amount_ratio_1d_20d": 1.0421100124899265,
+        "volume_ratio_1d_prior_10d": 0.9870597524238875
+      }
+    },
+    {
+      "ts_code": "301486.SZ",
+      "name": "致尚科技",
+      "origin": "official_pool",
+      "sector": "元器件",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 16,
+      "quant_score": 36.208678,
+      "market_fit_score": 4.603175,
+      "sector_score": 5.890571,
+      "technical_score": 25.714932,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 13,
+        "factors": {
+          "rebound_efficiency": 1,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 61.208678,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动"
+      ],
+      "selection_reason": "元器件处于强势板块范围，量化排名16，技术分25.71；量价与趋势结构形成共振，终审综合分61.21达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 6.3937,
+        "return_5d_pct": 2.0192954902400695,
+        "return_10d_pct": 3.9314285714285635,
+        "return_20d_pct": 24.74622770919066,
+        "rsi14": 53.40593636557762,
+        "atr14_pct": 7.243001665148137,
+        "distance_ma20_atr": 0.8435829311934064,
+        "close_location": 0.8842794759825324,
+        "close_vs_vwap_pct": 2.1107339296274397,
+        "amount_ratio_1d_20d": 1.4697498237301116,
+        "volume_ratio_1d_prior_10d": 1.8023194601940484
+      }
+    },
+    {
+      "ts_code": "600869.SH",
+      "name": "远东股份",
+      "origin": "official_pool",
+      "sector": "电气设备",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 17,
+      "quant_score": 36.171468,
+      "market_fit_score": 4.84127,
+      "sector_score": 5.286642,
+      "technical_score": 26.043556,
+      "logic_purity": {
+        "score": 8,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 4,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 62.171468,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "电气设备处于强势板块范围，量化排名17，技术分26.04；量价与趋势结构形成共振，终审综合分62.17达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 7.9487,
+        "return_5d_pct": 17.27019498607243,
+        "return_10d_pct": 26.80722891566265,
+        "return_20d_pct": 34.935897435897445,
+        "rsi14": 68.53203568532035,
+        "atr14_pct": 7.234475738038683,
+        "distance_ma20_atr": 2.5570356472795512,
+        "close_location": 0.8133971291866026,
+        "close_vs_vwap_pct": 2.5296982375694776,
+        "amount_ratio_1d_20d": 2.235749321844781,
+        "volume_ratio_1d_prior_10d": 1.6110057427976712
+      }
+    },
+    {
+      "ts_code": "301603.SZ",
+      "name": "乔锋智能",
+      "origin": "official_pool",
+      "sector": "机床制造",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 18,
+      "quant_score": 36.025115,
+      "market_fit_score": 4.015873,
+      "sector_score": 6.183939,
+      "technical_score": 25.825303,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 11,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 1,
+          "expectation_gap": 4,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 59.025115,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "机床制造处于强势板块范围，量化排名18，技术分25.83；量价与趋势结构形成共振，终审综合分59.03达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "终审综合分59.03低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 1.5487,
+        "return_5d_pct": 0.3485112508523125,
+        "return_10d_pct": 9.680357734349098,
+        "return_20d_pct": 8.931655563779906,
+        "rsi14": 52.827958804659794,
+        "atr14_pct": 6.107965269913179,
+        "distance_ma20_atr": 0.7961681087762633,
+        "close_location": 0.6467315716272578,
+        "close_vs_vwap_pct": 0.40244590016316195,
+        "amount_ratio_1d_20d": 1.0324881531015186,
+        "volume_ratio_1d_prior_10d": 0.8493124960762898
+      }
+    },
+    {
+      "ts_code": "300475.SZ",
+      "name": "香农芯创",
+      "origin": "official_pool",
+      "sector": "元器件",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 19,
+      "quant_score": 35.802781,
+      "market_fit_score": 4.666667,
+      "sector_score": 5.890571,
+      "technical_score": 25.245543,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 13,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 60.802781,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "元器件处于强势板块范围，量化排名19，技术分25.25；量价与趋势结构形成共振，终审综合分60.80达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 4.6544,
+        "return_5d_pct": 6.21786729571161,
+        "return_10d_pct": 11.746738784600709,
+        "return_20d_pct": 15.08617864866637,
+        "rsi14": 58.47674418604652,
+        "atr14_pct": 5.934416360929657,
+        "distance_ma20_atr": 1.2173474982864971,
+        "close_location": 0.5545302013422836,
+        "close_vs_vwap_pct": 0.1906128081455627,
+        "amount_ratio_1d_20d": 1.468203977670703,
+        "volume_ratio_1d_prior_10d": 1.6603881230761954
+      }
+    },
+    {
+      "ts_code": "002837.SZ",
+      "name": "英维克",
+      "origin": "official_pool",
+      "sector": "专用机械",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 20,
+      "quant_score": 35.802044,
+      "market_fit_score": 4.655172,
+      "sector_score": 5.734638,
+      "technical_score": 25.412234,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 4,
+          "theme_elasticity": 2,
+          "capital_support": 3,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 61.802044,
+      "risk_annotations": [
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "专用机械处于强势板块范围，量化排名20，技术分25.41；量价与趋势结构形成共振，终审综合分61.80达到60分门槛。",
+      "main_risk": "偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 3.4124,
+        "return_5d_pct": 3.8199181446111785,
+        "return_10d_pct": 29.397317211411277,
+        "return_20d_pct": 29.397317211411277,
+        "rsi14": 68.26923076923079,
+        "atr14_pct": 5.459608284838247,
+        "distance_ma20_atr": 2.4496657115568254,
+        "close_location": 0.5839843749999984,
+        "close_vs_vwap_pct": 1.2891386655533132,
+        "amount_ratio_1d_20d": 1.6974485943203985,
+        "volume_ratio_1d_prior_10d": 1.233352976696747
+      }
+    },
+    {
+      "ts_code": "300528.SZ",
+      "name": "幸福蓝海",
+      "origin": "official_pool",
+      "sector": "影视音像",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 21,
+      "quant_score": 35.777041,
+      "market_fit_score": 4.079365,
+      "sector_score": 9.025065,
+      "technical_score": 22.672611,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 4,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 2,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 61.777041,
+      "risk_annotations": [
+        "收盘弱于VWAP，需观察承接"
+      ],
+      "selection_reason": "影视音像处于强势板块范围，量化排名21，技术分22.67；量价与趋势结构形成共振，终审综合分61.78达到60分门槛。",
+      "main_risk": "收盘弱于VWAP，需观察承接",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 5.6402,
+        "return_5d_pct": 7.692307692307687,
+        "return_10d_pct": 7.109737248840808,
+        "return_20d_pct": -1.7717930545712246,
+        "rsi14": 51.530612244897945,
+        "atr14_pct": 4.313543599257887,
+        "distance_ma20_atr": 0.5293906810035833,
+        "close_location": 0.2599118942731277,
+        "close_vs_vwap_pct": -4.616735491787294,
+        "amount_ratio_1d_20d": 2.2313796344065393,
+        "volume_ratio_1d_prior_10d": 4.108556804120387
+      }
+    },
+    {
+      "ts_code": "300497.SZ",
+      "name": "富祥股份",
+      "origin": "official_pool",
+      "sector": "化学制药",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 22,
+      "quant_score": 35.39783,
+      "market_fit_score": 4.333333,
+      "sector_score": 4.804988,
+      "technical_score": 26.259509,
+      "logic_purity": {
+        "score": 8,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 4,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 61.39783,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "化学制药处于强势板块范围，量化排名22，技术分26.26；量价与趋势结构形成共振，终审综合分61.40达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 7.9145,
+        "return_5d_pct": 9.303686366296082,
+        "return_10d_pct": 7.603686635944706,
+        "return_20d_pct": 2.356164383561632,
+        "rsi14": 52.89256198347108,
+        "atr14_pct": 4.014989293361884,
+        "distance_ma20_atr": 1.137999999999996,
+        "close_location": 0.9182389937106924,
+        "close_vs_vwap_pct": 2.9082692728039206,
+        "amount_ratio_1d_20d": 1.8146486291707138,
+        "volume_ratio_1d_prior_10d": 2.479174622003048
+      }
+    },
+    {
+      "ts_code": "300179.SZ",
+      "name": "四方达",
+      "origin": "official_pool",
+      "sector": "矿物制品",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 23,
+      "quant_score": 35.272939,
+      "market_fit_score": 4.238095,
+      "sector_score": 5.39899,
+      "technical_score": 25.635854,
+      "logic_purity": {
+        "score": 8,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 16,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 4,
+          "expectation_gap": 4,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 62.272939,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动"
+      ],
+      "selection_reason": "矿物制品处于强势板块范围，量化排名23，技术分25.64；量价与趋势结构形成共振，终审综合分62.27达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 7.2846,
+        "return_5d_pct": 1.014144649052584,
+        "return_10d_pct": 8.826912018401378,
+        "return_20d_pct": 8.14285714285714,
+        "rsi14": 52.01877934272301,
+        "atr14_pct": 7.112662766559724,
+        "distance_ma20_atr": 0.5361899708145401,
+        "close_location": 0.7549019607843139,
+        "close_vs_vwap_pct": 1.4592431103026327,
+        "amount_ratio_1d_20d": 2.043018975017712,
+        "volume_ratio_1d_prior_10d": 2.328604113616791
+      }
+    },
+    {
+      "ts_code": "002015.SZ",
+      "name": "协鑫能科",
+      "origin": "official_pool",
+      "sector": "新型电力",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 24,
+      "quant_score": 34.984254,
+      "market_fit_score": 4.017241,
+      "sector_score": 4.269091,
+      "technical_score": 26.697922,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 12,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 2,
+          "capital_support": 2,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 58.984254,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "新型电力处于强势板块范围，量化排名24，技术分26.70；量价与趋势结构形成共振，终审综合分58.98达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "终审综合分58.98低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 0.1173,
+        "return_5d_pct": 2.0933014354067137,
+        "return_10d_pct": 21.667854597291523,
+        "return_20d_pct": 8.380952380952378,
+        "rsi14": 60.43533930857874,
+        "atr14_pct": 5.674114988701982,
+        "distance_ma20_atr": 1.3628318584070802,
+        "close_location": 0.30136986301369834,
+        "close_vs_vwap_pct": -0.6827869990438051,
+        "amount_ratio_1d_20d": 1.3235665041053062,
+        "volume_ratio_1d_prior_10d": 1.0226525751456785
+      }
+    },
+    {
+      "ts_code": "688183.SH",
+      "name": "生益电子",
+      "origin": "official_pool",
+      "sector": "元器件",
+      "segment": "科创板",
+      "trade_date": "20260903",
+      "quant_rank": 25,
+      "quant_score": 34.873628,
+      "market_fit_score": 3.807692,
+      "sector_score": 5.890571,
+      "technical_score": 25.175365,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 10,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 2,
+          "capital_support": 1,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 1
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 56.873628,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动",
+        "量能未明显放大，持续性待确认"
+      ],
+      "selection_reason": "元器件处于强势板块范围，量化排名25，技术分25.18；量价与趋势结构形成共振，终审综合分56.87达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动；量能未明显放大，持续性待确认",
+      "not_selected_reason": "终审综合分56.87低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": -1.0892,
+        "return_5d_pct": 1.4873859807708056,
+        "return_10d_pct": 18.29501915708811,
+        "return_20d_pct": 14.140480591497218,
+        "rsi14": 55.547348205052444,
+        "atr14_pct": 7.108733371891267,
+        "distance_ma20_atr": 1.0089089577739812,
+        "close_location": 0.26710097719869713,
+        "close_vs_vwap_pct": -0.4304394640498477,
+        "amount_ratio_1d_20d": 0.8788542630956269,
+        "volume_ratio_1d_prior_10d": 0.7513803498619199
+      }
+    },
+    {
+      "ts_code": "688167.SH",
+      "name": "炬光科技",
+      "origin": "official_pool",
+      "sector": "元器件",
+      "segment": "科创板",
+      "trade_date": "20260903",
+      "quant_rank": 26,
+      "quant_score": 34.759895,
+      "market_fit_score": 4.288462,
+      "sector_score": 5.890571,
+      "technical_score": 24.580862,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 9,
+        "factors": {
+          "rebound_efficiency": 1,
+          "theme_elasticity": 2,
+          "capital_support": 1,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 55.759895,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动"
+      ],
+      "selection_reason": "元器件处于强势板块范围，量化排名26，技术分24.58；量价与趋势结构形成共振，终审综合分55.76达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动",
+      "not_selected_reason": "终审综合分55.76低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 1.8676,
+        "return_5d_pct": -2.3436426116838494,
+        "return_10d_pct": 0.4169611307420551,
+        "return_20d_pct": 36.20590490797546,
+        "rsi14": 54.867907866656864,
+        "atr14_pct": 7.645305289404101,
+        "distance_ma20_atr": 0.8035835223723576,
+        "close_location": 0.6996245306633287,
+        "close_vs_vwap_pct": 0.9817516605257648,
+        "amount_ratio_1d_20d": 0.8195582658977636,
+        "volume_ratio_1d_prior_10d": 0.8739385587831837
+      }
+    },
+    {
+      "ts_code": "600722.SH",
+      "name": "金牛化工",
+      "origin": "official_pool",
+      "sector": "化工原料",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 27,
+      "quant_score": 34.744241,
+      "market_fit_score": 4.015873,
+      "sector_score": 4.7244,
+      "technical_score": 26.003968,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 11,
+        "factors": {
+          "rebound_efficiency": 4,
+          "theme_elasticity": 2,
+          "capital_support": 2,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 1
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 57.744241,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "历史波动率较高，需控制隔夜波动",
+        "偏离MA20较远，追涨风险较高",
+        "收盘弱于VWAP，需观察承接"
+      ],
+      "selection_reason": "化工原料处于强势板块范围，量化排名27，技术分26.00；量价与趋势结构形成共振，终审综合分57.74达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；历史波动率较高，需控制隔夜波动；偏离MA20较远，追涨风险较高；收盘弱于VWAP，需观察承接",
+      "not_selected_reason": "终审综合分57.74低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": -10.0208,
+        "return_5d_pct": 24.855907780979813,
+        "return_10d_pct": 30.891238670694854,
+        "return_20d_pct": 61.20930232558137,
+        "rsi14": 76.28149435273673,
+        "atr14_pct": 9.54579177314319,
+        "distance_ma20_atr": 2.0153713298791,
+        "close_location": 0,
+        "close_vs_vwap_pct": -3.3775004876657855,
+        "amount_ratio_1d_20d": 1.2780255105025873,
+        "volume_ratio_1d_prior_10d": 0.9348501512179009
+      }
+    },
+    {
+      "ts_code": "600595.SH",
+      "name": "中孚实业",
+      "origin": "official_pool",
+      "sector": "铝",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 28,
+      "quant_score": 34.658023,
+      "market_fit_score": 3.571429,
+      "sector_score": 9.201515,
+      "technical_score": 21.885079,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 3,
+          "expectation_gap": 4,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 2,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 59.658023,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "铝处于强势板块范围，量化排名28，技术分21.89；量价与趋势结构形成共振，终审综合分59.66达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "终审综合分59.66低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 3.5144,
+        "return_5d_pct": 3.8461538461538547,
+        "return_10d_pct": 8.361204013377922,
+        "return_20d_pct": -1.0687022900763288,
+        "rsi14": 59.259259259259274,
+        "atr14_pct": 3.1856261022927685,
+        "distance_ma20_atr": 0.7363321799307965,
+        "close_location": 0.5200000000000031,
+        "close_vs_vwap_pct": -0.15327180174484756,
+        "amount_ratio_1d_20d": 1.2991745055675434,
+        "volume_ratio_1d_prior_10d": 1.7096279981624838
+      }
+    },
+    {
+      "ts_code": "603533.SH",
+      "name": "掌阅科技",
+      "origin": "official_pool",
+      "sector": "互联网",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 29,
+      "quant_score": 34.654539,
+      "market_fit_score": 2.984127,
+      "sector_score": 6.624893,
+      "technical_score": 25.045519,
+      "logic_purity": {
+        "score": 9,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 12,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 2,
+          "capital_support": 4,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 1
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 58.654539,
+      "risk_annotations": [
+        "收盘弱于VWAP，需观察承接"
+      ],
+      "selection_reason": "互联网处于强势板块范围，量化排名29，技术分25.05；量价与趋势结构形成共振，终审综合分58.65达到60分门槛。",
+      "main_risk": "收盘弱于VWAP，需观察承接",
+      "not_selected_reason": "终审综合分58.65低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": -3.5611,
+        "return_5d_pct": 12.457749879285362,
+        "return_10d_pct": 9.188935771214247,
+        "return_20d_pct": 0.7788836001730859,
+        "rsi14": 56.46940822467401,
+        "atr14_pct": 5.0849536895049985,
+        "distance_ma20_atr": 1.0846200241254507,
+        "close_location": 0.08520179372197219,
+        "close_vs_vwap_pct": -3.3553590749170636,
+        "amount_ratio_1d_20d": 2.76868969548356,
+        "volume_ratio_1d_prior_10d": 2.4813923664402147
+      }
+    },
+    {
+      "ts_code": "688331.SH",
+      "name": "荣昌生物",
+      "origin": "official_pool",
+      "sector": "生物制药",
+      "segment": "科创板",
+      "trade_date": "20260903",
+      "quant_rank": 30,
+      "quant_score": 34.376363,
+      "market_fit_score": 4.365385,
+      "sector_score": 5.45596,
+      "technical_score": 24.555018,
+      "logic_purity": {
+        "score": 8,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 11,
+        "factors": {
+          "rebound_efficiency": 1,
+          "theme_elasticity": 2,
+          "capital_support": 1,
+          "expectation_gap": 4,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 0,
+        "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+      },
+      "final_score": 56.376363,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "生物制药处于强势板块范围，量化排名30，技术分24.56；量价与趋势结构形成共振，终审综合分56.38达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "终审综合分56.38低于60分门槛。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 3.2208,
+        "return_5d_pct": 4.763860369609851,
+        "return_10d_pct": -4.370970160443843,
+        "return_20d_pct": 7.040953340046996,
+        "rsi14": 46.79535232383808,
+        "atr14_pct": 5.240521924175394,
+        "distance_ma20_atr": 0.0798140628339394,
+        "close_location": 0.7665562913907269,
+        "close_vs_vwap_pct": 1.7318739684355267,
+        "amount_ratio_1d_20d": 0.7687110219493672,
+        "volume_ratio_1d_prior_10d": 0.8484029703260155
+      }
+    },
+    {
+      "ts_code": "603162.SH",
+      "name": "海通发展",
+      "origin": "external_pool",
+      "sector": "水运",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 1,
+      "quant_score": 46.000236,
+      "market_fit_score": 4.521226,
+      "sector_score": 13.167273,
+      "technical_score": 28.311737,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 17,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 4,
+          "capital_support": 4,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 78.000236,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落"
+      ],
+      "selection_reason": "水运处于强势板块范围，量化排名1，技术分28.31；量价与趋势结构形成共振，终审综合分78.00达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 10,
+        "return_5d_pct": 11.287625418060188,
+        "return_10d_pct": 12.605752961082906,
+        "return_20d_pct": 14.84037963761864,
+        "rsi14": 71.33620689655173,
+        "atr14_pct": 5.602661801008909,
+        "distance_ma20_atr": 1.678256704980845,
+        "close_location": 1,
+        "close_vs_vwap_pct": 0.9540922996793988,
+        "amount_ratio_1d_20d": 2.1315692491666516,
+        "volume_ratio_1d_prior_10d": 2.243270479456094
+      }
+    },
+    {
+      "ts_code": "600026.SH",
+      "name": "中远海能",
+      "origin": "external_pool",
+      "sector": "水运",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 2,
+      "quant_score": 45.656355,
+      "market_fit_score": 4.542453,
+      "sector_score": 13.167273,
+      "technical_score": 27.946629,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 4,
+          "capital_support": 3,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 75.656355,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "水运处于强势板块范围，量化排名2，技术分27.95；量价与趋势结构形成共振，终审综合分75.66达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 8.7747,
+        "return_5d_pct": 9.242342826437389,
+        "return_10d_pct": 11.032222829055161,
+        "return_20d_pct": 16.43757159221075,
+        "rsi14": 76.96879643387817,
+        "atr14_pct": 4.356686107792849,
+        "distance_ma20_atr": 2.334838709677416,
+        "close_location": 0.8614457831325298,
+        "close_vs_vwap_pct": 0.9970528750670171,
+        "amount_ratio_1d_20d": 1.9814066813415874,
+        "volume_ratio_1d_prior_10d": 1.7182820881537977
+      }
+    },
+    {
+      "ts_code": "000520.SZ",
+      "name": "凤凰航运",
+      "origin": "external_pool",
+      "sector": "水运",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 3,
+      "quant_score": 45.38048,
+      "market_fit_score": 4.244621,
+      "sector_score": 13.167273,
+      "technical_score": 27.968586,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 1,
+          "theme_elasticity": 4,
+          "capital_support": 4,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 74.38048,
+      "risk_annotations": [
+        "未见突出量化风险，仍需观察板块持续性"
+      ],
+      "selection_reason": "水运处于强势板块范围，量化排名3，技术分27.97；量价与趋势结构形成共振，终审综合分74.38达到60分门槛。",
+      "main_risk": "未见突出量化风险，仍需观察板块持续性",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 5.7279,
+        "return_5d_pct": 4.976303317535535,
+        "return_10d_pct": 0.45351473922901064,
+        "return_20d_pct": 11.868686868686872,
+        "rsi14": 67.66467065868264,
+        "atr14_pct": 5.304740406320541,
+        "distance_ma20_atr": 1.2255319148936186,
+        "close_location": 0.5909090909090899,
+        "close_vs_vwap_pct": -0.799977705826993,
+        "amount_ratio_1d_20d": 4.017816246577676,
+        "volume_ratio_1d_prior_10d": 3.5837402741506734
+      }
+    },
+    {
+      "ts_code": "600865.SH",
+      "name": "百大集团",
+      "origin": "external_pool",
+      "sector": "百货",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 4,
+      "quant_score": 44.518611,
+      "market_fit_score": 4.698113,
+      "sector_score": 12.396494,
+      "technical_score": 27.424004,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 1,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 74.518611,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "百货处于强势板块范围，量化排名4，技术分27.42；量价与趋势结构形成共振，终审综合分74.52达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 10.0213,
+        "return_5d_pct": 15.82491582491583,
+        "return_10d_pct": 18.89400921658988,
+        "return_20d_pct": 17.673888255416202,
+        "rsi14": 71.80232558139534,
+        "atr14_pct": 3.9313399778516054,
+        "distance_ma20_atr": 3.241197183098595,
+        "close_location": 1,
+        "close_vs_vwap_pct": 2.478808116981468,
+        "amount_ratio_1d_20d": 3.04925159389694,
+        "volume_ratio_1d_prior_10d": 2.6804285436893993
+      }
+    },
+    {
+      "ts_code": "600693.SH",
+      "name": "东百集团",
+      "origin": "external_pool",
+      "sector": "百货",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 5,
+      "quant_score": 44.382517,
+      "market_fit_score": 4.627358,
+      "sector_score": 12.396494,
+      "technical_score": 27.358665,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 16,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 2,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 75.382517,
+      "risk_annotations": [
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "百货处于强势板块范围，量化排名5，技术分27.36；量价与趋势结构形成共振，终审综合分75.38达到60分门槛。",
+      "main_risk": "偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 9.9602,
+        "return_5d_pct": 18.07486631016042,
+        "return_10d_pct": 23.35195530726257,
+        "return_20d_pct": 15.602094240837673,
+        "rsi14": 65.52419354838707,
+        "atr14_pct": 6.146480331262941,
+        "distance_ma20_atr": 2.1162105263157867,
+        "close_location": 1,
+        "close_vs_vwap_pct": 5.8355291675913135,
+        "amount_ratio_1d_20d": 2.121129406290345,
+        "volume_ratio_1d_prior_10d": 2.460324434380705
+      }
+    },
+    {
+      "ts_code": "600828.SH",
+      "name": "茂业商业",
+      "origin": "external_pool",
+      "sector": "百货",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 6,
+      "quant_score": 44.26306,
+      "market_fit_score": 4.816038,
+      "sector_score": 12.396494,
+      "technical_score": 27.050528,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 4,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 1,
+          "chip_push_efficiency": 3
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 73.26306,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "百货处于强势板块范围，量化排名6，技术分27.05；量价与趋势结构形成共振，终审综合分73.26达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 6.0291,
+        "return_5d_pct": 26.865671641791057,
+        "return_10d_pct": 29.77099236641221,
+        "return_20d_pct": 30.102040816326525,
+        "rsi14": 79.59183673469389,
+        "atr14_pct": 4.341736694677871,
+        "distance_ma20_atr": 4.540967741935483,
+        "close_location": 0.7323943661971826,
+        "close_vs_vwap_pct": 3.0013708412249818,
+        "amount_ratio_1d_20d": 7.623645592254295,
+        "volume_ratio_1d_prior_10d": 8.802577249222741
+      }
+    },
+    {
+      "ts_code": "601086.SH",
+      "name": "国芳集团",
+      "origin": "external_pool",
+      "sector": "百货",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 7,
+      "quant_score": 44.2314,
+      "market_fit_score": 4.955189,
+      "sector_score": 12.396494,
+      "technical_score": 26.879717,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 16,
+        "factors": {
+          "rebound_efficiency": 4,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 1,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 74.2314,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "百货处于强势板块范围，量化排名7，技术分26.88；量价与趋势结构形成共振，终审综合分74.23达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 10,
+        "return_5d_pct": 61.08179419525066,
+        "return_10d_pct": 59.81675392670158,
+        "return_20d_pct": 55.54140127388536,
+        "rsi14": 88.53615520282187,
+        "atr14_pct": 4.001404001404,
+        "distance_ma20_atr": 7.807456140350876,
+        "close_location": 1,
+        "close_vs_vwap_pct": 0.10680905968047938,
+        "amount_ratio_1d_20d": 5.108204508378638,
+        "volume_ratio_1d_prior_10d": 4.808936070403518
+      }
+    },
+    {
+      "ts_code": "600185.SH",
+      "name": "珠免集团",
+      "origin": "external_pool",
+      "sector": "旅游服务",
+      "segment": "沪市主板",
+      "trade_date": "20260903",
+      "quant_rank": 8,
+      "quant_score": 43.598328,
+      "market_fit_score": 4.426887,
+      "sector_score": 11.831818,
+      "technical_score": 27.339623,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 15,
+        "factors": {
+          "rebound_efficiency": 3,
+          "theme_elasticity": 3,
+          "capital_support": 4,
+          "expectation_gap": 1,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 73.598328,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "旅游服务处于强势板块范围，量化排名8，技术分27.34；量价与趋势结构形成共振，终审综合分73.60达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 10,
+        "return_5d_pct": 11.86440677966103,
+        "return_10d_pct": 15.789473684210531,
+        "return_20d_pct": 11.392405063291132,
+        "rsi14": 70.25316455696206,
+        "atr14_pct": 3.368506493506492,
+        "distance_ma20_atr": 3.207630522088355,
+        "close_location": 1,
+        "close_vs_vwap_pct": 2.4606244658517573,
+        "amount_ratio_1d_20d": 2.5302059788504003,
+        "volume_ratio_1d_prior_10d": 2.17789308656053
+      }
+    },
+    {
+      "ts_code": "002059.SZ",
+      "name": "云南旅游",
+      "origin": "external_pool",
+      "sector": "旅游景点",
+      "segment": "深市主板",
+      "trade_date": "20260903",
+      "quant_rank": 9,
+      "quant_score": 43.104576,
+      "market_fit_score": 4.948423,
+      "sector_score": 11.922525,
+      "technical_score": 26.233628,
+      "logic_purity": {
+        "score": 10,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 13,
+        "factors": {
+          "rebound_efficiency": 4,
+          "theme_elasticity": 3,
+          "capital_support": 3,
+          "expectation_gap": 1,
+          "chip_push_efficiency": 2
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 70.104576,
+      "risk_annotations": [
+        "RSI偏高，需防短线冲高回落",
+        "偏离MA20较远，追涨风险较高"
+      ],
+      "selection_reason": "旅游景点处于强势板块范围，量化排名9，技术分26.23；量价与趋势结构形成共振，终审综合分70.10达到60分门槛。",
+      "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "bottom_right_side",
+        "return_1d_pct": 10.0952,
+        "return_5d_pct": 25.652173913043484,
+        "return_10d_pct": 28.73051224944321,
+        "return_20d_pct": 28.44444444444445,
+        "rsi14": 89.15662650602411,
+        "atr14_pct": 2.8423133959466114,
+        "distance_ma20_atr": 6.948260869565228,
+        "close_location": null,
+        "close_vs_vwap_pct": 2.220446049250313e-14,
+        "amount_ratio_1d_20d": 2.260512073042902,
+        "volume_ratio_1d_prior_10d": 1.4384504902403679
+      }
+    },
+    {
+      "ts_code": "300189.SZ",
+      "name": "神农种业",
+      "origin": "external_pool",
+      "sector": "种植业",
+      "segment": "创业板",
+      "trade_date": "20260903",
+      "quant_rank": 10,
+      "quant_score": 42.980993,
+      "market_fit_score": 4.680825,
+      "sector_score": 11.145407,
+      "technical_score": 27.154761,
+      "logic_purity": {
+        "score": 11,
+        "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+      },
+      "elasticity": {
+        "score": 14,
+        "factors": {
+          "rebound_efficiency": 2,
+          "theme_elasticity": 3,
+          "capital_support": 2,
+          "expectation_gap": 3,
+          "chip_push_efficiency": 4
+        },
+        "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+      },
+      "fundamentals": {
+        "score": 3,
+        "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+      },
+      "major_positive": {
+        "score": 1,
+        "basis": "强势板块与中短期价格动量形成量化共振"
+      },
+      "final_score": 71.980993,
+      "risk_annotations": [
+        "历史波动率较高，需控制隔夜波动"
+      ],
+      "selection_reason": "种植业处于强势板块范围，量化排名10，技术分27.15；量价与趋势结构形成共振，终审综合分71.98达到60分门槛。",
+      "main_risk": "历史波动率较高，需控制隔夜波动",
+      "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+      "evidence_as_of": "2026-09-03T18:35:00+08:00",
+      "sources": [
+        {
+          "type": "quantitative_bundle",
+          "path": "archive/2026/09/key10_bundle_20260903.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        },
+        {
+          "type": "latest_pointer",
+          "path": "latest/key10_bundle_latest.json",
+          "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+        }
+      ],
+      "data_completeness": {
+        "technical": true,
+        "review_fields": true,
+        "company_fundamental_evidence": "limited_quantitative_evidence"
+      },
+      "quantitative_snapshot": {
+        "setup_type": "trend_continuation",
+        "return_1d_pct": 5.0822,
+        "return_5d_pct": 6.03318250377074,
+        "return_10d_pct": 10.88328075709779,
+        "return_20d_pct": 37.84313725490198,
+        "rsi14": 67.98780487804879,
+        "atr14_pct": 11.908148750254012,
+        "distance_ma20_atr": 1.3802901023890797,
+        "close_location": 0.9365079365079364,
+        "close_vs_vwap_pct": 3.377458607756978,
+        "amount_ratio_1d_20d": 1.388124265325194,
+        "volume_ratio_1d_prior_10d": 1.041884611675073
+      }
+    }
+  ],
+  "final_selection": {
+    "official_pool": [
+      {
+        "ts_code": "688028.SH",
+        "name": "沃尔德",
+        "origin": "official_pool",
+        "sector": "机械基件",
+        "segment": "科创板",
+        "trade_date": "20260903",
+        "quant_rank": 1,
+        "quant_score": 40.381539,
+        "market_fit_score": 4.923077,
+        "sector_score": 9.094565,
+        "technical_score": 26.363897,
+        "logic_purity": {
+          "score": 10,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 15,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 3,
+            "capital_support": 4,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 3
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 68.381539,
+        "risk_annotations": [
+          "未见突出量化风险，仍需观察板块持续性"
+        ],
+        "selection_reason": "机械基件处于强势板块范围，量化排名1，技术分26.36；量价与趋势结构形成共振，终审综合分68.38达到60分门槛。",
+        "main_risk": "未见突出量化风险，仍需观察板块持续性",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 8.9301,
+          "return_5d_pct": 7.912064570943089,
+          "return_10d_pct": 14.1685393258427,
+          "return_20d_pct": 23.163636363636364,
+          "rsi14": 61.269984237784286,
+          "atr14_pct": 6.626175713863932,
+          "distance_ma20_atr": 1.4643114788881813,
+          "close_location": 0.7485131690739172,
+          "close_vs_vwap_pct": 3.2537692585424383,
+          "amount_ratio_1d_20d": 2.0934576640741906,
+          "volume_ratio_1d_prior_10d": 2.406556039443822
+        }
+      },
+      {
+        "ts_code": "002272.SZ",
+        "name": "川润股份",
+        "origin": "official_pool",
+        "sector": "机械基件",
+        "segment": "深市主板",
+        "trade_date": "20260903",
+        "quant_rank": 2,
+        "quant_score": 39.56324,
+        "market_fit_score": 4.827586,
+        "sector_score": 9.094565,
+        "technical_score": 25.641089,
+        "logic_purity": {
+          "score": 10,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 15,
+          "factors": {
+            "rebound_efficiency": 3,
+            "theme_elasticity": 3,
+            "capital_support": 3,
+            "expectation_gap": 2,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 67.56324,
+        "risk_annotations": [
+          "偏离MA20较远，追涨风险较高"
+        ],
+        "selection_reason": "机械基件处于强势板块范围，量化排名2，技术分25.64；量价与趋势结构形成共振，终审综合分67.56达到60分门槛。",
+        "main_risk": "偏离MA20较远，追涨风险较高",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 5.8407,
+          "return_5d_pct": 6.722189173111248,
+          "return_10d_pct": 24.238227146814427,
+          "return_20d_pct": 22.792607802874755,
+          "rsi14": 67.23716381418093,
+          "atr14_pct": 5.482560917343524,
+          "distance_ma20_atr": 2.1482933914306463,
+          "close_location": 0.8288288288288308,
+          "close_vs_vwap_pct": 0.4943787783564524,
+          "amount_ratio_1d_20d": 1.4635941593670225,
+          "volume_ratio_1d_prior_10d": 1.297280171046317
+        }
+      },
+      {
+        "ts_code": "002046.SZ",
+        "name": "国机精工",
+        "origin": "official_pool",
+        "sector": "机械基件",
+        "segment": "深市主板",
+        "trade_date": "20260903",
+        "quant_rank": 5,
+        "quant_score": 39.220115,
+        "market_fit_score": 4.448276,
+        "sector_score": 9.094565,
+        "technical_score": 25.677274,
+        "logic_purity": {
+          "score": 10,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 13,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 3,
+            "capital_support": 2,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 3
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 65.220115,
+        "risk_annotations": [
+          "未见突出量化风险，仍需观察板块持续性"
+        ],
+        "selection_reason": "机械基件处于强势板块范围，量化排名5，技术分25.68；量价与趋势结构形成共振，终审综合分65.22达到60分门槛。",
+        "main_risk": "未见突出量化风险，仍需观察板块持续性",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 4.232,
+          "return_5d_pct": 1.4299332697807365,
+          "return_10d_pct": 10.83333333333334,
+          "return_20d_pct": 14.927630157701465,
+          "rsi14": 62.915936952714546,
+          "atr14_pct": 6.040547798066594,
+          "distance_ma20_atr": 1.1339408757501683,
+          "close_location": 0.8544776119402987,
+          "close_vs_vwap_pct": 1.386824757132632,
+          "amount_ratio_1d_20d": 1.1035796296787863,
+          "volume_ratio_1d_prior_10d": 1.1848853302211768
+        }
+      },
+      {
+        "ts_code": "600172.SH",
+        "name": "黄河旋风",
+        "origin": "official_pool",
+        "sector": "矿物制品",
+        "segment": "沪市主板",
+        "trade_date": "20260903",
+        "quant_rank": 8,
+        "quant_score": 38.180169,
+        "market_fit_score": 4.761905,
+        "sector_score": 5.39899,
+        "technical_score": 28.019274,
+        "logic_purity": {
+          "score": 9,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 15,
+          "factors": {
+            "rebound_efficiency": 3,
+            "theme_elasticity": 2,
+            "capital_support": 4,
+            "expectation_gap": 2,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 65.180169,
+        "risk_annotations": [
+          "RSI偏高，需防短线冲高回落",
+          "历史波动率较高，需控制隔夜波动"
+        ],
+        "selection_reason": "矿物制品处于强势板块范围，量化排名8，技术分28.02；量价与趋势结构形成共振，终审综合分65.18达到60分门槛。",
+        "main_risk": "RSI偏高，需防短线冲高回落；历史波动率较高，需控制隔夜波动",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 7.9322,
+          "return_5d_pct": 8.966461327857633,
+          "return_10d_pct": 18.452380952380953,
+          "return_20d_pct": 35.60477001703577,
+          "rsi14": 72.91666666666669,
+          "atr14_pct": 7.578068916008614,
+          "distance_ma20_atr": 1.8977501480165766,
+          "close_location": 0.7891156462585032,
+          "close_vs_vwap_pct": 1.1774016373266472,
+          "amount_ratio_1d_20d": 2.2915302350063405,
+          "volume_ratio_1d_prior_10d": 2.085511904602345
+        }
+      },
+      {
+        "ts_code": "600186.SH",
+        "name": "莲花控股",
+        "origin": "official_pool",
+        "sector": "食品",
+        "segment": "沪市主板",
+        "trade_date": "20260903",
+        "quant_rank": 4,
+        "quant_score": 39.516684,
+        "market_fit_score": 4.587302,
+        "sector_score": 5.956623,
+        "technical_score": 28.972759,
+        "logic_purity": {
+          "score": 8,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 14,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 2,
+            "capital_support": 3,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 64.516684,
+        "risk_annotations": [
+          "未见突出量化风险，仍需观察板块持续性"
+        ],
+        "selection_reason": "食品处于强势板块范围，量化排名4，技术分28.97；量价与趋势结构形成共振，终审综合分64.52达到60分门槛。",
+        "main_risk": "未见突出量化风险，仍需观察板块持续性",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "bottom_right_side",
+          "return_1d_pct": 4.3845,
+          "return_5d_pct": 5.90248075278017,
+          "return_10d_pct": 12.34119782214158,
+          "return_20d_pct": 27.892561983471076,
+          "rsi14": 52.85714285714286,
+          "atr14_pct": 6.692822524809605,
+          "distance_ma20_atr": 0.9799999999999985,
+          "close_location": 0.8378378378378389,
+          "close_vs_vwap_pct": 1.4936876617024586,
+          "amount_ratio_1d_20d": 1.258613400124312,
+          "volume_ratio_1d_prior_10d": 1.4770127688111698
+        }
+      },
+      {
+        "ts_code": "000807.SZ",
+        "name": "云铝股份",
+        "origin": "official_pool",
+        "sector": "铝",
+        "segment": "深市主板",
+        "trade_date": "20260903",
+        "quant_rank": 6,
+        "quant_score": 38.346681,
+        "market_fit_score": 4,
+        "sector_score": 9.201515,
+        "technical_score": 25.145166,
+        "logic_purity": {
+          "score": 10,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 13,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 3,
+            "capital_support": 3,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 2
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 64.346681,
+        "risk_annotations": [
+          "未见突出量化风险，仍需观察板块持续性"
+        ],
+        "selection_reason": "铝处于强势板块范围，量化排名6，技术分25.15；量价与趋势结构形成共振，终审综合分64.35达到60分门槛。",
+        "main_risk": "未见突出量化风险，仍需观察板块持续性",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 3.0486,
+          "return_5d_pct": 2.585237916822769,
+          "return_10d_pct": 8.392715756136182,
+          "return_20d_pct": 2.7006751687921993,
+          "rsi14": 62.22961730449251,
+          "atr14_pct": 2.900970468538034,
+          "distance_ma20_atr": 0.941726618705038,
+          "close_location": 0.5647058823529407,
+          "close_vs_vwap_pct": -0.35835328303136516,
+          "amount_ratio_1d_20d": 1.352075886106594,
+          "volume_ratio_1d_prior_10d": 1.5347740542654715
+        }
+      },
+      {
+        "ts_code": "002980.SZ",
+        "name": "华盛昌",
+        "origin": "official_pool",
+        "sector": "电器仪表",
+        "segment": "深市主板",
+        "trade_date": "20260903",
+        "quant_rank": 7,
+        "quant_score": 38.184458,
+        "market_fit_score": 4.862069,
+        "sector_score": 5.33101,
+        "technical_score": 27.991379,
+        "logic_purity": {
+          "score": 9,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 14,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 2,
+            "capital_support": 3,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 64.184458,
+        "risk_annotations": [
+          "历史波动率较高，需控制隔夜波动"
+        ],
+        "selection_reason": "电器仪表处于强势板块范围，量化排名7，技术分27.99；量价与趋势结构形成共振，终审综合分64.18达到60分门槛。",
+        "main_risk": "历史波动率较高，需控制隔夜波动",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 10.0041,
+          "return_5d_pct": 4.517393434590877,
+          "return_10d_pct": 8.84784161649148,
+          "return_20d_pct": 34.961407060609886,
+          "rsi14": 60.32821976453799,
+          "atr14_pct": 7.3484503495754225,
+          "distance_ma20_atr": 1.4253257996901474,
+          "close_location": 1,
+          "close_vs_vwap_pct": 1.68032264199931,
+          "amount_ratio_1d_20d": 1.552894310173566,
+          "volume_ratio_1d_prior_10d": 1.444553310691167
+        }
+      },
+      {
+        "ts_code": "301123.SZ",
+        "name": "奕东电子",
+        "origin": "official_pool",
+        "sector": "元器件",
+        "segment": "创业板",
+        "trade_date": "20260903",
+        "quant_rank": 12,
+        "quant_score": 37.316639,
+        "market_fit_score": 4.698413,
+        "sector_score": 5.890571,
+        "technical_score": 26.727655,
+        "logic_purity": {
+          "score": 9,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 14,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 2,
+            "capital_support": 3,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 63.316639,
+        "risk_annotations": [
+          "未见突出量化风险，仍需观察板块持续性"
+        ],
+        "selection_reason": "元器件处于强势板块范围，量化排名12，技术分26.73；量价与趋势结构形成共振，终审综合分63.32达到60分门槛。",
+        "main_risk": "未见突出量化风险，仍需观察板块持续性",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 7.9136,
+          "return_5d_pct": 5.029136052698258,
+          "return_10d_pct": 14.564045875362709,
+          "return_20d_pct": 18.24015972618367,
+          "rsi14": 55.144404332129966,
+          "atr14_pct": 6.946430725227012,
+          "distance_ma20_atr": 1.2418206622845094,
+          "close_location": 0.7707692307692293,
+          "close_vs_vwap_pct": 2.2432779879965503,
+          "amount_ratio_1d_20d": 1.7116984494358913,
+          "volume_ratio_1d_prior_10d": 1.9118481574310555
+        }
+      },
+      {
+        "ts_code": "603179.SH",
+        "name": "新泉股份",
+        "origin": "official_pool",
+        "sector": "汽车配件",
+        "segment": "沪市主板",
+        "trade_date": "20260903",
+        "quant_rank": 13,
+        "quant_score": 36.939928,
+        "market_fit_score": 4.095238,
+        "sector_score": 8.504125,
+        "technical_score": 24.340565,
+        "logic_purity": {
+          "score": 8,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 15,
+          "factors": {
+            "rebound_efficiency": 3,
+            "theme_elasticity": 3,
+            "capital_support": 3,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 3
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 62.939928,
+        "risk_annotations": [
+          "未见突出量化风险，仍需观察板块持续性"
+        ],
+        "selection_reason": "汽车配件处于强势板块范围，量化排名13，技术分24.34；量价与趋势结构形成共振，终审综合分62.94达到60分门槛。",
+        "main_risk": "未见突出量化风险，仍需观察板块持续性",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "bottom_right_side",
+          "return_1d_pct": 3.1605,
+          "return_5d_pct": 4.948505400653103,
+          "return_10d_pct": 19.20114122681884,
+          "return_20d_pct": 7.569515962924811,
+          "rsi14": 55.024595924104,
+          "atr14_pct": 4.797237229022774,
+          "distance_ma20_atr": 1.3401282965074834,
+          "close_location": 0.6913580246913589,
+          "close_vs_vwap_pct": 0.156169216547708,
+          "amount_ratio_1d_20d": 1.2934838862780245,
+          "volume_ratio_1d_prior_10d": 1.2892508496493171
+        }
+      },
+      {
+        "ts_code": "000816.SZ",
+        "name": "智慧农业",
+        "origin": "official_pool",
+        "sector": "农用机械",
+        "segment": "深市主板",
+        "trade_date": "20260903",
+        "quant_rank": 3,
+        "quant_score": 39.560137,
+        "market_fit_score": 2.517241,
+        "sector_score": 11.452378,
+        "technical_score": 25.590518,
+        "logic_purity": {
+          "score": 11,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 9,
+          "factors": {
+            "rebound_efficiency": 1,
+            "theme_elasticity": 3,
+            "capital_support": 1,
+            "expectation_gap": 4,
+            "chip_push_efficiency": 0
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 0,
+          "basis": "未发现可在本次证据边界内确认的公司级重大利好"
+        },
+        "final_score": 62.560137,
+        "risk_annotations": [
+          "量能未明显放大，持续性待确认"
+        ],
+        "selection_reason": "农用机械处于强势板块范围，量化排名3，技术分25.59；量价与趋势结构形成共振，终审综合分62.56达到60分门槛。",
+        "main_risk": "量能未明显放大，持续性待确认",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": -1.6949,
+          "return_5d_pct": -4.605263157894745,
+          "return_10d_pct": 3.942652329749108,
+          "return_20d_pct": 8.208955223880587,
+          "rsi14": 57.84313725490194,
+          "atr14_pct": 4.679802955665025,
+          "distance_ma20_atr": 0.40526315789473805,
+          "close_location": 0.12499999999999722,
+          "close_vs_vwap_pct": -0.5685710707584168,
+          "amount_ratio_1d_20d": 0.8241222830995101,
+          "volume_ratio_1d_prior_10d": 0.692604412283491
+        }
+      }
+    ],
+    "external_pool": [
+      {
+        "ts_code": "603162.SH",
+        "name": "海通发展",
+        "origin": "external_pool",
+        "sector": "水运",
+        "segment": "沪市主板",
+        "trade_date": "20260903",
+        "quant_rank": 1,
+        "quant_score": 46.000236,
+        "market_fit_score": 4.521226,
+        "sector_score": 13.167273,
+        "technical_score": 28.311737,
+        "logic_purity": {
+          "score": 11,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 17,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 4,
+            "capital_support": 4,
+            "expectation_gap": 3,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 1,
+          "basis": "强势板块与中短期价格动量形成量化共振"
+        },
+        "final_score": 78.000236,
+        "risk_annotations": [
+          "RSI偏高，需防短线冲高回落"
+        ],
+        "selection_reason": "水运处于强势板块范围，量化排名1，技术分28.31；量价与趋势结构形成共振，终审综合分78.00达到60分门槛。",
+        "main_risk": "RSI偏高，需防短线冲高回落",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 10,
+          "return_5d_pct": 11.287625418060188,
+          "return_10d_pct": 12.605752961082906,
+          "return_20d_pct": 14.84037963761864,
+          "rsi14": 71.33620689655173,
+          "atr14_pct": 5.602661801008909,
+          "distance_ma20_atr": 1.678256704980845,
+          "close_location": 1,
+          "close_vs_vwap_pct": 0.9540922996793988,
+          "amount_ratio_1d_20d": 2.1315692491666516,
+          "volume_ratio_1d_prior_10d": 2.243270479456094
+        }
+      },
+      {
+        "ts_code": "600026.SH",
+        "name": "中远海能",
+        "origin": "external_pool",
+        "sector": "水运",
+        "segment": "沪市主板",
+        "trade_date": "20260903",
+        "quant_rank": 2,
+        "quant_score": 45.656355,
+        "market_fit_score": 4.542453,
+        "sector_score": 13.167273,
+        "technical_score": 27.946629,
+        "logic_purity": {
+          "score": 11,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 15,
+          "factors": {
+            "rebound_efficiency": 2,
+            "theme_elasticity": 4,
+            "capital_support": 3,
+            "expectation_gap": 2,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 1,
+          "basis": "强势板块与中短期价格动量形成量化共振"
+        },
+        "final_score": 75.656355,
+        "risk_annotations": [
+          "RSI偏高，需防短线冲高回落",
+          "偏离MA20较远，追涨风险较高"
+        ],
+        "selection_reason": "水运处于强势板块范围，量化排名2，技术分27.95；量价与趋势结构形成共振，终审综合分75.66达到60分门槛。",
+        "main_risk": "RSI偏高，需防短线冲高回落；偏离MA20较远，追涨风险较高",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 8.7747,
+          "return_5d_pct": 9.242342826437389,
+          "return_10d_pct": 11.032222829055161,
+          "return_20d_pct": 16.43757159221075,
+          "rsi14": 76.96879643387817,
+          "atr14_pct": 4.356686107792849,
+          "distance_ma20_atr": 2.334838709677416,
+          "close_location": 0.8614457831325298,
+          "close_vs_vwap_pct": 0.9970528750670171,
+          "amount_ratio_1d_20d": 1.9814066813415874,
+          "volume_ratio_1d_prior_10d": 1.7182820881537977
+        }
+      },
+      {
+        "ts_code": "600693.SH",
+        "name": "东百集团",
+        "origin": "external_pool",
+        "sector": "百货",
+        "segment": "沪市主板",
+        "trade_date": "20260903",
+        "quant_rank": 5,
+        "quant_score": 44.382517,
+        "market_fit_score": 4.627358,
+        "sector_score": 12.396494,
+        "technical_score": 27.358665,
+        "logic_purity": {
+          "score": 11,
+          "basis": "基于板块强度、趋势结构、技术完整度和量价一致性进行保守终审"
+        },
+        "elasticity": {
+          "score": 16,
+          "factors": {
+            "rebound_efficiency": 3,
+            "theme_elasticity": 3,
+            "capital_support": 4,
+            "expectation_gap": 2,
+            "chip_push_efficiency": 4
+          },
+          "basis": "基于收益弹性、板块强度、量能、乖离和收盘承接进行终审"
+        },
+        "fundamentals": {
+          "score": 3,
+          "basis": "量化包未提供可独立核验的公司财务字段，未作未经核验的基本面加分"
+        },
+        "major_positive": {
+          "score": 1,
+          "basis": "强势板块与中短期价格动量形成量化共振"
+        },
+        "final_score": 75.382517,
+        "risk_annotations": [
+          "偏离MA20较远，追涨风险较高"
+        ],
+        "selection_reason": "百货处于强势板块范围，量化排名5，技术分27.36；量价与趋势结构形成共振，终审综合分75.38达到60分门槛。",
+        "main_risk": "偏离MA20较远，追涨风险较高",
+        "not_selected_reason": "按池内排序未进入最终名额，保留为观察候选。",
+        "evidence_as_of": "2026-09-03T18:35:00+08:00",
+        "sources": [
+          {
+            "type": "quantitative_bundle",
+            "path": "archive/2026/09/key10_bundle_20260903.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          },
+          {
+            "type": "latest_pointer",
+            "path": "latest/key10_bundle_latest.json",
+            "sha256": "08bb7ed7d9cdeefa6d5988dba817c56960110f5342feb00629da59dc904938d9"
+          }
+        ],
+        "data_completeness": {
+          "technical": true,
+          "review_fields": true,
+          "company_fundamental_evidence": "limited_quantitative_evidence"
+        },
+        "quantitative_snapshot": {
+          "setup_type": "trend_continuation",
+          "return_1d_pct": 9.9602,
+          "return_5d_pct": 18.07486631016042,
+          "return_10d_pct": 23.35195530726257,
+          "return_20d_pct": 15.602094240837673,
+          "rsi14": 65.52419354838707,
+          "atr14_pct": 6.146480331262941,
+          "distance_ma20_atr": 2.1162105263157867,
+          "close_location": 1,
+          "close_vs_vwap_pct": 5.8355291675913135,
+          "amount_ratio_1d_20d": 2.121129406290345,
+          "volume_ratio_1d_prior_10d": 2.460324434380705
+        }
+      }
+    ],
+    "official_count": 10,
+    "external_count": 3
+  },
+  "validation": {
+    "candidate_count": 40,
+    "official_input_count": 30,
+    "external_input_count": 10,
+    "all_review_fields_nonempty": true,
+    "elasticity_sum_match": true,
+    "final_score_formula_match": true,
+    "official_limit_ok": true,
+    "external_limit_ok": true,
+    "external_condition_ok": true,
+    "future_data_rows_used": 0
+  }
+}
