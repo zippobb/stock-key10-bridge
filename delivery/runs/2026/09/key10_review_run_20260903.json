@@ -1,0 +1,12 @@
+{
+  "run_date": "20260903",
+  "state": "running",
+  "attempt_no": 0,
+  "started_at": "2026-09-04T01:40:18+08:00",
+  "heartbeat_at": "2026-09-04T01:40:18+08:00",
+  "finished_at": null,
+  "owner": "temporary_acceptance",
+  "completed_stage": "input_validation",
+  "failure_stage": null,
+  "resume_from": "stage_A"
+}
