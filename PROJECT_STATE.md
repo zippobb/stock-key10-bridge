@@ -6,10 +6,10 @@
 ## 元数据
 
 - 状态文件版本：1.0
-- 最后更新：2026-09-04 01:26 Asia/Shanghai
+- 最后更新：2026-09-04 08:55 Asia/Shanghai
 - GitHub 仓库：`zippobb/stock-key10-bridge`
 - 服务器项目目录（2026-09-02实时验证）：`/opt/stock-automation/scanner`
-- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一，等待下一交易日端到端验收；正式JSON/PNG仍由ChatGPT终审任务生成
+- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一；20260903端到端验收已完成，正式JSON/PNG由ChatGPT终审任务生成，PNG样式已固化为`v2.0-dashboard-20260904`
 
 ## 权威性与冲突处理
 
@@ -91,6 +91,15 @@
 - 不得把任务“已设置”当成任务“已成功执行”。
 - 成功、结果未变化、数据未就绪、执行失败均应提供用户可见回执；没有可见回执不得视为交付完成。
 
+
+### V2.0 PNG固定样式
+
+- 样式版本：`v2.0-dashboard-20260904`，适用于主终审、有限重试和交付复核。
+- 画布：PNG、RGB、1024×2048；深蓝背景`#071525`及32px低对比度网格。
+- 字体：可验证的NotoSansSC/NotoSansCJK SC；粗体字形为空时使用常规中文字体加描边；不得使用拉丁字体、英文音译或空字形。
+- 版式：顶部标题/日期；市场总览；左右分列的升温/降温板块轮动；两列池内正式候选卡片；三列池外观察卡片；底部次日执行纪律。
+- 内容：真实中文股票名称和板块，池内最多10只、池外最多3只；每张卡片展示排名、代码、综合分、评分摘要、理由和风险；风险只作文字标记。
+- 验收：原始尺寸视觉检查通过后才可交付；不得出现文字溢出、卡片覆盖、日期混用、英文音译、空字形或旧候选内容；样式失败只修PNG，不重做JSON和评分。
 ## 当前已验证快照
 
 ### GitHub数据
@@ -172,12 +181,12 @@
 
 ## 最新桥接实时核验
 
-实时检查时间：2026-09-04 00:26 Asia/Shanghai。
+实时检查时间：2026-09-04 08:55 Asia/Shanghai。
 
 - GitHub `latest/manifest.json)：`status=success`、`trade_date=20260903`、`schema_version=2.0.0`，量化 bundle 已发布。
 - bundle：`model_version=V2.0`、`stage=21:30_quantitative_review_payload`、`future_data_rows_used=0`、正式池30只、外部池10只。
-- 20260903 正式结果 JSON、日期回执和最终 PNG 当前尚未生成。
-- `latest/key10_review_receipt_latest.json` 仍指向20260902已完成结果；下一次主终审应处理20260903最新 bundle，并生成对应正式结果与PNG。
+- 20260903 正式结果 JSON、日期回执和最终 PNG 已生成并完成回读校验。
+- `review/2026/09/key10_review_20260903.json`、`delivery/2026/09/key10_review_receipt_20260903.json`和`latest/key10_review_receipt_latest.json`均指向20260903；PNG已按`v2.0-dashboard-20260904`样式重新生成，SHA256=`2d7cc2af9c429df3b8a12aad3b96b27ff62eb4042042862e20c3dbfb7cd8b8a8`。
 - 当前工作会话未能直接访问 ECS，服务器 timer/service 状态待下一次服务器连接验收；本段只确认 GitHub 桥接状态。
 
 ## 本次实时调度重排核验
@@ -228,6 +237,8 @@
 - 结论：第1项全链路验收完成；服务器生成→GitHub发布→ChatGPT读取→终审JSON→PNG→持久回执→可见交付已贯通。
 
 ## 变更记录
+
+- 2026-09-04：发现此前20260903 PNG存在英文音译、部分中文缺失及样式未固化问题；已依据正式终审JSON重新生成中文深蓝金融仪表盘PNG，尺寸1024×2048，视觉检查通过，SHA256=`2d7cc2af9c429df3b8a12aad3b96b27ff62eb4042042862e20c3dbfb7cd8b8a8`，并将样式契约固化为`v2.0-dashboard-20260904`。
 
 - 2026-09-02：在用户确认完全替代后，从数据门槛检查点恢复并完成20260902终审；结果JSON为`review/2026/09/key10_review_20260902.json`，池内10只、池外3只，PNG为1024×2048且视觉检查通过，日期与latest回执已写入。
 

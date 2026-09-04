@@ -1,7 +1,7 @@
 {
   "run_date": "20260903",
   "started_at": "2026-09-04T01:40:18+08:00",
-  "finished_at": "2026-09-04T01:52:49+08:00",
+  "finished_at": "2026-09-04T08:55:56+08:00",
   "status": "已完成",
   "trade_date": "20260903",
   "attempt_no": 0,
@@ -15,8 +15,8 @@
   "retry_exhausted": false,
   "result_json_path": "review/2026/09/key10_review_20260903.json",
   "png_path": "review/2026/09/key10_review_20260903.png",
-  "png_sha256": "af0d309c91779b3f57d94e5312d7f0f85466962e3342b1180cb59995d7570779",
-  "png_delivery_status": "generated_1024x2048_visual_checked_and_uploaded",
+  "png_sha256": "2d7cc2af9c429df3b8a12aad3b96b27ff62eb4042042862e20c3dbfb7cd8b8a8",
+  "png_delivery_status": "regenerated_1024x2048_visual_checked_style_fixed_and_uploaded",
   "acceptance_scope": "end_to_end_20260903",
   "chain_checks": {
     "server_output_reference": "manifest/archive bridge verified",
@@ -27,7 +27,8 @@
     "png": true,
     "date_receipt": true,
     "latest_receipt": true,
-    "visible_completion": true
+    "visible_completion": true,
+    "png_style_contract": true
   },
-  "summary": "V2.0一次性端到端验收完成：量化包、权威归档、终审JSON、1024x2048 PNG及双回执均已写入并完成回读校验。"
+  "summary": "V2.0一次性端到端验收完成：量化包、权威归档、终审JSON、1024x2048中文深蓝仪表盘PNG及双回执均已写入并完成回读校验；PNG样式已固化。"
 }
