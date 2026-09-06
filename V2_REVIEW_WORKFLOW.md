@@ -45,6 +45,36 @@
 4. 正式池候选选择：先对现有候选完成V2终审和60分/数据完整门槛；若A层存在合格候选，正式池最多10只中至少保留`min(3,A层合格数)`只A层候选；A层不足时不凑数，可按B层、C层补足剩余名额。D层只能在没有合格A/B/C候选时作为最后备选。保留位不改变单只综合分，也不允许低于60分或数据不完整的候选入选。
 5. 保留位确定后，池内最终展示顺序仍按综合分、技术分、弹性分、板块分、逻辑纯度、ts_code排序；池外仍执行原V2准入条件且独立展示。若当前40只候选中没有A层合格候选，记录`rotation_coverage_gap`，不得用旧日期、旧PNG或臆造股票填补。
 6. 用户已确认V2取消行业/板块限制：所有行业均可进入轮动分层和候选来源，不执行白酒、证券、银行等旧排除清单。行业名称不得作为自动排除条件；候选仍须满足V2市场范围、数据完整、综合分门槛、弹性与风险核验等现行规则。
+### 第3步修正：动量与KDJ时机层（3A当前生效，3B待ECS字段）
+
+本步针对“高综合分/技术分但入选时点已接近回调”的滞后问题。时机层仅作独立标注，不修改V2七项评分、`final_score`、最终排序、60分/数据完整门槛、板块全行业范围、候选数量或PNG版式；历史结果不回写，历史验证（第6步）仍暂缓。
+
+1. 3A审查侧输入与字段契约（当前生效）
+   - 优先读取候选记录中的标准KDJ(9,3,3)快照；字段名固定为`kdj_k`、`kdj_d`、`kdj_j`、`kdj_k_prev`、`kdj_d_prev`、`kdj_j_prev`、`kdj_k_slope_3d`、`kdj_d_slope_3d`、`kdj_j_slope_3d`、`kdj_cross_state`（`golden_cross`/`death_cross`/`none`）、`kdj_cross_age_days`、`kdj_as_of`、`kdj_data_complete`和`kdj_source`。
+   - K、D、J必须为0–100的有限数，斜率为最近3个交易日的点数变化，`kdj_cross_age_days`为非负整数，`kdj_as_of`不得晚于`trade_date`；任一必需字段缺失、越界或日期不合格时，`kdj_status=data_insufficient`。
+   - 不得由RSI、MACD、收益率、乖离率或量能反推KDJ；缺失值不得填0、填50或沿用上一交易日。
+
+2. 时机状态（字段写入`selection_axes`，不改分/不改排名）
+   - `early_turn`：`kdj_cross_state=golden_cross`且`kdj_cross_age_days<=2`、K<60、D<60、J<90，K/J斜率>0且D斜率>=0；对应`entry_timing_status=可关注`，次日只观察回踩承接，不在高开长阳时追入。
+   - `trend_confirming`：K>D、K<80、J<100，K/D斜率非负且未触发扩张护栏；对应`entry_timing_status=待确认`，等待板块与量价确认。
+   - `extended`：K>=80或J>=100，或出现死叉后仍处于高位；对应`entry_timing_status=不追高`，等待回撤/重新钝化。
+   - `pullback_wait`：`kdj_cross_state=death_cross`，或K/J斜率均<0且收盘仍显著高于MA20；对应`entry_timing_status=待确认`，等待K/D止跌再评估。
+   - `weak`：K<D且K/J斜率非正、同时结构/量价未修复；对应`entry_timing_status=待确认`，暂不行动。
+   - 以上条件按`extended`→`pullback_wait`→`early_turn`→`trend_confirming`→`weak`优先级判定；无法满足或数据不完整时为`data_insufficient`，对应`entry_timing_status=数据不足`。每条记录必须写`timing_state`、`kdj_status`、`entry_timing_basis`和`next_day_action`。
+
+3. KDJ缺失时的审查侧扩张护栏（当前可执行、仅标注）
+   - 当`kdj_status=data_insufficient`时，若满足以下任一条件，将`entry_timing_status`标为`不追高`并写明`timing_guard_triggered=true`：`distance_ma20_atr>=1.8`；或`rsi14>=70`且`return_5d_pct>=8`；或`close_location>=0.90`且`volume_ratio_1d_prior_10d>=2.0`且`return_1d_pct>=5`。
+   - 护栏只影响`entry_timing_status`、`entry_timing_basis`和`next_day_action`，不改变任何V2分数、排序、准入、淘汰或风险文字；不得把护栏等同于否决。未触发护栏且KDJ缺失时保持`数据不足`，不作推断。
+   - 本护栏用于避免明显扩张位被误写成“可买”，不是历史验证或回测，也不改变第6步暂缓状态。
+
+4. 3B ECS上游部署要求（待服务器连接后实施）
+   - ECS量化包必须在正式池30只和池外10只的每条候选中输出上述KDJ字段，保持`future_data_rows_used=0`和现有stage/schema/model不变；同时保留第1步`selection_axes`和第2步`rotation_*`字段。
+   - 首次收到完整KDJ字段后，先做字段范围、日期、跨日快照和未来数据校验，再按本节状态表生成时机标注；不得回写旧交易日结果。当前会话无法直接修改或验证ECS脚本，3B不得宣称已部署。
+
+5. 输出与验收
+   - 正式JSON保留七项原始分、`final_score`、`selection_axes`、`rotation_*`和时机字段；`entry_timing_score_effect=0`、`entry_timing_rank_effect=false`继续固定为0/false。
+   - PNG版式不变；时机状态先在JSON和最终文字回执中呈现。只有后续用户明确确认并完成单独部署/验收，才可讨论把时机状态转为分数或排序规则。
+
 三、交付隔离
 1. 必须先完成并自检正式结果JSON，再开始制图。JSON包含七项分数、五项弹性明细、风险标记、来源、公开信息截止时间、bundle哈希和future_data_rows_used=0校验。
 2. 只为最终池内0–10只和池外0–3只撰写入选依据与主要风险；非入选股只保留紧凑评分记录和未入选原因。
