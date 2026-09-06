@@ -1,0 +1,32 @@
+{
+  "run_date": "20260904",
+  "trade_date": "20260904",
+  "stage": "stage_B_primary_source_evidence_and_stage_C_review",
+  "completed_at": "2026-09-06T15:05:48+08:00",
+  "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a",
+  "candidate_count": 40,
+  "official_input_count": 30,
+  "external_input_count": 10,
+  "evidence_cutoff": "2026-09-04T18:35:00+08:00",
+  "evidence_policy": {
+    "quantitative_source_verified": true,
+    "company_financial_source_verified": false,
+    "company_event_source_verified": false,
+    "missing_scores": ["fundamentals.score", "major_positive.score"],
+    "missing_scores_are_null": true,
+    "expectation_gap_not_substituted_by_price": true,
+    "available_weight_points": 85,
+    "available_weight_pct": 85.0,
+    "rescaled_under_v2_rule": true
+  },
+  "source_urls": [
+    "https://github.com/zippobb/stock-key10-bridge/blob/main/archive/2026/09/key10_bundle_20260904.json",
+    "https://github.com/zippobb/stock-key10-bridge/blob/main/latest/key10_bundle_latest.json"
+  ],
+  "formal_json_sha256": "a966618bb66208f276a315c120cf5c5dc03f698504248bc9dfc4d1bf9710bbe5",
+  "png_sha256": "47833f2d06a066c4d73675da509473bdbe5abbe7b6140f9060402af3e5789789",
+  "png_dimensions": [1024, 2048],
+  "png_mode": "RGB",
+  "visual_check": "passed",
+  "resume_next": "persist_formal_json_then_receipts_and_release_lock"
+}
