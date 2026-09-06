@@ -30,6 +30,21 @@
 3. 正式JSON必须同时保留七项原始分、`final_score`和上述`selection_axes`。正式池仍按现行V2顺序排序，PNG仍按现行固定样式生成；卡片可继续展示现有字段，时机状态先以JSON和最终文字回执为准。
 4. `entry_timing_status`不得与重大风险混用：重大风险仍只作文字标记，不扣分、不否决、不改变排序。后续第2–5步将分别处理板块驱动、动量/KDJ、阶段状态和输出数量；在对应步骤获确认前，不得把这些规则提前写入本步。
 
+### 第2步修正：板块轮动驱动候选来源（审查侧当前生效）
+
+本步先在终审侧使用现有量化包实现板块轮动分层；不修改七项评分、排序字段、KDJ/动量阈值、候选数量或PNG版式。由于当前bundle只提供池内30只和池外10只，未提供额外“轮动专用候选槽位”，本步不得凭空新增股票；上游候选扩展另行处理。
+
+1. 轮动数据：读取当前bundle的`sector_summary.all_sectors`，并读取`previous_trade_date`对应的权威bundle，按`industry`对齐。计算`sector_rank_delta=previous_rank-current_rank`（正数代表排名上升）和`sector_strength_delta=price_strength_norm-previous_price_strength_norm`。前一交易日板块缺失时，相关字段记为null，`rotation_state=data_insufficient`，不得用当日排名替代跨日变化。
+2. 分层口径（优先级从上到下，避免同一板块多层归类）：
+   - `warming`：`sector_rank_delta>=10`或`sector_strength_delta>=0.10`，且加速度、广度、资金、量能扩张四项中至少两项达到确认；无足够确认不得标为升温。
+   - `leading`：未归入warming，且当前板块排名<=30、强度变化>-0.05、持续性>=0.60。
+   - `cooling`：未归入前两层，且`sector_rank_delta<=-10`或`sector_strength_delta<=-0.10`。
+   - 其余为`neutral`；历史行缺失为`data_insufficient`。
+   其中确认项必须来自bundle的`acceleration_norm`、`breadth_norm`、`capital_norm`和`volume_expansion_ratio_pct`；对应阈值分别为0.60、0.60、0.60和50。
+3. 每个候选增加`rotation_state`、`rotation_source_tier`（A=warming、B=leading、C=neutral、D=cooling、U=data_insufficient）、`sector_rank_delta`、`sector_strength_delta`和`rotation_confirmation_count`，并保留板块证据日期。
+4. 正式池候选选择：先对现有候选完成V2终审和60分/数据完整门槛；若A层存在合格候选，正式池最多10只中至少保留`min(3,A层合格数)`只A层候选；A层不足时不凑数，可按B层、C层补足剩余名额。D层只能在没有合格A/B/C候选时作为最后备选。保留位不改变单只综合分，也不允许低于60分或数据不完整的候选入选。
+5. 保留位确定后，池内最终展示顺序仍按综合分、技术分、弹性分、板块分、逻辑纯度、ts_code排序；池外仍执行原V2准入条件且独立展示。若当前40只候选中没有A层合格候选，记录`rotation_coverage_gap`，不得用旧日期、旧PNG或臆造股票填补。
+6. 当前V2权威文件未定义新的行业排除清单，本步不从旧版本自行恢复白酒、证券、银行等排除项；如需加入，必须先形成新的V2明确规则。
 三、交付隔离
 1. 必须先完成并自检正式结果JSON，再开始制图。JSON包含七项分数、五项弹性明细、风险标记、来源、公开信息截止时间、bundle哈希和future_data_rows_used=0校验。
 2. 只为最终池内0–10只和池外0–3只撰写入选依据与主要风险；非入选股只保留紧凑评分记录和未入选原因。
