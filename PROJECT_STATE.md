@@ -6,10 +6,10 @@
 ## 元数据
 
 - 状态文件版本：1.0
-- 最后更新：2026-09-06（第3步规则同步）
+- 最后更新：2026-09-06（第3步3B代码层部分完成）
 - GitHub 仓库：`zippobb/stock-key10-bridge`
 - 服务器项目目录（2026-09-02实时验证）：`/opt/stock-automation/scanner`
-- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一；20260903端到端验收已完成，正式JSON/PNG由ChatGPT终审任务生成，PNG样式已固化为`v2.0-dashboard-20260904`；第1步研究价值/买入时机分离、第2步板块轮动审查侧分层及第3步动量/KDJ时机层3A已同步至工作流和活动提示词
+- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一；20260903端到端验收已完成，正式JSON/PNG由ChatGPT终审任务生成，PNG样式已固化为`v2.0-dashboard-20260904`；第1步研究价值/买入时机分离、第2步板块轮动审查侧分层、第3步动量/KDJ时机层3A及3B代码层部分修改已同步；生产bundle/GitHub发布仍待验证
 
 ## 权威性与冲突处理
 
@@ -111,7 +111,7 @@
 - 状态优先级为`extended`→`pullback_wait`→`early_turn`→`trend_confirming`→`weak`；早期近2日金叉且K<60/D<60/J<90、斜率向上才标`可关注`，趋势确认标`待确认`，K>=80/J>=100、K>=70或J>=90的死叉或扩张护栏触发标`不追高`，无法判断标`数据不足`。`pullback_wait`中的“显著高于MA20”固定为`distance_ma20_atr>=1.0`。
 - 审查侧扩张护栏无论KDJ是否完整都评估：`distance_ma20_atr>=1.8`，或`rsi14>=70`且`return_5d_pct>=8`，或`close_location>=0.90`且`volume_ratio_1d_prior_10d>=2.0`且`return_1d_pct>=5`；触发仅标注`不追高`，不否决、不改分、不改排名。KDJ缺失且未触发护栏时保持`数据不足`。
 - 2026-09-06实时读取latest：`trade_date=20260904`，池内30只+池外10只均无KDJ字段；按上述护栏预检查，11/40条会得到“不追高”标注，其余在KDJ补齐前为“数据不足”。这不是正式结果回写。
-- 3B待服务器连接后实施：ECS必须为两类候选输出完整KDJ字段并保持schema/model/stage及`future_data_rows_used=0`不变；当前工作会话未修改或验证ECS脚本，不得宣称3B已部署。
+- 3B生产发布待验证：ECS必须为两类候选输出完整KDJ字段并保持schema/model/stage及`future_data_rows_used=0`不变。2026-09-06桌面Codex已修改`/opt/stock-automation/scanner/stock_key10_v2_scoring.py`和`stock_key10_v2_daily.py`，但未生成生产bundle或发布GitHub；安全临时输出/干跑方式仍待确认，未达到3B已部署定义。
 - 已同步范围：`V2_REVIEW_WORKFLOW.md`及V2.0主任务、第一次重试、第二次重试提示词；历史结果不回写，历史验证（第6步）继续暂缓。
 
 ### 输出与职责
@@ -318,3 +318,14 @@
 - 2026-09-06：完成第3步修正（3A审查侧）。加入标准KDJ(9,3,3)字段契约、早期拐点/趋势确认/扩张/回调状态表及KDJ缺失时的扩张护栏；护栏只改变买入时机标注，不改V2分数、排序、准入、板块范围或PNG。实时bundle尚无KDJ，3B ECS字段补齐待服务器连接后实施；历史验证仍暂缓。
 - 2026-09-06：补齐第3步边界：扩张护栏改为无论KDJ是否完整均评估；高位死叉与“显著高于MA20”阈值改为可计算条件，避免趋势确认状态吞掉明显回调风险。分数、排序、准入和全行业规则不变。
 - 2026-09-06：修正KDJ契约的J值范围。K/D限定0–100，J按标准公式保留可超出区间的有限值，并固定RSV9、K/D递推、J=3K-2D、首个值50及零区间处理，避免把标准J极值误判为坏数据。
+
+### 2026-09-06 ECS 第3B代码层执行回执
+
+- 执行状态：部分完成；仅修改当前V2上游源码并通过单元校验，未生成生产bundle，未发布GitHub。
+- 连接方式：Alibaba Cloud Workbench CLI；实例`i-uf6fp4j1j3s3wlgdtzfy`，区域`cn-shanghai`；目录`/opt/stock-automation/scanner`。
+- 修改文件：`stock_key10_v2_scoring.py`、`stock_key10_v2_daily.py`；配置、历史输出、service、timer均未修改。
+- 主备份：`/root/stock-key10-backups/step3b_20260906T141321Z/`；语义修正增量备份：`/root/stock-key10-backups/step3b_refine_20260906T141939Z/`。修改前与当前SHA由桌面Codex回执保存；未读取或提交凭据。
+- 校验通过：语法、窗口不足、平窗RSV=50、初始K/D=50、金叉/死叉/斜率/年龄、范围/有限值、未来数据守卫、候选覆盖和单元测试。
+- 单元候选提取覆盖：官方30/30、池外10/10，每条14个KDJ字段；这不是生产bundle覆盖。
+- GitHub latest仍为`trade_date=20260904`、bundle SHA=`c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a`，生产候选KDJ仍为0/40；未发布旧产物。
+- 阻断：项目目录无`AGENTS.md`、无`.git`，无法验证Git clean状态；项目也未提供安全dry-run参数。人工恢复起点为确认可写入临时目录的V2 dry-run方式，先验证真实30+10候选KDJ覆盖及评分/排序不变，再调用既有bundle发布流程。
