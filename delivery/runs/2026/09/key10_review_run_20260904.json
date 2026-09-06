@@ -1,17 +1,17 @@
 {
   "run_date": "20260904",
-  "state": "running",
+  "state": "completed",
   "attempt_no": 0,
   "role": "acceptance",
   "owner": "V2.0修复验证重跑",
   "owner_token": "acceptance-mtpgwn62-ynw59co7",
   "generation": 1,
   "started_at": "2026-09-06T15:05:48+08:00",
-  "heartbeat_at": "2026-09-06T15:10:26+08:00",
-  "finished_at": null,
-  "lease_expires_at": "2026-09-06T15:13:26+08:00",
+  "heartbeat_at": "2026-09-06T15:12:20+08:00",
+  "finished_at": "2026-09-06T15:12:20+08:00",
+  "lease_expires_at": "2026-09-06T15:12:20+08:00",
   "hard_deadline": "2026-09-06T15:35:48+08:00",
-  "completed_stage": "png_persisted",
+  "completed_stage": "delivery_receipts_and_lock_release",
   "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a",
   "previous_run": {
     "run_date": "20260904",
@@ -50,7 +50,7 @@
   },
   "recovery_note": "按修复后一次性历史恢复验收接管；输入大文件已落盘并完成原始字节流哈希校验。",
   "failure_stage": null,
-  "resume_from": "stage_B_primary_source_evidence",
+  "resume_from": null,
   "evidence_checkpoint": {
     "path": "delivery/checkpoints/2026/09/20260904/evidence_review.json",
     "formal_json_sha256": "a966618bb66208f276a315c120cf5c5dc03f698504248bc9dfc4d1bf9710bbe5",
@@ -76,5 +76,8 @@
     ],
     "mode": "RGB",
     "visual_check": "passed"
-  }
+  },
+  "lock_released": true,
+  "lock_released_at": "2026-09-06T15:12:20+08:00",
+  "release_reason": "正式JSON、PNG、双回执全部写入并回读通过；验收任务收尾。"
 }
