@@ -68,9 +68,10 @@
    - 护栏只影响`entry_timing_status`、`entry_timing_basis`和`next_day_action`，不改变任何V2分数、排序、准入、淘汰或风险文字；不得把护栏等同于否决。KDJ缺失且未触发护栏时保持`kdj_status=data_insufficient`和`entry_timing_status=数据不足`，不作推断。
    - 本护栏用于避免明显扩张位被误写成“可买”，不是历史验证或回测，也不改变第6步暂缓状态。
 
-4. 3B ECS上游部署要求（待服务器连接后实施）
+4. 3B ECS上游部署要求（代码层部分完成，生产发布待验证）
    - ECS量化包必须在正式池30只和池外10只的每条候选中输出上述KDJ字段，保持`future_data_rows_used=0`和现有stage/schema/model不变；同时保留第1步`selection_axes`和第2步`rotation_*`字段。
-   - 首次收到完整KDJ字段后，先做字段范围、日期、跨日快照和未来数据校验，再按本节状态表生成时机标注；不得回写旧交易日结果。当前会话无法直接修改或验证ECS脚本，3B不得宣称已部署。
+   - 2026-09-06桌面Codex已修改`/opt/stock-automation/scanner/stock_key10_v2_scoring.py`和`stock_key10_v2_daily.py`，KDJ单元校验及30/30、10/10字段覆盖校验通过；但尚未生成生产bundle或发布GitHub。必须先通过安全临时输出/干跑和真实30+10兼容性校验，才能把3B标记为已部署。
+   - 每次运行必须重新读取当日bundle；在新bundle含完整KDJ字段前，旧latest不得被当作3B已部署，KDJ缺失按`data_insufficient`及扩张护栏处理。不得回写旧交易日结果。
 
 5. 输出与验收
    - 正式JSON保留七项原始分、`final_score`、`selection_axes`、`rotation_*`和时机字段；`entry_timing_score_effect=0`、`entry_timing_rank_effect=false`继续固定为0/false。
