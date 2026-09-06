@@ -7,11 +7,11 @@
   "owner_token": "acceptance-mtpgwn62-ynw59co7",
   "generation": 1,
   "started_at": "2026-09-06T15:05:48+08:00",
-  "heartbeat_at": "2026-09-06T15:09:45+08:00",
+  "heartbeat_at": "2026-09-06T15:10:26+08:00",
   "finished_at": null,
-  "lease_expires_at": "2026-09-06T15:12:45+08:00",
+  "lease_expires_at": "2026-09-06T15:13:26+08:00",
   "hard_deadline": "2026-09-06T15:35:48+08:00",
-  "completed_stage": "formal_json_persisted",
+  "completed_stage": "png_persisted",
   "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a",
   "previous_run": {
     "run_date": "20260904",
@@ -66,5 +66,15 @@
     "candidate_count": 40,
     "official_count": 10,
     "external_count": 3
+  },
+  "png_result": {
+    "path": "review/2026/09/key10_review_20260904.png",
+    "sha256": "47833f2d06a066c4d73675da509473bdbe5abbe7b6140f9060402af3e5789789",
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "mode": "RGB",
+    "visual_check": "passed"
   }
 }
