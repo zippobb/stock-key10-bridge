@@ -51,7 +51,8 @@
 
 1. 3A审查侧输入与字段契约（当前生效）
    - 优先读取候选记录中的标准KDJ(9,3,3)快照；字段名固定为`kdj_k`、`kdj_d`、`kdj_j`、`kdj_k_prev`、`kdj_d_prev`、`kdj_j_prev`、`kdj_k_slope_3d`、`kdj_d_slope_3d`、`kdj_j_slope_3d`、`kdj_cross_state`（`golden_cross`/`death_cross`/`none`）、`kdj_cross_age_days`、`kdj_as_of`、`kdj_data_complete`和`kdj_source`。
-   - K、D、J必须为0–100的有限数，斜率为最近3个交易日的点数变化，`kdj_cross_age_days`为非负整数，`kdj_as_of`不得晚于`trade_date`；全部字段合格时`kdj_status=complete`，任一必需字段缺失、越界或日期不合格时为`kdj_status=data_insufficient`。
+   - K、D必须为0–100的有限数；J按标准公式保留为有限数，可低于0或高于100。斜率为最近3个交易日的点数变化，`kdj_cross_age_days`为非负整数，`kdj_as_of`不得晚于`trade_date`；全部字段合格时`kdj_status=complete`，任一必需字段缺失、越界或日期不合格时为`kdj_status=data_insufficient`。
+   - 计算口径固定为：`RSV=(close-LL9)/(HH9-LL9)*100`；`K=2/3*K_prev+1/3*RSV`，`D=2/3*D_prev+1/3*K`，`J=3*K-2*D`。首个有效值`K=D=50`；9日窗口不足时标记数据不足，`HH9=LL9`时`RSV=50`；禁止引入未来数据。
    - 不得由RSI、MACD、收益率、乖离率或量能反推KDJ；缺失值不得填0、填50或沿用上一交易日。
 
 2. 时机状态（字段写入`selection_axes`，不改分/不改排名）
