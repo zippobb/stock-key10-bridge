@@ -51,20 +51,20 @@
 
 1. 3A审查侧输入与字段契约（当前生效）
    - 优先读取候选记录中的标准KDJ(9,3,3)快照；字段名固定为`kdj_k`、`kdj_d`、`kdj_j`、`kdj_k_prev`、`kdj_d_prev`、`kdj_j_prev`、`kdj_k_slope_3d`、`kdj_d_slope_3d`、`kdj_j_slope_3d`、`kdj_cross_state`（`golden_cross`/`death_cross`/`none`）、`kdj_cross_age_days`、`kdj_as_of`、`kdj_data_complete`和`kdj_source`。
-   - K、D、J必须为0–100的有限数，斜率为最近3个交易日的点数变化，`kdj_cross_age_days`为非负整数，`kdj_as_of`不得晚于`trade_date`；任一必需字段缺失、越界或日期不合格时，`kdj_status=data_insufficient`。
+   - K、D、J必须为0–100的有限数，斜率为最近3个交易日的点数变化，`kdj_cross_age_days`为非负整数，`kdj_as_of`不得晚于`trade_date`；全部字段合格时`kdj_status=complete`，任一必需字段缺失、越界或日期不合格时为`kdj_status=data_insufficient`。
    - 不得由RSI、MACD、收益率、乖离率或量能反推KDJ；缺失值不得填0、填50或沿用上一交易日。
 
 2. 时机状态（字段写入`selection_axes`，不改分/不改排名）
    - `early_turn`：`kdj_cross_state=golden_cross`且`kdj_cross_age_days<=2`、K<60、D<60、J<90，K/J斜率>0且D斜率>=0；对应`entry_timing_status=可关注`，次日只观察回踩承接，不在高开长阳时追入。
    - `trend_confirming`：K>D、K<80、J<100，K/D斜率非负且未触发扩张护栏；对应`entry_timing_status=待确认`，等待板块与量价确认。
-   - `extended`：K>=80或J>=100，或出现死叉后仍处于高位；对应`entry_timing_status=不追高`，等待回撤/重新钝化。
-   - `pullback_wait`：`kdj_cross_state=death_cross`，或K/J斜率均<0且收盘仍显著高于MA20；对应`entry_timing_status=待确认`，等待K/D止跌再评估。
-   - `weak`：K<D且K/J斜率非正、同时结构/量价未修复；对应`entry_timing_status=待确认`，暂不行动。
+   - `extended`：K>=80或J>=100，或`kdj_cross_state=death_cross`且(K>=70或J>=90)，或触发扩张护栏；对应`entry_timing_status=不追高`，等待回撤/重新钝化。
+   - `pullback_wait`：`kdj_cross_state=death_cross`（未达到`extended`条件），或K/J斜率均<0且`distance_ma20_atr>=1.0`；对应`entry_timing_status=待确认`，等待K/D止跌再评估。
+   - `weak`：K<D且K/J斜率均非正，且未满足前述状态；对应`entry_timing_status=待确认`，暂不行动。
    - 以上条件按`extended`→`pullback_wait`→`early_turn`→`trend_confirming`→`weak`优先级判定；无法满足或数据不完整时为`data_insufficient`，对应`entry_timing_status=数据不足`。每条记录必须写`timing_state`、`kdj_status`、`entry_timing_basis`和`next_day_action`。
 
-3. KDJ缺失时的审查侧扩张护栏（当前可执行、仅标注）
-   - 当`kdj_status=data_insufficient`时，若满足以下任一条件，将`entry_timing_status`标为`不追高`并写明`timing_guard_triggered=true`：`distance_ma20_atr>=1.8`；或`rsi14>=70`且`return_5d_pct>=8`；或`close_location>=0.90`且`volume_ratio_1d_prior_10d>=2.0`且`return_1d_pct>=5`。
-   - 护栏只影响`entry_timing_status`、`entry_timing_basis`和`next_day_action`，不改变任何V2分数、排序、准入、淘汰或风险文字；不得把护栏等同于否决。未触发护栏且KDJ缺失时保持`数据不足`，不作推断。
+3. 审查侧扩张护栏（当前可执行、仅标注）
+   - 无论KDJ是否完整都评估以下任一条件：`distance_ma20_atr>=1.8`；或`rsi14>=70`且`return_5d_pct>=8`；或`close_location>=0.90`且`volume_ratio_1d_prior_10d>=2.0`且`return_1d_pct>=5`。任一触发即写`timing_guard_triggered=true`及依据，并按状态优先级归入`extended`、标注`entry_timing_status=不追高`。
+   - 护栏只影响`entry_timing_status`、`entry_timing_basis`和`next_day_action`，不改变任何V2分数、排序、准入、淘汰或风险文字；不得把护栏等同于否决。KDJ缺失且未触发护栏时保持`kdj_status=data_insufficient`和`entry_timing_status=数据不足`，不作推断。
    - 本护栏用于避免明显扩张位被误写成“可买”，不是历史验证或回测，也不改变第6步暂缓状态。
 
 4. 3B ECS上游部署要求（待服务器连接后实施）
