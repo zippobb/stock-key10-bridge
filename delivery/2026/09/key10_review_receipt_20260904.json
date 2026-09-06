@@ -1,0 +1,24 @@
+{
+  "run_date": "20260904",
+  "trade_date": "20260904",
+  "status": "执行失败",
+  "started_at": "2026-09-04T18:35:47+08:00",
+  "finished_at": null,
+  "diagnosed_at": "2026-09-06T14:44:00+08:00",
+  "attempt_no": 0,
+  "retryable": false,
+  "error_class": "unverified_review_evidence",
+  "completed_stage": "input_gate",
+  "failure_stage": "review_evidence_and_persistent_delivery",
+  "resume_from": "stage_B_primary_source_evidence",
+  "missing_items": [
+    "截止前公司业务与财务一手证据",
+    "真实事件与预期差评分依据",
+    "通过证据验证的正式JSON和PNG"
+  ],
+  "result_json_path": null,
+  "png_path": null,
+  "png_delivery_status": "withheld_invalid_review",
+  "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a",
+  "summary": "输入正常；本地草稿存在无证据默认评分，不得作为正式结果；原运行中断时间未知，90分钟残留锁阻断重试。修复已落盘，历史终审尚未完成。"
+}
