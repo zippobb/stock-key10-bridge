@@ -1,11 +1,28 @@
 {
   "run_date": "20260904",
-  "state": "running",
+  "state": "failed",
   "attempt_no": 0,
   "started_at": "2026-09-04T18:35:47+08:00",
   "heartbeat_at": "2026-09-04T18:36:10+08:00",
   "finished_at": null,
   "owner": "V2.0选股终审主任务",
   "completed_stage": "input_gate",
-  "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a"
+  "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a",
+  "diagnosed_at": "2026-09-06T14:44:00+08:00",
+  "previous_run": {
+    "run_date": "20260904",
+    "state": "running",
+    "attempt_no": 0,
+    "started_at": "2026-09-04T18:35:47+08:00",
+    "heartbeat_at": "2026-09-04T18:36:10+08:00",
+    "finished_at": null,
+    "owner": "V2.0选股终审主任务",
+    "completed_stage": "input_gate",
+    "bundle_sha256": "c2d1d2440003d14f41b33cf3bfdf6ebc9773c59eb59f54c533fadb7c370c8b3a"
+  },
+  "error_class": "unverified_review_evidence",
+  "failure_stage": "review_evidence_and_persistent_delivery",
+  "resume_from": "stage_B_primary_source_evidence",
+  "lease_expires_at": "2026-09-04T18:39:10+08:00",
+  "recovery_note": "关闭过期运行记录；不伪造原运行结束时间。"
 }
