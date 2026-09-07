@@ -68,10 +68,13 @@
    - 护栏只影响`entry_timing_status`、`entry_timing_basis`和`next_day_action`，不改变任何V2分数、排序、准入、淘汰或风险文字；不得把护栏等同于否决。KDJ缺失且未触发护栏时保持`kdj_status=data_insufficient`和`entry_timing_status=数据不足`，不作推断。
    - 本护栏用于避免明显扩张位被误写成“可买”，不是历史验证或回测，也不改变第6步暂缓状态。
 
-4. 3B ECS上游部署要求（代码层部分完成，生产发布待验证）
+4. 3B ECS上游部署要求（已正式部署并通过首次自然交易日验收）
+
    - ECS量化包必须在正式池30只和池外10只的每条候选中输出上述KDJ字段，保持`future_data_rows_used=0`和现有stage/schema/model不变；同时保留第1步`selection_axes`和第2步`rotation_*`字段。
-   - 2026-09-06桌面Codex已修改`/opt/stock-automation/scanner/stock_key10_v2_scoring.py`和`stock_key10_v2_daily.py`，KDJ单元校验及30/30、10/10字段覆盖校验通过；但尚未生成生产bundle或发布GitHub。必须先通过安全临时输出/干跑和真实30+10兼容性校验，才能把3B标记为已部署。
-   - 每次运行必须重新读取当日bundle；在新bundle含完整KDJ字段前，旧latest不得被当作3B已部署，KDJ缺失按`data_insufficient`及扩张护栏处理。不得回写旧交易日结果。
+   - 2026-09-07首次自然交易日验收通过：18:20日更成功生成`trade_date=20260907`，18:20:54由`OnSuccess`发布到GitHub，18:30补偿发布按幂等规则成功跳过。
+   - 官方30只+外部10只，KDJ 14字段覆盖40/40，`kdj_data_complete=40/40`；K/D范围、J有限值、斜率、交叉状态/年龄及公式全部通过；`future_data_rows_used=0`，`excluded_sectors=[]`；评分、排名、池归属、排序及板块摘要与原输入一致。
+   - 本地bundle、GitHub archive和GitHub latest SHA256均为`43fb384b3361dfe0d5b98fbbcc95acc786e9ce7099c569b13ccb8fc46ad70cbc`，发布commit为`2cae467022df2f7635ffaaa211f484e48a77ee74`。20260904历史归档未触碰。
+   - 后续运行必须重新读取当日bundle；3B不再是生产阻断。不得回写旧交易日结果；历史验证（第6步）仍暂缓。
 
 5. 输出与验收
    - 正式JSON保留七项原始分、`final_score`、`selection_axes`、`rotation_*`和时机字段；`entry_timing_score_effect=0`、`entry_timing_rank_effect=false`继续固定为0/false。
