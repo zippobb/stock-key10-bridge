@@ -1,0 +1,23 @@
+{
+  "run_date": "20260907",
+  "state": "completed",
+  "attempt_no": 0,
+  "role": "primary",
+  "owner": "V2.0选股终审主任务",
+  "owner_token": "primary-20260907-e2e",
+  "generation": 1,
+  "started_at": "2026-09-07T18:41:49+08:00",
+  "heartbeat_at": "2026-09-07T18:42:55+08:00",
+  "finished_at": "2026-09-07T18:42:55+08:00",
+  "lease_expires_at": "2026-09-07T18:42:55+08:00",
+  "hard_deadline": "2026-09-07T18:44:00+08:00",
+  "completed_stage": "delivery_receipts_and_lock_release",
+  "bundle_sha256": "43fb384b3361dfe0d5b98fbbcc95acc786e9ce7099c569b13ccb8fc46ad70cbc",
+  "previous_run": null,
+  "recovery_note": "当日输入通过；一次原子提交完成正式产物、回执和锁释放。",
+  "lock_acquired": true,
+  "lock_released": true,
+  "lock_released_at": "2026-09-07T18:42:55+08:00",
+  "failure_stage": null,
+  "resume_from": null
+}
