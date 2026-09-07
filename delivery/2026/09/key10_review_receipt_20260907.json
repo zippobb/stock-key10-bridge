@@ -2,13 +2,13 @@
   "run_date": "20260907",
   "trade_date": "20260907",
   "status": "已完成",
-  "started_at": "2026-09-07T18:41:49+08:00",
-  "finished_at": "2026-09-07T18:42:55+08:00",
-  "attempt_no": 0,
-  "role": "primary",
-  "acceptance_scope": "daily_primary_20260907",
+  "started_at": "2026-09-07T18:44:31+08:00",
+  "finished_at": "2026-09-07T18:48:21.424+08:00",
+  "attempt_no": 1,
+  "role": "retry",
+  "acceptance_scope": "daily_retry_20260907",
   "retryable": false,
-  "error_class": null,
+  "error_class": "delivery_json_blob_encoding",
   "completed_stage": "delivery_receipts_and_lock_release",
   "failure_stage": null,
   "resume_from": null,
@@ -25,10 +25,10 @@
     2048
   ],
   "png_mode": "RGB",
-  "summary": "V2.0每日终审已完成。输入哈希、40只候选、selection_axes、KDJ时机、板块轮动、正式JSON、固定样式PNG和双回执完成校验；基本面与重大利好缺证据项显式为null，按85%可用权重处理。",
+  "summary": "V2.0每日终审已完成。第一次有限重试从已完成检查点恢复，修复正式JSON远端UTF-8持久化并回读；未重复取证、评分或制图。输入哈希、40只候选、selection_axes、KDJ时机、板块轮动、正式JSON、固定样式PNG和双回执均已校验。",
   "on_time_delivery": true,
-  "recovered_at": null,
-  "retry_executed": false,
+  "recovered_at": "2026-09-07T18:48:21.424+08:00",
+  "retry_executed": true,
   "visible_completion": "pending",
   "evidence_gaps": {
     "company_fundamental_evidence_verified": false,
@@ -52,13 +52,16 @@
     "visual_check": true,
     "date_receipt": true,
     "latest_receipt": true,
-    "lock_released": true
+    "lock_released": true,
+    "retry_checkpoint_read": true,
+    "json_utf8_read_back": true
   },
   "lock": {
-    "owner": "V2.0选股终审主任务",
-    "generation": 1,
+    "owner": "V2.0终审有限重试",
+    "owner_token": "retry-20260907-attempt1-e2e",
+    "generation": 2,
     "released": true,
-    "released_at": "2026-09-07T18:42:55+08:00"
+    "released_at": "2026-09-07T18:48:21.424+08:00"
   },
   "previous_receipt": {
     "run_date": "20260904",
@@ -186,5 +189,19 @@
       "released_at": "2026-09-06T15:12:20+08:00"
     },
     "visible_completion": "pending"
+  },
+  "owner_token": "retry-20260907-attempt1-e2e",
+  "hard_deadline": "2026-09-07T18:54:00+08:00",
+  "previous_run": {
+    "run_date": "20260907",
+    "state": "completed",
+    "attempt_no": 0,
+    "role": "primary",
+    "owner": "V2.0选股终审主任务",
+    "generation": 1,
+    "completed_stage": "delivery_receipts_and_lock_release",
+    "failure_stage": null,
+    "resume_from": "review_json_persist",
+    "note": "主运行回执已写入，但正式JSON路径回读为错误二进制；本次重试从检查点修复远端UTF-8 JSON并重新回读。"
   }
 }
