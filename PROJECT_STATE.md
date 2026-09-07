@@ -6,10 +6,10 @@
 ## 元数据
 
 - 状态文件版本：1.0
-- 最后更新：2026-09-06（第3步3B代码层部分完成）
+- 最后更新：2026-09-07（第3步3B正式部署完成）
 - GitHub 仓库：`zippobb/stock-key10-bridge`
 - 服务器项目目录（2026-09-02实时验证）：`/opt/stock-automation/scanner`
-- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一；20260903端到端验收已完成，正式JSON/PNG由ChatGPT终审任务生成，PNG样式已固化为`v2.0-dashboard-20260904`；第1步研究价值/买入时机分离、第2步板块轮动审查侧分层、第3步动量/KDJ时机层3A及3B代码层部分修改已同步；生产bundle/GitHub发布仍待验证
+- 当前总体状态：V2.0替代关系已确认为唯一现行权威；ECS与ChatGPT时间链路已统一；20260903端到端验收已完成，正式JSON/PNG由ChatGPT终审任务生成，PNG样式已固化为`v2.0-dashboard-20260904`；第1步研究价值/买入时机分离、第2步板块轮动审查侧分层、第3步动量/KDJ时机层3A/3B已部署并完成首次自然交易日发布验收；20260907正式bundle已同步至GitHub，后续按日观察运行稳定性
 
 ## 权威性与冲突处理
 
@@ -103,7 +103,7 @@
 - 已同步范围：`V2_REVIEW_WORKFLOW.md`及V2.0主任务、第一次重试、第二次重试的活动提示词；本步为审查侧2A，ECS候选池扩展/轮动专用槽位（2B）仍待服务器连接后实施；KDJ/动量阈值、PNG版式本次未改。板块限制取消已按用户中间决定固化，不再作为待确认项。服务器运行状态未在本会话实时验证。
 
 
-### 第3步修正：动量与KDJ时机层（3A当前生效，3B待ECS字段）
+### 第3步修正：动量与KDJ时机层（3A/3B当前生效）
 
 - 目标：识别早期拐点、趋势确认、扩张位和回调等待，避免把高综合分误写成临近回调的可买信号。
 - 3A当前在终审侧生效：时机状态写入`selection_axes`，保留`timing_state`、`kdj_status`、`entry_timing_basis`、`next_day_action`、`timing_guard_triggered`；不改变七项分、`final_score`、排序、60分/数据完整门槛、候选数量、板块全行业范围或PNG版式。
@@ -111,7 +111,7 @@
 - 状态优先级为`extended`→`pullback_wait`→`early_turn`→`trend_confirming`→`weak`；早期近2日金叉且K<60/D<60/J<90、斜率向上才标`可关注`，趋势确认标`待确认`，K>=80/J>=100、K>=70或J>=90的死叉或扩张护栏触发标`不追高`，无法判断标`数据不足`。`pullback_wait`中的“显著高于MA20”固定为`distance_ma20_atr>=1.0`。
 - 审查侧扩张护栏无论KDJ是否完整都评估：`distance_ma20_atr>=1.8`，或`rsi14>=70`且`return_5d_pct>=8`，或`close_location>=0.90`且`volume_ratio_1d_prior_10d>=2.0`且`return_1d_pct>=5`；触发仅标注`不追高`，不否决、不改分、不改排名。KDJ缺失且未触发护栏时保持`数据不足`。
 - 2026-09-06实时读取latest：`trade_date=20260904`，池内30只+池外10只均无KDJ字段；按上述护栏预检查，11/40条会得到“不追高”标注，其余在KDJ补齐前为“数据不足”。这不是正式结果回写。
-- 3B生产发布待验证：ECS必须为两类候选输出完整KDJ字段并保持schema/model/stage及`future_data_rows_used=0`不变。2026-09-06桌面Codex已修改`/opt/stock-automation/scanner/stock_key10_v2_scoring.py`和`stock_key10_v2_daily.py`，但未生成生产bundle或发布GitHub；安全临时输出/干跑方式仍待确认，未达到3B已部署定义。
+- 3B已完成并正式生效：2026-09-07首次自然交易日链路验收通过。ECS生成并发布`trade_date=20260907`；官方30只+外部10只，KDJ 14字段覆盖40/40，`kdj_data_complete=40/40`，K/D范围、J有限值、斜率、交叉状态/年龄及公式全部通过，`future_data_rows_used=0`，`excluded_sectors=[]`；评分、排名、池归属、排序及板块摘要保持不变。GitHub archive/latest与本地bundle SHA256一致为`43fb384b3361dfe0d5b98fbbcc95acc786e9ce7099c569b13ccb8fc46ad70cbc`，发布commit为`2cae467022df2f7635ffaaa211f484e48a77ee74`。20260904历史归档未触碰；18:30补偿发布按幂等规则成功跳过。3B不再是生产阻断，后续按日观察运行稳定性。
 - 已同步范围：`V2_REVIEW_WORKFLOW.md`及V2.0主任务、第一次重试、第二次重试提示词；历史结果不回写，历史验证（第6步）继续暂缓。
 
 ### 输出与职责
@@ -231,6 +231,16 @@
 - 本次仅执行配置同步与`systemctl daemon-reload`，未启动或重启任何服务。
 - ECS配置备份：`/root/stock-key10-backups/step_schedule_metadata_20260903T172641Z/`。
 - ChatGPT当前V2.0任务时间为18:35主终审、18:45第一次重试、18:55第二次重试、18:58交付复核；标普任务保持不变，其余非V2任务已停用。
+
+### 2026-09-07 第3B首次自然生产发布验收
+
+- 验收结论：步骤3B正式部署完成，无剩余阻断。
+- 18:20日更正常触发，`stock-key10-daily.service`退出码0，生成`trade_date=20260907`。
+- 18:20:54由`OnSuccess`触发首次GitHub发布并通过远端校验；18:30补偿发布正常触发并按幂等规则跳过，退出码0。
+- 本地两个bundle、GitHub archive和GitHub latest SHA256均为`43fb384b3361dfe0d5b98fbbcc95acc786e9ce7099c569b13ccb8fc46ad70cbc`；发布commit为`2cae467022df2f7635ffaaa211f484e48a77ee74`；GitHub manifest SHA256为`db78e3e169593ef43f6527fe34172746632797dd3c580ae7204d5bb002b1cc83`。
+- 官方候选30只、外部候选10只；KDJ 14字段覆盖40/40，`kdj_data_complete=40/40`；交叉状态为`golden=4/death=4/none=32`；`future_data_rows_used=0`；`excluded_sectors=[]`；schema/model/stage均符合V2.0契约。
+- 评分、排名、池归属、排序和板块摘要与原输入完全一致；未修改代码、配置、timer、service或历史归档。
+- 两个timer保持`enabled/active`；两个service为`inactive/dead`且`Result=success`；下一次触发为2026-09-08 18:20/18:30 CST。
 
 ## 禁止事项
 
