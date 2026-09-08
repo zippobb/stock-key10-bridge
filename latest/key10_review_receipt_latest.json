@@ -3,7 +3,7 @@
   "trade_date": "20260908",
   "status": "已完成",
   "started_at": "2026-09-08T18:37:20+08:00",
-  "finished_at": "2026-09-08T18:43:20+08:00",
+  "finished_at": "2026-09-08T18:44:00+08:00",
   "attempt_no": 0,
   "role": "primary",
   "acceptance_scope": "daily_primary_20260908",
@@ -17,7 +17,7 @@
   "bundle_sha256": "20d9050e301a16a9056ec43b6a1b3e561f01f639ab51c09cb99aa30e7d9e9169",
   "result_json_path": "review/2026/09/key10_review_20260908.json",
   "png_path": "review/2026/09/key10_review_20260908.png",
-  "result_json_sha256": "9b05835fe054ddaafa4367c7d051d0811d803b831cd0593cd917e3e9f644be76",
+  "result_json_sha256": "3d47d0a2176267dd750dff3da781cf4709e15d356f224efea849fe8edbde2e98",
   "png_sha256": "2e6ae4a06a89af14af7f09334c44cdd154685ee1b8654fe5e92aa7e5e6f904c0",
   "png_delivery_status": "persisted_and_read_back",
   "png_dimensions": [
@@ -26,7 +26,7 @@
   ],
   "png_mode": "RGB",
   "summary": "V2.0每日终审完成。输入、40只候选、selection_axes、KDJ时机、板块轮动、正式JSON、固定样式PNG和视觉检查通过；缺失证据项显式为null，按85%可用权重处理。",
-  "on_time_delivery": true,
+  "on_time_delivery": false,
   "retry_executed": false,
   "visible_completion": "pending",
   "final_delivery_gate": "ready",
@@ -52,6 +52,6 @@
     "owner_token": "primary-20260908-e2e",
     "generation": 1,
     "released": true,
-    "released_at": "2026-09-08T18:43:20+08:00"
+    "released_at": "2026-09-08T18:44:00+08:00"
   }
 }

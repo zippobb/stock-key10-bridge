@@ -8,7 +8,7 @@
   "future_data_rows_used": 0,
   "input": {
     "manifest_path": "latest/manifest.json",
-    "archive_path": "archive/2026/09/key10_bundle_20260907.json",
+    "archive_path": "archive/2026/09/key10_bundle_20260908.json",
     "latest_bundle_path": "latest/key10_bundle_latest.json",
     "bundle_sha256": "20d9050e301a16a9056ec43b6a1b3e561f01f639ab51c09cb99aa30e7d9e9169"
   },
