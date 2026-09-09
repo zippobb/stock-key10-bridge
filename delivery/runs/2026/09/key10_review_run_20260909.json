@@ -1,0 +1,22 @@
+{
+  "run_date": "20260909",
+  "state": "failed",
+  "attempt_no": 0,
+  "role": "primary",
+  "owner": "V2.0选股终审主任务",
+  "owner_token": "primary-20260909-e2e",
+  "generation": 1,
+  "started_at": "2026-09-09T18:37:37+08:00",
+  "heartbeat_at": "2026-09-09T18:45:38+08:00",
+  "finished_at": "2026-09-09T18:45:38+08:00",
+  "lease_expires_at": "2026-09-09T18:45:38+08:00",
+  "hard_deadline": "2026-09-09T18:44:00+08:00",
+  "completed_stage": "visual_check_local",
+  "bundle_sha256": "7bf380a90c1aa6ff5dc7a79caa737bdcf5aeea5aabee56fe37cb99313f8c1512",
+  "lock_acquired": true,
+  "lock_released": true,
+  "lock_released_at": "2026-09-09T18:45:38+08:00",
+  "failure_stage": "delivery_deadline",
+  "resume_from": "formal_json_persistence_from_validated_checkpoint",
+  "final_delivery_gate": "not_ready"
+}
