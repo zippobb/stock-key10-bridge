@@ -1,0 +1,24 @@
+{
+  "trade_date": "20260909",
+  "role": "primary",
+  "completed_stage": "visual_check_local",
+  "bundle_sha256": "7bf380a90c1aa6ff5dc7a79caa737bdcf5aeea5aabee56fe37cb99313f8c1512",
+  "review_json_sha256": "d5872f397d4ee77fc18a4c4d5ece50035d2e0b9dcd6bbd86587d3a0feffe1647",
+  "png_sha256": "1874abb7063b4863ed01d5b68c58f2f27e8cc9668248a72528a1e65200b284c3",
+  "validation": {
+    "input_hash": true,
+    "candidates_reviewed": 40,
+    "official_selected": 10,
+    "external_selected": 3,
+    "png_dimensions": [
+      1024,
+      2048
+    ],
+    "png_mode": "RGB",
+    "visual_check": true
+  },
+  "persisted_formal_artifacts": false,
+  "failure_reason": "超过主任务18:44硬截止，禁止迟到发布成功结果。",
+  "resume_from": "formal_json_persistence_from_validated_checkpoint",
+  "created_at": "2026-09-09T18:45:38+08:00"
+}
