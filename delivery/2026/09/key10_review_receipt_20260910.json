@@ -1,0 +1,63 @@
+{
+  "run_date": "20260910",
+  "started_at": "2026-09-10T18:41:10+08:00",
+  "finished_at": "2026-09-10T18:45:40+08:00",
+  "status": "已完成",
+  "trade_date": "20260910",
+  "attempt_no": 0,
+  "role": "primary",
+  "retryable": false,
+  "error_class": null,
+  "completed_stage": "delivery_ready",
+  "failure_stage": null,
+  "resume_from": null,
+  "missing_items": [],
+  "evidence_as_of": "2026-09-10T18:35:00+08:00",
+  "bundle_sha256": "9d4f87e69f3130e8efd2425630a7b3b8611a3b1ddb8428182cc8054d6a6ea0e2",
+  "result_json_path": "review/2026/09/key10_review_20260910.json",
+  "png_path": "review/2026/09/key10_review_20260910.png",
+  "result_json_sha256": "5923f38260af69ea0f935c545d4fd9a2388bafc0cc96b941f1cf6e496ed36af2",
+  "png_sha256": "e1806fdb1347f633dc362100f9699878880a76eb72ad1d7ef9da6394bec15585",
+  "png_delivery_status": "persisted_and_read_back",
+  "png_dimensions": [
+    1024,
+    2048
+  ],
+  "png_mode": "RGB",
+  "summary": "V2.0每日终审已完成。输入哈希、40只候选终审、名单、JSON、PNG及视觉检查均通过。",
+  "on_time_delivery": true,
+  "visible_completion": "pending",
+  "final_delivery_gate": "ready",
+  "chain_checks": {
+    "manifest_read": true,
+    "latest_archive_content_equal": true,
+    "sha256_calculated": true,
+    "schema_model_stage_trade_date": true,
+    "future_data_rows_zero": true,
+    "review_evidence_processed": true,
+    "selection_axes": true,
+    "rotation_fields": true,
+    "kdj_fields": true,
+    "review_json": true,
+    "png": true,
+    "visual_check": true,
+    "date_receipt": true,
+    "latest_receipt": true,
+    "lock_released": true,
+    "final_delivery_gate": true
+  },
+  "lock": {
+    "owner": "V2.0选股终审主任务",
+    "owner_token": "primary-20260910-184436",
+    "generation": 2,
+    "released": true,
+    "released_at": "2026-09-10T18:45:40+08:00"
+  },
+  "retry_exhausted": false,
+  "retry_executed": false,
+  "previous_receipt": {
+    "run_date": "20260909",
+    "status": "已完成",
+    "final_delivery_gate": "ready"
+  }
+}
