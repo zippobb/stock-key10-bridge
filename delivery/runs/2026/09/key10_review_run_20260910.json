@@ -1,25 +1,27 @@
 {
   "attempt_no": 0,
-  "completed_stage": "png_visual_checked",
+  "completed_stage": "delivery_ready",
   "failure_stage": null,
-  "final_delivery_gate": "pending",
+  "final_delivery_gate": "ready",
   "generation": 2,
   "hard_deadline": "2026-09-10T18:49:00+08:00",
   "heartbeat_at": "2026-09-10T18:44:36+08:00",
   "input_bundle_sha256": "9d4f87e69f3130e8efd2425630a7b3b8611a3b1ddb8428182cc8054d6a6ea0e2",
   "lease_expires_at": "2026-09-10T18:47:36+08:00",
-  "lock_released": false,
+  "lock_released": true,
   "owner_token": "primary-20260910-184436",
   "previous_run": {
-    "owner_token": "primary-20260910-184110",
     "generation": 1,
     "lease_expires_at": "2026-09-10T18:44:10+08:00",
+    "owner_token": "primary-20260910-184110",
     "reason": "previous lease expired before PNG readback; takeover by current primary"
   },
   "resume_from": null,
   "role": "primary",
   "run_date": "20260910",
-  "status": "running",
+  "status": "completed",
   "trade_date": "20260910",
-  "updated_at": "2026-09-10T18:44:36+08:00"
+  "updated_at": "2026-09-10T18:45:55+08:00",
+  "lock_released_at": "2026-09-10T18:45:55+08:00",
+  "finished_at": "2026-09-10T18:45:55+08:00"
 }
