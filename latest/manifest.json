@@ -1,11 +1,11 @@
 {
-  "archive_path": "archive/2026/09/key10_bundle_20260909.json",
-  "bundle_sha256": "7bf380a90c1aa6ff5dc7a79caa737bdcf5aeea5aabee56fe37cb99313f8c1512",
-  "published_at_utc": "2026-09-09T10:21:04Z",
+  "archive_path": "archive/2026/09/key10_bundle_20260910.json",
+  "bundle_sha256": "9d4f87e69f3130e8efd2425630a7b3b8611a3b1ddb8428182cc8054d6a6ea0e2",
+  "published_at_utc": "2026-09-10T10:20:57Z",
   "publisher_version": "2.0.0",
   "schema_version": "2.0.0",
-  "source_file_sha256": "7bf380a90c1aa6ff5dc7a79caa737bdcf5aeea5aabee56fe37cb99313f8c1512",
-  "source_size_bytes": 255490,
+  "source_file_sha256": "9d4f87e69f3130e8efd2425630a7b3b8611a3b1ddb8428182cc8054d6a6ea0e2",
+  "source_size_bytes": 255455,
   "status": "success",
-  "trade_date": "20260909"
+  "trade_date": "20260910"
 }
