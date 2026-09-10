@@ -1,0 +1,20 @@
+{
+  "run_date": "20260910",
+  "trade_date": "20260910",
+  "status": "running",
+  "role": "primary",
+  "attempt_no": 0,
+  "owner_token": "primary-20260910-184110",
+  "generation": 1,
+  "heartbeat_at": "2026-09-10T18:41:10+08:00",
+  "lease_expires_at": "2026-09-10T18:44:10+08:00",
+  "hard_deadline": "2026-09-10T18:49:00+08:00",
+  "completed_stage": "input_validation",
+  "failure_stage": null,
+  "resume_from": null,
+  "final_delivery_gate": "pending",
+  "lock_released": false,
+  "input_bundle_sha256": "9d4f87e69f3130e8efd2425630a7b3b8611a3b1ddb8428182cc8054d6a6ea0e2",
+  "previous_run": null,
+  "updated_at": "2026-09-10T18:41:10+08:00"
+}
