@@ -1,26 +1,31 @@
 {
-  "run_date": "20260909",
-  "trade_date": "20260909",
+  "run_date": "20260910",
+  "started_at": "2026-09-10T18:41:10+08:00",
+  "finished_at": "2026-09-10T18:45:40+08:00",
   "status": "已完成",
-  "started_at": "2026-09-09T18:56:00+08:00",
-  "finished_at": "2026-09-09T18:57:20+08:00",
-  "attempt_no": 2,
-  "role": "retry",
+  "trade_date": "20260910",
+  "attempt_no": 0,
+  "role": "primary",
   "retryable": false,
   "error_class": null,
   "completed_stage": "delivery_ready",
   "failure_stage": null,
   "resume_from": null,
   "missing_items": [],
-  "evidence_as_of": "2026-09-09T18:35:00+08:00",
-  "bundle_sha256": "7bf380a90c1aa6ff5dc7a79caa737bdcf5aeea5aabee56fe37cb99313f8c1512",
-  "result_json_path": "review/2026/09/key10_review_20260909.json",
-  "png_path": "review/2026/09/key10_review_20260909.png",
-  "result_json_sha256": "b5f52232ba0c0a7fb73a22635dd44c2fa68c77cd",
-  "png_sha256": "bf1a44a5e59564e2c8796a18e34493ac7b99ec20",
+  "evidence_as_of": "2026-09-10T18:35:00+08:00",
+  "bundle_sha256": "9d4f87e69f3130e8efd2425630a7b3b8611a3b1ddb8428182cc8054d6a6ea0e2",
+  "result_json_path": "review/2026/09/key10_review_20260910.json",
+  "png_path": "review/2026/09/key10_review_20260910.png",
+  "result_json_sha256": "5923f38260af69ea0f935c545d4fd9a2388bafc0cc96b941f1cf6e496ed36af2",
+  "png_sha256": "e1806fdb1347f633dc362100f9699878880a76eb72ad1d7ef9da6394bec15585",
   "png_delivery_status": "persisted_and_read_back",
-  "summary": "V2.0每日终审已完成。第二次有限重试从已验证检查点仅恢复正式JSON/PNG回读与双回执交付，未重复取证、评分或制图。",
-  "on_time_delivery": false,
+  "png_dimensions": [
+    1024,
+    2048
+  ],
+  "png_mode": "RGB",
+  "summary": "V2.0每日终审已完成。输入哈希、40只候选终审、名单、JSON、PNG及视觉检查均通过。",
+  "on_time_delivery": true,
   "visible_completion": "pending",
   "final_delivery_gate": "ready",
   "chain_checks": {
@@ -42,27 +47,17 @@
     "final_delivery_gate": true
   },
   "lock": {
-    "owner": "V2.0终审第二次重试",
-    "owner_token": "retry2-20260909-delivery",
-    "generation": 3,
+    "owner": "V2.0选股终审主任务",
+    "owner_token": "primary-20260910-184436",
+    "generation": 2,
     "released": true,
-    "released_at": "2026-09-09T18:57:20+08:00"
+    "released_at": "2026-09-10T18:45:40+08:00"
   },
   "retry_exhausted": false,
-  "retry_executed": true,
-  "png_dimensions": [
-    1024,
-    2048
-  ],
-  "png_mode": "RGB",
+  "retry_executed": false,
   "previous_receipt": {
-    "status": "执行失败",
-    "attempt_no": 0,
-    "finished_at": "2026-09-09T18:45:38+08:00",
-    "retryable": true,
-    "completed_stage": "visual_check_local",
-    "failure_stage": "delivery_deadline",
-    "resume_from": "formal_json_persistence_from_validated_checkpoint",
-    "summary": "输入、40只终审、正式名单及PNG视觉检查已完成，但超过18:44硬截止，按规则停止迟到成功发布。"
+    "run_date": "20260909",
+    "status": "已完成",
+    "final_delivery_gate": "ready"
   }
 }
