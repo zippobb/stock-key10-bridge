@@ -8,7 +8,7 @@
   "heartbeat_at": "2026-09-11T18:51:13.873+08:00",
   "input_bundle_sha256": "ed6c2d51dae30ba478d59cba0983113b6c7c6cee8d4d6abda4e9ca924967bf15",
   "lease_expires_at": "2026-09-11T18:54:13.873+08:00",
-  "lock_released": false,
+  "lock_released": true,
   "owner_token": "retry1-20260911-png-1789123859051",
   "previous_run": {
     "generation": 2,
@@ -21,7 +21,10 @@
   "resume_from": "png_render_from_validated_json",
   "role": "retry",
   "run_date": "20260911",
-  "status": "running",
+  "status": "failed",
   "trade_date": "20260911",
-  "updated_at": "2026-09-11T18:51:13.873+08:00"
+  "updated_at": "2026-09-11T18:52:14.264+08:00",
+  "finished_at": "2026-09-11T18:52:14.264+08:00",
+  "lock_released_at": "2026-09-11T18:52:14.264+08:00",
+  "error_class": "png_cjk_rasterization_invalid"
 }
