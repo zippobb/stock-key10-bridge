@@ -1,0 +1,61 @@
+{
+  "run_date": "20260911",
+  "started_at": "2026-09-11T18:35:25+08:00",
+  "finished_at": "2026-09-11T18:42:50+08:00",
+  "status": "执行失败",
+  "trade_date": "20260911",
+  "attempt_no": 0,
+  "role": "primary",
+  "retryable": true,
+  "error_class": "png_font_asset_invalid",
+  "completed_stage": "formal_json_persisted",
+  "failure_stage": "png_visual_check",
+  "resume_from": "png_render_from_validated_json",
+  "missing_items": [
+    "valid_cjk_font_asset",
+    "formal_png"
+  ],
+  "evidence_as_of": "2026-09-11T18:35:00+08:00",
+  "bundle_sha256": "ed6c2d51dae30ba478d59cba0983113b6c7c6cee8d4d6abda4e9ca924967bf15",
+  "result_json_path": "review/2026/09/key10_review_20260911.json",
+  "png_path": null,
+  "result_json_sha256": "ac58a34df124cc29355c850a9651286f187e702c7810249b43e26069d4ce5c35",
+  "png_sha256": null,
+  "png_delivery_status": "failed_visual_check_not_persisted",
+  "summary": "输入、40只终审及正式JSON已完成并回读；PNG首次因既有字体损坏失败，唯一一次制图重试因中文缺字方框未通过视觉检查，未提交无效PNG。",
+  "on_time_delivery": false,
+  "visible_completion": "pending",
+  "final_delivery_gate": "blocked",
+  "chain_checks": {
+    "manifest_read": true,
+    "latest_archive_content_equal": true,
+    "sha256_calculated": true,
+    "schema_model_stage_trade_date": true,
+    "future_data_rows_zero": true,
+    "review_evidence_processed": true,
+    "selection_axes": true,
+    "rotation_fields": true,
+    "kdj_fields": true,
+    "review_json": true,
+    "png": false,
+    "visual_check": false,
+    "date_receipt": true,
+    "latest_receipt": true,
+    "lock_released": true,
+    "final_delivery_gate": false
+  },
+  "lock": {
+    "owner": "V2.0选股终审主任务",
+    "owner_token": "primary-20260911-failure-184230",
+    "generation": 2,
+    "released": true,
+    "released_at": "2026-09-11T18:42:50+08:00"
+  },
+  "retry_exhausted": false,
+  "retry_executed": false,
+  "previous_receipt": {
+    "run_date": "20260910",
+    "status": "已完成",
+    "final_delivery_gate": "ready"
+  }
+}
