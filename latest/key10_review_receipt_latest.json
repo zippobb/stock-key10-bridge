@@ -1,5 +1,5 @@
 {
-  "attempt_no": 1,
+  "attempt_no": 2,
   "bundle_sha256": "ed6c2d51dae30ba478d59cba0983113b6c7c6cee8d4d6abda4e9ca924967bf15",
   "chain_checks": {
     "date_receipt": true,
@@ -20,42 +20,47 @@
     "visual_check": false
   },
   "completed_stage": "formal_json_persisted",
-  "error_class": "png_cjk_rasterization_invalid",
+  "error_class": "png_rendering_unavailable_before_hard_deadline",
   "evidence_as_of": "2026-09-11T18:35:00+08:00",
   "failure_stage": "png_visual_check",
   "final_delivery_gate": "blocked",
-  "finished_at": "2026-09-11T18:52:23.524+08:00",
+  "finished_at": "2026-09-11T18:57:00+08:00",
   "lock": {
-    "generation": 3,
-    "owner": "V2.0终审有限重试",
-    "owner_token": "retry1-20260911-png-1789123859051",
+    "owner": "V2.0终审第二次重试",
+    "owner_token": "retry2-20260911-png",
+    "generation": 4,
     "released": true,
-    "released_at": "2026-09-11T18:52:23.524+08:00"
+    "released_at": "2026-09-11T18:57:00+08:00"
   },
   "missing_items": [
-    "working_cjk_font_or_rasterizer",
-    "formal_png"
+    "通过原尺寸视觉检查的1024×2048中文PNG",
+    "PNG持久化与回读"
   ],
   "on_time_delivery": false,
   "png_delivery_status": "failed_visual_check_not_persisted",
   "png_path": null,
   "png_sha256": null,
   "previous_receipt": {
-    "final_delivery_gate": "ready",
-    "run_date": "20260910",
-    "status": "已完成"
+    "status": "执行失败",
+    "attempt_no": 1,
+    "finished_at": "2026-09-11T18:52:23.524+08:00",
+    "retryable": true,
+    "completed_stage": "formal_json_persisted",
+    "failure_stage": "png_visual_check",
+    "resume_from": "png_render_from_validated_json",
+    "summary": "从已验证正式JSON恢复制图；Ghostscript栅格化仍产生中文乱码，原尺寸视觉检查失败。未重复取证、评分或名单生成，未提交无效PNG。"
   },
   "result_json_path": "review/2026/09/key10_review_20260911.json",
   "result_json_sha256": "ac58a34df124cc29355c850a9651286f187e702c7810249b43e26069d4ce5c35",
-  "resume_from": "png_render_from_validated_json",
+  "resume_from": "png_render_from_validated_json_with_verified_chinese_font_backend",
   "retry_executed": true,
-  "retry_exhausted": false,
-  "retryable": true,
+  "retry_exhausted": true,
+  "retryable": false,
   "role": "retry",
   "run_date": "20260911",
-  "started_at": "2026-09-11T18:35:25+08:00",
+  "started_at": "2026-09-11T18:56:00+08:00",
   "status": "执行失败",
-  "summary": "从已验证正式JSON恢复制图；Ghostscript栅格化仍产生中文乱码，原尺寸视觉检查失败。未重复取证、评分或名单生成，未提交无效PNG。",
+  "summary": "第二次有限重试仅从已验证正式JSON恢复PNG交付；在18:58硬截止前无法获得通过中文字体与原尺寸视觉检查的PNG，未提交无效图片，自动重试已耗尽。",
   "trade_date": "20260911",
   "visible_completion": "pending"
 }
