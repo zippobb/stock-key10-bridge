@@ -2,24 +2,26 @@
   "attempt_no": 0,
   "completed_stage": "formal_json_persisted",
   "failure_stage": "png_visual_check",
-  "final_delivery_gate": "pending",
+  "final_delivery_gate": "blocked",
   "generation": 2,
   "hard_deadline": "2026-09-11T18:49:00+08:00",
   "heartbeat_at": "2026-09-11T18:42:30+08:00",
   "input_bundle_sha256": "ed6c2d51dae30ba478d59cba0983113b6c7c6cee8d4d6abda4e9ca924967bf15",
   "lease_expires_at": "2026-09-11T18:45:30+08:00",
-  "lock_released": false,
+  "lock_released": true,
   "owner_token": "primary-20260911-failure-184230",
   "previous_run": {
-    "owner_token": "primary-20260911-183525",
     "generation": 1,
     "lease_expires_at": "2026-09-11T18:40:40+08:00",
+    "owner_token": "primary-20260911-183525",
     "reason": "lease expired during PNG font recovery; reacquired only to persist failure state"
   },
   "resume_from": "png_render_from_validated_json",
   "role": "primary",
   "run_date": "20260911",
-  "status": "running",
+  "status": "failed",
   "trade_date": "20260911",
-  "updated_at": "2026-09-11T18:42:30+08:00"
+  "updated_at": "2026-09-11T18:43:10+08:00",
+  "lock_released_at": "2026-09-11T18:43:10+08:00",
+  "finished_at": "2026-09-11T18:43:10+08:00"
 }
