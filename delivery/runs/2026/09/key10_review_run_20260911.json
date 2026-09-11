@@ -1,14 +1,14 @@
 {
   "attempt_no": 2,
   "completed_stage": "formal_json_persisted",
-  "failure_stage": null,
-  "final_delivery_gate": "not_ready",
+  "failure_stage": "png_visual_check",
+  "final_delivery_gate": "blocked",
   "generation": 4,
   "hard_deadline": "2026-09-11T18:58:00+08:00",
-  "heartbeat_at": "2026-09-11T18:56:05+08:00",
+  "heartbeat_at": "2026-09-11T18:57:00+08:00",
   "input_bundle_sha256": "ed6c2d51dae30ba478d59cba0983113b6c7c6cee8d4d6abda4e9ca924967bf15",
-  "lease_expires_at": "2026-09-11T18:58:00+08:00",
-  "lock_released": false,
+  "lease_expires_at": "2026-09-11T18:57:00+08:00",
+  "lock_released": true,
   "owner_token": "retry2-20260911-png",
   "previous_run": {
     "attempt_no": 1,
@@ -19,17 +19,18 @@
     "final_delivery_gate": "blocked",
     "lock_released": true
   },
-  "resume_from": "png_render_from_validated_json",
+  "resume_from": "png_render_from_validated_json_with_verified_chinese_font_backend",
   "role": "retry",
   "run_date": "20260911",
   "status": "failed",
   "trade_date": "20260911",
   "updated_at": "2026-09-11T18:52:14.264+08:00",
-  "finished_at": "2026-09-11T18:52:14.264+08:00",
-  "lock_released_at": null,
+  "finished_at": "2026-09-11T18:57:00+08:00",
+  "lock_released_at": "2026-09-11T18:57:00+08:00",
   "error_class": "png_cjk_rasterization_invalid",
-  "state": "running",
+  "state": "failed",
   "owner": "V2.0终审第二次重试",
   "started_at": "2026-09-11T18:56:00+08:00",
-  "takeover_reason": "attempt1_released_retryable_png_visual_failure"
+  "takeover_reason": "attempt1_released_retryable_png_visual_failure",
+  "retry_exhausted": true
 }
