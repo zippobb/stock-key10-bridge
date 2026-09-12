@@ -20,7 +20,9 @@
     "visual_check": true,
     "png_persisted_readback": true,
     "cjk_glyph_preflight": true,
-    "json_png_date_consistency": true
+    "json_png_date_consistency": true,
+    "result_json_readback": true,
+    "json_sha256_consistent": true
   },
   "completed_stage": "delivery_ready",
   "error_class": "png_rendering_unavailable_before_hard_deadline",
@@ -52,7 +54,7 @@
     "summary": "从已验证正式JSON恢复制图；Ghostscript栅格化仍产生中文乱码，原尺寸视觉检查失败。未重复取证、评分或名单生成，未提交无效PNG。"
   },
   "result_json_path": "review/2026/09/key10_review_20260911.json",
-  "result_json_sha256": "ac58a34df124cc29355c850a9651286f187e702c7810249b43e26069d4ce5c35",
+  "result_json_sha256": "d300c25ef8bd8983439470cec728801ae3ab05ecde737db65e2ef476571f7a0b",
   "resume_from": "png_render_from_validated_json_with_verified_chinese_font_backend",
   "retry_executed": true,
   "retry_exhausted": true,
