@@ -60,5 +60,7 @@
   },
   "visible_completion": "pending",
   "repair_finished_at": "2026-09-12T12:44:15.095310+08:00",
-  "original_failure_finished_at": "2026-09-11T18:57:00+08:00"
+  "original_failure_finished_at": "2026-09-11T18:57:00+08:00",
+  "result_json_sha256": "d300c25ef8bd8983439470cec728801ae3ab05ecde737db65e2ef476571f7a0b",
+  "result_json_readback": true
 }
