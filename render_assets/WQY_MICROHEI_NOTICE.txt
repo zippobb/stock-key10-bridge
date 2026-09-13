@@ -1,0 +1,11 @@
+WenQuanYi Micro Hei notice
+
+The file wqy-microhei.ttc is from:
+https://github.com/anthonyfok/fonts-wqy-microhei
+source commit: cd82defe33ec0e86e628329f1b63049ef562c8e5
+
+The original font is licensed under Apache License 2.0 or GPLv3 with font
+embedding exceptions. It is used by the V2.0 dashboard renderer as a
+verified Chinese outline font. See the source repository for the complete
+license text and copyright notices.
+
