@@ -1,0 +1,39 @@
+{
+  "scope": "rendering_only",
+  "status": "passed",
+  "verified_at": "2026-09-13T13:49:19Z",
+  "sample_trade_date": "20260911",
+  "next_trade_date": "20260914",
+  "input_sha256": "d300c25ef8bd8983439470cec728801ae3ab05ecde737db65e2ef476571f7a0b",
+  "font_sha256": "e4bca8df123ce01b104780f576ea1a58b9a5ff1662a91124b6d3180cb6c88212",
+  "renderer_sha256": "f12f369a0b39a95a02e36e60cac9d28524825c05db8a73ef216b72d6f627f04a",
+  "png_sha256": "e375c88a9edfd723fb29c3cb9bc109455e35d5871fa162fe412fef3e8f05b459",
+  "png_readback_commit": "4efeee6366323ff57a1193fca4756ab248505b1d",
+  "png_path": "render_assets/acceptance/20260911/20260913T134742Z/key10_review_20260911.png",
+  "font_source": "fresh connector download of 18 text chunks; restored full TTC",
+  "original_font_transport_seed": "local TTC matched user-pinned SHA256; used only to package transport, not acceptance rendering",
+  "input_source": "GitHub blob cd6a29fd47f8346d1ca2cf51f4ad302c436d251f preserving trailing newline",
+  "checks": {
+    "font_chunk_hashes": true,
+    "font_full_hash": true,
+    "input_unchanged": true,
+    "renderer_hash": true,
+    "RGB_1024x2048": true,
+    "official_10_external_3": true,
+    "all_13_names_codes_scores_match": true,
+    "chinese_cmap_no_missing": true,
+    "simplified_representatives_visual": true,
+    "original_size_visual": true,
+    "no_overlap_clipping_or_tofu": true,
+    "png_repository_raw_bytes_equal": true,
+    "wrong_input_hash_rejected": true,
+    "wrapper_png_identical": true
+  },
+  "limitations": [
+    "仅制图链路验收；未重审股票或评分；不保证未来每日选股准时完成。"
+  ],
+  "diagnosis": [
+    "字体二进制内容接口返回空；以小型UTF-8传输分块规避。",
+    "文件接口未保留JSON末尾换行；原始哈希敏感文件使用Blob内容并验证落盘字节。"
+  ]
+}
