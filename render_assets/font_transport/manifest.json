@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "encoding": "gzip+base64",
+  "font_filename": "wqy-microhei.ttc",
+  "font_sha256": "e4bca8df123ce01b104780f576ea1a58b9a5ff1662a91124b6d3180cb6c88212",
+  "font_size": 5177387,
+  "parts": [
+    {
+      "path": "font.part000.b64",
+      "size": 180001,
+      "sha256": "e486e53e149a1f67d720b2bf853722e4aa6a0b3687a7502f30d0ab540ec329fb"
+    },
+    {
+      "path": "font.part001.b64",
+      "size": 180001,
+      "sha256": "713d7cc7ec0e596d1afbb6db27e6ca404d682ae0acf1fb0216c7191c25081ecd"
+    },
+    {
+      "path": "font.part002.b64",
+      "size": 180001,
+      "sha256": "12cda14bed1bfa38a9b3f7297a88a8b2932c8d2c7950fa6156132802dbb7fb9b"
+    },
+    {
+      "path": "font.part003.b64",
+      "size": 180001,
+      "sha256": "7c1d29c3d75b59f8bc905bc23df5c2ec101be71a6143deeb74c40201548c946a"
+    },
+    {
+      "path": "font.part004.b64",
+      "size": 180001,
+      "sha256": "94c97d212484ed867043cfc87397839e64a4f50b04e26733721ff9f47a29b4fd"
+    },
+    {
+      "path": "font.part005.b64",
+      "size": 180001,
+      "sha256": "36b74427b01a8079282ab47be950a17f1d1de4c470d46f5e1b14d315fc2c7013"
+    },
+    {
+      "path": "font.part006.b64",
+      "size": 180001,
+      "sha256": "edf71ca0381ee4d18b0b7116d6b43de8175bef653238b32bf509047a07b4096d"
+    },
+    {
+      "path": "font.part007.b64",
+      "size": 180001,
+      "sha256": "b3b7563dbc6f4fd30cafef43c7f4a1b0ec4e01ff5a31607c65bc874d8f22ff9e"
+    },
+    {
+      "path": "font.part008.b64",
+      "size": 180001,
+      "sha256": "9f22ac5935b38dd856976967132db535962312b8e5b59b7581286a92718d9de7"
+    },
+    {
+      "path": "font.part009.b64",
+      "size": 180001,
+      "sha256": "f23e4a03a3935ffc5b9c83403c17c49c84656b62f0781a28cc05e4fe0dffc0f8"
+    },
+    {
+      "path": "font.part010.b64",
+      "size": 180001,
+      "sha256": "c7b6fee3d170c79ed1d568f5f90d4f5240df475b3a98785c1796df8c029be370"
+    },
+    {
+      "path": "font.part011.b64",
+      "size": 180001,
+      "sha256": "32132141700c23ee58262f2c45dd5d4d40c4aeede06d19217a6d5b52d8857904"
+    },
+    {
+      "path": "font.part012.b64",
+      "size": 180001,
+      "sha256": "e3e0d1ff15fa41503ec2cf224451a5dd02cfc7b6867239d7dbd37f21be41f3ce"
+    },
+    {
+      "path": "font.part013.b64",
+      "size": 180001,
+      "sha256": "9c73ca281f5f05300e64045110441dbdf88542d6b72970343595147799a7227e"
+    },
+    {
+      "path": "font.part014.b64",
+      "size": 180001,
+      "sha256": "90575101314d52e58bc3d66ae6836732c5f63c9e708ab834e05b82856d6815e7"
+    },
+    {
+      "path": "font.part015.b64",
+      "size": 180001,
+      "sha256": "5365836c2055ed5eea4f7c528c3fbd0767dd7f618318823ae02367256a798148"
+    },
+    {
+      "path": "font.part016.b64",
+      "size": 180001,
+      "sha256": "21e6b6cf8337223d70a6a3dc3216eac9a97a1ecc582c8b95abddb731ea1fa750"
+    },
+    {
+      "path": "font.part017.b64",
+      "size": 30941,
+      "sha256": "21b7d91922ef3f5f7d2a301592fd6d60de72f183555c1e75c1b9be126a3696b5"
+    }
+  ]
+}
