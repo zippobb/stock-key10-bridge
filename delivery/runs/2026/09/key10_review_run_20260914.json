@@ -1,13 +1,18 @@
 {
   "attempt_no": 0,
-  "completed_stage": "input_gate",
+  "completed_stage": "A_and_partial_B_persisted",
   "generation": 1,
   "hard_deadline": "2026-09-14T18:49:00+08:00",
-  "heartbeat_at": "2026-09-14T10:42:02.740Z",
-  "lease_expires_at": "2026-09-14T10:45:02.740Z",
+  "heartbeat_at": "2026-09-14T10:42:42.738Z",
+  "lease_expires_at": "2026-09-14T10:42:42.738Z",
   "owner_token": "primary-20260914-1789382326190",
   "role": "primary",
   "started_at": "2026-09-14T10:38:46.190Z",
-  "status": "running",
-  "trade_date": "20260914"
+  "status": "failed",
+  "trade_date": "20260914",
+  "failure_stage": "B_evidence_coverage",
+  "resume_from": "stage_B_primary_evidence_from_persisted_checkpoints",
+  "finished_at": "2026-09-14T10:42:42.738Z",
+  "released": true,
+  "released_at": "2026-09-14T10:42:42.738Z"
 }
