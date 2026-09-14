@@ -1,0 +1,2099 @@
+{
+  "trade_date": "20260914",
+  "scope": "quantitative_diagnostics_only_not_final_review",
+  "previous_trade_date": "20260911",
+  "rows": [
+    {
+      "ts_code": "600176.SH",
+      "name": "中国巨石",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": -4,
+      "sector_strength_delta": -0.04500000000000004,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "688519.SH",
+      "name": "南亚新材",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002436.SZ",
+      "name": "兴森科技",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "601890.SH",
+      "name": "亚星锚链",
+      "origin": "official_pool",
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -11,
+      "sector_strength_delta": -0.26363636363636356,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "600172.SH",
+      "name": "黄河旋风",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 28,
+      "sector_strength_delta": 0.0686363636363636,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "pullback_wait",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300843.SZ",
+      "name": "胜蓝股份",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "603186.SH",
+      "name": "华正新材",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "603083.SH",
+      "name": "剑桥科技",
+      "origin": "official_pool",
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -26,
+      "sector_strength_delta": -0.28681818181818186,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "pullback_wait",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300179.SZ",
+      "name": "四方达",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 28,
+      "sector_strength_delta": 0.0686363636363636,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "601869.SH",
+      "name": "长飞光纤",
+      "origin": "official_pool",
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -26,
+      "sector_strength_delta": -0.28681818181818186,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300408.SZ",
+      "name": "三环集团",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "600186.SH",
+      "name": "莲花控股",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -6,
+      "sector_strength_delta": -0.039999999999999925,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "data_insufficient",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "数据不足",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "000636.SZ",
+      "name": "风华高科",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002980.SZ",
+      "name": "华盛昌",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 20,
+      "sector_strength_delta": 0.08500000000000002,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300285.SZ",
+      "name": "国瓷材料",
+      "origin": "official_pool",
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 38,
+      "sector_strength_delta": 0.255,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002585.SZ",
+      "name": "双星新材",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 22,
+      "sector_strength_delta": 0.03409090909090906,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002015.SZ",
+      "name": "协鑫能科",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -9,
+      "sector_strength_delta": -0.09636363636363643,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "weak",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002463.SZ",
+      "name": "沪电股份",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002080.SZ",
+      "name": "中材科技",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": -4,
+      "sector_strength_delta": -0.04500000000000004,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "600330.SH",
+      "name": "天通股份",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 10,
+      "sector_strength_delta": 0.0345454545454546,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "pullback_wait",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "603650.SH",
+      "name": "彤程新材",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 22,
+      "sector_strength_delta": 0.10954545454545461,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "688183.SH",
+      "name": "生益电子",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "weak",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "688028.SH",
+      "name": "沃尔德",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -1,
+      "sector_strength_delta": 0.0304545454545454,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "603439.SH",
+      "name": "三力制药",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 51,
+      "sector_strength_delta": 0.26590909090909093,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300454.SZ",
+      "name": "深信服",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 37,
+      "sector_strength_delta": 0.2318181818181818,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "pullback_wait",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002916.SZ",
+      "name": "深南电路",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002046.SZ",
+      "name": "国机精工",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -1,
+      "sector_strength_delta": 0.0304545454545454,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002600.SZ",
+      "name": "领益智造",
+      "origin": "official_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "data_insufficient",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "数据不足",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300568.SZ",
+      "name": "星源材质",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 22,
+      "sector_strength_delta": 0.10954545454545461,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "300757.SZ",
+      "name": "罗博特科",
+      "origin": "official_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 10,
+      "sector_strength_delta": 0.0345454545454546,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "pullback_wait",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "601328.SH",
+      "name": "交通银行",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 5,
+      "sector_strength_delta": 0.051818181818181985,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "000993.SZ",
+      "name": "闽东电力",
+      "origin": "external_pool",
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -1,
+      "sector_strength_delta": -0.06545454545454543,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "600908.SH",
+      "name": "无锡银行",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 5,
+      "sector_strength_delta": 0.051818181818181985,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "600876.SH",
+      "name": "凯盛新能",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": -4,
+      "sector_strength_delta": -0.04500000000000004,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "603291.SH",
+      "name": "联合水务",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 2,
+      "sector_strength_delta": 0.04500000000000004,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "000868.SZ",
+      "name": "安凯客车",
+      "origin": "external_pool",
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 41,
+      "sector_strength_delta": 0.2522727272727271,
+      "rotation_confirmation_count": 4,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "600926.SH",
+      "name": "杭州银行",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 5,
+      "sector_strength_delta": 0.051818181818181985,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "605011.SH",
+      "name": "杭州热电",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 2,
+      "sector_strength_delta": 0.06136363636363651,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "extended",
+      "timing_guard_triggered": true,
+      "entry_timing_status": "不追高",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "603318.SH",
+      "name": "水发燃气",
+      "origin": "external_pool",
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 2,
+      "sector_strength_delta": 0.06136363636363651,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "trend_confirming",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "待确认",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    },
+    {
+      "ts_code": "002918.SZ",
+      "name": "蒙娜丽莎",
+      "origin": "external_pool",
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 38,
+      "sector_strength_delta": 0.255,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ],
+      "kdj_status": "complete",
+      "timing_state": "data_insufficient",
+      "timing_guard_triggered": false,
+      "entry_timing_status": "数据不足",
+      "entry_timing_score_effect": 0,
+      "entry_timing_rank_effect": false,
+      "final_review_complete": false,
+      "final_score": null
+    }
+  ],
+  "sectors": {
+    "银行": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 5,
+      "sector_strength_delta": 0.051818181818181985,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "水力发电": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -1,
+      "sector_strength_delta": -0.06545454545454543,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "汽车整车": {
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 41,
+      "sector_strength_delta": 0.2522727272727271,
+      "rotation_confirmation_count": 4,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "港口": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 5,
+      "sector_strength_delta": 0.031818181818181634,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "汽车服务": {
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 10,
+      "sector_strength_delta": 0.005909090909090975,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "供气供热": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 2,
+      "sector_strength_delta": 0.06136363636363651,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "玻璃": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": -4,
+      "sector_strength_delta": -0.04500000000000004,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "陶瓷": {
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 38,
+      "sector_strength_delta": 0.255,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "水务": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 2,
+      "sector_strength_delta": 0.04500000000000004,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "火力发电": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.010000000000000009,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "路桥": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 3,
+      "sector_strength_delta": -0.00909090909090915,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "商品城": {
+      "rotation_state": "warming",
+      "rotation_source_tier": "A",
+      "sector_rank_delta": 43,
+      "sector_strength_delta": 0.1945454545454547,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "船舶": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -11,
+      "sector_strength_delta": -0.26363636363636356,
+      "rotation_confirmation_count": 3,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "新型电力": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -9,
+      "sector_strength_delta": -0.09636363636363643,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "水运": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 1,
+      "sector_strength_delta": -0.0404545454545453,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "摩托车": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 79,
+      "sector_strength_delta": 0.3731818181818183,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "水泥": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 3,
+      "sector_strength_delta": 0.0763636363636363,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "造纸": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 24,
+      "sector_strength_delta": 0.13636363636363635,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "百货": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -1,
+      "sector_strength_delta": -0.01727272727272733,
+      "rotation_confirmation_count": 2,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "铁路": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 18,
+      "sector_strength_delta": 0.021363636363636362,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "仓储物流": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 6,
+      "sector_strength_delta": 0.06227272727272737,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "出版业": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 8,
+      "sector_strength_delta": 0.0431818181818181,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "石油贸易": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -19,
+      "sector_strength_delta": -0.22636363636363643,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "其他商业": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": 0.1368181818181815,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "元器件": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": -0.024090909090909163,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "林业": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 6,
+      "sector_strength_delta": 0.07181818181818178,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "综合类": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": -4,
+      "sector_strength_delta": -0.04727272727272713,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "矿物制品": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 28,
+      "sector_strength_delta": 0.0686363636363636,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "塑料": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 22,
+      "sector_strength_delta": 0.03409090909090906,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "园区开发": {
+      "rotation_state": "leading",
+      "rotation_source_tier": "B",
+      "sector_rank_delta": 32,
+      "sector_strength_delta": 0.15000000000000002,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "特种钢": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 23,
+      "sector_strength_delta": 0.14227272727272733,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "保险": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 20,
+      "sector_strength_delta": 0.08318181818181802,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "家居用品": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 40,
+      "sector_strength_delta": 0.07954545454545459,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "批发业": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -15,
+      "sector_strength_delta": -0.10409090909090901,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "旅游景点": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -22,
+      "sector_strength_delta": -0.21318181818181814,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "钢加工": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -7,
+      "sector_strength_delta": -0.016818181818181954,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "纺织机械": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 47,
+      "sector_strength_delta": 0.13227272727272732,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "通信设备": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -26,
+      "sector_strength_delta": -0.28681818181818186,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "软饮料": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 24,
+      "sector_strength_delta": 0.09045454545454545,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "石油开采": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 8,
+      "sector_strength_delta": -0.006818181818181779,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "普钢": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -7,
+      "sector_strength_delta": 0.01636363636363658,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "装修装饰": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -7,
+      "sector_strength_delta": -0.13681818181818184,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "商贸代理": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -22,
+      "sector_strength_delta": -0.16909090909090907,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "农用机械": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 24,
+      "sector_strength_delta": 0.044545454545454666,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "环境保护": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 27,
+      "sector_strength_delta": 0.057727272727272794,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "影视音像": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -29,
+      "sector_strength_delta": -0.14863636363636368,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "建筑工程": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -2,
+      "sector_strength_delta": -0.09727272727272718,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "医药商业": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 57,
+      "sector_strength_delta": 0.2713636363636364,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "中成药": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 51,
+      "sector_strength_delta": 0.26590909090909093,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "家用电器": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 10,
+      "sector_strength_delta": 0.0018181818181818299,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "航空": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -44,
+      "sector_strength_delta": -0.415,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "轻工机械": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 39,
+      "sector_strength_delta": 0.23954545454545456,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "红黄酒": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -31,
+      "sector_strength_delta": -0.14500000000000002,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "染料涂料": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 53,
+      "sector_strength_delta": 0.2613636363636364,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "生物制药": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 55,
+      "sector_strength_delta": 0.429090909090909,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "啤酒": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 13,
+      "sector_strength_delta": 0.010909090909090924,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "焦炭加工": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -29,
+      "sector_strength_delta": -0.17136363636363638,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "机场": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -19,
+      "sector_strength_delta": -0.010909090909090757,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "化工原料": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 22,
+      "sector_strength_delta": 0.10954545454545461,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "化学制药": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 48,
+      "sector_strength_delta": 0.3268181818181818,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "医疗保健": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 41,
+      "sector_strength_delta": 0.2559090909090909,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "软件服务": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 37,
+      "sector_strength_delta": 0.2318181818181818,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "纺织": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 23,
+      "sector_strength_delta": 0.10499999999999998,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "公共交通": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 7,
+      "sector_strength_delta": 0.08227272727272716,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "电信运营": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -28,
+      "sector_strength_delta": -0.11818181818181811,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "电气设备": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 1,
+      "sector_strength_delta": -0.021818181818181903,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "专用机械": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 10,
+      "sector_strength_delta": 0.0345454545454546,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "电器仪表": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 20,
+      "sector_strength_delta": 0.08500000000000002,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "石油加工": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -12,
+      "sector_strength_delta": -0.024999999999999967,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "橡胶": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -21,
+      "sector_strength_delta": 0.025000000000000022,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "广告包装": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -10,
+      "sector_strength_delta": -0.06454545454545457,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "旅游服务": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -25,
+      "sector_strength_delta": -0.10772727272727278,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "其他建材": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -3,
+      "sector_strength_delta": 0.06227272727272731,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "饲料": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -16,
+      "sector_strength_delta": -0.10772727272727273,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "渔业": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -49,
+      "sector_strength_delta": -0.2395454545454545,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "农业综合": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -17,
+      "sector_strength_delta": -0.15909090909090928,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "区域地产": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 8,
+      "sector_strength_delta": 0.06181818181818188,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "酒店餐饮": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -25,
+      "sector_strength_delta": -0.07954545454545453,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "运输设备": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -38,
+      "sector_strength_delta": -0.1822727272727272,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "煤炭开采": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -30,
+      "sector_strength_delta": -0.15363636363636357,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "汽车配件": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 6,
+      "sector_strength_delta": 0.025000000000000078,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "黄金": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -4,
+      "sector_strength_delta": -0.0277272727272726,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "服饰": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 7,
+      "sector_strength_delta": 0.03636363636363643,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "种植业": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -51,
+      "sector_strength_delta": -0.28090909090909083,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "铝": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -42,
+      "sector_strength_delta": -0.1186363636363636,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "文教休闲": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -3,
+      "sector_strength_delta": -0.07272727272727264,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "超市连锁": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -56,
+      "sector_strength_delta": -0.26227272727272727,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "食品": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -6,
+      "sector_strength_delta": -0.039999999999999925,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "IT设备": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 8,
+      "sector_strength_delta": 0.04909090909090913,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "空运": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -50,
+      "sector_strength_delta": -0.19545454545454538,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "房产服务": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 3,
+      "sector_strength_delta": 0.05818181818181811,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "互联网": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -3,
+      "sector_strength_delta": -0.0027272727272728003,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "工程机械": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -18,
+      "sector_strength_delta": -0.10500000000000004,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "机械基件": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -1,
+      "sector_strength_delta": 0.0304545454545454,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "日用化工": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 6,
+      "sector_strength_delta": 0.11272727272727279,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "多元金融": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -17,
+      "sector_strength_delta": -0.03363636363636363,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "化工机械": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -32,
+      "sector_strength_delta": -0.20636363636363636,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "全国地产": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": 0.11727272727272728,
+      "rotation_confirmation_count": 1,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "化纤": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 4,
+      "sector_strength_delta": 0.09454545454545452,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "半导体": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -24,
+      "sector_strength_delta": -0.13772727272727264,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "农药化肥": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -35,
+      "sector_strength_delta": -0.11181818181818187,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "铜": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -66,
+      "sector_strength_delta": -0.2568181818181819,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "证券": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -23,
+      "sector_strength_delta": 0.06363636363636366,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "电器连锁": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -30,
+      "sector_strength_delta": -0.008636363636363664,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "公路": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -41,
+      "sector_strength_delta": -0.3172727272727274,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "小金属": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -10,
+      "sector_strength_delta": -0.008636363636363581,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "乳制品": {
+      "rotation_state": "cooling",
+      "rotation_source_tier": "D",
+      "sector_rank_delta": -15,
+      "sector_strength_delta": -0.033636363636363686,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "机床制造": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -2,
+      "sector_strength_delta": 0.03727272727272732,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "白酒": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": 0,
+      "sector_strength_delta": 0.061818181818181855,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    },
+    "铅锌": {
+      "rotation_state": "neutral",
+      "rotation_source_tier": "C",
+      "sector_rank_delta": -6,
+      "sector_strength_delta": -0.01863636363636363,
+      "rotation_confirmation_count": 0,
+      "evidence_dates": [
+        "20260911",
+        "20260914"
+      ]
+    }
+  }
+}
