@@ -1,13 +1,13 @@
 {
-  "role": "primary",
   "attempt_no": 0,
-  "trade_date": "20260914",
-  "status": "running",
-  "owner_token": "primary-20260914-1789382326190",
-  "generation": 1,
-  "heartbeat_at": "2026-09-14T10:38:46.190Z",
-  "lease_expires_at": "2026-09-14T10:41:46.190Z",
-  "hard_deadline": "2026-09-14T18:49:00+08:00",
   "completed_stage": "input_gate",
-  "started_at": "2026-09-14T10:38:46.190Z"
+  "generation": 1,
+  "hard_deadline": "2026-09-14T18:49:00+08:00",
+  "heartbeat_at": "2026-09-14T10:39:49.635Z",
+  "lease_expires_at": "2026-09-14T10:42:49.635Z",
+  "owner_token": "primary-20260914-1789382326190",
+  "role": "primary",
+  "started_at": "2026-09-14T10:38:46.190Z",
+  "status": "running",
+  "trade_date": "20260914"
 }

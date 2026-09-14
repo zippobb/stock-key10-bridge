@@ -1,0 +1,20 @@
+{
+  "trade_date": "20260914",
+  "evidence_cutoff": "2026-09-14T18:35:00+08:00",
+  "stage": "B_partial",
+  "sources": [
+    {
+      "ts_code": "601890.SH",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497422.PDF",
+      "published_date": "2026-08-25",
+      "published_time": null,
+      "summary": "2026上半年营收11.1333亿元同比+12.30%；归母净利1.5277亿元+33.37%，扣非+17.60%；经营现金流-2.9005亿元。",
+      "reasoning": "利润增长与现金流恶化需分别处理，不能从净利润增长直接推出短期预期差。",
+      "score": null
+    }
+  ],
+  "unverified_searches": [
+    "中国巨石/南亚新材/兴森科技/交通银行：巨潮域名查询返回首页或无关主体，不能作为财务或业务评分证据。"
+  ],
+  "scoring_complete": false
+}
