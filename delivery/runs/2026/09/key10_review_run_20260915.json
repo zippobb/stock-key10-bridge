@@ -1,0 +1,13 @@
+{
+  "trade_date": "20260915",
+  "role": "primary",
+  "attempt_no": 0,
+  "status": "running",
+  "owner_token": "primary-20260915-1789468733961",
+  "generation": 1,
+  "started_at": "2026-09-15T10:38:53.961Z",
+  "heartbeat_at": "2026-09-15T10:38:53.961Z",
+  "lease_expires_at": "2026-09-15T10:41:00.000Z",
+  "hard_deadline": "2026-09-15T18:49:00+08:00",
+  "completed_stage": "manifest_and_blob_identity_verified"
+}
