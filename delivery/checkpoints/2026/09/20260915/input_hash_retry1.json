@@ -1,0 +1,21 @@
+{
+  "trade_date": "20260915",
+  "role": "retry",
+  "attempt_no": 1,
+  "completed_stage": "input_hash_verified",
+  "verified_at": "2026-09-15T10:54:03.629Z",
+  "manifest_bundle_sha256": "35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05",
+  "latest_raw_sha256": "35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05",
+  "archive_raw_sha256": "35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05",
+  "raw_bytes_equal": true,
+  "schema_version": "2.0.0",
+  "model_version": "V2.0",
+  "stage": "21:30_quantitative_review_payload",
+  "future_data_rows_used": {
+    "official": 0,
+    "external": 0
+  },
+  "official_count": 30,
+  "external_count": 10,
+  "resume_from": "stage_A_candidate_table"
+}
