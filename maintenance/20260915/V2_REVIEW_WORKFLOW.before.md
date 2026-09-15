@@ -1,0 +1,195 @@
+# V2.0 选股终审工作流
+
+> 本文件是主运行与重试运行共用的持久工作流。V2.0完全替代V1.1风险层和V1.2风向层；影子层已取消。V1.1、V1.2及影子层仅为归档资料，不得参与运行或触发规则冲突。当前V2规则冲突时以PROJECT_STATE.md和用户最新明确决定为准。
+
+执行“V2.0 选股终审”。这是同一任务会话中的增量工作流，必须按阶段执行，禁止把所有检索、评分、制图混成一次不可恢复的长步骤。
+
+一、事实源与数据门槛
+1. 先完整读取私有GitHub仓库 zippobb/stock-key10-bridge main分支的 PROJECT_STATE.md。对话记忆只作线索；仅当PROJECT_STATE.md、用户最新明确决定或实时数据中的当前V2信息互相冲突时，醒目标记并停止相关推断。V1.1、V1.2及影子层记载一律视为归档，不得要求单独确认替代关系。
+2. 读取 latest/manifest.json、其archive_path权威归档和 latest/key10_bundle_latest.json，核对trade_date、schema、model、stage、SHA256及内容一致性。
+3. 只接受当天北京时间交易日、schema_version=2.0.0、model_version=V2.0、stage=21:30_quantitative_review_payload、future_data_rows_used=0的数据。任何一项不满足，立即输出“数据未就绪”及具体缺失项；禁止回退V1.x、旧融合结果或旧交易日。
+
+二、分阶段增量核验
+阶段A——建立候选表：从量化包读取池内最多30只、池外最多10只及市场适配、板块、技术三项量化分。先生成候选代码、名称、板块、量化分和bundle哈希的结构化工作表。
+阶段B——批量取证：按板块/产业链分组检索，产业与政策证据同组复用，避免对每只股票重复搜索相同事件。公司层面优先交易所公告、公司公告、定期报告等一手资料；通常每家公司最多保留两项决定性来源，只有来源冲突、重大风险或重大利好需要追加。
+阶段C——增量复用：对本任务会话最近已核验且公司主体未变的业务逻辑、逻辑纯度依据和基本面基线可以复用，但必须保留原来源与evidence_as_of。市场、板块、技术、当天公告、当天业绩变化、重大事件和风险必须按本交易日重新核验；资料过期、来源缺失或出现新公告时不得复用。
+阶段D——先评分后写作：对池内最多30只和池外最多10只逐只形成紧凑JSON记录，不为未入选股写长篇文字。字段包括logic_purity、elasticity五项明细及合计、fundamentals、major_positive、risk_annotations、main_risk、evidence_as_of、sources和data_completeness。
+阶段E——计算与校验：按市场适配5、板块15、技术30、逻辑纯度15、弹性20、基本面10、重大利好5计算100分。弹性五项各0–4且合计必须等于elasticity。单项缺失时仅在可用权重达到70%时等比例还原至100分，否则标为数据不完整且不得正式入选。综合分低于60不入选。重大风险只作文字标记，不扣分、不否决、不改变分数或排序，不生成PASS/WARNING/FAIL。
+阶段F——排序输出：池内按综合分、技术分、弹性分、板块分、逻辑纯度、ts_code依次排序，输出0–10只，不凑数。池外仅保留强势板块且该板块不存在任何池内综合分不低于60的合格个股时的候选，按相同顺序输出0–3只；不得与池内混排，也不得自动加入正式股票池。
+
+### 第1步修正：研究价值与买入时机分离（当前生效）
+
+本步只做“研究价值”和“买入时机”的职责分离，不提前改动板块算法、KDJ阈值、动量阈值、候选数量或PNG版式。
+
+1. 现有七项评分及`final_score`继续作为V2.0的综合质量/入选资格分：市场适配5、板块15、技术30、逻辑纯度15、弹性20、基本面10、重大利好5。它不是买入信号，也不得把高综合分直接表述为“次日可买”。
+2. 每个池内、池外候选记录增加`selection_axes`，至少包含：
+   - `research_value_score`（0–30）：逻辑纯度15 + 基本面10 + 重大利好5。缺项不填默认分；按该轴可用权重达到70%时等比例还原，否则记为数据不足并记录缺失证据。
+   - `market_context_score`（0–70）：市场适配5 + 板块15 + 技术30 + 弹性20。它是当前综合分的市场/交易背景拆分，不是新的加权分；缺项沿用V2可用权重规则。
+   - `entry_timing_status`：只能取`可关注`、`待确认`、`不追高`、`数据不足`之一；同时写`entry_timing_basis`和`next_day_action`。判断必须引用当日量化快照、市场/板块证据和执行纪律，不得仅由`final_score`或单一指标推断。
+   - `entry_timing_score_effect=0`、`entry_timing_rank_effect=false`：本步时机状态只作独立标注，暂不改分、不改排序、不改变池内/池外准入。
+3. 正式JSON必须同时保留七项原始分、`final_score`和上述`selection_axes`。正式池仍按现行V2顺序排序，PNG仍按现行固定样式生成；卡片可继续展示现有字段，时机状态先以JSON和最终文字回执为准。
+4. `entry_timing_status`不得与重大风险混用：重大风险仍只作文字标记，不扣分、不否决、不改变排序。后续第2–5步将分别处理板块驱动、动量/KDJ、阶段状态和输出数量；在对应步骤获确认前，不得把这些规则提前写入本步。
+
+### 第2步修正：板块轮动驱动候选来源（审查侧当前生效）
+
+本步先在终审侧使用现有量化包实现板块轮动分层；不修改七项评分、排序字段、KDJ/动量阈值、候选数量或PNG版式。由于当前bundle只提供池内30只和池外10只，未提供额外“轮动专用候选槽位”，本步不得凭空新增股票；上游候选扩展另行处理。
+
+1. 轮动数据：读取当前bundle的`sector_summary.all_sectors`，并读取`previous_trade_date`对应的权威bundle，按`industry`对齐。计算`sector_rank_delta=previous_rank-current_rank`（正数代表排名上升）和`sector_strength_delta=price_strength_norm-previous_price_strength_norm`。前一交易日板块缺失时，相关字段记为null，`rotation_state=data_insufficient`，不得用当日排名替代跨日变化。
+2. 分层口径（优先级从上到下，避免同一板块多层归类）：
+   - `warming`：`sector_rank_delta>=10`或`sector_strength_delta>=0.10`，且加速度、广度、资金、量能扩张四项中至少两项达到确认；无足够确认不得标为升温。
+   - `leading`：未归入warming，且当前板块排名<=30、强度变化>-0.05、持续性>=0.60。
+   - `cooling`：未归入前两层，且`sector_rank_delta<=-10`或`sector_strength_delta<=-0.10`。
+   - 其余为`neutral`；历史行缺失为`data_insufficient`。
+   其中确认项必须来自bundle的`acceleration_norm`、`breadth_norm`、`capital_norm`和`volume_expansion_ratio_pct`；对应阈值分别为0.60、0.60、0.60和50。
+3. 每个候选增加`rotation_state`、`rotation_source_tier`（A=warming、B=leading、C=neutral、D=cooling、U=data_insufficient）、`sector_rank_delta`、`sector_strength_delta`和`rotation_confirmation_count`，并保留板块证据日期。
+4. 正式池候选选择：先对现有候选完成V2终审和60分/数据完整门槛；若A层存在合格候选，正式池最多10只中至少保留`min(3,A层合格数)`只A层候选；A层不足时不凑数，可按B层、C层补足剩余名额。D层只能在没有合格A/B/C候选时作为最后备选。保留位不改变单只综合分，也不允许低于60分或数据不完整的候选入选。
+5. 保留位确定后，池内最终展示顺序仍按综合分、技术分、弹性分、板块分、逻辑纯度、ts_code排序；池外仍执行原V2准入条件且独立展示。若当前40只候选中没有A层合格候选，记录`rotation_coverage_gap`，不得用旧日期、旧PNG或臆造股票填补。
+6. 用户已确认V2取消行业/板块限制：所有行业均可进入轮动分层和候选来源，不执行白酒、证券、银行等旧排除清单。行业名称不得作为自动排除条件；候选仍须满足V2市场范围、数据完整、综合分门槛、弹性与风险核验等现行规则。
+### 第3步修正：动量与KDJ时机层（3A当前生效，3B待ECS字段）
+
+本步针对“高综合分/技术分但入选时点已接近回调”的滞后问题。时机层仅作独立标注，不修改V2七项评分、`final_score`、最终排序、60分/数据完整门槛、板块全行业范围、候选数量或PNG版式；历史结果不回写，历史验证（第6步）仍暂缓。
+
+1. 3A审查侧输入与字段契约（当前生效）
+   - 优先读取候选记录中的标准KDJ(9,3,3)快照；字段名固定为`kdj_k`、`kdj_d`、`kdj_j`、`kdj_k_prev`、`kdj_d_prev`、`kdj_j_prev`、`kdj_k_slope_3d`、`kdj_d_slope_3d`、`kdj_j_slope_3d`、`kdj_cross_state`（`golden_cross`/`death_cross`/`none`）、`kdj_cross_age_days`、`kdj_as_of`、`kdj_data_complete`和`kdj_source`。
+   - K、D必须为0–100的有限数；J按标准公式保留为有限数，可低于0或高于100。斜率为最近3个交易日的点数变化，`kdj_cross_age_days`为非负整数，`kdj_as_of`不得晚于`trade_date`；全部字段合格时`kdj_status=complete`，任一必需字段缺失、越界或日期不合格时为`kdj_status=data_insufficient`。
+   - 计算口径固定为：`RSV=(close-LL9)/(HH9-LL9)*100`；`K=2/3*K_prev+1/3*RSV`，`D=2/3*D_prev+1/3*K`，`J=3*K-2*D`。首个有效值`K=D=50`；9日窗口不足时标记数据不足，`HH9=LL9`时`RSV=50`；禁止引入未来数据。
+   - 不得由RSI、MACD、收益率、乖离率或量能反推KDJ；缺失值不得填0、填50或沿用上一交易日。
+
+2. 时机状态（字段写入`selection_axes`，不改分/不改排名）
+   - `early_turn`：`kdj_cross_state=golden_cross`且`kdj_cross_age_days<=2`、K<60、D<60、J<90，K/J斜率>0且D斜率>=0；对应`entry_timing_status=可关注`，次日只观察回踩承接，不在高开长阳时追入。
+   - `trend_confirming`：K>D、K<80、J<100，K/D斜率非负且未触发扩张护栏；对应`entry_timing_status=待确认`，等待板块与量价确认。
+   - `extended`：K>=80或J>=100，或`kdj_cross_state=death_cross`且(K>=70或J>=90)，或触发扩张护栏；对应`entry_timing_status=不追高`，等待回撤/重新钝化。
+   - `pullback_wait`：`kdj_cross_state=death_cross`（未达到`extended`条件），或K/J斜率均<0且`distance_ma20_atr>=1.0`；对应`entry_timing_status=待确认`，等待K/D止跌再评估。
+   - `weak`：K<D且K/J斜率均非正，且未满足前述状态；对应`entry_timing_status=待确认`，暂不行动。
+   - 以上条件按`extended`→`pullback_wait`→`early_turn`→`trend_confirming`→`weak`优先级判定；无法满足或数据不完整时为`data_insufficient`，对应`entry_timing_status=数据不足`。每条记录必须写`timing_state`、`kdj_status`、`entry_timing_basis`和`next_day_action`。
+
+3. 审查侧扩张护栏（当前可执行、仅标注）
+   - 无论KDJ是否完整都评估以下任一条件：`distance_ma20_atr>=1.8`；或`rsi14>=70`且`return_5d_pct>=8`；或`close_location>=0.90`且`volume_ratio_1d_prior_10d>=2.0`且`return_1d_pct>=5`。任一触发即写`timing_guard_triggered=true`及依据，并按状态优先级归入`extended`、标注`entry_timing_status=不追高`。
+   - 护栏只影响`entry_timing_status`、`entry_timing_basis`和`next_day_action`，不改变任何V2分数、排序、准入、淘汰或风险文字；不得把护栏等同于否决。KDJ缺失且未触发护栏时保持`kdj_status=data_insufficient`和`entry_timing_status=数据不足`，不作推断。
+   - 本护栏用于避免明显扩张位被误写成“可买”，不是历史验证或回测，也不改变第6步暂缓状态。
+
+4. 3B ECS上游部署要求（已正式部署并通过首次自然交易日验收）
+
+   - ECS量化包必须在正式池30只和池外10只的每条候选中输出上述KDJ字段，保持`future_data_rows_used=0`和现有stage/schema/model不变；同时保留第1步`selection_axes`和第2步`rotation_*`字段。
+   - 2026-09-07首次自然交易日验收通过：18:20日更成功生成`trade_date=20260907`，18:20:54由`OnSuccess`发布到GitHub，18:30补偿发布按幂等规则成功跳过。
+   - 官方30只+外部10只，KDJ 14字段覆盖40/40，`kdj_data_complete=40/40`；K/D范围、J有限值、斜率、交叉状态/年龄及公式全部通过；`future_data_rows_used=0`，`excluded_sectors=[]`；评分、排名、池归属、排序及板块摘要与原输入一致。
+   - 本地bundle、GitHub archive和GitHub latest SHA256均为`43fb384b3361dfe0d5b98fbbcc95acc786e9ce7099c569b13ccb8fc46ad70cbc`，发布commit为`2cae467022df2f7635ffaaa211f484e48a77ee74`。20260904历史归档未触碰。
+   - 后续运行必须重新读取当日bundle；3B不再是生产阻断。不得回写旧交易日结果；历史验证（第6步）仍暂缓。
+
+5. 输出与验收
+   - 正式JSON保留七项原始分、`final_score`、`selection_axes`、`rotation_*`和时机字段；`entry_timing_score_effect=0`、`entry_timing_rank_effect=false`继续固定为0/false。
+   - PNG版式不变；时机状态先在JSON和最终文字回执中呈现。只有后续用户明确确认并完成单独部署/验收，才可讨论把时机状态转为分数或排序规则。
+
+三、交付隔离
+1. 必须先完成并自检正式结果JSON，再开始制图。JSON包含七项分数、五项弹性明细、风险标记、来源、公开信息截止时间、bundle哈希和future_data_rows_used=0校验。
+2. 只为最终池内0–10只和池外0–3只撰写入选依据与主要风险；非入选股只保留紧凑评分记录和未入选原因。
+3. JSON通过后生成一张1024×2048深蓝风格PNG，在同一张图分别展示池内与池外；移除V1.0/V1.1/V1.2、影子层、重点池、PASS/WARNING/FAIL字段。买点只作执行纪律说明，不计分。
+4. PNG生成或视觉检查失败时，禁止重新执行阶段A至F；保留已完成JSON，单独重试制图最多一次。仍失败则输出“执行失败”、JSON结果和具体制图错误。
+5. 任一阶段失败都必须输出可见回执，说明失败阶段、已完成阶段和可恢复起点。最终状态只允许“已完成”“结果未变化”“数据未就绪”“执行失败”。不得静默结束。
+6. 同一trade_date和bundle哈希已有成功结果时，直接输出“结果未变化”并重新提供该日结果，不重复检索和评分。
+
+
+### V2.0 PNG 固定样式契约（唯一有效）
+
+PNG样式版本：`v2.0-dashboard-20260904`。今后主终审、有限重试和交付复核必须使用同一契约；样式失败只修复制图，不重做终审评分。
+
+1. 数据来源与内容边界
+   - PNG只能直接读取已通过校验的当日正式结果JSON；不得从旧PNG、旧日期结果、旧版脚本或英文临时表复制内容。
+   - 标题固定为“V2.0每日选股”；副标题使用下一有效交易日“X月X日盘前候选｜数据截止：YYYY-MM-DD HH:MM”。
+   - 股票名称、板块名称、栏目标题和说明必须使用真实中文；禁止用英文音译、英文占位词或空字形替代。技术缩写仅允许V2.0、MA20、RSI、VWAP及股票代码。
+   - 展示数量、名称、代码、板块和综合分必须与正式JSON的`final_selection`逐项一致；池内最多10只，池外最多3只，池外必须明确“不自动入池”。
+
+2. 画布、字体与配色
+   - 输出格式固定为PNG，RGB，尺寸固定为1024×2048。
+   - 背景固定为深蓝`#071525`，使用32px间距的低对比度网格`#102947`。
+   - 面板使用`#0B2037`，候选卡片使用`#0D2843`，边框使用`#1E5B88`；标题/分区使用`#56D6FF`、`#FFD66B`、`#FF6B78`，综合分使用`#FFD66B`，风险使用`#FF818B`。
+   - 中文字体优先使用可验证的NotoSansSC/NotoSansCJK SC；必须先验证中文粗体字形非空。粗体文件不可用时，使用同一份可验证中文常规字体加描边；禁止静默回退到拉丁字体、方框或英文音译。
+
+3. 固定版式（自上而下不得改变）
+   - 顶部：V2.0徽章、主标题、下一交易日副标题。
+   - 第一面板：`市场总览`，展示市场阶段/姿态、上涨/下跌家数、站上MA20比例、成交额、中位涨跌和创业板当日涨跌。
+   - 第二面板：`板块轮动`，必须左右分列`升温板块`和`降温板块`；各展示3个代表板块，且每行展示相邻交易日昨日排名→今日排名、板块强度变化、当日收益动量和量能变化。
+   - 第三部分：`池内正式候选`，固定两列卡片、最多五行；每张卡片展示排名、中文名称、股票代码、市场/板块/技术分、逻辑纯度/弹性/基本面/重大利好分、核心理由和风险文字。
+   - 第四部分：`池外观察`，固定三列卡片、最多一行；每张卡片展示排名、中文名称、股票代码、板块、技术/弹性/逻辑分、池外准入理由和风险文字。
+   - 底部：`次日执行纪律`，固定包含不追高、回踩确认、风险不改分、池外仅观察四条说明及免责声明。
+
+4. 视觉验收
+   - 生成后必须按原始1024×2048尺寸检查：中文标题、股票名称、栏目、排名、分数均可见；无英文音译、空字形、文字溢出、相邻卡片覆盖或日期混用。
+   - 必须核对PNG中的池内/池外数量、名称、代码、综合分、板块轮动三行与正式JSON一致。
+   - 视觉检查失败时，保留正式JSON，仅重新制图；不得重新检索、重新评分或调用旧版本流程。
+四、持久交付与完成定义
+1. 每次运行无论状态如何，都必须把机器可读回执写入私有GitHub仓库 zippobb/stock-key10-bridge。日期归档路径固定为 delivery/YYYY/MM/key10_review_receipt_YYYYMMDD.json，最新指针固定为 latest/key10_review_receipt_latest.json；若同路径已存在，先读取当前SHA再更新，禁止盲目覆盖。
+2. 回执字段至少包含：run_date、started_at、finished_at、status、trade_date、bundle_sha256、completed_stage、failure_stage、missing_items、result_json_path、png_delivery_status、summary。status只允许“已完成”“结果未变化”“数据未就绪”“执行失败”。
+3. “已完成”时，先将完整正式结果JSON写入 review/YYYY/MM/key10_review_YYYYMMDD.json，再写日期回执，最后更新latest回执；回执中的result_json_path必须指向该结果文件。只有结果JSON已写入且可重新读取校验，才允许把status写为“已完成”。
+4. “结果未变化”时，回执必须指向既有且已核验的结果JSON；“数据未就绪”必须记录具体missing_items；“执行失败”必须记录failure_stage、已完成阶段和可恢复起点。
+5. GitHub日期回执是本次运行的持久完成标记，必须最后写入。若回执写入或回读校验失败，最终状态必须改为“执行失败”，并在任务会话明确说明“持久回执写入失败”；不得宣称已完成。
+6. 写入并回读日期回执后，仍必须在本任务会话发送可见最终消息。最终消息第一行必须是四种状态之一，随后给出trade_date、结果JSON路径、PNG状态或具体缺失/失败原因。禁止SKIP_COMPLETION、禁止只有内部结果、禁止仅写GitHub而不回复用户。
+
+五、有限重试协议
+1. 每个北京时间交易日最多执行1次主运行和2次跨时间重试。主运行attempt_no=0；18:45重试attempt_no=1；18:55重试attempt_no=2。禁止创建无限循环或超过2次重试。
+2. 日期回执增加attempt_no、retryable、error_class、resume_from、retry_exhausted字段。每次尝试均以GitHub现有日期回执和结果JSON为检查点，使用SHA更新，禁止并发盲写。
+3. 可重试错误仅包括：当天数据包尚未发布或仍为旧交易日、临时网络超时、限流、GitHub临时读取失败、单个来源临时不可用、PNG生成或视觉检查失败。鉴权/权限失败、当前V2权威规则之间尚未解决的冲突、schema/model不兼容、future_data_rows_used不为0、哈希不一致等属于不可重试错误，必须停止并明确报告。V1.1、V1.2或影子层的归档记载不构成规则冲突，不得据此失败、重试或暂停primary。
+4. 同一次尝试内，单个瞬时失败的只读调用最多立即重试1次；已成功的调用和阶段不得重做。跨时间重试必须从resume_from继续：数据门槛失败从阶段A前重新检查数据；阶段B/C失败复用已保存的候选表和有效证据；阶段D/E/F失败复用此前已成功阶段；仅PNG失败时只重试PNG，不得重新检索或评分。
+5. 每次重试前先检查当日日期回执、latest回执及结果JSON。若status为“已完成”或“结果未变化”且结果可回读，立即停止且不得重复计算；若同一bundle_sha256已有成功结果，同样停止。
+6. attempt_no=2仍未成功时，写入retry_exhausted=true，状态为“数据未就绪”或“执行失败”，记录最后错误、已完成阶段和人工恢复起点；不得继续自动重试。
+7. 没有执行重试时也必须输出可见状态，已有成功结果重新附PNG；一旦实际发起重试，无论结果如何都必须写入持久回执并发送可见状态。
+
+
+六、并发锁与运行状态（2026-09-06修复）
+1. 运行锁路径保持不变。使用唯一owner_token、generation、lease_expires_at、heartbeat_at、hard_deadline和completed_stage。租期180秒，每60秒及每个阶段持久化后续租，租期不得超过本次hard_deadline。主运行截止18:44，第一次重试截止18:54，第二次重试截止18:58，交付复核18:58；目标始终早于19:00。
+2. 必须用现有文件SHA进行条件更新取得锁并回读owner_token。锁有效时只报告并发拦截，不覆盖原运行或日期回执，不把锁记录当作进程存活证明。失去租期的旧执行者必须停止写入；每次检查点或正式输出写入前重新核对owner_token、generation和未到期租期。
+3. 过期锁可基于最新SHA接管，generation递增，保留previous_run摘要与接管原因。旧版无lease_expires_at锁按heartbeat_at+180秒识别过期。任何SHA冲突都停止当前写入并重新核验归属，禁止盲写。共享结果与锁的更新必须在同一基准commit上提交并非强制推进main，拒绝过期执行者覆盖新owner。
+4. 阶段A及每批取证后立即将候选表、来源URL、原始发布时间、证据摘要及完成阶段写入delivery/checkpoints/YYYY/MM/<trade_date>/，回读后才更新completed_stage。正式JSON验证通过立即持久化，再制图。不能仅保存在临时目录或未挂到main的Git blob。
+5. 主任务18:43、第一次重试18:53、第二次18:57开始收尾；到本次截止时停止新检索、保存已验证检查点，写失败回执并释放锁。运行中断后的过期锁由下一次重试从持久检查点接管。截止后只允许记录失败，不生成迟到的成功回执冒充准时完成。
+6. 成功需JSON、PNG与双回执逐项回读，原尺寸视觉检查通过，并在最终消息实际附PNG。不能提前记录visible_completion=true；发送前只能记pending。
+7. 证据质量门槛：格式非空不等于真实终审。禁止因无财报证据统一填基本面3分，禁止把量价共振计为重大利好，禁止仅凭价格乖离赋予预期差。公司业务、财务和事件评分须对应截止前一手来源和推理；缺失项标null及原因，按原V2可用权重>=70%规则处理，禁止补默认分。缺少必要证据且不满足权重门槛时不得发布正式名单。
+8. 内容校验失败从取证阶段恢复，不能仅重传JSON/PNG。鉴权、哈希、未来数据及当前规则不兼容仍不可自动重试。活跃锁拦截须可见报告但不计次数；同日已有完整成功结果重新交付PNG，禁止静默。
+
+
+### 大文件校验安全规则（2026-09-06新增）
+- 禁止把完整 JSON、PNG 或任何大文件内容插入 shell 命令、python -c 参数、URL、环境变量或工具参数中的命令字符串。
+- SHA256 必须对已落盘文件按文件流计算，例如 `sha256sum /path/to/file` 或 Python `hashlib.file_digest(open(path, "rb"), "sha256")`；结果只传递短哈希字符串。
+- GitHub 文件先保存到临时文件，再计算原始字节 SHA256；不得用 JSON 解析后重新序列化的内容代替原始字节校验。
+- 若本地无法安全落盘或流式读取大文件，立即写“执行失败”、failure_stage=`input_sha256_calculation`，不得进入终审，也不得把参数长度错误归类为数据或权限失败。
+
+
+### PNG 字形后端与视觉闸门修复（2026-09-12生效）
+
+1. PNG仍唯一使用样式契约 `v2.0-dashboard-20260904`；正式 JSON、PNG、日期回执和 latest 回执必须按顺序完成并逐一回读，`final_delivery_gate=ready` 后才释放锁和发送结果。
+2. 制图前必须执行 CJK 字形预检：所有实际显示的中文字符和全角标点都必须有可验证字形，字形掩码不得为空；禁止把损坏字体、拉丁字体、方框、英文音译或 ReportLab `STSong-Light` 作为静默兜底。
+3. 允许的制图后端只有：通过文件完整性与代表字形预检的持久化中文字体，或可复现的矢量 CJK 图集后端。矢量后端必须固定字形数据、版本、来源和许可证；旧版 KanjiVG 派生图集已退役，不得用于新输出。当前唯一启用后端为可验证的 WenQuanYi Micro Hei 中文字体文件；页面以4倍分辨率绘制后一次性Lanczos缩小，且不允许系统字体、日文/繁体字形、拉丁字体或方框回退。实现和字体文件位于 `render_assets/`。
+4. 生成后必须回读原始 PNG，验证 `mode=RGB`、`size=(1024,2048)`、文件 SHA256、正式 JSON 中的交易日/池内/池外数量/名称/代码/综合分和板块三行；再做原尺寸视觉检查。任何字形缺失、乱码、重叠、截断、溢出或日期混用都阻断交付，并从 `png_render_from_validated_json` 恢复。
+5. PNG 视觉检查失败时保留已验证正式 JSON，不重复取证、评分或名单生成；只有在新的字形预检和原尺寸视觉检查均通过后，才允许写入 `review/YYYY/MM/key10_review_YYYYMMDD.png` 并更新完成回执。
+
+
+### PNG 简体中文字体化渲染修复（2026-09-13生效）
+
+1. 上一版 `kanjivg_vector_atlas_v1` 已明确退役。它使用日文/繁体笔画图集，不再属于 V2.0 正式输出路径；历史提交仅保留审计用途。
+2. 当前唯一有效后端为 `wqy_microhei_simplified_font_supersampled_4x`：使用固定提交的 WenQuanYi Micro Hei 中文字体文件，直接绘制真实字体轮廓，不使用中心线图集、KanjiVG、日文或繁体字形。
+3. 页面先在 4 倍画布上完成文字和版式，再一次性 Lanczos 缩小到 RGB 1024×2048。禁止低分辨率直接栅格化、损坏字体、拉丁字体替代、ReportLab CJK fallback、英文音译和 tofu 方框。
+4. 制图前必须使用字体 cmap 预检所有实际显示的中文字符，并强制检查 `为`、`买`、`亚`、`环`、`际`、`领`、`闽` 等简繁差异字；任一缺字或字体不可读立即失败。
+5. 固定样式 `v2.0-dashboard-20260904`、标题“V2.0每日选股”、市场总览、相邻交易日升温/降温板块、池内/池外布局及 JSON 评分数据均保持不变。历史 20260911 正式 JSON 不回写，仅替换其 PNG 并更新双回执中的渲染后端、字体预检、PNG SHA 和修复记录。
+
+
+## 制图传输与验收契约（2026-09-13生效）
+
+独立制图验收已通过，范围仅为已验证正式JSON到PNG、仓库写入回读和视觉检查，不代表重新终审或未来准时性保证。机器契约：`render_assets/render_contract_v2.json`；验收报告：`render_assets/acceptance/20260911/20260913T134742Z/acceptance_report.json`。
+
+- 必须从同一main基准commit通过GitHub连接器读取契约、渲染器及字体传输文件，不使用shell Git或凭据。
+- 字体使用`render_assets/font_transport/manifest.json`列出的18个小型UTF-8分块；逐块验证长度/SHA256，运行同目录`restore_font.py`还原完整TTC，再验证固定完整SHA256。禁止空内容继续、系统字体回退、KanjiVG或旧本地字体充当验收输入。
+- 原始JSON/文本哈希敏感读取：先取得文件Blob SHA，再通过`github_fetch_blob`读取UTF-8原文，保留末尾换行；使用文件写入工具或标准输入安全落盘后流式算哈希。不得直接对`github_fetch_file`可能归一化的字符串宣称原始字节已校验，也不得猜测增删换行来满足哈希。
+- 渲染入口改为`render_assets/render_v2_verified.py`，传入`--input`、权威`--input-sha256`、`--output`、`--next-trade-date`。入口强制检查输入/字体/渲染器哈希、RGB 1024×2048和输入未变；任何预检失败立即停止。
+- 固定后端`wqy_microhei_simplified_font_supersampled_4x`，4倍绘制后一次Lanczos缩小。仍需原尺寸目视核验简体、清晰、无缺字方框/重叠/截断，逐只核对JSON；程序仅输出`visual_check=pending`，不能自动宣称视觉通过。
+- PNG通过连接器二进制base64读取回读，只去除传输换行后比较原始字节。仓库提交按最新基准commit非强制推进，冲突停止。所有已有评分、日期时限、租约、交付闸门、池归属和排序规则继续有效。
+
+
+## 终审取证时限与跨日证据缓存修复（2026-09-14生效）
+
+1. 阶段B不得默认从零检索40只候选。建立并优先读取 `delivery/evidence_cache/<ts_code>.json` 及最近成功正式JSON中的公司级证据；仅当股票主体、报告期或来源URL失效时重建基线。
+2. 公司业务逻辑与最近一期定期报告属于可复用基线。每次运行必须保留原URL、原始发布时间、报告期、摘要和上次核验日期，并核对截止时间前是否出现新定期报告、业绩预告、重大公告或风险事件。市场、板块、技术、KDJ、当日事件和执行时机仍按当日bundle重新计算或核验。
+3. 缓存证据不是默认分。只有来源仍可回读、发布时间不晚于本次证据截止时间、主体和报告期匹配时才能复用；否则字段为null并写明原因。禁止因缓存存在而跳过新增公告检查。
+4. 阶段B按批次持久化，每批最多10只，文件名为 `stage_B_batch_<n>.json`；每批记录已完成代码、来源、发布时间、摘要、评分依据和待补项。中断后从首个未完成代码继续。
+5. 主任务首先读取上一交易日成功结果和证据缓存，对重合候选执行增量刷新；新候选优先补业务与财务基线，再补事件与风险。不得重复检索已验证且仍有效的同一来源。
+6. `B_evidence_coverage` 属于可从检查点继续的 retryable 阶段性失败，但只有已持久化批次可复用。第一次和第二次有限重试可以继续阶段B补证、评分和交付；不得把它误分类为“只能重传文件”。鉴权、输入哈希、future data、schema/model及规则冲突仍不可重试。
+7. 时间闸门继续有效：各运行到收尾点立即保存批次和回执并释放锁。不得为赶时限编造证据、默认评分或发布不完整名单。
+8. 成功标准、V2七项权重、60分门槛、正式池/池外规则、风险文字规则、KDJ时机层和PNG契约均不变。
