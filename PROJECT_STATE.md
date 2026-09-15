@@ -446,3 +446,8 @@
 ## 2026-09-16 发布器兼容性隔离复核
 
 - 使用ECS已部署候选适配器和20260915现有缓存生成隔离 `/tmp/stock-key10-candidate-dryrun-20260916/adapter_bundle.json`，大小277727字节；现有`export_key10_v2_bundle.validate`通过，V2发布器必需字段、禁用字段和1MiB限制均满足。该文件仅在/tmp，未写入生产latest、/var/lib、历史归档或GitHub。
+
+## 2026-09-16 V2排序兼容修正
+
+- 首次适配器干跑发现三路轮询输出顺序可能偏离原`score_stocks`排序；未进入自然生产运行前已修正为`quant_score、technical_score、sector_score、market_fit_score、ts_code`原排序键。排序修正daily最终SHA256为`a0f747bf504b98a5a0de8f08b19f89dba2456db4885b6b7a1f9b52fbe167d259`，前一版本已备份至`/root/stock-key10-backups/step_candidate_sources_sort_20260915T170732Z/`，修改前SHA256为`91859c21d11edf2b408e3c62d34dbada6e962f4ae3699c8ebd6210a3d85aff83`。
+- 使用最终生产源码的20260915隔离干跑再次通过：`official/external=30/10`、`final_order_preserved=true`、14个KDJ字段40/40、发布器校验通过，临时bundle 277727字节；生产latest和GitHub均未写入。
