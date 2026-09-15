@@ -182,3 +182,8 @@
 - 20260915真实缓存隔离干跑：官方扫描237/资格82，外部扫描439/资格215，输出30/10，代码唯一且跨池不重叠；14个KDJ字段覆盖40/40，`kdj_data_complete=40/40`，评分、KDJ、量化排名及池归属逐代码保持不变，`future_data_rows_used=0`，`schema/model/stage`及`excluded_sectors=[]`保持不变，耗时约53.935秒。
 - 由于ECS没有可靠的带生效日期题材成员映射，真实路由为先行股118、题材联动0、确认跟随0，题材统计0、`coverage_gap=true`；因此本次仅完成代码部署、合成测试和真实干跑，不宣称三路完整真实覆盖。后续不得硬编码示例题材/股票或恢复行业排除。
 - 生产latest、历史归档、GitHub发布、service和timer未被本次接入触碰；下一步为自然交易日只读观察日更调用新模块并核验新bundle与发布链路，不能手动补发或把干跑产物当准时生产结果。
+
+## 2026-09-16 候选模块文档校正
+
+- 仅将候选模块文档中的“integration pending”改为已部署适配器说明，执行逻辑和V2规则不变。修正后main提交为 `739f87bb794bcaa5e5d55ec6767f6c608b68353c`，ECS源码SHA256为 `60f25f3015c15236b766f3c261d127d7d5f21B97A06AC64CC6B9D29908449943`（大小写仅为显示，不作为哈希比较依据）。
+- 修正前源码备份：`/root/stock-key10-backups/step_candidate_sources_refine_20260915T165549Z/`；语法、12项单测和使用生产源码的20260915真实隔离干跑均再次通过。候选来源仍因无可靠题材映射而保持`theme_linkage=0`、`confirmed_follower=0`、`coverage_gap=true`，不可宣称三路完整真实覆盖。
