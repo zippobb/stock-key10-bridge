@@ -2,10 +2,10 @@
   "run_date": "20260915",
   "trade_date": "20260915",
   "role": "retry",
-  "attempt_no": 1,
+  "attempt_no": 2,
   "status": "执行失败",
-  "started_at": "2026-09-15T10:54:03.629Z",
-  "finished_at": "2026-09-15T10:54:24.581Z",
+  "started_at": "2026-09-15T10:56:38.000Z",
+  "finished_at": "2026-09-15T10:57:30.000Z",
   "bundle_sha256": "35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05",
   "completed_stage": "input_hash_verified",
   "failure_stage": "time_gate_before_stage_A",
@@ -20,10 +20,10 @@
   "png_delivery_status": "not_started",
   "final_delivery_gate": "blocked",
   "resume_from": "stage_A_candidate_table",
-  "retryable": true,
-  "retry_exhausted": false,
-  "error_class": "insufficient_remaining_run_window",
-  "summary": "已修复连接器大文件落盘方式：通过标准输入流写入临时文件并以sha256sum校验。latest与archive原始SHA256均等于manifest，V2.0字段、30+10候选和future_data_rows_used=0通过。因接近本次硬截止，停止进入终审并保存可复用输入检查点。",
+  "retryable": false,
+  "retry_exhausted": true,
+  "error_class": "retry_window_exhausted",
+  "summary": "第二次有限重试已回读并复用通过校验的输入检查点；由于剩余时间不足以按真实证据标准完成阶段A、阶段B四批取证、评分、JSON、PNG和双回读，按时间闸门停止，未编造证据或默认评分。自动重试已耗尽。",
   "checkpoint_paths": [
     "delivery/checkpoints/2026/09/20260915/input_hash_retry1.json"
   ],
@@ -38,10 +38,9 @@
     "png": false
   },
   "lock": {
-    "owner_token": "retry1-20260915-1789469643629",
-    "generation": 2,
+    "generation": 3,
     "released": true,
-    "released_at": "2026-09-15T10:54:24.581Z"
+    "released_at": "2026-09-15T10:57:30.000Z"
   },
   "visible_completion": "pending",
   "on_time_delivery": false
