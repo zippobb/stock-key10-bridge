@@ -437,3 +437,8 @@
 - 新旧差异：官方新增13、移出13；外部新增7、移出7。路由计数为先行股118、题材联动0、确认跟随0，题材统计0，`coverage_gap=true`；ECS未发现有可靠、带生效日期的题材成员映射，因此本次不得宣称三路完整覆盖，资金/量价依据仅作候选来源诊断，不转为评分或买入信号。干跑耗时约53.935秒，使用43个基准交易日及`raw_tushare_unadjusted_close_volume`口径。
 - 接入后实时复核：生产latest仍为`trade_date=20260915`、SHA256 `35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05`，未覆盖latest或历史归档，未发布GitHub。daily/publish服务均inactive；两个timer仍enabled/active。daily.service、daily.timer、github-publish.timer文件SHA分别保持为 `b5561741ea9121ace2f863baf026ecc3a7e13de2cd84e7cba7ab772ecf3a7106`、`7339f29ccfca73406dcdba2d9998d4aaf8aaeac034250966c784ac56828527f7`、`1e51f2eb3c89b6c650613964af3a6eaeda00f23137b5dcbad33223d32223d35a`。
 - 当前判定：代码已部署、合成测试和真实隔离干跑已通过；端到端生产候选包尚未由自然交易日运行生成，故不得报告为正式三路验收完成。下一自然交易日需只观察日更/发布链路，核验新字段、30+10、分数/排名/池归属不变及题材覆盖缺口；不修改任务时间、服务或历史结果。
+
+## 2026-09-16 候选模块文档校正
+
+- 为避免模块文档仍写“integration pending”造成职责歧义，仅修正 `candidate_assets/candidate_sources_v2.py` 模块文档字符串；执行逻辑、测试语义和候选结果不变。修正后main提交为 `739f87bb794bcaa5e5d55ec6767f6c608b68353c`，ECS最终源码SHA256为 `60f25f3015c15236b766f3c261d127d7d5f21b97a06ac64cc6b9d29908449943`。
+- 修正前ECS源码已备份至 `/root/stock-key10-backups/step_candidate_sources_refine_20260915T165549Z/`，备份清单记录修正前SHA256 `4669988110033de3b5d7cc90524ecee47a085366895e58431ed2a9ac47f0fbdf`、修正后SHA256及systemd单元哈希。12/12单元测试、语法检查和使用生产源码的20260915真实隔离干跑再次通过；生产latest仍未改变。
