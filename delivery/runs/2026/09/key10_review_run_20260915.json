@@ -2,15 +2,15 @@
   "trade_date": "20260915",
   "role": "acceptance",
   "attempt_no": 0,
-  "status": "running",
+  "status": "failed",
   "owner_token": "acceptance-20260915-1789480212449",
   "generation": 4,
   "started_at": "2026-09-15T13:50:12.449Z",
-  "heartbeat_at": "2026-09-15T13:55:51.845Z",
-  "lease_expires_at": "2026-09-15T13:58:51.845Z",
+  "heartbeat_at": "2026-09-15T13:56:07.860Z",
+  "lease_expires_at": "2026-09-15T13:56:07.860Z",
   "hard_deadline": "2026-09-15T14:30:12.449Z",
   "completed_stage": "A_and_partial_B_persisted",
-  "released": false,
+  "released": true,
   "previous_run": {
     "trade_date": "20260915",
     "role": "retry",
@@ -36,5 +36,9 @@
     }
   },
   "acceptance_scope": "historical_end_to_end_20260915",
-  "on_time_delivery": false
+  "on_time_delivery": false,
+  "failure_stage": "B_evidence_coverage",
+  "resume_from": "delivery/acceptance/20260915/acceptance-20260915-1789480212449/stage_B_batch_1.json",
+  "finished_at": "2026-09-15T13:56:07.860Z",
+  "final_delivery_gate": "blocked"
 }
