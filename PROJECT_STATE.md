@@ -442,3 +442,7 @@
 
 - 为避免模块文档仍写“integration pending”造成职责歧义，仅修正 `candidate_assets/candidate_sources_v2.py` 模块文档字符串；执行逻辑、测试语义和候选结果不变。修正后main提交为 `739f87bb794bcaa5e5d55ec6767f6c608b68353c`，ECS最终源码SHA256为 `60f25f3015c15236b766f3c261d127d7d5f21b97a06ac64cc6b9d29908449943`。
 - 修正前ECS源码已备份至 `/root/stock-key10-backups/step_candidate_sources_refine_20260915T165549Z/`，备份清单记录修正前SHA256 `4669988110033de3b5d7cc90524ecee47a085366895e58431ed2a9ac47f0fbdf`、修正后SHA256及systemd单元哈希。12/12单元测试、语法检查和使用生产源码的20260915真实隔离干跑再次通过；生产latest仍未改变。
+
+## 2026-09-16 发布器兼容性隔离复核
+
+- 使用ECS已部署候选适配器和20260915现有缓存生成隔离 `/tmp/stock-key10-candidate-dryrun-20260916/adapter_bundle.json`，大小277727字节；现有`export_key10_v2_bundle.validate`通过，V2发布器必需字段、禁用字段和1MiB限制均满足。该文件仅在/tmp，未写入生产latest、/var/lib、历史归档或GitHub。
