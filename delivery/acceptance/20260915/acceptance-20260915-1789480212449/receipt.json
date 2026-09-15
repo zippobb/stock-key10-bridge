@@ -1,0 +1,88 @@
+{
+  "run_date": "20260915",
+  "trade_date": "20260915",
+  "scope": "historical_end_to_end_acceptance",
+  "started_at": "2026-09-15T13:50:12.449Z",
+  "finished_at": "2026-09-15T13:55:50.925Z",
+  "status": "执行失败",
+  "on_time_delivery": false,
+  "bundle_sha256": "35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05",
+  "input_blob_sha": "3bac8a5a7bc33fcd7a1ff5b61c01de4f04f6f56b",
+  "completed_stage": "A_and_partial_B_persisted",
+  "failure_stage": "B_evidence_coverage",
+  "resume_from": "delivery/acceptance/20260915/acceptance-20260915-1789480212449/stage_B_batch_1.json",
+  "next_uncompleted_code": "600176.SH",
+  "result_json_path": null,
+  "png_delivery_status": "not_started_due_to_incomplete_review",
+  "final_delivery_gate": "blocked",
+  "visible_completion": "pending",
+  "summary": "量化输入、原文传输、哈希、候选表、租约及检查点写入回读通过。第一批证据未完整；未生成正式评分JSON或PNG。",
+  "checks": [
+    {
+      "stage": "GitHub_input_transport_hash",
+      "status": "passed"
+    },
+    {
+      "stage": "V2_schema_model_stage",
+      "status": "passed"
+    },
+    {
+      "stage": "40_unique_candidates",
+      "status": "passed"
+    },
+    {
+      "stage": "KDJ_snapshot_range_date_J_D_formula",
+      "status": "passed",
+      "count": 40,
+      "limitation": "未读取完整历史OHLC，未验证RSV/K递推全历史"
+    },
+    {
+      "stage": "stage_A_persist_readback",
+      "status": "passed"
+    },
+    {
+      "stage": "stage_B",
+      "status": "failed",
+      "fully_reviewed_count": 0,
+      "primary_document_body_verified_count": 1
+    },
+    {
+      "stage": "formal_JSON_scoring_selection",
+      "status": "not_run"
+    },
+    {
+      "stage": "PNG_render_visual_binary_readback",
+      "status": "not_run"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "description": "没有可直接使用的公司证据缓存；首批10只未完成业务、财报、事件及评分依据闭环。定向检索主要返回站点首页或无关报告，不作为证据。",
+      "evidence_path": "delivery/acceptance/20260915/acceptance-20260915-1789480212449/stage_B_batch_1.json"
+    },
+    {
+      "id": "F2",
+      "severity": "blocking_for_cache_reuse",
+      "description": "20260911历史正式JSON的40只候选均以量化板块/趋势/量价为logic_purity依据，且无一手预期差证据仍记0。按当前证据规则不能作为合格公司评分缓存直接复用。",
+      "evidence_path": "review/2026/09/key10_review_20260911.json",
+      "historical_file_modified": false
+    },
+    {
+      "id": "F3",
+      "severity": "render_contract_static_mismatch",
+      "description": "固定渲染器以板块名代替核心理由、风险固定为风险待确认；池外未展示真实准入理由和风险，与工作流固定内容契约不一致。未运行PNG，未宣称视觉失败或通过。",
+      "evidence_path": "render_assets/render_v2_png_simplified.py",
+      "blob_sha": "569058eb541f16ebfae85d0dddbf69fd427a208d"
+    }
+  ],
+  "remediation": [
+    "从阶段B首个未完成代码继续，保存可核验公司报告和业务证据；单只完成即落盘，不等待整批",
+    "不得把历史成功标记当作证据质量认证，未支持的分项保持null并重算可用权重",
+    "正式JSON通过后修复并验收渲染器对理由/风险/池外准入字段的真实展示，同步固定哈希契约"
+  ],
+  "production_receipts_unchanged": true,
+  "scoring_rules_changed": false,
+  "trades_executed": false
+}
