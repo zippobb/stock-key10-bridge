@@ -417,3 +417,12 @@
 - 实现及接入契约见candidate_assets/README.md；候选模块candidate_assets/candidate_sources_v2.py，8项合成单元测试通过。三路轮询去重后保留原30+10上限，不改变七项权重、60分/完整性门槛、最终排序、池外准入、KDJ和风险规则；交付继续文字模式。
 - 模块须在ECS完整扫描宇宙截断前调用，不能仅重排既有40只；新诊断字段不会自动产生买入信号。首版召回参数尚未经真实输入或收益验证。
 - 部署状态：未接入ECS，未启用新生产候选生成；当前会话无ECS执行通道，仓库未含当前daily/scoring生产源码。须完成真实源码适配、带日期题材映射、完整行情干跑和文字交付验收后更新状态。现有bundle、正式历史结果、任务计划及启用状态未改；缺新字段不得误判旧V2包无效。
+
+## 2026-09-15 GitHub固定commit同步通道（已验证）
+
+- 桌面端 GitHub 连接器当前可用，账号标识为 `zippobb`；目标私有仓库可读，默认分支为 `main`，连接器返回的仓库权限包含 `pull`。本次未读取或输出任何 token、私钥、Cookie、`.env` 或认证文件。
+- 已记录的失败类型彼此独立：桌面端此前 `git clone` 的准确错误为 `Failed to connect to github.com:443 after 21096 ms`（TCP 连接超时）；ECS 通过 SSH Git 的准确错误为 `git@github.com: Permission denied (publickey).`（SSH 公钥认证失败）；ECS 在禁用交互提示后使用 HTTPS Git 的准确错误为 `fatal: could not read Username for 'https://github.com': terminal prompts disabled`（私有仓库的 HTTP 凭据不可用）。DNS 当前可解析，桌面端和 ECS 的 GitHub API HTTPS 探测均返回 HTTP 200，未复现 DNS、TLS 或代理错误；两端未配置需要清理的 Git/环境代理。
+- 已从 `main` 解析并固定 commit `f63f805037561ac0984efb1eda1879f643d560a7`，按该 commit 的 blob SHA 保存并校验：`PROJECT_STATE.md`（`fc24de8e75d4c37793b009c7d33fa449c488507f`）、`V2_REVIEW_WORKFLOW.md`（`9c806c4287cf44f8040244af747cc778406dfc98`）、`candidate_assets/README.md`（`5a9527b528def66921536fbb7877b1d90ce1b097`）、`candidate_assets/candidate_sources_v2.py`（`f60f63400b7a80be3e9e36de16e04eade7f09dfd`）和 `candidate_assets/test_candidate_sources_v2.py`（`c03766988d2a67c4188035a24bee601c3dd83bca`）。
+- 离线包保留在桌面项目的 `offline/stock-key10-bridge-f63f805037561ac0984efb1eda1879f643d560a7/`，清单记录每个文件的字节数和 SHA256；本次包内五个文件的 SHA256 分别为 `ac79563eb23405bad3dacd74b704d09bb4eab53b5fd99e9c52cc6f0061965e80`、`8b0b5abf4c607a5a0514b130a2940b7261d120b50f82409bc765765ef5fa5a55`、`028cf9e8a8ba215c4c0080fd079e211314f8e5dc82cf6ee5fa950b3b7cb730d7`、`2e7bda17b938fab629ec17d5bcf426eeb42944d87acfa42a02cc079fc90a9038`、`cf1a05919f98ae4a3c012a98742c3314232588edaef8a3965118831d7c4e46e0`。
+- 新增标准工具：`delivery/tools/sync_candidate_assets_to_ecs.ps1`、`delivery/tools/verify_candidate_assets_stage.py` 和 `delivery/tools/SYNC_CANDIDATE_ASSETS.md`。工具先校验固定 commit 清单，再通过现有 SSH 别名/SCP 写入 `/opt/stock-automation/staging/stock-key10-candidate-assets/<commit>/`，远端只读 verifier 逐文件校验后结束；不会覆盖 `/opt/stock-automation/scanner`、生产 latest、历史 archive，也不会启动或重启服务。
+- 本次实际暂存路径为 `/opt/stock-automation/staging/stock-key10-candidate-assets/f63f805037561ac0984efb1eda1879f643d560a7/`，远端 verifier 在新 SSH 会话中返回 `VERIFY_PASSED`，5/5 文件哈希一致。当前候选来源模块仍未接入 ECS 生产日更；本次只建立并验证源码同步通道，不改变选股策略、任务、调度或发布协议。
