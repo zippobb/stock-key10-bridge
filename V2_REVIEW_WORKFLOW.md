@@ -187,3 +187,7 @@
 
 - 仅将候选模块文档中的“integration pending”改为已部署适配器说明，执行逻辑和V2规则不变。修正后main提交为 `739f87bb794bcaa5e5d55ec6767f6c608b68353c`，ECS源码SHA256为 `60f25f3015c15236b766f3c261d127d7d5f21b97a06ac64cc6b9d29908449943`（大小写仅为显示，不作为哈希比较依据）。
 - 修正前源码备份：`/root/stock-key10-backups/step_candidate_sources_refine_20260915T165549Z/`；语法、12项单测和使用生产源码的20260915真实隔离干跑均再次通过。候选来源仍因无可靠题材映射而保持`theme_linkage=0`、`confirmed_follower=0`、`coverage_gap=true`，不可宣称三路完整真实覆盖。
+
+## 2026-09-16 发布器兼容性隔离复核
+
+- 用生产适配器从20260915缓存构造的隔离bundle为277727字节，`export_key10_v2_bundle.validate`通过；发布器允许新增候选诊断字段且未触发禁用字段扫描。未执行发布服务，生产latest和历史归档不变。
