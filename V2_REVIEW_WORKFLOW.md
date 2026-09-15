@@ -185,5 +185,5 @@
 
 ## 2026-09-16 候选模块文档校正
 
-- 仅将候选模块文档中的“integration pending”改为已部署适配器说明，执行逻辑和V2规则不变。修正后main提交为 `739f87bb794bcaa5e5d55ec6767f6c608b68353c`，ECS源码SHA256为 `60f25f3015c15236b766f3c261d127d7d5f21B97A06AC64CC6B9D29908449943`（大小写仅为显示，不作为哈希比较依据）。
+- 仅将候选模块文档中的“integration pending”改为已部署适配器说明，执行逻辑和V2规则不变。修正后main提交为 `739f87bb794bcaa5e5d55ec6767f6c608b68353c`，ECS源码SHA256为 `60f25f3015c15236b766f3c261d127d7d5f21b97a06ac64cc6b9d29908449943`（大小写仅为显示，不作为哈希比较依据）。
 - 修正前源码备份：`/root/stock-key10-backups/step_candidate_sources_refine_20260915T165549Z/`；语法、12项单测和使用生产源码的20260915真实隔离干跑均再次通过。候选来源仍因无可靠题材映射而保持`theme_linkage=0`、`confirmed_follower=0`、`coverage_gap=true`，不可宣称三路完整真实覆盖。
