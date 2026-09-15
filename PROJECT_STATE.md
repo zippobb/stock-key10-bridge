@@ -451,3 +451,13 @@
 
 - 首次适配器干跑发现三路轮询输出顺序可能偏离原`score_stocks`排序；未进入自然生产运行前已修正为`quant_score、technical_score、sector_score、market_fit_score、ts_code`原排序键。排序修正daily最终SHA256为`a0f747bf504b98a5a0de8f08b19f89dba2456db4885b6b7a1f9b52fbe167d259`，前一版本已备份至`/root/stock-key10-backups/step_candidate_sources_sort_20260915T170732Z/`，修改前SHA256为`91859c21d11edf2b408e3c62d34dbada6e962f4ae3699c8ebd6210a3d85aff83`。
 - 使用最终生产源码的20260915隔离干跑再次通过：`official/external=30/10`、`final_order_preserved=true`、14个KDJ字段40/40、发布器校验通过，临时bundle 277727字节；生产latest和GitHub均未写入。
+
+## 2026-09-16 V2候选来源第二阶段：扫描覆盖与题材映射核验
+
+- 本次通过已验收的SSH/SCP通道对ECS进行新鲜只读重建，输入交易日为`20260915`；未启动、停止或重启服务，未修改timer、历史归档、latest或GitHub发布产物。日更与发布service当时均为`inactive`，systemd为`running`，两个timer仍为`enabled`。
+- 官方扫描边界：观察池CSV为237只且代码唯一；237/237有市场元数据、目标日日线和历史特征，评分帧为237行，数据完整237/237。原V2技术分低于18分155只，技术合格82只；因此237→82仅由现行V2数据完整性/技术门槛造成，没有在此之前的量价或排名截断。
+- 外部扫描边界：市场元数据共5562行；剔除官方观察池后5325；强势行业条件（110个行业中按分数至少9且排名位于前30%，本日13个行业）后495；允许市场字段（沪市主板、深市主板、创业板、科创板）后473；总市值不少于30亿元后440；退市风险过滤后439。该439是完整市场资格子集，不是按量价或板块排名预截取的子集。439/439有历史特征和数据完整评分，技术分低于18分224只，原V2技术合格215只；完整评分帧的量化排名最大值为439，随后才交给候选来源适配器。
+- 截断前真实隔离干跑（仅`/tmp/stock-key10-candidate-dryrun-20260916/`）保持官方/外部30/10上限、代码唯一及跨池不重叠；候选来源为`early_leader=118`、`theme_linkage=0`、`confirmed_follower=0`，`theme_stats_count=0`、`coverage_gap=true`、拒绝384行。原量化分、KDJ、quant_rank、池归属及最终排序逐项不变，`future_data_rows_used=0`，发布器契约校验通过，耗时64.533秒。相对旧30/10名单，官方新增13/移出13，外部新增7/移出7；差异来自来源召回与余位按原quant_rank补齐，不是评分或排序暗改。
+- 题材映射核查：scanner生产目录没有带`theme_id`、成员代码、`source_url`、原始发布日期和`effective_from`的真实映射。现有wind-aifinmarket主题探测配置是通用静态行业/ETF/代表股定义，不是带日期的中国股票成员证据；Tushare开盘啦题材接口文档虽定义了题材成员和交易日期字段，但文档注明源站暂无新增数据，且本次安全SSH读取未暴露或读取令牌，未取得可核验的当前/历史成员数据。候选模块合成测试中的example.org仅为测试夹具，不是业务证据。
+- 因此本阶段没有创建或部署题材映射文件；不能宣称细分题材联动或确认跟随已真实验收，保持先行股来源可运行，`theme_linkage=0`、`confirmed_follower=0`。MLCC、覆铜板、金刚石热管理仍仅为待核验线索，不是白名单。
+- 生产latest仍为`trade_date=20260915`，本地两个bundle SHA256均为`35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05`且尚无`candidate_generation_version`；本次未发布GitHub。题材映射和三路来源的自然交易日端到端验收继续待补，不把隔离干跑当作自然运行成功。
