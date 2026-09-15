@@ -1,0 +1,46 @@
+{
+  "run_date": "20260915",
+  "trade_date": "20260915",
+  "role": "primary",
+  "attempt_no": 0,
+  "status": "执行失败",
+  "started_at": "2026-09-15T10:38:53.961Z",
+  "finished_at": "2026-09-15T10:39:11.620Z",
+  "bundle_sha256": "35b65e03e527b503ee5130823816419db4b8de15af97c82e2b0669918d49ca05",
+  "completed_stage": "manifest_and_blob_identity_verified",
+  "failure_stage": "input_raw_byte_hash_streaming",
+  "missing_items": [
+    "连接器大文件安全落盘与文件流SHA256校验桥接不可用",
+    "阶段A至F终审",
+    "正式JSON与PNG及其回读"
+  ],
+  "result_json_path": null,
+  "png_path": null,
+  "png_delivery_status": "not_started",
+  "final_delivery_gate": "blocked",
+  "resume_from": "input_raw_byte_hash_streaming",
+  "retryable": true,
+  "retry_exhausted": false,
+  "error_class": "transient_execution_environment_file_bridge_unavailable",
+  "summary": "manifest、latest与archive的Git blob SHA及文本内容一致；schema/model/stage、交易日、30+10候选和双池future_data_rows_used=0已核验。因当前执行环境无法将连接器返回的大JSON安全落盘并按文件流计算原始字节SHA256，依据硬规则在进入终审前停止。",
+  "chain_checks": {
+    "manifest": true,
+    "latest_archive_blob_identity": true,
+    "latest_archive_text_identity": true,
+    "schema_model_stage_trade_date": true,
+    "future_data_rows_used_zero": true,
+    "input_raw_sha256_file_stream": false,
+    "source_evidence_complete": false,
+    "scoring_complete": false,
+    "result_json_readback": false,
+    "png": false
+  },
+  "lock": {
+    "owner_token": "primary-20260915-1789468733961",
+    "generation": 1,
+    "released": true,
+    "released_at": "2026-09-15T10:39:11.620Z"
+  },
+  "visible_completion": "pending",
+  "on_time_delivery": false
+}
