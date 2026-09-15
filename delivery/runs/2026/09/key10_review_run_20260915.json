@@ -1,18 +1,24 @@
 {
   "trade_date": "20260915",
-  "role": "primary",
-  "attempt_no": 0,
-  "status": "failed",
-  "owner_token": "primary-20260915-1789468733961",
-  "generation": 1,
-  "started_at": "2026-09-15T10:38:53.961Z",
-  "heartbeat_at": "2026-09-15T10:39:11.620Z",
-  "lease_expires_at": "2026-09-15T10:39:11.620Z",
-  "hard_deadline": "2026-09-15T18:49:00+08:00",
-  "completed_stage": "manifest_and_blob_identity_verified",
-  "failure_stage": "input_raw_byte_hash_streaming",
-  "resume_from": "input_raw_byte_hash_streaming",
+  "role": "retry",
+  "attempt_no": 1,
+  "status": "running",
+  "owner_token": "retry1-20260915-1789469643629",
+  "generation": 2,
+  "started_at": "2026-09-15T10:54:03.629Z",
+  "heartbeat_at": "2026-09-15T10:54:03.629Z",
+  "lease_expires_at": "2026-09-15T10:55:00.000Z",
+  "hard_deadline": "2026-09-15T18:55:00+08:00",
+  "completed_stage": "input_hash_verified",
+  "failure_stage": null,
+  "resume_from": "stage_A_candidate_table",
   "finished_at": "2026-09-15T10:39:11.620Z",
-  "released": true,
-  "released_at": "2026-09-15T10:39:11.620Z"
+  "released": false,
+  "released_at": "2026-09-15T10:39:11.620Z",
+  "previous_run": {
+    "role": "primary",
+    "attempt_no": 0,
+    "status": "failed",
+    "failure_stage": "input_raw_byte_hash_streaming"
+  }
 }
