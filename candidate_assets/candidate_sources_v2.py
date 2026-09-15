@@ -1,10 +1,11 @@
-"""V2 upstream candidate recall; integration pending, never a final-score engine.
+"""V2 upstream candidate recall adapter, never a final-score engine.
 
 Input rows are the FULL eligible universe after existing V2 universe checks,
 not a previously truncated 30+10 bundle. Bars use one explicitly declared
 price/volume basis and exactly the benchmark trading calendar. Theme membership
 must be dated, verified, and valid at the event date used for an early/follower
-relationship.
+relationship. The production daily entry calls this module before its 30+10
+output limits; standalone truncated bundles remain invalid inputs.
 """
 from copy import deepcopy
 from collections import defaultdict
