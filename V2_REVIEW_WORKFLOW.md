@@ -195,3 +195,10 @@
 ## 2026-09-16 V2排序兼容修正
 
 - 适配器已按现行`score_stocks`排序键恢复输出顺序，避免三路召回顺序改变原V2最终排序；最终真实隔离干跑`final_order_preserved=true`，其他V2分数、KDJ、池上限和发布器契约检查继续通过。
+
+
+## 日期回执规范路径与迁移兼容（2026-09-16）
+1. 日期回执唯一规范路径为 `delivery/YYYY/MM/key10_review_receipt_YYYYMMDD.json`。禁止新写入 `delivery/receipts/YYYY/MM/`。
+2. 完成顺序固定为：正式JSON回读、文字报告回读、规范日期回执写入并回读、latest回执写入并回读。四项一致后才允许 `final_delivery_gate=ready`。
+3. 若只发现 `delivery/receipts/YYYY/MM/` 中的兼容旧回执，且其Git Blob SHA或完整内容与latest完全一致，重试只迁移回执到规范路径，不重新取证、评分或生成报告。
+4. 交付复核在迁移期间可只读回退检查兼容旧路径；内容与latest完全一致且正式JSON、文字报告均可回读时，不得把主结果误报为失败，应注明兼容路径。规范路径一旦存在，以规范路径为准。
