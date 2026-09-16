@@ -18,10 +18,21 @@ VALID_ORIGINS = ("official_pool", "external_pool")
 
 
 def _as_date(value: object) -> date:
-    text = str(value)
+    text = str(value).strip()
     if len(text) == 8 and text.isdigit():
         return datetime.strptime(text, "%Y%m%d").date()
+    if len(text) >= 10:
+        text = text[:10]
     return date.fromisoformat(text)
+
+
+def _date_prefix(value: object) -> date | None:
+    if value in (None, ""):
+        return None
+    try:
+        return _as_date(value)
+    except (TypeError, ValueError):
+        return None
 
 
 def _positive(value: object) -> bool:
@@ -34,7 +45,7 @@ def _positive(value: object) -> bool:
 
 
 def _normalise_memberships(row: dict, trade_day: date) -> list[dict]:
-    """Keep only verified facts published by trade_day for later as-of checks."""
+    """Normalize dated facts and same-day cold-start membership snapshots."""
     result = []
     for raw in row.get("themes", []):
         if not isinstance(raw, dict):
@@ -44,39 +55,68 @@ def _normalise_memberships(row: dict, trade_day: date) -> list[dict]:
         theme_id = raw.get("theme_id")
         if not theme_id:
             continue
-        try:
-            effective_from = _as_date(raw["effective_from"])
-            published_on = _as_date(raw["published_on"])
-            effective_to = (
-                _as_date(raw["effective_to"]) if raw.get("effective_to") else None
-            )
-        except (KeyError, TypeError, ValueError):
+
+        observed_day = _date_prefix(raw.get("observed_at"))
+        effective_from = _date_prefix(raw.get("effective_from"))
+        published_value = raw.get("source_published_at")
+        if published_value in (None, ""):
+            published_value = raw.get("published_on")
+        published_on = _date_prefix(published_value)
+        effective_to = _date_prefix(raw.get("effective_to"))
+
+        # Legacy dated facts remain valid. A snapshot without a known
+        # historical effective date must carry a real observation timestamp.
+        if observed_day is None and effective_from is not None:
+            observed_day = effective_from
+        snapshot_only = effective_from is None
+        if snapshot_only and observed_day is None:
             continue
-        if effective_to is not None and effective_to < effective_from:
+        if effective_to is not None and (
+            effective_from is None or effective_to < effective_from
+        ):
             continue
-        if effective_from > trade_day or published_on > trade_day:
+
+        known_dates = (
+            observed_day,
+            effective_from,
+            published_on,
+        )
+        if any(item is not None and item > trade_day for item in known_dates):
             continue
+
         item = deepcopy(raw)
         item["theme_id"] = str(theme_id)
         item["_effective_from"] = effective_from
         item["_published_on"] = published_on
         item["_effective_to"] = effective_to
+        item["_observed_day"] = observed_day
+        item["_snapshot_only"] = snapshot_only
         result.append(item)
     return result
 
 
 def _theme_ids(memberships: list[dict], as_of: date) -> set[str]:
-    return {
-        str(item["theme_id"])
-        for item in memberships
-        if item["_effective_from"] <= as_of
-        and item["_published_on"] <= as_of
-        and (
-            item["_effective_to"] is None
-            or as_of <= item["_effective_to"]
-        )
-    }
-
+    result = set()
+    for item in memberships:
+        if item.get("_snapshot_only"):
+            # A cold-start snapshot proves membership only for the day it was
+            # observed; it cannot create a historical follower relationship.
+            if item.get("_observed_day") == as_of:
+                result.add(str(item["theme_id"]))
+            continue
+        effective_from = item.get("_effective_from")
+        published_on = item.get("_published_on")
+        if (
+            effective_from is not None
+            and effective_from <= as_of
+            and (published_on is None or published_on <= as_of)
+            and (
+                item.get("_effective_to") is None
+                or as_of <= item["_effective_to"]
+            )
+        ):
+            result.add(str(item["theme_id"]))
+    return result
 
 def _benchmark_basis(benchmark: list[dict]) -> str:
     values = {str(item.get("price_basis", "")) for item in benchmark}
