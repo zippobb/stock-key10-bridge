@@ -469,3 +469,33 @@
 - 规范日期回执、兼容旧路径回执和 `latest/key10_review_receipt_latest.json` 的Git Blob SHA均为 `14122f4c36a3c4f331f5ec057ccdf1089377c41a`。
 - 已更新主任务、两次有限重试和交付复核：新运行只写规范路径；迁移期兼容旧路径仅用于只读核验或回执迁移，不触发重新终审。
 - 本次未修改正式JSON、文字报告、评分、名单或ECS量化链路。
+
+
+## 2026-09-16 前置过滤对照与题材冷启动接入
+
+### 实时对照范围（不改变生产准入）
+
+- 本次使用交易日 `20260916`、当前缓存的21个交易日和同一批合格行情；A/B/C均为隔离诊断，不发布、不覆盖latest或历史归档。历史源文件扫描量为 `1,482,796` 行，`source_max_trade_date=20260817`，缓存补入日期为 `20260818` 至 `20260915`，三组均 `future_data_rows_used=0`。
+- 生产强势行业筛选仍由 `stock_key10_v2_daily.py` 调用 `build_sector_scores` 后的 `strong_sectors` 执行；当前条件为板块分 `>=9/15` 且位于前30%，再叠加外部市场段、市值不少于30亿元、退市风险排除和数据完整性。个股正式资格继续由 `technical_score>=18`、现行完整性门槛、原V2评分/排序及30+10上限决定。
+- A（当前生产强势行业筛选）：外部市场候选 `1159`，评分 `1159`，数据完整 `1154`，技术分>=18 为 `511`，技术分<18 为 `643`；历史行 `335,622`，目标日新增 `1159`；路由 `early_leader=286`、`theme_linkage=0`、`confirmed_follower=0`；正式输出仍30+10。
+- B（保留市场、市值、退市风险和数据完整规则，先行召回覆盖全部允许行业，仅标记原强势行业条件）：外部候选 `4067`，评分 `4067`，数据完整 `4054`，技术分>=18 为 `1188`，技术分<18 为 `2866`；历史行 `1,187,393`，目标日新增 `4067`；路由 `early_leader=468`、`theme_linkage=0`、`confirmed_follower=0`；正式输出仍30+10。相对A的正式选择变化仅2进2出：新增 `002912.SZ`（IT设备，技术分25.439779，20260910窗口内突破、3日相对收益0.088426、量比2.832713）和 `002531.SZ`（电气设备，技术分23.959714，20260910窗口内突破、3日相对收益0.082205、量比3.466498）；移出 `603322.SH`（通信设备，技术分25.945818，原强势行业）和 `003006.SZ`（造纸，技术分26.286124，原强势行业）。这些变化来自允许行业范围扩大后的来源召回/轮询，不是评分、池归属或排序暗改。
+- C（B中技术分<18的先行信号，仅诊断）：输入 `2866`，识别 `48` 条，全部为 `early_leader`，`theme_linkage=0`、`confirmed_follower=0`，`formal_output_allowed=false`，没有进入任何正式结果。行业分布为：电气设备10、半导体9、专用机械6、化工原料4、软件服务4、元器件3、汽车配件2、家用电器2、医疗保健2，通信设备/小金属/矿物制品/IT设备/广告包装/化学制药各1。完整代码与量价依据保存在备份证据 `ab_c_summary_20260916.json`，不作为正式候选。
+- A+B+C合计耗时 `1158.1` 秒（约19分18秒），其中包含全量缓存读取与两组历史构建；当前生产A口径的自然日更 `20260916` 实测服务耗时约2分02秒。对照未改变截止时间、任务时间、七项权重、60分门槛、KDJ、池外规则或行业全覆盖原则。
+
+### 题材映射冷启动与接口事实
+
+- 通过现有授权Tushare运行环境实际探测 `dc_index`/`dc_member`、`kpl_concept`/`kpl_concept_cons`、`ths_index`/`ths_member`、`tdx_index`/`tdx_member`；均返回接口无权限。现有 `tushare-mcp` 服务仅暴露价格和历史行情工具。因此当前不能取得可核验的当前题材成员快照，未写入伪造映射，`theme_linkage` 与 `confirmed_follower` 继续如实为0，不能宣称三路完整验收。
+- 已将冷启动契约写入 `candidate_assets/candidate_sources_v2.py`：当前快照可使用 `observed_at`，`source_published_at` 仅在来源提供时保留，未知历史生效日保持 `effective_from=null`；快照只在观察日参与当日联动，不能倒推历史先行/跟随；成员行情缺失保留在题材分母并保守降级；多标签按 `theme_id` 去重并保留来源/事实字段。
+- `stock_key10_v2_daily.py` 已做向后兼容适配：`candidate_source_rows`/`build_candidate_source_output` 接受可选 `themes_by_code`，未提供时行为仍为 `themes_source=none_available`，不改变当前生产输出；提供时不改变评分、排序或准入，只把结构化映射交给现有召回模块。
+
+### 测试、部署与实时产物
+
+- GitHub main 已同步：候选模块提交 `438ff77989c0727eaa7be28a1344d919ebd3fe30`（blob `026be50fa4b3fb4b3e3839e987038740161d3bab`），测试提交 `3c7260c95fd8fed219cff23d9a9742a12243ca7b`（blob `7efddd6a9720c60b6d0d619daa5af9733b9c446a`），README/当前main提交 `6ccad7e879b7ea77b795349d7b6f27d6ee5260df`（blob `b36aa60b74d6d6a666fbabdd189b41c855139cbc`）。本地与ECS单元测试共16项通过，ECS适配器快照冒烟通过；未启动日更或发布服务。
+- ECS备份：`/root/stock-key10-backups/step_candidate_sources_coldstart_20260916T155604Z/`，修改前 `candidate_sources_v2.py` SHA256=`60f25f3015c15236b766f3c261d127d7d5f21b97a06ac64cc6b9d29908449943`，测试文件=`6a1e3a8cce16fb5e13165b6de8bb41d49ef8667d7b69c5d17b5ad49d43ba62dd`；部署后分别为 `6e3f559d15fa876c...`、`550a220f06269dc7...`（完整值见服务器回执）。`stock_key10_v2_daily.py` 备份为 `/root/stock-key10-backups/step_candidate_source_daily_adapter_20260916T155931Z/`，修改前 SHA256=`a0f747bf504b98a5a0de8f08b19f89dba2456db4885b6b7a1f9b52fbe167d259`，部署后=`262833444449f390d83ef35cbb4e1a98ed231c44210c00364f671b83381339cd`。服务文件和timer均未修改；当前日更/发布服务 inactive，两个timer active。
+- 20260916自然运行已完成且本次未重跑：本地两个生产bundle SHA256均为 `31f01c0d8ca8f578c7b7d2f9c898eebc551a6bc4af6ef58bd409a3557d80abd4`，`trade_date=20260916`、schema/model/stage为 `2.0.0/V2.0/21:30_quantitative_review_payload`，官方/外部30+10，`future_data_rows_used=0`，`excluded_sectors=[]`，`candidate_generation_version=v2_candidate_sources_20260916`，题材来源仍 `none_available`。GitHub manifest、latest和 `archive/2026/09/key10_bundle_20260916.json` 与本地SHA一致；18:22的OnSuccess发布成功，18:30补偿发布按幂等规则跳过。
+
+### 尚未完成
+
+- 前置过滤只完成A/B/C诊断，未放宽现行生产规则；若要改变范围须另行确认。
+- 当前题材联动/历史跟随仍未完成真实数据验收，原因是已授权接口权限不足而不是“必须先有历史成员库”。下一步需要为至少一个可靠来源开通成员接口或提供授权的结构化当前快照，按上述字段写入并做当日隔离干跑；取得数据前不凑数、不倒填历史、不把先行股结果包装成三路完整通过。
+- 下一自然交易日需只读验收新版本是否实际调用适配器，并确认评分、排序、KDJ、30+10、manifest和归档一致；不把本次代码部署或隔离测试当作端到端完成。
