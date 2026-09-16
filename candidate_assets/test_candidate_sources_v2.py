@@ -168,6 +168,94 @@ class RecallTests(unittest.TestCase):
         self.assertEqual(result["route_counts"]["theme_linkage"], 0)
         self.assertGreater(result["route_counts"]["early_leader"], 0)
 
+    def test_same_day_snapshot_supports_linkage(self):
+        for row in self.rows:
+            row["themes"] = [
+                dict(
+                    theme_id="snapshot_theme",
+                    effective_from=None,
+                    observed_at=f"{self.dates[-1]}T15:00:00+08:00",
+                    source_published_at=None,
+                    verified=True,
+                    source_url="https://example.org/current-snapshot",
+                    relation_type="market_label",
+                    fact_summary="Current membership snapshot only",
+                )
+            ]
+        result = self.run_recall()
+        self.assertFalse(result["coverage_gap"])
+        self.assertGreater(result["route_counts"]["theme_linkage"], 0)
+        self.assertIn(
+            "snapshot_theme",
+            result["theme_stats"],
+        )
+        self.assertTrue(result["theme_stats"]["snapshot_theme"]["linked"])
+
+    def test_snapshot_cannot_create_historical_follower(self):
+        for row in self.rows:
+            row["themes"] = [
+                dict(
+                    theme_id="snapshot_theme",
+                    effective_from=None,
+                    observed_at=f"{self.dates[-1]}T15:00:00+08:00",
+                    verified=True,
+                    source_url="https://example.org/current-snapshot",
+                )
+            ]
+        result = self.run_recall()
+        self.assertEqual(result["route_counts"]["confirmed_follower"], 0)
+        self.assertGreater(result["route_counts"]["theme_linkage"], 0)
+
+    def test_snapshot_without_observed_at_is_ignored(self):
+        for row in self.rows:
+            row["themes"] = [
+                dict(
+                    theme_id="snapshot_theme",
+                    effective_from=None,
+                    verified=True,
+                    source_url="https://example.org/current-snapshot",
+                )
+            ]
+        result = self.run_recall()
+        self.assertTrue(result["coverage_gap"])
+        self.assertEqual(result["route_counts"]["theme_linkage"], 0)
+
+    def test_multi_tag_snapshot_is_deduplicated_and_traced(self):
+        for row in self.rows:
+            row["themes"] = [
+                dict(
+                    theme_id="snapshot_a",
+                    effective_from=None,
+                    observed_at=f"{self.dates[-1]}T15:00:00+08:00",
+                    verified=True,
+                    source_url="https://example.org/current-snapshot-a",
+                ),
+                dict(
+                    theme_id="snapshot_b",
+                    effective_from=None,
+                    observed_at=f"{self.dates[-1]}T15:00:00+08:00",
+                    verified=True,
+                    source_url="https://example.org/current-snapshot-b",
+                ),
+                dict(
+                    theme_id="snapshot_a",
+                    effective_from=None,
+                    observed_at=f"{self.dates[-1]}T15:00:00+08:00",
+                    verified=True,
+                    source_url="https://example.org/current-snapshot-a",
+                ),
+            ]
+        result = self.run_recall()
+        row = next(
+            item
+            for item in result["pools"]["official_pool"]
+            if item["ts_code"] == "000000.SH"
+        )
+        self.assertEqual(
+            row["candidate_source"]["theme_ids"],
+            ["snapshot_a", "snapshot_b"],
+        )
+
     def test_price_basis_mismatch_rejected(self):
         self.rows[0]["bars"][0]["price_basis"] = "adjusted_close"
         result = self.run_recall()
