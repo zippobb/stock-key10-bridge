@@ -3,11 +3,17 @@
   "role": "primary",
   "attempt_no": 0,
   "status": "running",
-  "owner_token": "primary-20260917-1789641459221",
-  "generation": 1,
+  "owner_token": "primary-20260917-1789641567291",
+  "generation": 2,
   "started_at": "2026-09-17T10:37:39.221Z",
-  "heartbeat_at": "2026-09-17T10:37:39.221Z",
-  "lease_expires_at": "2026-09-17T10:40:39.221Z",
+  "heartbeat_at": "2026-09-17T10:39:27.291Z",
+  "lease_expires_at": "2026-09-17T10:42:27.291Z",
   "hard_deadline": "2026-09-17T18:49:00+08:00",
-  "completed_stage": "input_hash_verified"
+  "completed_stage": "stage_B_scoring_complete",
+  "previous_run": {
+    "owner_token": "primary-20260917-1789641459221",
+    "generation": 1,
+    "completed_stage": "input_hash_verified",
+    "takeover_reason": "lease_expired_during_checkpoint_persistence"
+  }
 }
