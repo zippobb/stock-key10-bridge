@@ -2,18 +2,22 @@
   "trade_date": "20260917",
   "role": "primary",
   "attempt_no": 0,
-  "status": "running",
-  "owner_token": "primary-20260917-1789641567291",
-  "generation": 2,
+  "status": "completed",
+  "owner_token": "primary-20260917-1789641627531",
+  "generation": 3,
   "started_at": "2026-09-17T10:37:39.221Z",
-  "heartbeat_at": "2026-09-17T10:39:27.291Z",
-  "lease_expires_at": "2026-09-17T10:42:27.291Z",
+  "heartbeat_at": "2026-09-17T10:40:27.531Z",
+  "lease_expires_at": "2026-09-17T10:40:27.531Z",
   "hard_deadline": "2026-09-17T18:49:00+08:00",
-  "completed_stage": "stage_B_scoring_complete",
+  "completed_stage": "delivery_ready",
   "previous_run": {
-    "owner_token": "primary-20260917-1789641459221",
-    "generation": 1,
-    "completed_stage": "input_hash_verified",
-    "takeover_reason": "lease_expired_during_checkpoint_persistence"
-  }
+    "owner_token": "primary-20260917-1789641567291",
+    "generation": 2,
+    "completed_stage": "stage_B_scoring_complete",
+    "takeover_reason": "lease_expired_after_dual_receipt_readback"
+  },
+  "finished_at": "2026-09-17T10:40:27.531Z",
+  "final_delivery_gate": "ready",
+  "lock_released": true,
+  "visible_completion": "pending"
 }
