@@ -519,3 +519,18 @@
 - 当前main完整目录未包含原观察池CSV/完整配置，不能依据历史237只快照或每日30只候选推断增删名单。新增/移出对照待桌面Codex通过SSH只读取得当前生产完整池后计算。
 - 本轮仅持久化用户目标集合并回读；未连接或修改ECS，生产导入状态为pending_ecs_import。生产生效日期须据实际导入验收记录，历史结果不回写。
 - 后续按用户指定方式，由桌面Codex使用GitHub连接器固定commit取原文、离线包经SSH/SCP暂存校验；定位真实生产股票池读取路径、备份并完成名单校验与隔离干跑后，最小替换股票池配置，不修改service/timer及评分规则。
+## 2026-09-19 V2.0观察池替换部署验收（已部署，自然运行待验证）
+
+- 实际部署时间：2026-09-19 17:12:43 Asia/Shanghai（2026-09-19T09:12:43Z）。本节更新并取代上文同日“待ECS接入”的导入前状态；该历史记录保留。
+- 权威输入：仓库 zippobb/stock-key10-bridge，固定commit 31e2a9f1a1c1da7883b0b1f9e184b677e4ac9e3a，pool_assets/official_pool_20260919.json；Git Blob SHA c8da38cc0470ebcb3ef93c99bd8c0af1365db26f，原始字节SHA256 efe4ff20930a561003f42307c48b9ac2766ba9a278c20b8debd65351374d1ee8。PROJECT_STATE来源Blob SHA为d60c2850212465d9fade4a08276835d8cf99e692。
+- 生产调用链经实时systemd核验：stock-key10-daily.service的ExecStart运行 /opt/stock-automation/scanner/stock_key10_v2_daily.py；该入口读取 config/strategy_v2.json 的 universe.observation_pool_path 和 expected_observation_pool_count，再读取 config/observation_pool.csv。
+- 实际生产修改仅有两项：/opt/stock-automation/scanner/config/observation_pool.csv 被完整替换为229只；/opt/stock-automation/scanner/config/strategy_v2.json 的 expected_observation_pool_count 从237改为229，其余配置语义不变。CSV名称按ts_code匹配当前市场元数据 data/v2/stock_metadata_20260918.csv生成；截图source_name不作身份键。
+- 新旧差异：原池237只；新池229只；新增30只；移出38只；保留199只。新名单229/229唯一，当前市场元数据匹配229/229，未匹配代码0；沪市主板64、深市主板56、创业板61、科创板48。完整新增、移出、保留代码列表记录于备份目录的 pool_change_manifest.json。
+- 新增代码：000892.SZ, 001211.SZ, 001313.SZ, 002265.SZ, 002491.SZ, 002636.SZ, 002716.SZ, 002734.SZ, 003040.SZ, 300049.SZ, 300364.SZ, 300456.SZ, 300468.SZ, 300489.SZ, 300697.SZ, 301205.SZ, 600121.SH, 600691.SH, 600703.SH, 600989.SH, 601872.SH, 603601.SH, 603618.SH, 603663.SH, 603983.SH, 605376.SH, 688090.SH, 688256.SH, 688271.SH, 688802.SH。
+- 移出代码：000400.SZ, 000807.SZ, 000816.SZ, 000988.SZ, 001267.SZ, 001369.SZ, 002173.SZ, 002230.SZ, 002439.SZ, 002649.SZ, 002859.SZ, 300088.SZ, 300164.SZ, 300248.SZ, 300476.SZ, 300763.SZ, 300843.SZ, 300919.SZ, 301013.SZ, 301178.SZ, 600580.SH, 600595.SH, 601138.SH, 601179.SH, 601225.SH, 603061.SH, 603439.SH, 603501.SH, 605117.SH, 688126.SH, 688127.SH, 688258.SH, 688322.SH, 688388.SH, 688411.SH, 688502.SH, 688523.SH, 688629.SH。
+- 隔离真实缓存干跑：交易日20260918，使用当日已有行情、指数和市场元数据缓存，未请求外部行情API；耗时119.037秒。官方池229只全部进入历史、特征和评分输入，目标日日线缺失0；74只因既有technical_score<18条件排除，其余155只通过该技术门槛。外部扫描输入1179只，新官方池代码进入外部集0只；旧池移出代码中15只按原有外部资格进入外部扫描输入。候选仍为官方30、外部10；V2评分代码、排序、池外准入逻辑和候选数量未修改。
+- 干跑契约：trade_date=20260918、schema_version=2.0.0、model_version=V2.0、stage=21:30_quantitative_review_payload、future_data_rows_used=0、excluded_sectors=[]。隔离bundle为 /tmp/stock-key10-pool-refresh-20260919-80m58faf/output/key10_v2_review_payload_latest.json，SHA256 dcedcb2994535469f68b057801006c613329ac229515132295b4d108ccc50402；逐代码排除原因表同目录 official_pool_scan_exclusions.csv。
+- 修改前备份：/root/stock-key10-backups/official_pool_20260919_20260919T091106Z/。原观察池SHA256 26c3753153e136cca843d95e9000c82a1d854b5b26d2c4a93a992ff5a634890b，原策略配置SHA256 2557399e7e524075e61ff0fec9d00715dbcb88806fd33c26244825624ac6c74a；备份副本回读哈希一致。pool_change_manifest.json SHA256 accc10e1a478c53415dd018fae5f7aac1ef9d39d060fa2287aaac81582edbb88。
+- 部署后回读：观察池SHA256 407e7ff4b9ace35c2dc7c179d7ac0ab0c75ff3e7c79d72f0b404abf0e468defc；策略配置SHA256 539bd3806293b2aedad8b60744b801eb9e3e72132532ac059fa938fb860f1fba。权威代码顺序与CSV一致，代码集合、元数据名称和229预期数量均通过校验。
+- 生产latest及20260918日期包SHA256均保持063728fe4ddf92b59a3de849a1086a645a1d97900892d5f6f2e682b7511b47dc；未写latest或历史结果。daily/publish service均inactive/dead；两个timer均enabled/active，下次分别为2026-09-21 18:20、18:30 CST。四个service/timer文件SHA256与修改前相同，未启动或发布任何服务。
+- 状态：池配置已部署；下一自然交易日20260921的日更、排除原因和发布链路待只读验收。本次干跑不计作自然交易日生产验收。
