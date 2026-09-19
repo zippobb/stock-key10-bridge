@@ -1,0 +1,1401 @@
+{
+  "pool_version": "user_pool_20260919",
+  "model_version": "V2.0",
+  "requested_on": "2026-09-19",
+  "source": "user_provided_7_screenshots",
+  "source_as_of": null,
+  "count": 229,
+  "update_mode": "replace_official_pool",
+  "deployment_status": "pending_ecs_import",
+  "validation": {
+    "source_rows_contiguous": true,
+    "unique_codes": 229,
+    "code_format_valid": true,
+    "screenshot_visual_check": "completed",
+    "market_metadata_validation": "pending_ecs_import",
+    "previous_pool_diff": "pending_live_pool_read"
+  },
+  "notes": [
+    "source_name为截图显示名称，不代表外部行情元数据已核验；以ts_code为主键。",
+    "XD等临时显示前缀不作为股票身份；生产名称使用最新已验证市场元数据。",
+    "原始截图序号仅用于追溯，不代表评分或排序。",
+    "本名单为用户更新的完整池内观察集合，不是每日30只候选或最终10只正式结果。",
+    "生产生效日期以ECS真实导入验收为准，不回写历史结果。"
+  ],
+  "stocks": [
+    {
+      "source_row": 1,
+      "code": "001211",
+      "ts_code": "001211.SZ",
+      "source_name": "双枪科技"
+    },
+    {
+      "source_row": 2,
+      "code": "300285",
+      "ts_code": "300285.SZ",
+      "source_name": "国瓷材料"
+    },
+    {
+      "source_row": 3,
+      "code": "002716",
+      "ts_code": "002716.SZ",
+      "source_name": "湖南白银"
+    },
+    {
+      "source_row": 4,
+      "code": "688802",
+      "ts_code": "688802.SH",
+      "source_name": "沐曦股份-U"
+    },
+    {
+      "source_row": 5,
+      "code": "001313",
+      "ts_code": "001313.SZ",
+      "source_name": "粤海饲料"
+    },
+    {
+      "source_row": 6,
+      "code": "601872",
+      "ts_code": "601872.SH",
+      "source_name": "招商轮船"
+    },
+    {
+      "source_row": 7,
+      "code": "605376",
+      "ts_code": "605376.SH",
+      "source_name": "博迁新材"
+    },
+    {
+      "source_row": 8,
+      "code": "688256",
+      "ts_code": "688256.SH",
+      "source_name": "寒武纪"
+    },
+    {
+      "source_row": 9,
+      "code": "603601",
+      "ts_code": "603601.SH",
+      "source_name": "再升科技"
+    },
+    {
+      "source_row": 10,
+      "code": "002636",
+      "ts_code": "002636.SZ",
+      "source_name": "金安国纪"
+    },
+    {
+      "source_row": 11,
+      "code": "300528",
+      "ts_code": "300528.SZ",
+      "source_name": "幸福蓝海"
+    },
+    {
+      "source_row": 12,
+      "code": "688390",
+      "ts_code": "688390.SH",
+      "source_name": "固德威"
+    },
+    {
+      "source_row": 13,
+      "code": "600989",
+      "ts_code": "600989.SH",
+      "source_name": "宝丰能源"
+    },
+    {
+      "source_row": 14,
+      "code": "688090",
+      "ts_code": "688090.SH",
+      "source_name": "瑞松科技"
+    },
+    {
+      "source_row": 15,
+      "code": "300049",
+      "ts_code": "300049.SZ",
+      "source_name": "福瑞医科"
+    },
+    {
+      "source_row": 16,
+      "code": "600691",
+      "ts_code": "600691.SH",
+      "source_name": "潞化科技"
+    },
+    {
+      "source_row": 17,
+      "code": "603011",
+      "ts_code": "603011.SH",
+      "source_name": "合锻智能"
+    },
+    {
+      "source_row": 18,
+      "code": "600121",
+      "ts_code": "600121.SH",
+      "source_name": "郑州煤电"
+    },
+    {
+      "source_row": 19,
+      "code": "600703",
+      "ts_code": "600703.SH",
+      "source_name": "三安光电"
+    },
+    {
+      "source_row": 20,
+      "code": "000892",
+      "ts_code": "000892.SZ",
+      "source_name": "欢瑞世纪"
+    },
+    {
+      "source_row": 21,
+      "code": "603983",
+      "ts_code": "603983.SH",
+      "source_name": "丸美生物"
+    },
+    {
+      "source_row": 22,
+      "code": "002265",
+      "ts_code": "002265.SZ",
+      "source_name": "建设工业"
+    },
+    {
+      "source_row": 23,
+      "code": "301205",
+      "ts_code": "301205.SZ",
+      "source_name": "联特科技"
+    },
+    {
+      "source_row": 24,
+      "code": "688271",
+      "ts_code": "688271.SH",
+      "source_name": "联影医疗"
+    },
+    {
+      "source_row": 25,
+      "code": "300364",
+      "ts_code": "300364.SZ",
+      "source_name": "中文在线"
+    },
+    {
+      "source_row": 26,
+      "code": "603663",
+      "ts_code": "603663.SH",
+      "source_name": "三祥新材"
+    },
+    {
+      "source_row": 27,
+      "code": "300475",
+      "ts_code": "300475.SZ",
+      "source_name": "香农芯创"
+    },
+    {
+      "source_row": 28,
+      "code": "300489",
+      "ts_code": "300489.SZ",
+      "source_name": "光智科技"
+    },
+    {
+      "source_row": 29,
+      "code": "002734",
+      "ts_code": "002734.SZ",
+      "source_name": "利民股份"
+    },
+    {
+      "source_row": 30,
+      "code": "300456",
+      "ts_code": "300456.SZ",
+      "source_name": "赛微电子"
+    },
+    {
+      "source_row": 31,
+      "code": "600330",
+      "ts_code": "600330.SH",
+      "source_name": "天通股份"
+    },
+    {
+      "source_row": 32,
+      "code": "003040",
+      "ts_code": "003040.SZ",
+      "source_name": "楚天龙"
+    },
+    {
+      "source_row": 33,
+      "code": "002491",
+      "ts_code": "002491.SZ",
+      "source_name": "通鼎互联"
+    },
+    {
+      "source_row": 34,
+      "code": "603618",
+      "ts_code": "603618.SH",
+      "source_name": "杭电股份"
+    },
+    {
+      "source_row": 35,
+      "code": "300468",
+      "ts_code": "300468.SZ",
+      "source_name": "四方精创"
+    },
+    {
+      "source_row": 36,
+      "code": "300697",
+      "ts_code": "300697.SZ",
+      "source_name": "电工合金"
+    },
+    {
+      "source_row": 37,
+      "code": "002837",
+      "ts_code": "002837.SZ",
+      "source_name": "英维克"
+    },
+    {
+      "source_row": 38,
+      "code": "600172",
+      "ts_code": "600172.SH",
+      "source_name": "黄河旋风"
+    },
+    {
+      "source_row": 39,
+      "code": "600722",
+      "ts_code": "600722.SH",
+      "source_name": "金牛化工"
+    },
+    {
+      "source_row": 40,
+      "code": "300373",
+      "ts_code": "300373.SZ",
+      "source_name": "扬杰科技"
+    },
+    {
+      "source_row": 41,
+      "code": "688676",
+      "ts_code": "688676.SH",
+      "source_name": "金盘科技"
+    },
+    {
+      "source_row": 42,
+      "code": "002484",
+      "ts_code": "002484.SZ",
+      "source_name": "江海股份"
+    },
+    {
+      "source_row": 43,
+      "code": "301165",
+      "ts_code": "301165.SZ",
+      "source_name": "锐捷网络"
+    },
+    {
+      "source_row": 44,
+      "code": "601890",
+      "ts_code": "601890.SH",
+      "source_name": "亚星锚链"
+    },
+    {
+      "source_row": 45,
+      "code": "603039",
+      "ts_code": "603039.SH",
+      "source_name": "XD泛微网"
+    },
+    {
+      "source_row": 46,
+      "code": "600726",
+      "ts_code": "600726.SH",
+      "source_name": "华电能源"
+    },
+    {
+      "source_row": 47,
+      "code": "300568",
+      "ts_code": "300568.SZ",
+      "source_name": "星源材质"
+    },
+    {
+      "source_row": 48,
+      "code": "600396",
+      "ts_code": "600396.SH",
+      "source_name": "华电辽能"
+    },
+    {
+      "source_row": 49,
+      "code": "300404",
+      "ts_code": "300404.SZ",
+      "source_name": "博济医药"
+    },
+    {
+      "source_row": 50,
+      "code": "600206",
+      "ts_code": "600206.SH",
+      "source_name": "有研新材"
+    },
+    {
+      "source_row": 51,
+      "code": "688702",
+      "ts_code": "688702.SH",
+      "source_name": "盛科通信-U"
+    },
+    {
+      "source_row": 52,
+      "code": "600186",
+      "ts_code": "600186.SH",
+      "source_name": "莲花控股"
+    },
+    {
+      "source_row": 53,
+      "code": "300199",
+      "ts_code": "300199.SZ",
+      "source_name": "翰宇药业"
+    },
+    {
+      "source_row": 54,
+      "code": "688008",
+      "ts_code": "688008.SH",
+      "source_name": "澜起科技"
+    },
+    {
+      "source_row": 55,
+      "code": "000603",
+      "ts_code": "000603.SZ",
+      "source_name": "盛达资源"
+    },
+    {
+      "source_row": 56,
+      "code": "002938",
+      "ts_code": "002938.SZ",
+      "source_name": "鹏鼎控股"
+    },
+    {
+      "source_row": 57,
+      "code": "002585",
+      "ts_code": "002585.SZ",
+      "source_name": "双星新材"
+    },
+    {
+      "source_row": 58,
+      "code": "001378",
+      "ts_code": "001378.SZ",
+      "source_name": "德冠新材"
+    },
+    {
+      "source_row": 59,
+      "code": "301171",
+      "ts_code": "301171.SZ",
+      "source_name": "易点天下"
+    },
+    {
+      "source_row": 60,
+      "code": "300058",
+      "ts_code": "300058.SZ",
+      "source_name": "蓝色光标"
+    },
+    {
+      "source_row": 61,
+      "code": "688361",
+      "ts_code": "688361.SH",
+      "source_name": "中科飞测"
+    },
+    {
+      "source_row": 62,
+      "code": "688146",
+      "ts_code": "688146.SH",
+      "source_name": "中船特气"
+    },
+    {
+      "source_row": 63,
+      "code": "000975",
+      "ts_code": "000975.SZ",
+      "source_name": "山金国际"
+    },
+    {
+      "source_row": 64,
+      "code": "605599",
+      "ts_code": "605599.SH",
+      "source_name": "菜百股份"
+    },
+    {
+      "source_row": 65,
+      "code": "002490",
+      "ts_code": "002490.SZ",
+      "source_name": "山东墨龙"
+    },
+    {
+      "source_row": 66,
+      "code": "600227",
+      "ts_code": "600227.SH",
+      "source_name": "赤天化"
+    },
+    {
+      "source_row": 67,
+      "code": "688432",
+      "ts_code": "688432.SH",
+      "source_name": "有研硅"
+    },
+    {
+      "source_row": 68,
+      "code": "000938",
+      "ts_code": "000938.SZ",
+      "source_name": "紫光股份"
+    },
+    {
+      "source_row": 69,
+      "code": "301358",
+      "ts_code": "301358.SZ",
+      "source_name": "湖南裕能"
+    },
+    {
+      "source_row": 70,
+      "code": "000969",
+      "ts_code": "000969.SZ",
+      "source_name": "安泰科技"
+    },
+    {
+      "source_row": 71,
+      "code": "688082",
+      "ts_code": "688082.SH",
+      "source_name": "盛美上海"
+    },
+    {
+      "source_row": 72,
+      "code": "688012",
+      "ts_code": "688012.SH",
+      "source_name": "中微公司"
+    },
+    {
+      "source_row": 73,
+      "code": "300209",
+      "ts_code": "300209.SZ",
+      "source_name": "行云科技"
+    },
+    {
+      "source_row": 74,
+      "code": "688147",
+      "ts_code": "688147.SH",
+      "source_name": "微导纳米"
+    },
+    {
+      "source_row": 75,
+      "code": "688331",
+      "ts_code": "688331.SH",
+      "source_name": "荣昌生物"
+    },
+    {
+      "source_row": 76,
+      "code": "688048",
+      "ts_code": "688048.SH",
+      "source_name": "长光华芯"
+    },
+    {
+      "source_row": 77,
+      "code": "300765",
+      "ts_code": "300765.SZ",
+      "source_name": "石药创新"
+    },
+    {
+      "source_row": 78,
+      "code": "300394",
+      "ts_code": "300394.SZ",
+      "source_name": "天孚通信"
+    },
+    {
+      "source_row": 79,
+      "code": "688521",
+      "ts_code": "688521.SH",
+      "source_name": "芯原股份"
+    },
+    {
+      "source_row": 80,
+      "code": "688525",
+      "ts_code": "688525.SH",
+      "source_name": "XD佰维存"
+    },
+    {
+      "source_row": 81,
+      "code": "603650",
+      "ts_code": "603650.SH",
+      "source_name": "彤程新材"
+    },
+    {
+      "source_row": 82,
+      "code": "000962",
+      "ts_code": "000962.SZ",
+      "source_name": "东方钽业"
+    },
+    {
+      "source_row": 83,
+      "code": "300054",
+      "ts_code": "300054.SZ",
+      "source_name": "鼎龙股份"
+    },
+    {
+      "source_row": 84,
+      "code": "688530",
+      "ts_code": "688530.SH",
+      "source_name": "欧莱新材"
+    },
+    {
+      "source_row": 85,
+      "code": "688123",
+      "ts_code": "688123.SH",
+      "source_name": "聚辰股份"
+    },
+    {
+      "source_row": 86,
+      "code": "002008",
+      "ts_code": "002008.SZ",
+      "source_name": "大族激光"
+    },
+    {
+      "source_row": 87,
+      "code": "600176",
+      "ts_code": "600176.SH",
+      "source_name": "中国巨石"
+    },
+    {
+      "source_row": 88,
+      "code": "688019",
+      "ts_code": "688019.SH",
+      "source_name": "安集科技"
+    },
+    {
+      "source_row": 89,
+      "code": "000725",
+      "ts_code": "000725.SZ",
+      "source_name": "京东方A"
+    },
+    {
+      "source_row": 90,
+      "code": "600183",
+      "ts_code": "600183.SH",
+      "source_name": "生益科技"
+    },
+    {
+      "source_row": 91,
+      "code": "301217",
+      "ts_code": "301217.SZ",
+      "source_name": "铜冠铜箔"
+    },
+    {
+      "source_row": 92,
+      "code": "600105",
+      "ts_code": "600105.SH",
+      "source_name": "永鼎股份"
+    },
+    {
+      "source_row": 93,
+      "code": "600378",
+      "ts_code": "600378.SH",
+      "source_name": "昊华科技"
+    },
+    {
+      "source_row": 94,
+      "code": "300604",
+      "ts_code": "300604.SZ",
+      "source_name": "长川科技"
+    },
+    {
+      "source_row": 95,
+      "code": "300953",
+      "ts_code": "300953.SZ",
+      "source_name": "震裕科技"
+    },
+    {
+      "source_row": 96,
+      "code": "300666",
+      "ts_code": "300666.SZ",
+      "source_name": "江丰电子"
+    },
+    {
+      "source_row": 97,
+      "code": "300566",
+      "ts_code": "300566.SZ",
+      "source_name": "激智科技"
+    },
+    {
+      "source_row": 98,
+      "code": "300576",
+      "ts_code": "300576.SZ",
+      "source_name": "容大感光"
+    },
+    {
+      "source_row": 99,
+      "code": "300390",
+      "ts_code": "300390.SZ",
+      "source_name": "天华新能"
+    },
+    {
+      "source_row": 100,
+      "code": "002176",
+      "ts_code": "002176.SZ",
+      "source_name": "江特电机"
+    },
+    {
+      "source_row": 101,
+      "code": "600869",
+      "ts_code": "600869.SH",
+      "source_name": "远东股份"
+    },
+    {
+      "source_row": 102,
+      "code": "000657",
+      "ts_code": "000657.SZ",
+      "source_name": "中钨高新"
+    },
+    {
+      "source_row": 103,
+      "code": "300408",
+      "ts_code": "300408.SZ",
+      "source_name": "三环集团"
+    },
+    {
+      "source_row": 104,
+      "code": "603171",
+      "ts_code": "603171.SH",
+      "source_name": "税友股份"
+    },
+    {
+      "source_row": 105,
+      "code": "603533",
+      "ts_code": "603533.SH",
+      "source_name": "掌阅科技"
+    },
+    {
+      "source_row": 106,
+      "code": "301382",
+      "ts_code": "301382.SZ",
+      "source_name": "蜂助手"
+    },
+    {
+      "source_row": 107,
+      "code": "688234",
+      "ts_code": "688234.SH",
+      "source_name": "天岳先进"
+    },
+    {
+      "source_row": 108,
+      "code": "603773",
+      "ts_code": "603773.SH",
+      "source_name": "沃格光电"
+    },
+    {
+      "source_row": 109,
+      "code": "300236",
+      "ts_code": "300236.SZ",
+      "source_name": "上海新阳"
+    },
+    {
+      "source_row": 110,
+      "code": "301123",
+      "ts_code": "301123.SZ",
+      "source_name": "奕东电子"
+    },
+    {
+      "source_row": 111,
+      "code": "688668",
+      "ts_code": "688668.SH",
+      "source_name": "鼎通科技"
+    },
+    {
+      "source_row": 112,
+      "code": "688630",
+      "ts_code": "688630.SH",
+      "source_name": "芯碁微装"
+    },
+    {
+      "source_row": 113,
+      "code": "002138",
+      "ts_code": "002138.SZ",
+      "source_name": "顺络电子"
+    },
+    {
+      "source_row": 114,
+      "code": "603290",
+      "ts_code": "603290.SH",
+      "source_name": "斯达半导"
+    },
+    {
+      "source_row": 115,
+      "code": "603678",
+      "ts_code": "603678.SH",
+      "source_name": "火炬电子"
+    },
+    {
+      "source_row": 116,
+      "code": "000636",
+      "ts_code": "000636.SZ",
+      "source_name": "风华高科"
+    },
+    {
+      "source_row": 117,
+      "code": "002916",
+      "ts_code": "002916.SZ",
+      "source_name": "深南电路"
+    },
+    {
+      "source_row": 118,
+      "code": "301319",
+      "ts_code": "301319.SZ",
+      "source_name": "唯特偶"
+    },
+    {
+      "source_row": 119,
+      "code": "002552",
+      "ts_code": "002552.SZ",
+      "source_name": "宝鼎科技"
+    },
+    {
+      "source_row": 120,
+      "code": "300179",
+      "ts_code": "300179.SZ",
+      "source_name": "四方达"
+    },
+    {
+      "source_row": 121,
+      "code": "688449",
+      "ts_code": "688449.SH",
+      "source_name": "联芸科技"
+    },
+    {
+      "source_row": 122,
+      "code": "000021",
+      "ts_code": "000021.SZ",
+      "source_name": "深科技"
+    },
+    {
+      "source_row": 123,
+      "code": "688585",
+      "ts_code": "688585.SH",
+      "source_name": "上纬新材"
+    },
+    {
+      "source_row": 124,
+      "code": "603629",
+      "ts_code": "603629.SH",
+      "source_name": "利通电子"
+    },
+    {
+      "source_row": 125,
+      "code": "688981",
+      "ts_code": "688981.SH",
+      "source_name": "中芯国际"
+    },
+    {
+      "source_row": 126,
+      "code": "002371",
+      "ts_code": "002371.SZ",
+      "source_name": "北方华创"
+    },
+    {
+      "source_row": 127,
+      "code": "600487",
+      "ts_code": "600487.SH",
+      "source_name": "亨通光电"
+    },
+    {
+      "source_row": 128,
+      "code": "300567",
+      "ts_code": "300567.SZ",
+      "source_name": "精测电子"
+    },
+    {
+      "source_row": 129,
+      "code": "002829",
+      "ts_code": "002829.SZ",
+      "source_name": "星网宇达"
+    },
+    {
+      "source_row": 130,
+      "code": "002384",
+      "ts_code": "002384.SZ",
+      "source_name": "东山精密"
+    },
+    {
+      "source_row": 131,
+      "code": "600353",
+      "ts_code": "600353.SH",
+      "source_name": "旭光电子"
+    },
+    {
+      "source_row": 132,
+      "code": "002156",
+      "ts_code": "002156.SZ",
+      "source_name": "通富微电"
+    },
+    {
+      "source_row": 133,
+      "code": "600160",
+      "ts_code": "600160.SH",
+      "source_name": "巨化股份"
+    },
+    {
+      "source_row": 134,
+      "code": "688551",
+      "ts_code": "688551.SH",
+      "source_name": "科威尔"
+    },
+    {
+      "source_row": 135,
+      "code": "688308",
+      "ts_code": "688308.SH",
+      "source_name": "欧科亿"
+    },
+    {
+      "source_row": 136,
+      "code": "603186",
+      "ts_code": "603186.SH",
+      "source_name": "华正新材"
+    },
+    {
+      "source_row": 137,
+      "code": "000547",
+      "ts_code": "000547.SZ",
+      "source_name": "航天发展"
+    },
+    {
+      "source_row": 138,
+      "code": "688017",
+      "ts_code": "688017.SH",
+      "source_name": "绿的谐波"
+    },
+    {
+      "source_row": 139,
+      "code": "601689",
+      "ts_code": "601689.SH",
+      "source_name": "拓普集团"
+    },
+    {
+      "source_row": 140,
+      "code": "688519",
+      "ts_code": "688519.SH",
+      "source_name": "南亚新材"
+    },
+    {
+      "source_row": 141,
+      "code": "002080",
+      "ts_code": "002080.SZ",
+      "source_name": "中材科技"
+    },
+    {
+      "source_row": 142,
+      "code": "600110",
+      "ts_code": "600110.SH",
+      "source_name": "诺德股份"
+    },
+    {
+      "source_row": 143,
+      "code": "688700",
+      "ts_code": "688700.SH",
+      "source_name": "东威科技"
+    },
+    {
+      "source_row": 144,
+      "code": "002655",
+      "ts_code": "002655.SZ",
+      "source_name": "共达电声"
+    },
+    {
+      "source_row": 145,
+      "code": "301611",
+      "ts_code": "301611.SZ",
+      "source_name": "珂玛科技"
+    },
+    {
+      "source_row": 146,
+      "code": "688037",
+      "ts_code": "688037.SH",
+      "source_name": "芯源微"
+    },
+    {
+      "source_row": 147,
+      "code": "603688",
+      "ts_code": "603688.SH",
+      "source_name": "石英股份"
+    },
+    {
+      "source_row": 148,
+      "code": "301396",
+      "ts_code": "301396.SZ",
+      "source_name": "宏景科技"
+    },
+    {
+      "source_row": 149,
+      "code": "300454",
+      "ts_code": "300454.SZ",
+      "source_name": "深信服"
+    },
+    {
+      "source_row": 150,
+      "code": "688305",
+      "ts_code": "688305.SH",
+      "source_name": "科德数控"
+    },
+    {
+      "source_row": 151,
+      "code": "301603",
+      "ts_code": "301603.SZ",
+      "source_name": "乔锋智能"
+    },
+    {
+      "source_row": 152,
+      "code": "300503",
+      "ts_code": "300503.SZ",
+      "source_name": "昊志机电"
+    },
+    {
+      "source_row": 153,
+      "code": "688766",
+      "ts_code": "688766.SH",
+      "source_name": "普冉股份"
+    },
+    {
+      "source_row": 154,
+      "code": "603986",
+      "ts_code": "603986.SH",
+      "source_name": "兆易创新"
+    },
+    {
+      "source_row": 155,
+      "code": "600584",
+      "ts_code": "600584.SH",
+      "source_name": "长电科技"
+    },
+    {
+      "source_row": 156,
+      "code": "688110",
+      "ts_code": "688110.SH",
+      "source_name": "东芯股份"
+    },
+    {
+      "source_row": 157,
+      "code": "000811",
+      "ts_code": "000811.SZ",
+      "source_name": "冰轮环境"
+    },
+    {
+      "source_row": 158,
+      "code": "300863",
+      "ts_code": "300863.SZ",
+      "source_name": "卡倍亿"
+    },
+    {
+      "source_row": 159,
+      "code": "603993",
+      "ts_code": "603993.SH",
+      "source_name": "洛阳钼业"
+    },
+    {
+      "source_row": 160,
+      "code": "000983",
+      "ts_code": "000983.SZ",
+      "source_name": "山西焦煤"
+    },
+    {
+      "source_row": 161,
+      "code": "300346",
+      "ts_code": "300346.SZ",
+      "source_name": "南大光电"
+    },
+    {
+      "source_row": 162,
+      "code": "002980",
+      "ts_code": "002980.SZ",
+      "source_name": "华盛昌"
+    },
+    {
+      "source_row": 163,
+      "code": "603127",
+      "ts_code": "603127.SH",
+      "source_name": "昭衍新药"
+    },
+    {
+      "source_row": 164,
+      "code": "300497",
+      "ts_code": "300497.SZ",
+      "source_name": "富祥股份"
+    },
+    {
+      "source_row": 165,
+      "code": "002428",
+      "ts_code": "002428.SZ",
+      "source_name": "云南锗业"
+    },
+    {
+      "source_row": 166,
+      "code": "002192",
+      "ts_code": "002192.SZ",
+      "source_name": "融捷股份"
+    },
+    {
+      "source_row": 167,
+      "code": "002015",
+      "ts_code": "002015.SZ",
+      "source_name": "协鑫能科"
+    },
+    {
+      "source_row": 168,
+      "code": "002202",
+      "ts_code": "002202.SZ",
+      "source_name": "金风科技"
+    },
+    {
+      "source_row": 169,
+      "code": "688295",
+      "ts_code": "688295.SH",
+      "source_name": "中复神鹰"
+    },
+    {
+      "source_row": 170,
+      "code": "002272",
+      "ts_code": "002272.SZ",
+      "source_name": "川润股份"
+    },
+    {
+      "source_row": 171,
+      "code": "002463",
+      "ts_code": "002463.SZ",
+      "source_name": "沪电股份"
+    },
+    {
+      "source_row": 172,
+      "code": "301292",
+      "ts_code": "301292.SZ",
+      "source_name": "海科新源"
+    },
+    {
+      "source_row": 173,
+      "code": "600397",
+      "ts_code": "600397.SH",
+      "source_name": "江钨装备"
+    },
+    {
+      "source_row": 174,
+      "code": "603256",
+      "ts_code": "603256.SH",
+      "source_name": "宏和科技"
+    },
+    {
+      "source_row": 175,
+      "code": "603306",
+      "ts_code": "603306.SH",
+      "source_name": "华懋科技"
+    },
+    {
+      "source_row": 176,
+      "code": "600531",
+      "ts_code": "600531.SH",
+      "source_name": "豫光金铅"
+    },
+    {
+      "source_row": 177,
+      "code": "688025",
+      "ts_code": "688025.SH",
+      "source_name": "杰普特"
+    },
+    {
+      "source_row": 178,
+      "code": "688167",
+      "ts_code": "688167.SH",
+      "source_name": "炬光科技"
+    },
+    {
+      "source_row": 179,
+      "code": "688313",
+      "ts_code": "688313.SH",
+      "source_name": "仕佳光子"
+    },
+    {
+      "source_row": 180,
+      "code": "002046",
+      "ts_code": "002046.SZ",
+      "source_name": "国机精工"
+    },
+    {
+      "source_row": 181,
+      "code": "600879",
+      "ts_code": "600879.SH",
+      "source_name": "航天电子"
+    },
+    {
+      "source_row": 182,
+      "code": "300757",
+      "ts_code": "300757.SZ",
+      "source_name": "罗博特科"
+    },
+    {
+      "source_row": 183,
+      "code": "600268",
+      "ts_code": "600268.SH",
+      "source_name": "国电南自"
+    },
+    {
+      "source_row": 184,
+      "code": "688028",
+      "ts_code": "688028.SH",
+      "source_name": "沃尔德"
+    },
+    {
+      "source_row": 185,
+      "code": "300102",
+      "ts_code": "300102.SZ",
+      "source_name": "乾照光电"
+    },
+    {
+      "source_row": 186,
+      "code": "300857",
+      "ts_code": "300857.SZ",
+      "source_name": "协创数据"
+    },
+    {
+      "source_row": 187,
+      "code": "301486",
+      "ts_code": "301486.SZ",
+      "source_name": "致尚科技"
+    },
+    {
+      "source_row": 188,
+      "code": "688498",
+      "ts_code": "688498.SH",
+      "source_name": "源杰科技"
+    },
+    {
+      "source_row": 189,
+      "code": "301511",
+      "ts_code": "301511.SZ",
+      "source_name": "德福科技"
+    },
+    {
+      "source_row": 190,
+      "code": "301306",
+      "ts_code": "301306.SZ",
+      "source_name": "西测测试"
+    },
+    {
+      "source_row": 191,
+      "code": "300620",
+      "ts_code": "300620.SZ",
+      "source_name": "光库科技"
+    },
+    {
+      "source_row": 192,
+      "code": "688227",
+      "ts_code": "688227.SH",
+      "source_name": "品高股份"
+    },
+    {
+      "source_row": 193,
+      "code": "600498",
+      "ts_code": "600498.SH",
+      "source_name": "烽火通信"
+    },
+    {
+      "source_row": 194,
+      "code": "601869",
+      "ts_code": "601869.SH",
+      "source_name": "长飞光纤"
+    },
+    {
+      "source_row": 195,
+      "code": "688535",
+      "ts_code": "688535.SH",
+      "source_name": "华海诚科"
+    },
+    {
+      "source_row": 196,
+      "code": "605358",
+      "ts_code": "605358.SH",
+      "source_name": "立昂微"
+    },
+    {
+      "source_row": 197,
+      "code": "000070",
+      "ts_code": "000070.SZ",
+      "source_name": "特发信息"
+    },
+    {
+      "source_row": 198,
+      "code": "301005",
+      "ts_code": "301005.SZ",
+      "source_name": "超捷股份"
+    },
+    {
+      "source_row": 199,
+      "code": "688353",
+      "ts_code": "688353.SH",
+      "source_name": "华盛锂电"
+    },
+    {
+      "source_row": 200,
+      "code": "603799",
+      "ts_code": "603799.SH",
+      "source_name": "华友钴业"
+    },
+    {
+      "source_row": 201,
+      "code": "002245",
+      "ts_code": "002245.SZ",
+      "source_name": "蔚蓝锂芯"
+    },
+    {
+      "source_row": 202,
+      "code": "688041",
+      "ts_code": "688041.SH",
+      "source_name": "海光信息"
+    },
+    {
+      "source_row": 203,
+      "code": "300502",
+      "ts_code": "300502.SZ",
+      "source_name": "新易盛"
+    },
+    {
+      "source_row": 204,
+      "code": "002851",
+      "ts_code": "002851.SZ",
+      "source_name": "麦格米特"
+    },
+    {
+      "source_row": 205,
+      "code": "300308",
+      "ts_code": "300308.SZ",
+      "source_name": "中际旭创"
+    },
+    {
+      "source_row": 206,
+      "code": "603083",
+      "ts_code": "603083.SH",
+      "source_name": "剑桥科技"
+    },
+    {
+      "source_row": 207,
+      "code": "301308",
+      "ts_code": "301308.SZ",
+      "source_name": "江波龙"
+    },
+    {
+      "source_row": 208,
+      "code": "600096",
+      "ts_code": "600096.SH",
+      "source_name": "云天化"
+    },
+    {
+      "source_row": 209,
+      "code": "002466",
+      "ts_code": "002466.SZ",
+      "source_name": "天齐锂业"
+    },
+    {
+      "source_row": 210,
+      "code": "601208",
+      "ts_code": "601208.SH",
+      "source_name": "东材科技"
+    },
+    {
+      "source_row": 211,
+      "code": "002895",
+      "ts_code": "002895.SZ",
+      "source_name": "川恒股份"
+    },
+    {
+      "source_row": 212,
+      "code": "300207",
+      "ts_code": "300207.SZ",
+      "source_name": "欣旺达"
+    },
+    {
+      "source_row": 213,
+      "code": "605196",
+      "ts_code": "605196.SH",
+      "source_name": "华通线缆"
+    },
+    {
+      "source_row": 214,
+      "code": "000960",
+      "ts_code": "000960.SZ",
+      "source_name": "锡业股份"
+    },
+    {
+      "source_row": 215,
+      "code": "002600",
+      "ts_code": "002600.SZ",
+      "source_name": "领益智造"
+    },
+    {
+      "source_row": 216,
+      "code": "603516",
+      "ts_code": "603516.SH",
+      "source_name": "淳中科技"
+    },
+    {
+      "source_row": 217,
+      "code": "603179",
+      "ts_code": "603179.SH",
+      "source_name": "新泉股份"
+    },
+    {
+      "source_row": 218,
+      "code": "603019",
+      "ts_code": "603019.SH",
+      "source_name": "中科曙光"
+    },
+    {
+      "source_row": 219,
+      "code": "300442",
+      "ts_code": "300442.SZ",
+      "source_name": "润泽科技"
+    },
+    {
+      "source_row": 220,
+      "code": "603876",
+      "ts_code": "603876.SH",
+      "source_name": "鼎胜新材"
+    },
+    {
+      "source_row": 221,
+      "code": "002896",
+      "ts_code": "002896.SZ",
+      "source_name": "中大力德"
+    },
+    {
+      "source_row": 222,
+      "code": "002436",
+      "ts_code": "002436.SZ",
+      "source_name": "兴森科技"
+    },
+    {
+      "source_row": 223,
+      "code": "300065",
+      "ts_code": "300065.SZ",
+      "source_name": "海兰信"
+    },
+    {
+      "source_row": 224,
+      "code": "601899",
+      "ts_code": "601899.SH",
+      "source_name": "紫金矿业"
+    },
+    {
+      "source_row": 225,
+      "code": "688072",
+      "ts_code": "688072.SH",
+      "source_name": "拓荆科技"
+    },
+    {
+      "source_row": 226,
+      "code": "301377",
+      "ts_code": "301377.SZ",
+      "source_name": "鼎泰高科"
+    },
+    {
+      "source_row": 227,
+      "code": "301232",
+      "ts_code": "301232.SZ",
+      "source_name": "飞沃科技"
+    },
+    {
+      "source_row": 228,
+      "code": "688183",
+      "ts_code": "688183.SH",
+      "source_name": "生益电子"
+    },
+    {
+      "source_row": 229,
+      "code": "002407",
+      "ts_code": "002407.SZ",
+      "source_name": "多氟多"
+    }
+  ]
+}
