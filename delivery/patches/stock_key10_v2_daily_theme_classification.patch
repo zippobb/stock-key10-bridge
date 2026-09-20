@@ -1,0 +1,121 @@
+diff --git a/stock_key10_v2_daily.py b/stock_key10_v2_daily.py
+index 5c7b128..77738a5 100644
+--- a/stock_key10_v2_daily.py
++++ b/stock_key10_v2_daily.py
+@@ -25,6 +25,11 @@ import tushare as ts
+ from stock_key10_v2_common import atomic_write, json_bytes, load_json, now_bj, pending_trade_dates, safe_error, sha256, write_json_pair
+ import stock_key10_v2_data as data_adapter
+ from stock_key10_v2_scoring import build_sector_scores, build_stock_features, kdj_snapshot, score_stocks, strong_sectors
++from candidate_assets.theme_classification_v2 import (
++    build_theme_classification_diagnostics,
++    enrich_candidate_records,
++    load_theme_classification,
++)
+ 
+ 
+ KDJ_COLUMNS = [
+@@ -382,7 +387,23 @@ def build_candidate_source_output(
+     }
+ 
+ 
+-def compute(target_date: str, previous_date: str, next_date: str) -> dict[str, object]:
++def compute(
++    target_date: str,
++    previous_date: str,
++    next_date: str,
++    *,
++    theme_config_dir: Path | None = None,
++    output_path: Path | None = None,
++    cache_only: bool = False,
++) -> dict[str, object]:
++    if output_path is not None:
++        output_path = output_path.resolve()
++        try:
++            output_path.relative_to(Path("/tmp").resolve())
++        except ValueError as exc:
++            raise ValueError("隔离输出必须位于/tmp") from exc
++        if output_path.exists():
++            raise FileExistsError(output_path)
+     started = time.perf_counter()
+     config = load_json(CONFIG_PATH)
+     observation_path = ROOT / str(config["universe"]["observation_pool_path"])
+@@ -398,12 +419,27 @@ def compute(target_date: str, previous_date: str, next_date: str) -> dict[str, o
+         raise ValueError(f"正式观察池必须恰为{expected}只且代码唯一，实际{len(observation)}只")
+     observation = observation[["ts_code"]].copy()
+     observation_codes = set(observation["ts_code"].astype(str))
++    theme_dir = theme_config_dir or (ROOT / "config")
++    theme_snapshot = load_theme_classification(
++        theme_dir / "stock_theme_tags_229_v2.0.json",
++        theme_dir / "stock_theme_tags_229_v2.0_import.json",
++        observation_codes,
++    )
+ 
+     daily_path = ROOT / f"data/history_daily/daily_{target_date}.csv"
+-    daily, daily_source = data_adapter.fetch_daily_once(target_date, daily_path)
+-    index_history, index_source = data_adapter.fetch_major_index_history(target_date, ROOT/f"data/v2/index_history_{target_date}.csv")
+     metadata_path = ROOT / f"data/v2/stock_metadata_{target_date}.csv"
++    index_path = ROOT / f"data/v2/index_history_{target_date}.csv"
++    if cache_only:
++        missing_caches = [path for path in (daily_path, metadata_path, index_path) if not path.is_file()]
++        if missing_caches:
++            raise FileNotFoundError(
++                "cache-only隔离运行缺少缓存: " + ",".join(str(path) for path in missing_caches)
++            )
++    daily, daily_source = data_adapter.fetch_daily_once(target_date, daily_path)
++    index_history, index_source = data_adapter.fetch_major_index_history(target_date, index_path)
+     base, metadata_source = data_adapter.fetch_market_metadata(target_date, daily, metadata_path)
++    if cache_only and {daily_source, index_source, metadata_source} != {"existing_valid_cache"}:
++        raise RuntimeError("cache-only隔离运行意外使用了非缓存数据源")
+     required_base = {"ts_code", "name", "industry", "segment", "total_mv_yi", "delisting_risk"}
+     if not required_base.issubset(base.columns) or base["ts_code"].duplicated().any():
+         raise ValueError(f"市场元数据字段或唯一性异常: {sorted(required_base-set(base.columns))}")
+@@ -467,6 +503,20 @@ def compute(target_date: str, previous_date: str, next_date: str) -> dict[str, o
+     )
+     official_records = candidate_source_output["official_records"]
+     external_records = candidate_source_output["external_records"]
++    official_records = enrich_candidate_records(official_records, theme_snapshot)
++    external_records = enrich_candidate_records(external_records, theme_snapshot)
++    theme_classification_diagnostics = build_theme_classification_diagnostics(
++        theme_snapshot,
++        observation_codes,
++        scored_official["ts_code"].astype(str).tolist(),
++        official_eligible["ts_code"].astype(str).tolist(),
++        scored_external["ts_code"].astype(str).tolist() if external_codes else [],
++        official_records,
++        external_records,
++    )
++    candidate_source_output["diagnostics"]["theme_classification"] = (
++        theme_classification_diagnostics
++    )
+     for record in external_records:
+         record["activation_rule"] = "仅当终审后同一强势板块无正式池合格个股时方可入池外最终名单"
+         record["manual_pool_admission_only"] = True
+@@ -481,6 +531,7 @@ def compute(target_date: str, previous_date: str, next_date: str) -> dict[str, o
+         "next_trade_date": next_date,
+         "candidate_generation_version": candidate_source_output["candidate_generation_version"],
+         "candidate_source_diagnostics": candidate_source_output["diagnostics"],
++        "theme_classification_diagnostics": theme_classification_diagnostics,
+         "market_environment": market,
+         "sector_summary": {
+             "sector_count": len(sectors),
+@@ -532,11 +583,15 @@ def compute(target_date: str, previous_date: str, next_date: str) -> dict[str, o
+         raise RuntimeError(f"V2.0量化提交前验证失败: {validation}")
+     latest = ROOT / str(config["output"]["review_payload_latest"])
+     dated = ROOT / f"data/v2/key10_v2_review_payload_{target_date}.json"
+-    write_json_pair(latest, dated, payload)
+-    payload["output_files"] = [
+-        {"path": str(latest), "sha256": sha256(latest)},
+-        {"path": str(dated), "sha256": sha256(dated)},
+-    ]
++    if output_path is None:
++        write_json_pair(latest, dated, payload)
++        payload["output_files"] = [
++            {"path": str(latest), "sha256": sha256(latest)},
++            {"path": str(dated), "sha256": sha256(dated)},
++        ]
++    else:
++        output_path.parent.mkdir(parents=True, exist_ok=True)
++        atomic_write(output_path, json_bytes(payload))
+     return payload
+ 
+ 

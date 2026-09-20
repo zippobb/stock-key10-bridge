@@ -1,0 +1,23 @@
+diff --git a/build_key10_v2_review_template.py b/build_key10_v2_review_template.py
+index a54719a..dbd3c29 100644
+--- a/build_key10_v2_review_template.py
++++ b/build_key10_v2_review_template.py
+@@ -10,7 +10,7 @@ from stock_key10_v2_common import atomic_write, json_bytes, load_json
+ 
+ 
+ def review_item(candidate: dict[str, object]) -> dict[str, object]:
+-    return {
++    review = {
+         "ts_code": candidate["ts_code"],
+         "origin": candidate["origin"],
+         "logic_purity": {"score": None, "reason": ""},
+@@ -32,6 +32,9 @@ def review_item(candidate: dict[str, object]) -> dict[str, object]:
+         "main_risk": "",
+         "evidence_as_of": "",
+     }
++    if "theme_classification" in candidate:
++        review["theme_classification"] = candidate["theme_classification"]
++    return review
+ 
+ 
+ def main() -> int:

@@ -1,6 +1,6 @@
-# V2候选来源改造：ECS已接入，题材映射待授权
+# V2候选来源与229题材分类：分类透传已部署，正式联动召回待证据
 
-2026-09-15用户确认先修改候选生成。目标是在终审之前召回具有上涨机会的股票；公司质量不等于股价上涨潜力。候选召回模块、单元测试及冷启动接口已接入ECS生产入口（未提供题材映射时行为保持不变）；首个自然交易日仍需观察真实调用，不能把代码部署或合成测试当作端到端完成。
+2026-09-15用户确认先修改候选生成。目标是在终审之前召回具有上涨机会的股票；公司质量不等于股价上涨潜力。候选召回模块、单元测试及冷启动接口已接入ECS生产入口。2026-09-21另完成229只用户确认交易分类的候选字段/诊断及终审输入透传；分类本身不满足现行正式题材成员证据契约，未启用题材联动或跟随召回。自然交易日仍需验收，不能把代码部署或隔离运行当作端到端完成。
 
 ## 三条候选来源
 
@@ -46,4 +46,14 @@
 - 当前成员快照允许在 `effective_from=null` 时接入，但必须提供真实获取时间 `observed_at`、`verified=true`、`source_url` 和结构化事实字段（如 `relation_type`、`fact_summary`）；`source_published_at` 仅在来源明确给出时填写。
 - 冷启动快照只证明 `observed_at` 所在交易日的当前成员关系，可用于当日题材联动；不会被当作历史生效日，不能倒推先行/跟随顺序。历史跟随仍只使用当时已公开且生效的 `effective_from`/发布日期记录。
 - 题材成员分母先按完整、已核验的成员快照建立；成员行情缺失会保留在分母并使题材联动保守降级，不通过缩小分母虚增广度。多标签按 `theme_id` 去重，来源与事实摘要随候选诊断保留。
-- 若来源不提供历史生效日期，`effective_from` 保持 `null`；不得用抓取时间冒充历史生效时间。当前生产暂未取得有权限的题材成员接口数据，因此没有伪造或写入题材映射；取得授权后可直接使用上述快照契约。
+- 若来源不提供历史生效日期，`effective_from` 保持 `null`；不得用抓取时间冒充历史生效时间。当前生产尚无符合本节verified与日期契约的可验证市场成员快照。2026-09-21已另行导入229只用户确认项目交易分类，仅用于候选分类字段和独立诊断；该分类不是市场成员证据，不参与正式联动/跟随。
+
+
+## 2026-09-21 ECS分类透传验收
+
+- 固定来源commit 7828d38c41b06a4caaea5f04beeb0210cb08aec5，映射Blob fafa071ae49e54e34e32a6f2f7313caf5e797fd8；229/229用户观察池代码匹配，88个主标签。
+- 分类模块位于candidate_assets/theme_classification_v2.py，单元测试位于candidate_assets/test_theme_classification_v2.py。production daily入口在候选选择器30+10截断后传递分类字段；全229池内扫描与外部合格扫描另有独立诊断。分类不进入selector的verified members、分数、排名或准入。
+- 真实当前缓存隔离干跑：trade_date=20260918、正式候选30+10、池内分类30/30、池外待分类10/10、future_data_rows_used=0、excluded_sectors=[]；与同配置同缓存原版候选列表及全部原字段逐项一致。发布器校验通过。终审review输入模板透传40/40分类；终审finalizer保留quant候选来源的分类。
+- 当前用户分类无source_url、observed_at及历史effective_from；因此正式题材联动/跟随成员资格为0，route_counts为early_leader=387、theme_linkage=0、confirmed_follower=0。不得据本映射倒推历史先行/跟随，也不得称全市场题材广度。
+- ECS SHA256：daily 262833444449f390d83ef35cbb4e1a98ed231c44210c00364f671b83381339cd → 598ba7e333199ff44a1742cecf89468172d00104b9c59a7999e9233c6528817d；review template 64ebd918c70bf4ec545c51222480fd7df1d2d9e98435475a10acaea301208af7 → 398c8d3f29aa0fd8f76126a756f0aa848071568e9311d28c589d0a476eec9552。备份目录：/root/stock-key10-backups/theme_classification_20260920T161346Z/。生产service/timer未改，latest与历史未改；2026-09-21自然运行与正式终审交付待验收。
+- 生产入口未纳入此GitHub树；本目录delivery/patches保存daily入口和终审模板的精确差异。
