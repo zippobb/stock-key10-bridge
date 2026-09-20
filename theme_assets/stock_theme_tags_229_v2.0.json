@@ -1,0 +1,2300 @@
+{
+  "schema_version": "1.0.0",
+  "classification_version": "2.0",
+  "rules_version": "1.2",
+  "source": "User-confirmed project classification; not a verified market concept feed",
+  "historical_effective_date_known": false,
+  "coverage_scope": "229 user pool members only",
+  "members": [
+    {
+      "ts_code": "000636.SZ",
+      "name": "风华高科",
+      "primary_theme": "MLCC",
+      "business_realization": "待核验",
+      "fact_summary": "MLCC制造",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300285.SZ",
+      "name": "国瓷材料",
+      "primary_theme": "MLCC",
+      "business_realization": "待核验",
+      "fact_summary": "上游介质粉体",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "605376.SH",
+      "name": "博迁新材",
+      "primary_theme": "MLCC",
+      "business_realization": "待核验",
+      "fact_summary": "上游电极镍粉",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300408.SZ",
+      "name": "三环集团",
+      "primary_theme": "MLCC",
+      "business_realization": "待核验",
+      "fact_summary": "中高端MLCC制造",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603678.SH",
+      "name": "火炬电子",
+      "primary_theme": "MLCC",
+      "business_realization": "MLCC业务与算力相关收入分开；后者贡献低（据原材料）",
+      "fact_summary": "特种MLCC；算力收入占比低",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002138.SZ",
+      "name": "顺络电子",
+      "primary_theme": "AI电感",
+      "business_realization": "待核验",
+      "fact_summary": "AI服务器供电电感",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603186.SH",
+      "name": "华正新材",
+      "primary_theme": "覆铜板",
+      "business_realization": "待核验",
+      "fact_summary": "高速CCL",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600183.SH",
+      "name": "生益科技",
+      "primary_theme": "覆铜板",
+      "business_realization": "待核验",
+      "fact_summary": "高速CCL",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002636.SZ",
+      "name": "金安国纪",
+      "primary_theme": "覆铜板",
+      "business_realization": "待核验",
+      "fact_summary": "普通覆铜板价格逻辑",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688519.SH",
+      "name": "南亚新材",
+      "primary_theme": "覆铜板",
+      "business_realization": "待核验",
+      "fact_summary": "高速CCL",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603256.SH",
+      "name": "宏和科技",
+      "primary_theme": "电子布",
+      "business_realization": "待核验",
+      "fact_summary": "极薄、超薄、低介电电子布",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600176.SH",
+      "name": "中国巨石",
+      "primary_theme": "电子布",
+      "business_realization": "待核验",
+      "fact_summary": "普通电子布价格逻辑",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002080.SZ",
+      "name": "中材科技",
+      "primary_theme": "电子布",
+      "business_realization": "待核验",
+      "fact_summary": "低介电特种电子布",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "601208.SH",
+      "name": "东材科技",
+      "primary_theme": "电子树脂",
+      "business_realization": "待核验",
+      "fact_summary": "上游电子树脂",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301217.SZ",
+      "name": "铜冠铜箔",
+      "primary_theme": "铜箔",
+      "business_realization": "待核验",
+      "fact_summary": "HVLP、RTF；分代记录阶段",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600110.SH",
+      "name": "诺德股份",
+      "primary_theme": "铜箔",
+      "business_realization": "待核验",
+      "fact_summary": "不同代际供货与送样不能混同",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688028.SH",
+      "name": "沃尔德",
+      "primary_theme": "金刚石散热",
+      "business_realization": "低收入贡献（原材料口径，待核验）",
+      "fact_summary": "热沉及金刚石铜；收入占比小",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300179.SZ",
+      "name": "四方达",
+      "primary_theme": "金刚石散热",
+      "business_realization": "待核验",
+      "fact_summary": "CVD散热材料；测试不等于规模供货",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600172.SH",
+      "name": "黄河旋风",
+      "primary_theme": "金刚石散热",
+      "business_realization": "待核验",
+      "fact_summary": "热沉及复合材料；区别于半导体器件",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002046.SZ",
+      "name": "国机精工",
+      "primary_theme": "金刚石散热",
+      "business_realization": "待核验",
+      "fact_summary": "金刚石散热材料",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "001211.SZ",
+      "name": "双枪科技",
+      "primary_theme": "家居消费",
+      "business_realization": "待核验",
+      "fact_summary": "餐厨具主业；上涨驱动待确认",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002716.SZ",
+      "name": "湖南白银",
+      "primary_theme": "贵金属",
+      "business_realization": "待核验",
+      "fact_summary": "原标签白银；白银采选冶炼",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688802.SH",
+      "name": "沐曦股份-U",
+      "primary_theme": "国产算力",
+      "business_realization": "待核验",
+      "fact_summary": "通用GPU",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "001313.SZ",
+      "name": "粤海饲料",
+      "primary_theme": "水产饲料",
+      "business_realization": "待核验",
+      "fact_summary": "特种水产饲料",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "601872.SH",
+      "name": "招商轮船",
+      "primary_theme": "油运",
+      "business_realization": "待核验",
+      "fact_summary": "油轮运输",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688256.SH",
+      "name": "寒武纪",
+      "primary_theme": "国产算力",
+      "business_realization": "待核验",
+      "fact_summary": "AI计算芯片",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603601.SH",
+      "name": "再升科技",
+      "primary_theme": "商业航天",
+      "business_realization": "待核验",
+      "fact_summary": "用户反馈同花顺AI归类；航天应用及供货待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300528.SZ",
+      "name": "幸福蓝海",
+      "primary_theme": "影视院线",
+      "business_realization": "待核验",
+      "fact_summary": "影视及院线",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688390.SH",
+      "name": "固德威",
+      "primary_theme": "储能",
+      "business_realization": "待核验",
+      "fact_summary": "逆变器及储能设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600989.SH",
+      "name": "宝丰能源",
+      "primary_theme": "煤制烯烃",
+      "business_realization": "待核验",
+      "fact_summary": "煤制烯烃",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688090.SH",
+      "name": "瑞松科技",
+      "primary_theme": "工业机器人",
+      "business_realization": "待核验",
+      "fact_summary": "工业机器人系统",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300049.SZ",
+      "name": "福瑞医科",
+      "primary_theme": "医疗器械",
+      "business_realization": "待核验",
+      "fact_summary": "肝病诊断设备；兼有药品业务",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600691.SH",
+      "name": "潞化科技",
+      "primary_theme": "尿素",
+      "business_realization": "待核验",
+      "fact_summary": "尿素生产",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603011.SH",
+      "name": "合锻智能",
+      "primary_theme": "可控核聚变",
+      "business_realization": "待核验",
+      "fact_summary": "核聚变装备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600121.SH",
+      "name": "郑州煤电",
+      "primary_theme": "动力煤",
+      "business_realization": "待核验",
+      "fact_summary": "煤炭生产",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600703.SH",
+      "name": "三安光电",
+      "primary_theme": "碳化硅",
+      "business_realization": "待核验",
+      "fact_summary": "碳化硅器件",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000892.SZ",
+      "name": "欢瑞世纪",
+      "primary_theme": "AI应用",
+      "business_realization": "低收入贡献（原材料口径，待核验）",
+      "fact_summary": "AI短剧；收入占比低",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603983.SH",
+      "name": "丸美生物",
+      "primary_theme": "重组胶原蛋白",
+      "business_realization": "待核验",
+      "fact_summary": "化妆品及胶原蛋白布局",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002265.SZ",
+      "name": "建设工业",
+      "primary_theme": "军工",
+      "business_realization": "待核验",
+      "fact_summary": "轻武器",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301205.SZ",
+      "name": "联特科技",
+      "primary_theme": "光模块",
+      "business_realization": "待核验",
+      "fact_summary": "光通信模块",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688271.SH",
+      "name": "联影医疗",
+      "primary_theme": "脑机接口",
+      "business_realization": "待核验",
+      "fact_summary": "磁共振脑机接口线索待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300364.SZ",
+      "name": "中文在线",
+      "primary_theme": "AI应用",
+      "business_realization": "待核验",
+      "fact_summary": "短剧及AI内容",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603663.SH",
+      "name": "三祥新材",
+      "primary_theme": "稀有",
+      "business_realization": "待核验",
+      "fact_summary": "原标签锆材料；锆系材料",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300475.SZ",
+      "name": "香农芯创",
+      "primary_theme": "存储芯片",
+      "business_realization": "待核验",
+      "fact_summary": "分销及存储产品；HBM资质待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300489.SZ",
+      "name": "光智科技",
+      "primary_theme": "磷化铟",
+      "business_realization": "相关资产及收入归属待核验",
+      "fact_summary": "磷化铟交易归类沿用；衬底资产、订单及上市公司收入归属待核验，不将集团资产直接算作上市公司业务",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002734.SZ",
+      "name": "利民股份",
+      "primary_theme": "农药",
+      "business_realization": "待核验",
+      "fact_summary": "农药关联",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300456.SZ",
+      "name": "赛微电子",
+      "primary_theme": "光交换",
+      "business_realization": "待核验",
+      "fact_summary": "MEMS-OCS；业务证据待补",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600330.SH",
+      "name": "天通股份",
+      "primary_theme": "铌酸锂",
+      "business_realization": "待核验",
+      "fact_summary": "晶体材料；压电与光通信量产不混同",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "003040.SZ",
+      "name": "楚天龙",
+      "primary_theme": "数字人民币",
+      "business_realization": "待核验",
+      "fact_summary": "硬钱包等",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002491.SZ",
+      "name": "通鼎互联",
+      "primary_theme": "光纤光缆",
+      "business_realization": "待核验",
+      "fact_summary": "光纤光缆",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603618.SH",
+      "name": "杭电股份",
+      "primary_theme": "光纤光缆",
+      "business_realization": "待核验",
+      "fact_summary": "光纤光缆",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300468.SZ",
+      "name": "四方精创",
+      "primary_theme": "稳定币",
+      "business_realization": "待核验",
+      "fact_summary": "mBridge不等同于稳定币",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300697.SZ",
+      "name": "电工合金",
+      "primary_theme": "数据中心供电",
+      "business_realization": "待核验",
+      "fact_summary": "铜母线及部件",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002837.SZ",
+      "name": "英维克",
+      "primary_theme": "液冷",
+      "business_realization": "待核验",
+      "fact_summary": "液冷设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600722.SH",
+      "name": "金牛化工",
+      "primary_theme": "甲醇",
+      "business_realization": "待核验",
+      "fact_summary": "甲醇",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300373.SZ",
+      "name": "扬杰科技",
+      "primary_theme": "功率半导体",
+      "business_realization": "待核验",
+      "fact_summary": "功率器件",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688676.SH",
+      "name": "金盘科技",
+      "primary_theme": "数据中心供电",
+      "business_realization": "待核验",
+      "fact_summary": "供配电设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002484.SZ",
+      "name": "江海股份",
+      "primary_theme": "数据中心供电",
+      "business_realization": "待核验",
+      "fact_summary": "电容器",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301165.SZ",
+      "name": "锐捷网络",
+      "primary_theme": "交换机",
+      "business_realization": "待核验",
+      "fact_summary": "网络交换设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "601890.SH",
+      "name": "亚星锚链",
+      "primary_theme": "船舶配套",
+      "business_realization": "待核验",
+      "fact_summary": "船用锚链",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603039.SH",
+      "name": "泛微网络",
+      "primary_theme": "AI应用",
+      "business_realization": "待核验",
+      "fact_summary": "协同办公及智能体",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600726.SH",
+      "name": "华电能源",
+      "primary_theme": "电力",
+      "business_realization": "待核验",
+      "fact_summary": "热电业务",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300568.SZ",
+      "name": "星源材质",
+      "primary_theme": "固态电池",
+      "business_realization": "待核验",
+      "fact_summary": "传统隔膜及固态材料布局",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600396.SH",
+      "name": "华电辽能",
+      "primary_theme": "电力",
+      "business_realization": "待核验",
+      "fact_summary": "电力热力生产供应",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300404.SZ",
+      "name": "博济医药",
+      "primary_theme": "CRO",
+      "business_realization": "待核验",
+      "fact_summary": "研发外包",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600206.SH",
+      "name": "有研新材",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "靶材",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688702.SH",
+      "name": "盛科通信-U",
+      "primary_theme": "交换芯片",
+      "business_realization": "待核验",
+      "fact_summary": "以太网交换芯片",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600186.SH",
+      "name": "莲花控股",
+      "primary_theme": "算力租赁",
+      "business_realization": "待核验",
+      "fact_summary": "算力租赁",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300199.SZ",
+      "name": "翰宇药业",
+      "primary_theme": "仿制药",
+      "business_realization": "待核验",
+      "fact_summary": "司美格鲁肽仿制方向",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688008.SH",
+      "name": "澜起科技",
+      "primary_theme": "存储芯片",
+      "business_realization": "待核验",
+      "fact_summary": "内存接口",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000603.SZ",
+      "name": "盛达资源",
+      "primary_theme": "贵金属",
+      "business_realization": "待核验",
+      "fact_summary": "原标签白银；白银矿业",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002938.SZ",
+      "name": "鹏鼎控股",
+      "primary_theme": "PCB",
+      "business_realization": "待核验",
+      "fact_summary": "印制电路板",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002585.SZ",
+      "name": "双星新材",
+      "primary_theme": "复合铜箔",
+      "business_realization": "待核验",
+      "fact_summary": "PET复合集流体",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "001378.SZ",
+      "name": "德冠新材",
+      "primary_theme": "功能薄膜",
+      "business_realization": "待核验",
+      "fact_summary": "BOPP薄膜",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301171.SZ",
+      "name": "易点天下",
+      "primary_theme": "AI应用",
+      "business_realization": "待核验",
+      "fact_summary": "出海营销",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300058.SZ",
+      "name": "蓝色光标",
+      "primary_theme": "AI应用",
+      "business_realization": "待核验",
+      "fact_summary": "数字营销",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688361.SH",
+      "name": "中科飞测",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "检测量测设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688146.SH",
+      "name": "中船特气",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "电子特气",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000975.SZ",
+      "name": "山金国际",
+      "primary_theme": "贵金属",
+      "business_realization": "待核验",
+      "fact_summary": "原标签黄金；黄金开采",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "605599.SH",
+      "name": "菜百股份",
+      "primary_theme": "黄金珠宝",
+      "business_realization": "待核验",
+      "fact_summary": "黄金珠宝零售",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002490.SZ",
+      "name": "山东墨龙",
+      "primary_theme": "油气设备",
+      "business_realization": "待核验",
+      "fact_summary": "油气装备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600227.SH",
+      "name": "赤天化",
+      "primary_theme": "煤化工",
+      "business_realization": "待核验",
+      "fact_summary": "甲醇及尿素",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688432.SH",
+      "name": "有研硅",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "硅片；重组为催化",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000938.SZ",
+      "name": "紫光股份",
+      "primary_theme": "交换机",
+      "business_realization": "待核验",
+      "fact_summary": "数据中心交换机",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301358.SZ",
+      "name": "湖南裕能",
+      "primary_theme": "锂电池",
+      "business_realization": "待核验",
+      "fact_summary": "原标签磷酸铁锂；正极材料",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000969.SZ",
+      "name": "安泰科技",
+      "primary_theme": "可控核聚变",
+      "business_realization": "待核验",
+      "fact_summary": "涉钨部件",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688082.SH",
+      "name": "盛美上海",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "清洗设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688012.SH",
+      "name": "中微公司",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "刻蚀设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300209.SZ",
+      "name": "行云科技",
+      "primary_theme": "算力租赁",
+      "business_realization": "待核验",
+      "fact_summary": "用户指定算力租赁",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688147.SH",
+      "name": "微导纳米",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "薄膜沉积",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688331.SH",
+      "name": "荣昌生物",
+      "primary_theme": "创新药",
+      "business_realization": "待核验",
+      "fact_summary": "生物创新药；BD为催化",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688048.SH",
+      "name": "长光华芯",
+      "primary_theme": "光芯片",
+      "business_realization": "待核验",
+      "fact_summary": "激光及光通信芯片",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300765.SZ",
+      "name": "石药创新",
+      "primary_theme": "创新药",
+      "business_realization": "待核验",
+      "fact_summary": "生物创新药；BD为催化",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300394.SZ",
+      "name": "天孚通信",
+      "primary_theme": "CPO",
+      "business_realization": "待核验",
+      "fact_summary": "光器件及光引擎",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688521.SH",
+      "name": "芯原股份",
+      "primary_theme": "国产算力",
+      "business_realization": "待核验",
+      "fact_summary": "定制芯片/IP；用户指定国产算力",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688525.SH",
+      "name": "佰维存储",
+      "primary_theme": "存储芯片",
+      "business_realization": "待核验",
+      "fact_summary": "模组及封测；非存储原厂",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603650.SH",
+      "name": "彤程新材",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "光刻胶",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000962.SZ",
+      "name": "东方钽业",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "钽靶材及高纯材料",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300054.SZ",
+      "name": "鼎龙股份",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "CMP抛光材料",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688530.SH",
+      "name": "欧莱新材",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "溅射靶材",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688123.SH",
+      "name": "聚辰股份",
+      "primary_theme": "存储芯片",
+      "business_realization": "待核验",
+      "fact_summary": "存储芯片；沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002008.SZ",
+      "name": "大族激光",
+      "primary_theme": "PCB设备",
+      "business_realization": "待核验",
+      "fact_summary": "PCB加工设备；沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688019.SH",
+      "name": "安集科技",
+      "primary_theme": "半导体材料",
+      "business_realization": "已有收入（本轮已查官网摘要）",
+      "fact_summary": "CMP抛光液等；2026H1营业收入15.26亿元、扣非净利润4.26亿元，官网半年报摘要",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000725.SZ",
+      "name": "京东方A",
+      "primary_theme": "玻璃基板",
+      "business_realization": "关联待核验",
+      "fact_summary": "用户指定交易归类；不将面板与封装基板业务等同",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600105.SH",
+      "name": "永鼎股份",
+      "primary_theme": "光芯片",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核；相关资产与收入归属待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600378.SH",
+      "name": "昊华科技",
+      "primary_theme": "氟化工",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300604.SZ",
+      "name": "长川科技",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300953.SZ",
+      "name": "震裕科技",
+      "primary_theme": "人形机器人",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核；相关业务贡献待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300666.SZ",
+      "name": "江丰电子",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300566.SZ",
+      "name": "激智科技",
+      "primary_theme": "功能薄膜",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300576.SZ",
+      "name": "容大感光",
+      "primary_theme": "PCB材料",
+      "business_realization": "待核验",
+      "fact_summary": "用户确认；油墨及光刻胶布局放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300390.SZ",
+      "name": "天华新能",
+      "primary_theme": "稀有",
+      "business_realization": "待核验",
+      "fact_summary": "原标签锂；锂盐业务，沿用YX06历史复核再按金属新规则归并",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002176.SZ",
+      "name": "江特电机",
+      "primary_theme": "稀有",
+      "business_realization": "待核验",
+      "fact_summary": "原标签锂；沿用YX06历史复核再按金属新规则归并",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600869.SH",
+      "name": "远东股份",
+      "primary_theme": "数据中心供电",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核；相关收入贡献待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000657.SZ",
+      "name": "中钨高新",
+      "primary_theme": "稀有",
+      "business_realization": "待核验",
+      "fact_summary": "原标签钨；沿用YX06历史复核再按金属新规则归并",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603171.SH",
+      "name": "税友股份",
+      "primary_theme": "AI应用",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603533.SH",
+      "name": "掌阅科技",
+      "primary_theme": "AI应用",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX06历史复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301382.SZ",
+      "name": "蜂助手",
+      "primary_theme": "算力租赁",
+      "business_realization": "待核验",
+      "fact_summary": "历史检索记录末尾截断；本轮归类补全，原始阶段证据未恢复",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688234.SH",
+      "name": "天岳先进",
+      "primary_theme": "碳化硅",
+      "business_realization": "待核验",
+      "fact_summary": "本轮按碳化硅衬底基础归类补齐；YX06完整历史行未恢复，不冒充用户逐项确认",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603773.SH",
+      "name": "沃格光电",
+      "primary_theme": "玻璃基板",
+      "business_realization": "关联待核验",
+      "fact_summary": "用户确认标签；具体业务兑现另核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300236.SZ",
+      "name": "上海新阳",
+      "primary_theme": "半导体材料",
+      "business_realization": "待核验",
+      "fact_summary": "半导体化学材料；本轮按现有材料口径整理",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301123.SZ",
+      "name": "奕东电子",
+      "primary_theme": "高速连接器",
+      "business_realization": "待核验",
+      "fact_summary": "与鼎通科技统一；具体产品放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688668.SH",
+      "name": "鼎通科技",
+      "primary_theme": "高速连接器",
+      "business_realization": "待核验",
+      "fact_summary": "与奕东电子统一",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688630.SH",
+      "name": "芯碁微装",
+      "primary_theme": "PCB设备",
+      "business_realization": "待核验",
+      "fact_summary": "与大族激光统一",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603290.SH",
+      "name": "斯达半导",
+      "primary_theme": "功率半导体",
+      "business_realization": "待核验",
+      "fact_summary": "IGBT作为具体产品说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002916.SZ",
+      "name": "深南电路",
+      "primary_theme": "PCB",
+      "business_realization": "待核验",
+      "fact_summary": "保留PCB主标签；兼有IC载板业务不自动改变主线",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301319.SZ",
+      "name": "唯特偶",
+      "primary_theme": "PCB材料",
+      "business_realization": "待核验",
+      "fact_summary": "焊接材料，与容大感光归入同一大类",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002552.SZ",
+      "name": "宝鼎科技",
+      "primary_theme": "覆铜板",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX07复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688449.SH",
+      "name": "联芸科技",
+      "primary_theme": "存储芯片",
+      "business_realization": "待核验",
+      "fact_summary": "存储主控，非存储晶圆原厂",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000021.SZ",
+      "name": "深科技",
+      "primary_theme": "存储芯片",
+      "business_realization": "待核验",
+      "fact_summary": "封测、模组角色放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688585.SH",
+      "name": "上纬新材",
+      "primary_theme": "机器人",
+      "business_realization": "相关收入待核验",
+      "fact_summary": "用户确认；控制权变更线索，不代表已形成机器人收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603629.SH",
+      "name": "利通电子",
+      "primary_theme": "算力租赁",
+      "business_realization": "待核验",
+      "fact_summary": "原批来源曾截断，不标交叉核验通过",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688981.SH",
+      "name": "中芯国际",
+      "primary_theme": "晶圆代工",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX07复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002371.SZ",
+      "name": "北方华创",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX07复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600487.SH",
+      "name": "亨通光电",
+      "primary_theme": "光纤光缆",
+      "business_realization": "待核验",
+      "fact_summary": "用户修订，与长飞光纤统一",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300567.SZ",
+      "name": "精测电子",
+      "primary_theme": "半导体设备",
+      "business_realization": "待核验",
+      "fact_summary": "检测设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002829.SZ",
+      "name": "星网宇达",
+      "primary_theme": "卫星通信",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX07复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002384.SZ",
+      "name": "东山精密",
+      "primary_theme": "光模块",
+      "business_realization": "相关收入待核验",
+      "fact_summary": "用户按交易催化确认；PCB保留业务背景",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600353.SH",
+      "name": "旭光电子",
+      "primary_theme": "可控核聚变",
+      "business_realization": "相关贡献待核验",
+      "fact_summary": "业务贡献与交易题材分开记录",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002156.SZ",
+      "name": "通富微电",
+      "primary_theme": "先进封装",
+      "business_realization": "待核验",
+      "fact_summary": "沿用YX07复核",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600160.SH",
+      "name": "巨化股份",
+      "primary_theme": "氟化工",
+      "business_realization": "已有收入（据批次材料）",
+      "fact_summary": "制冷剂、含氟材料；财务数字未独立核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688551.SH",
+      "name": "科威尔",
+      "primary_theme": "数据中心供电",
+      "business_realization": "小批量/客户导入（据材料）",
+      "fact_summary": "AI电源测试配套；不等于电源制造",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688308.SH",
+      "name": "欧科亿",
+      "primary_theme": "PCB设备",
+      "business_realization": "收购推进，收入归属待核验",
+      "fact_summary": "用户确认；PCB钻针标的收入不直接计为上市公司收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000547.SZ",
+      "name": "航天发展",
+      "primary_theme": "商业航天",
+      "business_realization": "低收入贡献（据材料）",
+      "fact_summary": "用户确认；本批称占比不足1%，未独立核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688017.SH",
+      "name": "绿的谐波",
+      "primary_theme": "人形机器人",
+      "business_realization": "量产交付（据材料），分项收入待核验",
+      "fact_summary": "减速器、关节模组；工业机器人收入不等于人形机器人收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "601689.SH",
+      "name": "拓普集团",
+      "primary_theme": "人形机器人",
+      "business_realization": "小批量（据材料），相关利润待核验",
+      "fact_summary": "执行器等；液冷线索放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688700.SH",
+      "name": "东威科技",
+      "primary_theme": "PCB设备",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "电镀设备；新业务阶段分别记录",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002655.SZ",
+      "name": "共达电声",
+      "primary_theme": "消费电子",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "电声元器件；AI语音、玩具交易主导性待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301611.SZ",
+      "name": "珂玛科技",
+      "primary_theme": "半导体设备",
+      "business_realization": "量产/新品小批量（据材料）",
+      "fact_summary": "设备用陶瓷零部件，非整机",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688037.SH",
+      "name": "芯源微",
+      "primary_theme": "半导体设备",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "涂胶显影、清洗、键合设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603688.SH",
+      "name": "石英股份",
+      "primary_theme": "半导体材料",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "高纯石英；光纤、Q布放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301396.SZ",
+      "name": "宏景科技",
+      "primary_theme": "算力租赁",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "运营与设备集成收入分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300454.SZ",
+      "name": "深信服",
+      "primary_theme": "网络安全",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "云计算及AI基础设施保留说明；当前主线未独立确认",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688305.SH",
+      "name": "科德数控",
+      "primary_theme": "数控机床",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "五轴机床、数控系统",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301603.SZ",
+      "name": "乔锋智能",
+      "primary_theme": "数控机床",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "液冷零部件加工设备不等于液冷产品供应商",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300503.SZ",
+      "name": "昊志机电",
+      "primary_theme": "PCB设备",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "PCB主轴；机器人低收入贡献不能单独排除题材",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688766.SH",
+      "name": "普冉股份",
+      "primary_theme": "存储芯片",
+      "business_realization": "已有收入；收购阶段待核验",
+      "fact_summary": "标的SHM收入不可直接归入普冉合并收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603986.SH",
+      "name": "兆易创新",
+      "primary_theme": "存储芯片",
+      "business_realization": "已有产品，收入待核验",
+      "fact_summary": "官网产品支持存储归类",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600584.SH",
+      "name": "长电科技",
+      "primary_theme": "先进封装",
+      "business_realization": "已有收入/产能建设（据材料）",
+      "fact_summary": "与通富微电统一",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688110.SH",
+      "name": "东芯股份",
+      "primary_theme": "存储芯片",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "参股GPU不因未并表而直接排除交易影响",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000811.SZ",
+      "name": "冰轮环境",
+      "primary_theme": "液冷",
+      "business_realization": "相关收入待核验",
+      "fact_summary": "一次侧冷源、换热设备，不是服务器制造",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300863.SZ",
+      "name": "卡倍亿",
+      "primary_theme": "高速铜缆",
+      "business_realization": "产能建设/客户导入（据材料）",
+      "fact_summary": "铜缆与连接器区分，相关收入待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603993.SH",
+      "name": "洛阳钼业",
+      "primary_theme": "有色",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签铜；铜钴合计毛利不等于铜单项贡献",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000983.SZ",
+      "name": "山西焦煤",
+      "primary_theme": "焦煤",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "复产和价格回暖放催化",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300346.SZ",
+      "name": "南大光电",
+      "primary_theme": "半导体材料",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "电子特气、前驱体、光刻胶分别记录兑现",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002980.SZ",
+      "name": "华盛昌",
+      "primary_theme": "光模块",
+      "business_realization": "收购推进及并表待核验",
+      "fact_summary": "光模块/光芯片测试配套，不是光模块制造商",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603127.SH",
+      "name": "昭衍新药",
+      "primary_theme": "CRO",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "药物非临床评价",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300497.SZ",
+      "name": "富祥股份",
+      "primary_theme": "锂电池",
+      "business_realization": "相关收入贡献待核验",
+      "fact_summary": "电解液添加剂；整体利润不能直接归入该业务",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002428.SZ",
+      "name": "云南锗业",
+      "primary_theme": "稀有",
+      "business_realization": "已有锗业务收入（据材料）",
+      "fact_summary": "原标签锗；磷化铟保留关联说明，贡献待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002192.SZ",
+      "name": "融捷股份",
+      "primary_theme": "稀有",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签锂；锂矿、锂盐及负极项目分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002015.SZ",
+      "name": "协鑫能科",
+      "primary_theme": "算力租赁",
+      "business_realization": "项目投运；相关收入待核验",
+      "fact_summary": "投运不等于显著利润兑现",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002202.SZ",
+      "name": "金风科技",
+      "primary_theme": "风电整机",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "风机制造与风电场运营分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688295.SH",
+      "name": "中复神鹰",
+      "primary_theme": "碳纤维",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "T1200级制备规模不等于销售规模",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002272.SZ",
+      "name": "川润股份",
+      "primary_theme": "液冷",
+      "business_realization": "相关交付及收入待核验",
+      "fact_summary": "沿用当前交易归类",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002463.SZ",
+      "name": "沪电股份",
+      "primary_theme": "PCB",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "现有业务与扩产分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301292.SZ",
+      "name": "海科新源",
+      "primary_theme": "锂电池",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "电解液溶剂，不是电解液生产商",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600397.SH",
+      "name": "江钨装备",
+      "primary_theme": "磁选装备",
+      "business_realization": "置入及收购阶段待核验",
+      "fact_summary": "保留已选主线；钨加工收购线索单列，不因公司名称直接改为稀有",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603306.SH",
+      "name": "华懋科技",
+      "primary_theme": "半导体材料",
+      "business_realization": "参股/合资，收入归属待核验",
+      "fact_summary": "光刻胶布局；徐州博康收入不能直接计作上市公司收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600531.SH",
+      "name": "豫光金铅",
+      "primary_theme": "有色",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签铅锌；材料对锌支持不足，铅/白银具体交易驱动待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688025.SH",
+      "name": "杰普特",
+      "primary_theme": "激光器",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "基础归类；近期催化待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688167.SH",
+      "name": "炬光科技",
+      "primary_theme": "CPO",
+      "business_realization": "放量前期，相关收入待核验",
+      "fact_summary": "微透镜、阵列配套",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688313.SH",
+      "name": "仕佳光子",
+      "primary_theme": "光芯片",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "AWG、CW分开；芯片与器件合计收入不等于纯芯片收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600879.SH",
+      "name": "航天电子",
+      "primary_theme": "商业航天",
+      "business_realization": "已有配套；分项收入待核验",
+      "fact_summary": "不能把全部航天业务计入商业航天",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300757.SZ",
+      "name": "罗博特科",
+      "primary_theme": "CPO",
+      "business_realization": "已有设备订单；CPO份额待核验",
+      "fact_summary": "光耦合、封装设备；多路线订单不能全计作CPO",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600268.SH",
+      "name": "国电南自",
+      "primary_theme": "虚拟电厂",
+      "business_realization": "试点/试运行；当前阶段待核验",
+      "fact_summary": "2023年进度不能代表2026年现状",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300102.SZ",
+      "name": "乾照光电",
+      "primary_theme": "商业航天",
+      "business_realization": "批量供应（据材料）",
+      "fact_summary": "卫星太阳能电池外延片；收入占比待核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300857.SZ",
+      "name": "协创数据",
+      "primary_theme": "算力租赁",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "整体净利润与算力租赁贡献分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301486.SZ",
+      "name": "致尚科技",
+      "primary_theme": "CPO",
+      "business_realization": "MPO已交付；CPO相关收入待核验",
+      "fact_summary": "MT插芯、连接器；全部MPO收入不等于CPO收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688498.SH",
+      "name": "源杰科技",
+      "primary_theme": "光芯片",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "数据中心产品放量，CPO用途单列",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301511.SZ",
+      "name": "德福科技",
+      "primary_theme": "铜箔",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "HVLP各代际量产、验证分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301306.SZ",
+      "name": "西测测试",
+      "primary_theme": "商业航天",
+      "business_realization": "投入阶段；相关订单收入待核验",
+      "fact_summary": "检测配套",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300620.SZ",
+      "name": "光库科技",
+      "primary_theme": "CPO",
+      "business_realization": "FAU放量；CPO相关收入待核验",
+      "fact_summary": "薄膜铌酸锂开发能力不等于收入兑现",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688227.SH",
+      "name": "品高股份",
+      "primary_theme": "算力租赁",
+      "business_realization": "已签合同；履约收入待核验",
+      "fact_summary": "云计算收入不等于算力租赁收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600498.SH",
+      "name": "烽火通信",
+      "primary_theme": "光纤光缆",
+      "business_realization": "已有业务；CPO仅技术储备线索",
+      "fact_summary": "用户确认保留光纤光缆",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "601869.SH",
+      "name": "长飞光纤",
+      "primary_theme": "光纤光缆",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "空芯光纤贡献单列；预告应更新实际报告",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688535.SH",
+      "name": "华海诚科",
+      "primary_theme": "半导体材料",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "塑封料、先进封装材料及并表贡献分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "605358.SH",
+      "name": "立昂微",
+      "primary_theme": "半导体材料",
+      "business_realization": "已有硅片业务；分项贡献待核验",
+      "fact_summary": "功率及化合物半导体芯片放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000070.SZ",
+      "name": "特发信息",
+      "primary_theme": "光纤光缆",
+      "business_realization": "已有线缆业务；当前催化待核验",
+      "fact_summary": "官网支持基础归类",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301005.SZ",
+      "name": "超捷股份",
+      "primary_theme": "商业航天",
+      "business_realization": "低收入贡献（据公开答复转载）",
+      "fact_summary": "商业火箭箭体结构件，不写成尚无收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688353.SH",
+      "name": "华盛锂电",
+      "primary_theme": "锂电池",
+      "business_realization": "已有添加剂业务",
+      "fact_summary": "VC、FEC；官网产品支持归类",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603799.SH",
+      "name": "华友钴业",
+      "primary_theme": "稀有",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签钴；镍钴锂一体化，按本项目稀有口径归类",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002245.SZ",
+      "name": "蔚蓝锂芯",
+      "primary_theme": "数据中心供电",
+      "business_realization": "BBU放量前期，相关收入待核验",
+      "fact_summary": "传统圆柱锂电收入不能计作BBU收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688041.SH",
+      "name": "海光信息",
+      "primary_theme": "国产算力",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "CPU、DCU和软件生态",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300502.SZ",
+      "name": "新易盛",
+      "primary_theme": "光模块",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "800G、1.6T代际放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002851.SZ",
+      "name": "麦格米特",
+      "primary_theme": "数据中心供电",
+      "business_realization": "批量交付/收入开始兑现（据材料）",
+      "fact_summary": "下一代产品预期与当前收入分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300308.SZ",
+      "name": "中际旭创",
+      "primary_theme": "光模块",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "规模交付；订单覆盖期未独立核验",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603083.SH",
+      "name": "剑桥科技",
+      "primary_theme": "光模块",
+      "business_realization": "已有收入/1.6T爬坡（据材料）",
+      "fact_summary": "发货目标不等于已交付",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301308.SZ",
+      "name": "江波龙",
+      "primary_theme": "存储芯片",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "主控、模组、固件、封测，不冒充存储晶圆原厂",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "600096.SH",
+      "name": "云天化",
+      "primary_theme": "磷化工",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "参股矿山资源不等于全额权益资源",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002466.SZ",
+      "name": "天齐锂业",
+      "primary_theme": "稀有",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签锂；锂矿锂盐，固态电池材料另记",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002895.SZ",
+      "name": "川恒股份",
+      "primary_theme": "磷化工",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "磷矿、饲料级磷酸盐、磷酸铁分开",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300207.SZ",
+      "name": "欣旺达",
+      "primary_theme": "锂电池",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "动力、储能、消费；AIDC订单增长不等于收入增长",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "605196.SH",
+      "name": "华通线缆",
+      "primary_theme": "电线电缆",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "海外产能及铝业放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "000960.SZ",
+      "name": "锡业股份",
+      "primary_theme": "有色",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签锡；锌铜铟为其他业务",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002600.SZ",
+      "name": "领益智造",
+      "primary_theme": "折叠屏",
+      "business_realization": "量产爬坡，相关收入待核验",
+      "fact_summary": "用户确认；液冷及机器人保留说明，不再拆分主标签",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603516.SH",
+      "name": "淳中科技",
+      "primary_theme": "液冷",
+      "business_realization": "当前相关收入待核验",
+      "fact_summary": "液冷老化测试配套；旧公告尚无收入不能代表当前",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603179.SH",
+      "name": "新泉股份",
+      "primary_theme": "汽车零部件",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "内外饰、座椅；机器人业务阶段另记",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603019.SH",
+      "name": "中科曙光",
+      "primary_theme": "国产算力",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "服务器、集群、液冷及募投方向放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300442.SZ",
+      "name": "润泽科技",
+      "primary_theme": "算力租赁",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "IDC机柜服务与算力服务分开，规划不等于投运",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "603876.SH",
+      "name": "鼎胜新材",
+      "primary_theme": "电池铝箔",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "新增产能与钠电应用作为催化",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002896.SZ",
+      "name": "中大力德",
+      "primary_theme": "人形机器人",
+      "business_realization": "相关收入待核验",
+      "fact_summary": "减速器量产不等于人形机器人量产收入",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002436.SZ",
+      "name": "兴森科技",
+      "primary_theme": "IC载板",
+      "business_realization": "已有载板业务；ABF认证/爬坡（据材料）",
+      "fact_summary": "用户要求独立于PCB；传统PCB保留业务背景",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "300065.SZ",
+      "name": "海兰信",
+      "primary_theme": "海底数据中心",
+      "business_realization": "部分项目运行；相关收入待核验",
+      "fact_summary": "UDC建设运营不自动等于算力租赁",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "601899.SH",
+      "name": "紫金矿业",
+      "primary_theme": "有色",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "原标签铜；保留此前铜主线，黄金锂放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688072.SH",
+      "name": "拓荆科技",
+      "primary_theme": "半导体设备",
+      "business_realization": "量产供货（据材料）",
+      "fact_summary": "沉积及混合键合设备",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301377.SZ",
+      "name": "鼎泰高科",
+      "primary_theme": "PCB设备",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "钻针铣刀是加工耗材；与欧科亿统一项目标签",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "301232.SZ",
+      "name": "飞沃科技",
+      "primary_theme": "商业航天",
+      "business_realization": "相关收入待核验",
+      "fact_summary": "用户本轮指定；风电紧固件已有业务不代表航天已兑现",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "688183.SH",
+      "name": "生益电子",
+      "primary_theme": "PCB",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "AI服务器项目量产；旧收入占比保留期间",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    },
+    {
+      "ts_code": "002407.SZ",
+      "name": "多氟多",
+      "primary_theme": "锂电池",
+      "business_realization": "已有收入（据材料）",
+      "fact_summary": "六氟磷酸锂；电子级氢氟酸放说明",
+      "classification_status": "user_confirmed",
+      "business_verification_status": "not_independently_verified_by_this_import",
+      "effective_from": null
+    }
+  ]
+}
