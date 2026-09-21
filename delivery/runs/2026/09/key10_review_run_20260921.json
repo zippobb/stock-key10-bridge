@@ -6,10 +6,10 @@
   "owner_token": "primary-20260921-1789987159050",
   "generation": 1,
   "started_at": "2026-09-21T10:39:19.050Z",
-  "heartbeat_at": "2026-09-21T10:39:19.050Z",
-  "lease_expires_at": "2026-09-21T10:42:19.050Z",
+  "heartbeat_at": "2026-09-21T10:40:23.298Z",
+  "lease_expires_at": "2026-09-21T10:43:23.298Z",
   "hard_deadline": "2026-09-21T18:49:00+08:00",
-  "completed_stage": "input_hash_verified",
+  "completed_stage": "stage_B_scoring_complete",
   "theme_classification": {
     "classification_version": "v2.0",
     "rules_version": "v1.2",
