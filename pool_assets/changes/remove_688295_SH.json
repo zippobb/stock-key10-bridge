@@ -1,0 +1,21 @@
+{
+  "model_version": "V2.0",
+  "operation": "remove_from_official_observation_pool",
+  "ts_code": "688295.SH",
+  "name": "中复神鹰",
+  "authorization": "用户明确要求删除中复神鹰",
+  "status": "pending_local_codex_ecs_import",
+  "verified_baseline_path": "pool_assets/official_pool_20260919.json",
+  "verified_baseline_blob_sha": "c8da38cc0470ebcb3ef93c99bd8c0af1365db26f",
+  "scope": "观察池成员删除，不建立全市场黑名单，不回写历史结果",
+  "deployment_instructions": [
+    "在/opt/stock-automation/scanner读取PROJECT_STATE.md对应的真实生产调用链，定位strategy_v2.json的universe.observation_pool_path。",
+    "备份当前观察池CSV和strategy_v2.json并记录SHA256；按ts_code仅删除688295.SH，若已不存在按幂等处理。",
+    "expected_observation_pool_count更新为删除后实际唯一代码数量，保留其他现有增删变更。",
+    "检查题材加载器对观察池与映射集合的校验，按现有契约同步活动映射或活动成员过滤；不覆盖历史229只分类资产。",
+    "隔离验证代码唯一、数量一致、中复神鹰不在池内，其他成员和评分/排序规则不变；通过后原子部署并回读。",
+    "不启动日更发布、不改timer和历史结果；失败恢复备份并校验哈希。",
+    "返回实际修改文件、前后数量、哈希、备份目录和验证证据。"
+  ],
+  "effective_at": null
+}
