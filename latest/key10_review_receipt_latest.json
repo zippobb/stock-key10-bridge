@@ -14,9 +14,9 @@
   "retryable": false,
   "missing_items": [],
   "result_json_path": "review/2026/09/key10_review_20260921.json",
-  "result_json_sha256": "5504aeca7ebdd3536dbfeb497c50300fca37aaa5b38f559cf48198e1b7679f41",
+  "result_json_sha256": "43cd86ee49deb168156551c50441d6195d72c21215381dee7055c7b9b0563e97",
   "text_report_path": "review/2026/09/key10_review_20260921.md",
-  "text_report_sha256": "334274d371316b7a518a6e157db9fdcc85e70587a909d94989cc1f56e2405141",
+  "text_report_sha256": "ea3a6049d4f76e91434245a95922dd5a544896b52faebbba0170f8dc17150ba2",
   "delivery_mode": "text",
   "text_delivery_status": "persisted_and_verified",
   "png_path": null,
@@ -32,5 +32,6 @@
   "visible_completion": "pending",
   "owner_token": "primary-20260921-1789987159050",
   "generation": 1,
-  "on_time_delivery": true
+  "on_time_delivery": true,
+  "theme_pending_normalized": true
 }
