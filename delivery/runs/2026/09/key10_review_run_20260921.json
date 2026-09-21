@@ -3,11 +3,11 @@
   "role": "primary",
   "attempt_no": 0,
   "status": "completed",
-  "owner_token": "primary-20260921-1789987316006",
-  "generation": 2,
+  "owner_token": "primary-20260921-correction-1789987409842",
+  "generation": 3,
   "started_at": "2026-09-21T10:39:19.050Z",
-  "heartbeat_at": "2026-09-21T10:41:56.006Z",
-  "lease_expires_at": "2026-09-21T10:41:56.006Z",
+  "heartbeat_at": "2026-09-21T10:43:29.842Z",
+  "lease_expires_at": "2026-09-21T10:43:29.842Z",
   "hard_deadline": "2026-09-21T18:49:00+08:00",
   "completed_stage": "delivery_ready",
   "theme_classification": {
@@ -16,14 +16,15 @@
     "mapping_blob_sha": "fafa071ae49e54e34e32a6f2f7313caf5e797fd8",
     "rules_blob_sha": "207de151e005fdde436f8dd7d8e43c6374a4b766"
   },
-  "finished_at": "2026-09-21T10:41:56.006Z",
+  "finished_at": "2026-09-21T10:43:29.842Z",
   "final_delivery_gate": "ready",
   "lock_released": true,
   "visible_completion": "pending",
   "previous_run": {
-    "owner_token": "primary-20260921-1789987159050",
-    "generation": 1,
-    "completed_stage": "stage_B_scoring_complete",
-    "takeover_reason": "lease_expired_after_dual_receipt_readback"
-  }
+    "owner_token": "primary-20260921-1789987316006",
+    "generation": 2,
+    "completed_stage": "delivery_ready",
+    "takeover_reason": "quality_correction_before_visible_delivery"
+  },
+  "post_delivery_correction": "normalize_pending_theme_classification_without_score_or_rank_change"
 }
