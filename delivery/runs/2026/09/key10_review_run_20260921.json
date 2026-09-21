@@ -1,0 +1,19 @@
+{
+  "trade_date": "20260921",
+  "role": "primary",
+  "attempt_no": 0,
+  "status": "running",
+  "owner_token": "primary-20260921-1789987159050",
+  "generation": 1,
+  "started_at": "2026-09-21T10:39:19.050Z",
+  "heartbeat_at": "2026-09-21T10:39:19.050Z",
+  "lease_expires_at": "2026-09-21T10:42:19.050Z",
+  "hard_deadline": "2026-09-21T18:49:00+08:00",
+  "completed_stage": "input_hash_verified",
+  "theme_classification": {
+    "classification_version": "v2.0",
+    "rules_version": "v1.2",
+    "mapping_blob_sha": "fafa071ae49e54e34e32a6f2f7313caf5e797fd8",
+    "rules_blob_sha": "207de151e005fdde436f8dd7d8e43c6374a4b766"
+  }
+}
