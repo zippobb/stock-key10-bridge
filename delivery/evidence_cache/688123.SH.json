@@ -1,0 +1,27 @@
+{
+  "ts_code": "688123.SH",
+  "name": "聚辰股份",
+  "source_url": "https://stockmc.xueqiu.com/202608/688123_20260815_6KMG.pdf",
+  "source_published_at": "2026-08-15",
+  "reporting_period": "2026H1",
+  "source_type": "issuer_report_pdf_mirror",
+  "locator": "摘要第3页主要财务数据",
+  "facts": [
+    "营业收入601921678.97元，同比增长4.71%；归母净利润525334159.47元，同比增长156.07%。",
+    "扣非净利润93471185.97元，同比下降47.30%；经营现金流86632330.18元，同比下降41.63%，归母增长不能直接视为主营改善。"
+  ],
+  "pending": [
+    "官方原始链接交叉核验",
+    "非经常损益成因",
+    "存储业务结构及新增公告",
+    "弹性五项依据"
+  ],
+  "last_verified_at": "2026-09-22T10:39:37.799Z",
+  "verification_status": "report_text_read_primary_host_confirmation_pending",
+  "review_complete": false,
+  "scores": null,
+  "cache_schema_version": "1.0",
+  "eligible_for_unconditional_score_reuse": false,
+  "baseline_status": "partial_requires_validation",
+  "raw_documents_persisted": false
+}

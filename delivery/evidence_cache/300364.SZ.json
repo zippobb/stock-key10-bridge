@@ -1,0 +1,40 @@
+{
+  "ts_code": "300364.SZ",
+  "name": "中文在线",
+  "source_url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12538177&stockid=300364",
+  "source_published_at": "2026-08-26",
+  "reporting_period": "2026H1",
+  "source_type": "issuer_report_republished_text",
+  "locator": "第二节主要财务指标；财务附注61",
+  "facts": [
+    "营业收入577936358.23元，同比增长3.85%；归母净利润-42995299.41元，仍亏损。",
+    "经营现金流126801681.39元。短剧及IP衍生品收入411260317.48元，不能等同全部AI收入。"
+  ],
+  "pending": [
+    "官方原始链接交叉核验",
+    "披露日至截止时间增量公告",
+    "AI业务兑现及题材催化",
+    "弹性五项依据"
+  ],
+  "last_verified_at": "2026-09-22T10:39:37.799Z",
+  "verification_status": "report_text_read_primary_host_confirmation_pending",
+  "review_complete": false,
+  "scores": null,
+  "incremental_evidence": [
+    {
+      "source_url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12579284&stockid=300364",
+      "source_published_at": "2026-09-01",
+      "publication_date_precision": "day",
+      "source_type": "issuer_announcement_republished_text",
+      "facts": [
+        "股东本次质押851万股，占其所持股份9.76%、公司总股本1.17%。",
+        "公告所载累计质押3940万股，占其所持股份45.18%、公司总股本5.41%；公告日风险陈述不能等同截止日持续无风险保证。"
+      ],
+      "last_verified_at": "2026-09-22T10:44:44.539Z"
+    }
+  ],
+  "cache_schema_version": "1.0",
+  "eligible_for_unconditional_score_reuse": false,
+  "baseline_status": "partial_requires_validation",
+  "raw_documents_persisted": false
+}

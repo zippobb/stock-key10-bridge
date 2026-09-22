@@ -3,6 +3,7 @@
   "batch_no": 1,
   "fully_reviewed_candidates": 0,
   "scoring_complete": false,
+  "partial_evidence_candidates": 4,
   "records": [
     {
       "ts_code": "300364.SZ",
@@ -25,7 +26,20 @@
       "last_verified_at": "2026-09-22T10:39:37.799Z",
       "verification_status": "report_text_read_primary_host_confirmation_pending",
       "review_complete": false,
-      "scores": null
+      "scores": null,
+      "incremental_evidence": [
+        {
+          "source_url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12579284&stockid=300364",
+          "source_published_at": "2026-09-01",
+          "publication_date_precision": "day",
+          "source_type": "issuer_announcement_republished_text",
+          "facts": [
+            "股东本次质押851万股，占其所持股份9.76%、公司总股本1.17%。",
+            "公告所载累计质押3940万股，占其所持股份45.18%、公司总股本5.41%；公告日风险陈述不能等同截止日持续无风险保证。"
+          ],
+          "last_verified_at": "2026-09-22T10:44:44.539Z"
+        }
+      ]
     },
     {
       "ts_code": "688123.SH",
@@ -65,17 +79,55 @@
       "pending": [
         "官方原始链接交叉核验",
         "披露日至截止时间增量公告",
-        "弹性五项及预期差依据"
+        "弹性五项及预期差依据",
+        "2026-09-08员工持股计划草案与2026-09-16工商变更公告页面未提取到正文，须读取附件；不能依据标题认定利好"
       ],
       "last_verified_at": "2026-09-22T10:39:37.799Z",
+      "verification_status": "report_text_read_primary_host_confirmation_pending",
+      "review_complete": false,
+      "scores": null,
+      "unverified_source_candidates": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12588546&stockid=300454",
+          "publication_date": "2026-09-08",
+          "body_verified": false
+        },
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12606176&stockid=300454",
+          "publication_date": "2026-09-16",
+          "body_verified": false
+        }
+      ]
+    },
+    {
+      "ts_code": "300404.SZ",
+      "name": "博济医药",
+      "source_url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12545406&stockid=300404",
+      "source_published_at": "2026-08-27",
+      "publication_date_precision": "day",
+      "reporting_period": "2026H1",
+      "source_type": "issuer_report_republished_text",
+      "locator": "第二节主要财务指标",
+      "facts": [
+        "营业收入454140244.60元，同比增长25.64%；归母净利润37200513.01元，同比增长138.93%。",
+        "扣非净利润22391063.08元，同比增长86.77%；经营现金流3092309.70元，同比下降85.44%。"
+      ],
+      "pending": [
+        "官方原始链接交叉核验",
+        "业务结构与题材兑现",
+        "披露日至截止时间增量公告",
+        "弹性五项依据"
+      ],
+      "last_verified_at": "2026-09-22T10:44:44.539Z",
       "verification_status": "report_text_read_primary_host_confirmation_pending",
       "review_complete": false,
       "scores": null
     }
   ],
   "cache_audit": {
-    "cache_directory": "not_found",
+    "cache_directory_at_start": "not_found",
     "previous_result_company_url_coverage": "0/40",
     "old_scores_reused": false
-  }
+  },
+  "resume_from": "stage_B_primary_evidence_from_persisted_checkpoints"
 }

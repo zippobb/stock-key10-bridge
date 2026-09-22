@@ -1,0 +1,28 @@
+{
+  "ts_code": "300404.SZ",
+  "name": "博济医药",
+  "source_url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12545406&stockid=300404",
+  "source_published_at": "2026-08-27",
+  "publication_date_precision": "day",
+  "reporting_period": "2026H1",
+  "source_type": "issuer_report_republished_text",
+  "locator": "第二节主要财务指标",
+  "facts": [
+    "营业收入454140244.60元，同比增长25.64%；归母净利润37200513.01元，同比增长138.93%。",
+    "扣非净利润22391063.08元，同比增长86.77%；经营现金流3092309.70元，同比下降85.44%。"
+  ],
+  "pending": [
+    "官方原始链接交叉核验",
+    "业务结构与题材兑现",
+    "披露日至截止时间增量公告",
+    "弹性五项依据"
+  ],
+  "last_verified_at": "2026-09-22T10:44:44.539Z",
+  "verification_status": "report_text_read_primary_host_confirmation_pending",
+  "review_complete": false,
+  "scores": null,
+  "cache_schema_version": "1.0",
+  "eligible_for_unconditional_score_reuse": false,
+  "baseline_status": "partial_requires_validation",
+  "raw_documents_persisted": false
+}
