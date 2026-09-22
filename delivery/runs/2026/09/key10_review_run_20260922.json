@@ -7,10 +7,10 @@
   "owner_token": "primary-20260922-1790073432848",
   "generation": 1,
   "started_at": "2026-09-22T10:37:12.848Z",
-  "heartbeat_at": "2026-09-22T10:38:31.997Z",
-  "lease_expires_at": "2026-09-22T10:41:31.997Z",
+  "heartbeat_at": "2026-09-22T10:39:38.831Z",
+  "lease_expires_at": "2026-09-22T10:42:38.831Z",
   "hard_deadline": "2026-09-22T10:49:00Z",
-  "completed_stage": "stage_A_candidate_table",
+  "completed_stage": "stage_B_batch_1_partial",
   "failure_stage": null,
   "resume_from": "stage_A_candidate_table"
 }
