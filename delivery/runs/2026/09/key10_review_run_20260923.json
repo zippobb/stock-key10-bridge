@@ -3,14 +3,17 @@
   "trade_date": "20260923",
   "role": "primary",
   "attempt_no": 0,
-  "status": "running",
+  "status": "failed",
   "owner_token": "primary-20260923-1790159833301",
   "generation": 1,
   "started_at": "2026-09-23T10:37:13.301Z",
-  "heartbeat_at": "2026-09-23T10:38:21.720Z",
-  "lease_expires_at": "2026-09-23T10:41:21.720Z",
+  "heartbeat_at": "2026-09-23T10:38:25.793Z",
+  "lease_expires_at": "2026-09-23T10:38:25.793Z",
   "hard_deadline": "2026-09-23T10:49:00Z",
   "completed_stage": "stage_A_candidate_table",
-  "failure_stage": null,
-  "resume_from": "rule_compatibility_check"
+  "failure_stage": "current_rule_contract_mismatch",
+  "resume_from": "align_simplified_contract_then_revalidate_input",
+  "lock_status": "released",
+  "released_at": "2026-09-23T10:38:25.793Z",
+  "retryable": false
 }
