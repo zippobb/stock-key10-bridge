@@ -3,14 +3,17 @@
   "trade_date": "20260924",
   "role": "primary",
   "attempt_no": 0,
-  "status": "running",
+  "status": "failed",
   "owner_token": "primary-20260924-1790246017956",
   "generation": 1,
   "started_at": "2026-09-24T10:33:37.956Z",
-  "heartbeat_at": "2026-09-24T10:34:36.800Z",
-  "lease_expires_at": "2026-09-24T10:37:36.800Z",
+  "heartbeat_at": "2026-09-24T10:34:40.642Z",
+  "lease_expires_at": "2026-09-24T10:34:40.642Z",
   "hard_deadline": "2026-09-24T10:49:00Z",
   "completed_stage": "stage_A_candidate_table",
-  "failure_stage": null,
-  "resume_from": "rule_compatibility_check"
+  "failure_stage": "current_rule_contract_mismatch",
+  "resume_from": "deploy_simplified_quant_theme_rsi_contract",
+  "lock_status": "released",
+  "released_at": "2026-09-24T10:34:40.642Z",
+  "retryable": false
 }

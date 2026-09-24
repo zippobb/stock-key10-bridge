@@ -1,23 +1,23 @@
 {
-  "run_date": "20260923",
-  "trade_date": "20260923",
-  "next_trade_date": "20260924",
+  "run_date": "20260924",
+  "trade_date": "20260924",
+  "next_trade_date": "20260928",
   "role": "primary",
   "attempt_no": 0,
   "status": "执行失败",
-  "started_at": "2026-09-23T10:37:13.301Z",
-  "finished_at": "2026-09-23T10:38:21.061Z",
-  "bundle_sha256": "d12f8cd1a4d2050e5939679c6d168d84df8f86b5a9f7c7b5446896daecb1aeb5",
+  "started_at": "2026-09-24T10:33:37.956Z",
+  "finished_at": "2026-09-24T10:34:36.135Z",
+  "bundle_sha256": "a43a528a7f31ab316f999cdd895bf26def518b99e067904131acc98827f807b4",
   "completed_stage": "stage_A_candidate_table",
   "failure_stage": "current_rule_contract_mismatch",
   "error_class": "rule_and_deployment_contract_mismatch",
-  "resume_from": "align_simplified_contract_then_revalidate_input",
+  "resume_from": "deploy_simplified_quant_theme_rsi_contract",
   "retryable": false,
   "retry_exhausted": false,
   "missing_items": [
-    "对话已同意仅量化评分、池内题材轮动和RSI时机；仓库工作流及本次任务仍要求七项主观终审，尚无统一的新评分/准入/交付契约",
-    "229/229题材标签已覆盖，但bundle的theme_stats为空、themes_source=none_available；没有完整池题材行情聚合及可比前日快照，不能用30+10候选代替",
-    "简化RSI独立标注规则与既有技术分去重尚未核定"
+    "仓库PROJECT_STATE、V2_REVIEW_WORKFLOW和当前任务仍执行旧七项主观终审，未同步用户确认的量化评分＋池内题材轮动＋RSI方案",
+    "股票池229/229已有题材标签，但当前bundle的theme_stats为空且themes_source=none_available，缺完整池题材行情聚合及前日可比快照",
+    "40只候选rsi14完整，但尚未固化RSI状态阈值、方向/背离规则以及与现有技术分的去重口径"
   ],
   "result_json_path": null,
   "result_json_sha256": null,
@@ -29,7 +29,7 @@
   "png_delivery_status": "not_required_text_mode",
   "final_delivery_gate": "blocked",
   "visible_completion": "pending",
-  "owner_token": "primary-20260923-1790159833301",
+  "owner_token": "primary-20260924-1790246017956",
   "generation": 1,
   "official_selected_count": null,
   "external_selected_count": null,
@@ -38,19 +38,22 @@
   "input_verification": {
     "raw_sha256_verified": true,
     "latest_archive_blob_match": true,
-    "source_commit": "5ba14b3129bf7520ae5fa2862350e8695d181198",
-    "blob_sha": "56f8124d7925a40496a29fd0e62d1c6ad996bbf7"
+    "blob_sha": "db1023d4ba7dad9af26d8a5945832ae55c70cbfa"
+  },
+  "quantitative_availability": {
+    "candidate_count": 40,
+    "rsi14_complete_count": 40
   },
   "theme_coverage": {
     "pool_count": 229,
     "mapped_pool_count": 229,
     "unmapped_pool_count": 0,
     "theme_stats_count": 0,
-    "scope": "229_user_pool_members_only"
+    "themes_source": "none_available"
   },
   "checkpoint_paths": [
-    "delivery/checkpoints/2026/09/20260923/stage_A_candidate_table.json",
-    "delivery/checkpoints/2026/09/20260923/rule_compatibility_check.json"
+    "delivery/checkpoints/2026/09/20260924/stage_A_candidate_table.json",
+    "delivery/checkpoints/2026/09/20260924/rule_compatibility_check.json"
   ],
   "lock_status": "released",
   "on_time_delivery": false
