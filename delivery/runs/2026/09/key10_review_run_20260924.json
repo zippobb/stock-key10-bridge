@@ -1,0 +1,16 @@
+{
+  "run_date": "20260924",
+  "trade_date": "20260924",
+  "role": "primary",
+  "attempt_no": 0,
+  "status": "running",
+  "owner_token": "primary-20260924-1790246017956",
+  "generation": 1,
+  "started_at": "2026-09-24T10:33:37.956Z",
+  "heartbeat_at": "2026-09-24T10:33:37.956Z",
+  "lease_expires_at": "2026-09-24T10:36:37.956Z",
+  "hard_deadline": "2026-09-24T10:49:00Z",
+  "completed_stage": "input_verified",
+  "failure_stage": null,
+  "resume_from": "rule_compatibility_check"
+}
