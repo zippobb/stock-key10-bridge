@@ -1,0 +1,21 @@
+{
+  "trade_date": "20260924",
+  "next_trade_date": "20260928",
+  "input_blob_sha": "db1023d4ba7dad9af26d8a5945832ae55c70cbfa",
+  "bundle_sha256": "a43a528a7f31ab316f999cdd895bf26def518b99e067904131acc98827f807b4",
+  "input_raw_bytes_verified": true,
+  "input_verification_method": "github_fetch_blob_stdin_file_stream_sha256",
+  "schema_version": "2.0.0",
+  "model_version": "V2.0",
+  "stage": "21:30_quantitative_review_payload",
+  "future_data_rows_used": 0,
+  "official_candidate_count": 30,
+  "external_candidate_count": 10,
+  "rsi14_complete_count": 40,
+  "theme_pool_count": 229,
+  "theme_mapped_pool_count": 229,
+  "theme_stats_count": 0,
+  "themes_source": "none_available",
+  "completed_stage": "stage_A_candidate_table",
+  "checked_at": "2026-09-24T10:34:15.812Z"
+}
