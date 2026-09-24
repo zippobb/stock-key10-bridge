@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-24T10:34:36.135Z",
+  "project_state_blob": "86e522b19ff61ac91af83e2d5eb34dca4c16fe53",
+  "workflow_blob": "ff5addce2fa765c5fe99acdcffc9a7e2b9671d70",
+  "input_blob": "db1023d4ba7dad9af26d8a5945832ae55c70cbfa",
+  "user_confirmed_target": "quantitative_score_plus_pool_theme_rotation_plus_rsi_timing",
+  "current_repository_contract": "legacy_seven_factor_evidence_review",
+  "rsi14_candidate_coverage": "40/40",
+  "theme_label_pool_coverage": "229/229",
+  "theme_rotation_stats_available": false,
+  "changes_applied": false,
+  "historical_results_modified": false
+}
