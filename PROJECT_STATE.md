@@ -10,9 +10,17 @@ V2.0唯一有效，V1及影子层取消；只输出JSON及中文文字。量化�
 上涨延伸在截断前全局降优先级；公式与阈值为实验参数，不代表收益验证。跟随保护Unknown，确认跟随未启用；题材标签不等于当日联动证据。
 
 ## 部署状态与分工
-ECS导入/七文件部署由用户本地Codex负责，Work不连接ECS。
-本地Codex回执：冻结包组合验证通过，生产仍未切换；该状态是用户提供回执，不是Work实时SSH核验。
-拟部署观察池228：新增605507.SH国邦医药，删除300199.SZ翰宇药业与688295.SH中复神鹰；分类227，国邦医药待分类。生产回执仍229。移出池不等于外部永久禁选。
+ECS七文件部署状态：2026-09-27 22:04 CST，本地Codex经SSH stock-server新鲜核验后，按冻结manifest完成七个运行文件替换并逐项回读SHA256通过。实际备份：/root/stock-key10-backups/step_v2_pool_candidate_freeze_20260927T140416Z/。无代码策略参数调整；未改service/timer，未启动日更/发布，未改latest或历史归档。
+部署文件及SHA256：
+- config/observation_pool.csv：8c55a323ba8f6f005290fc5f2ce1d279425ef618a94f4000b662934e6c8c7a82
+- config/stock_theme_tags_229_v2.0.json：8ab1714a1802241a0caef827cec11894ddf0f57fe0e0e487f7ceb9688e09b445
+- config/stock_theme_tags_229_v2.0_import.json：cc88cbadec5e176cc842c8afdeb1d72deeaeb8ad54927585a8927a61de79e345
+- config/strategy_v2.json：85de2921d16404bf1360c69343e7e77efd110cd779050518943fc81e0e0bd48e
+- candidate_assets/theme_classification_v2.py：fee7ecf24936f9a95aa123238c65518036bb98cd0dcad6e4beee92a49c6a8411
+- candidate_assets/candidate_sources_v2.py：cf531c85261ef1223ac81dcef7620ebd8af0d345098c5fc3e21234df2c23d1df
+- stock_key10_v2_daily.py：5aa9308ba03afbd92277526158b933a3d862d9b2b6312eca9a330d77299c772a
+当前观察池已为228只：新增605507.SH国邦医药，删除300199.SZ翰宇药业与688295.SH中复神鹰；分类227条，国邦医药待分类，不因缺标签剔除。移出池不等于外部永久禁选。
+部署后两个service均inactive，两个timer均enabled/active；实际下次触发为2026-09-28 18:20与18:30 CST。单元文件哈希未变。
 schema/model保持2.0.0/V2.0；上游stage=21:30_quantitative_review_payload，终审stage=final_review，新review_contract_version独立标识下游契约。
 新下游schema：contracts/key10_review_quant_theme.schema.json
 新实际校验器：delivery/tools/validate_quant_theme_review.py
@@ -28,7 +36,7 @@ schema/model保持2.0.0/V2.0；上游stage=21:30_quantitative_review_payload，�
 同步前提示词/任务配置及旧工作流归档于contracts/archive/20260927/，仅供恢复，不作当前执行基线。
 
 ## 下一验收
-本地Codex部署七文件前重查基线；ECS timer据用户回执为2026-09-28 18:20/18:30，Work未直接核验。
-部署后仍需恢复两个终审任务并验收下一自然交易日：新池、新优先级、原始量化保留、无旧门槛、JSON/文字及双回执一致。
+当前ECS生产latest两份副本SHA256相同，均为a43a528a7f31ab316f999cdd895bf26def518b99e067904131acc98827f807b4，trade_date=20260924；其候选尚无selection_order，不能作为新终审契约输入。该历史latest未改写，等待自然日更产生新包。
+同步回执确认主任务与唯一重试任务提示词已同步并回读，但两任务仍停用；本轮未操作任务。状态：ECS已部署，终审任务待恢复，自然运行待验收。恢复任务后，再核验自然运行的新池、selection_order、评分/KDJ、未来数据守卫、JSON/文字报告及回执一致性；不把隔离缓存测试当作自然运行验收。
 具体锁、路径、单次重试和截止规则统一遵循V2_REVIEW_WORKFLOW.md。没有完成某一端不得宣称端到端部署完成。
 
