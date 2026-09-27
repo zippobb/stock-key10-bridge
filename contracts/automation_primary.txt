@@ -1,0 +1,17 @@
+执行Stock Key10 V2.0终审主任务，role=primary，attempt_no=0。
+仓库zippobb/stock-key10-bridge main。V2.0唯一有效，V1及影子层取消；不执行交易，不访问或修改ECS，不改调度或任务启用状态。
+先读取PROJECT_STATE.md及V2_REVIEW_WORKFLOW.md；当前契约quant_theme_rotation_20260927，固定规则commit。同一运行/恢复固定量化输入、证据截止时间和契约版本。
+只处理对应北京时间自然交易日；校验manifest、权威archive与latest原文哈希一致，schema=2.0.0/model=V2.0/input stage=21:30_quantitative_review_payload、future_data_rows_used=0、代码唯一、池归属、市场范围、必要风险和technical_score>=18/data_complete。新输入缺selection_order时报告upstream_contract_not_ready，不用原分数伪造；不以新字段要求追溯否定历史成功结果。
+取消七项主观终审评分、旧final_score/research_value_score/market_context_score、70%权重/60分门槛及旧轮动保留席位；不重算上游quant_score/quant_rank/KDJ。官方和外部分开，上游顺序只读保留。官方selected最多10、外部selected最多3，不凑数；外部始终是独立观察来源，不自动入池。
+全部输入候选记录selected/watch/deferred；selected的final_order在各池连续编号，watch/deferred为null。默认按selection_order选取；有证据改序时记录来源日期、依据、原位置与新位置，不覆盖selection_order，不静默按旧分数回排。路线或低延伸不等于入场信号，Unknown不等于False或低风险；跟随仍未启用。
+有针对性检索截止前公开收评/必要公告，减少重复市场扫描；报道事实、推断、缺失分开。大盘连涨/累计涨幅/偏离/参与面和题材证据可以导致少选、观察或暂缓，写明依据及候选/数量影响。不虚构概率、乘数或联动。公司资料只在相关时补充，不逐只强求长篇证据。
+新闻/题材/公司资料缺失不阻断JSON与文字交付；若不足以支持正式选择则观察/暂缓。日期、输入哈希、未来数据、schema、来源、池归属及具体风险硬条件仍不得绕过。
+每条input_snapshot完整保留上游候选；新结果review_contract_version=quant_theme_rotation_20260927、schema_version=2.0.0、model_version=V2.0、stage=final_review，input_stage保留上游stage。
+必须读取并实际执行contracts/key10_review_quant_theme.schema.json和delivery/tools/validate_quant_theme_review.py。生成前以--write-text创建临时中文报告；JSON和MD持久化回读后以--text再次验证，禁止把仅阅读schema说成实际校验。
+正式文件review/YYYY/MM/key10_review_<trade_date>.json和同名.md；日期回执delivery/YYYY/MM/key10_review_receipt_<trade_date>.json，latest/key10_review_receipt_latest.json。运行状态delivery/runs/YYYY/MM/key10_review_run_<trade_date>.json；检查点delivery/checkpoints/YYYY/MM/<trade_date>/。
+遵守工作流owner_token/generation、180秒租约/60秒续租、同基准commit关联提交及非强制更新；失去租约停止写入。时间取真实时钟，不复制固定时间。原文哈希对实际字节计算，不重序列化代替，不输出凭据。
+不可变attempt记录与失败原件保留；同日同输入的本次未完成文件可在保存原件快照和取得租约后修复，不覆盖已验收成功结果、其他日期或primary失败attempt。已有合格JSON只续交付，不重复成功阶段。
+顺序为JSON验证与持久化回读、MD持久化回读及--text校验、规范日期回执、latest回执及一致性回读、释放所属锁、会话直接展示完整中文报告。
+回执记录attempt、输入/输出哈希、实际阶段/retryable/resume_from、真实finished_at、delivery_mode=text、text_delivery_status；png_delivery_status=not_required_text_mode、png_path=null。不生成PNG；验证后才gate=ready，发送前visible_completion=pending。
+任务无读写/执行能力时如实报告阻断；不得宣称未完成的同步、部署或持久化成功。不永久停用每日任务。
+主任务18:48开始收尾、18:49硬截止（Asia/Shanghai）；到时保存真实检查点，失败可见，不伪装准时成功。当日最多一次primary与一次retry。已有同日同输入成功交付只读复核、重展全文并报告结果未变化。缺普通研究证据不是retry阻断理由；可用watch/deferred完成交付。

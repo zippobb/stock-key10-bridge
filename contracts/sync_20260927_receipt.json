@@ -1,0 +1,31 @@
+{
+  "status": "repository_contract_prepared_task_sync_pending",
+  "date": "2026-09-27",
+  "base_commit": "efacc2f5c6fdf3b3be54ce543b0f84188b8b7c84",
+  "ecs_deployed_by_this_session": false,
+  "validation": {
+    "synthetic_contract_tests": "passed",
+    "cli_create_readback_tamper": "passed",
+    "new_production_bundle": "not_available_not_tested"
+  },
+  "tasks": [
+    {
+      "id": "6a999effa2308191a21925a364d2c0fe",
+      "title": "V2.0选股终审主任务",
+      "is_enabled": false,
+      "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20260904T183500\nRRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    },
+    {
+      "id": "6a999f1757b881919023f6af25c7f8b2",
+      "title": "V2.0终审重试与交付复核",
+      "is_enabled": false,
+      "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20260907T185000\nRRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=18;BYMINUTE=50;BYSECOND=0\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    }
+  ],
+  "notes": [
+    "Tasks remain disabled. No schedule changes authorized.",
+    "ECS seven-file deployment is still local Codex responsibility."
+  ]
+}
