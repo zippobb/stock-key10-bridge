@@ -26,17 +26,17 @@ schema/model保持2.0.0/V2.0；上游stage=21:30_quantitative_review_payload，�
 新实际校验器：delivery/tools/validate_quant_theme_review.py
 历史成功结果不迁移、不覆盖；新schema验收不是自然运行或收益验收。
 
-## 实时任务核对（本次同步前）
-主任务：6a999effa2308191a21925a364d2c0fe，V2.0选股终审主任务。
-计划工作日18:35，Asia/Shanghai；is_enabled=false。
-唯一重试：6a999f1757b881919023f6af25c7f8b2，V2.0终审重试与交付复核。
-计划工作日18:50，Asia/Shanghai；is_enabled=false。
-提示词同步不得改动计划/状态，不影响其他任务。保持停用意味着不会自动运行，恢复须另行明确授权。
-任务新正文存于contracts/automation_primary.txt与contracts/automation_retry.txt；实际同步和回读结果以contracts/sync_20260927_receipt.json为准，不能以存在草案推定线上已更新。
-同步前提示词/任务配置及旧工作流归档于contracts/archive/20260927/，仅供恢复，不作当前执行基线。
+## 实时任务核对（2026-09-27恢复后）
+用户明确授权“恢复”，Work已将以下两个任务is_enabled设为true并回读确认：
+- 主任务6a999effa2308191a21925a364d2c0fe：工作日18:35，Asia/Shanghai，已启用。
+- 唯一重试6a999f1757b881919023f6af25c7f8b2：工作日18:50，Asia/Shanghai，已启用。
+原提示词、计划、时区、标题均未改变，其他任务未变。未手动触发执行。
+工具next_run_time返回null；依原计划下次应为2026-09-28上述时间，不把计划时间当作运行成功证据。
+contracts/sync_20260927_receipt.json记录的是此前提示词同步时停用快照；当前启用状态以本节及实时任务读取为准。
+新契约与提示词同步已完成；ECS部署依据本地Codex回执。当前状态：ECS已部署、终审任务已恢复、自然运行待验收。
 
 ## 下一验收
 当前ECS生产latest两份副本SHA256相同，均为a43a528a7f31ab316f999cdd895bf26def518b99e067904131acc98827f807b4，trade_date=20260924；其候选尚无selection_order，不能作为新终审契约输入。该历史latest未改写，等待自然日更产生新包。
-同步回执确认主任务与唯一重试任务提示词已同步并回读，但两任务仍停用；本轮未操作任务。状态：ECS已部署，终审任务待恢复，自然运行待验收。恢复任务后，再核验自然运行的新池、selection_order、评分/KDJ、未来数据守卫、JSON/文字报告及回执一致性；不把隔离缓存测试当作自然运行验收。
+主任务与唯一重试已同步并恢复启用。等待自然运行核验新池、selection_order、评分/KDJ、未来数据守卫、JSON/文字报告及回执一致性；不把隔离缓存测试或启用成功当作自然运行验收。
 具体锁、路径、单次重试和截止规则统一遵循V2_REVIEW_WORKFLOW.md。没有完成某一端不得宣称端到端部署完成。
 
