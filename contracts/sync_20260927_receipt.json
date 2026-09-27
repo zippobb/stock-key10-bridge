@@ -1,5 +1,5 @@
 {
-  "status": "repository_contract_prepared_task_sync_pending",
+  "status": "chatgpt_contract_and_tasks_synced_verified_ecs_pending",
   "date": "2026-09-27",
   "base_commit": "efacc2f5c6fdf3b3be54ce543b0f84188b8b7c84",
   "ecs_deployed_by_this_session": false,
@@ -14,18 +14,25 @@
       "title": "V2.0选股终审主任务",
       "is_enabled": false,
       "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20260904T183500\nRRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR\nEND:VEVENT",
-      "default_timezone": "Asia/Shanghai"
+      "default_timezone": "Asia/Shanghai",
+      "prompt_verified": true
     },
     {
       "id": "6a999f1757b881919023f6af25c7f8b2",
       "title": "V2.0终审重试与交付复核",
       "is_enabled": false,
       "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Shanghai:20260907T185000\nRRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=18;BYMINUTE=50;BYSECOND=0\nEND:VEVENT",
-      "default_timezone": "Asia/Shanghai"
+      "default_timezone": "Asia/Shanghai",
+      "prompt_verified": true
     }
   ],
   "notes": [
     "Tasks remain disabled. No schedule changes authorized.",
     "ECS seven-file deployment is still local Codex responsibility."
-  ]
+  ],
+  "contract_commit": "0d230bf3dd096b6a84e2f8db5b2fcc3b41416a47",
+  "repository_readback": "workflow, state, schema, validator and both task prompts exactly match staged bytes",
+  "other_tasks_unchanged": true,
+  "task_enablement_unchanged": true,
+  "production_end_to_end_verified": false
 }
