@@ -1,0 +1,74 @@
+{
+  "run_date": "20260928",
+  "trade_date": "20260928",
+  "status": "已完成",
+  "role": "primary",
+  "attempt_no": 0,
+  "retryable": false,
+  "review_contract_version": "quant_theme_rotation_20260927",
+  "contract_commit": "df8dc677523aaed1875b6cddd78446f9f42ef047",
+  "input_bundle_sha256": "624002f09d2c16c04ccba17bef25c30c3dc1976c56630ca7a5bde5d3d359640c",
+  "input_blob_sha": "d0a5fe73514dd9c4491a33114761abd2f744b38b",
+  "result_json_path": "review/2026/09/key10_review_20260928.json",
+  "result_json_sha256": "2e104563160615518a9fe9e1f3d33d64372209fb7147437335f9dbdd9a4c0f7e",
+  "text_report_path": "review/2026/09/key10_review_20260928.md",
+  "text_report_sha256": "a32fda4bb77ec8af2836e80da57d47e27e9e3592d076e23994f3ae5244cd677e",
+  "delivery_mode": "text",
+  "text_delivery_status": "persisted_and_verified",
+  "png_delivery_status": "not_required_text_mode",
+  "png_path": null,
+  "final_delivery_gate": "ready",
+  "visible_completion": "pending",
+  "completed_stage": "delivery_ready",
+  "failure_stage": null,
+  "resume_from": null,
+  "selected_counts": {
+    "official": 5,
+    "external": 0
+  },
+  "status_counts": {
+    "official": {
+      "selected": 5,
+      "watch": 10,
+      "deferred": 15
+    },
+    "external": {
+      "selected": 0,
+      "watch": 5,
+      "deferred": 5
+    }
+  },
+  "selected_summary": [
+    {
+      "final_order": 1,
+      "ts_code": "001211.SZ",
+      "name": "双枪科技",
+      "quant_score": 40.864042
+    },
+    {
+      "final_order": 2,
+      "ts_code": "300207.SZ",
+      "name": "欣旺达",
+      "quant_score": 37.049738
+    },
+    {
+      "final_order": 3,
+      "ts_code": "600206.SH",
+      "name": "有研新材",
+      "quant_score": 33.990273
+    },
+    {
+      "final_order": 4,
+      "ts_code": "688271.SH",
+      "name": "联影医疗",
+      "quant_score": 37.417874
+    },
+    {
+      "final_order": 5,
+      "ts_code": "002896.SZ",
+      "name": "中大力德",
+      "quant_score": 35.157554
+    }
+  ],
+  "finished_at": "2026-09-28T10:42:38.742Z"
+}
