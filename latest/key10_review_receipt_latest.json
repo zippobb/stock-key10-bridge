@@ -1,60 +1,74 @@
 {
-  "run_date": "20260924",
-  "trade_date": "20260924",
-  "next_trade_date": "20260928",
+  "run_date": "20260928",
+  "trade_date": "20260928",
+  "status": "已完成",
   "role": "primary",
   "attempt_no": 0,
-  "status": "执行失败",
-  "started_at": "2026-09-24T10:33:37.956Z",
-  "finished_at": "2026-09-24T10:34:36.135Z",
-  "bundle_sha256": "a43a528a7f31ab316f999cdd895bf26def518b99e067904131acc98827f807b4",
-  "completed_stage": "stage_A_candidate_table",
-  "failure_stage": "current_rule_contract_mismatch",
-  "error_class": "rule_and_deployment_contract_mismatch",
-  "resume_from": "deploy_simplified_quant_theme_rsi_contract",
   "retryable": false,
-  "retry_exhausted": false,
-  "missing_items": [
-    "仓库PROJECT_STATE、V2_REVIEW_WORKFLOW和当前任务仍执行旧七项主观终审，未同步用户确认的量化评分＋池内题材轮动＋RSI方案",
-    "股票池229/229已有题材标签，但当前bundle的theme_stats为空且themes_source=none_available，缺完整池题材行情聚合及前日可比快照",
-    "40只候选rsi14完整，但尚未固化RSI状态阈值、方向/背离规则以及与现有技术分的去重口径"
-  ],
-  "result_json_path": null,
-  "result_json_sha256": null,
-  "text_report_path": null,
-  "text_report_sha256": null,
+  "review_contract_version": "quant_theme_rotation_20260927",
+  "contract_commit": "df8dc677523aaed1875b6cddd78446f9f42ef047",
+  "input_bundle_sha256": "624002f09d2c16c04ccba17bef25c30c3dc1976c56630ca7a5bde5d3d359640c",
+  "input_blob_sha": "d0a5fe73514dd9c4491a33114761abd2f744b38b",
+  "result_json_path": "review/2026/09/key10_review_20260928.json",
+  "result_json_sha256": "2e104563160615518a9fe9e1f3d33d64372209fb7147437335f9dbdd9a4c0f7e",
+  "text_report_path": "review/2026/09/key10_review_20260928.md",
+  "text_report_sha256": "a32fda4bb77ec8af2836e80da57d47e27e9e3592d076e23994f3ae5244cd677e",
   "delivery_mode": "text",
-  "text_delivery_status": "blocked_rule_contract_mismatch",
-  "png_path": null,
+  "text_delivery_status": "persisted_and_verified",
   "png_delivery_status": "not_required_text_mode",
-  "final_delivery_gate": "blocked",
+  "png_path": null,
+  "final_delivery_gate": "ready",
   "visible_completion": "pending",
-  "owner_token": "primary-20260924-1790246017956",
-  "generation": 1,
-  "official_selected_count": null,
-  "external_selected_count": null,
-  "reviewed_candidate_count": 0,
-  "future_data_rows_used": 0,
-  "input_verification": {
-    "raw_sha256_verified": true,
-    "latest_archive_blob_match": true,
-    "blob_sha": "db1023d4ba7dad9af26d8a5945832ae55c70cbfa"
+  "completed_stage": "delivery_ready",
+  "failure_stage": null,
+  "resume_from": null,
+  "selected_counts": {
+    "official": 5,
+    "external": 0
   },
-  "quantitative_availability": {
-    "candidate_count": 40,
-    "rsi14_complete_count": 40
+  "status_counts": {
+    "official": {
+      "selected": 5,
+      "watch": 10,
+      "deferred": 15
+    },
+    "external": {
+      "selected": 0,
+      "watch": 5,
+      "deferred": 5
+    }
   },
-  "theme_coverage": {
-    "pool_count": 229,
-    "mapped_pool_count": 229,
-    "unmapped_pool_count": 0,
-    "theme_stats_count": 0,
-    "themes_source": "none_available"
-  },
-  "checkpoint_paths": [
-    "delivery/checkpoints/2026/09/20260924/stage_A_candidate_table.json",
-    "delivery/checkpoints/2026/09/20260924/rule_compatibility_check.json"
+  "selected_summary": [
+    {
+      "final_order": 1,
+      "ts_code": "001211.SZ",
+      "name": "双枪科技",
+      "quant_score": 40.864042
+    },
+    {
+      "final_order": 2,
+      "ts_code": "300207.SZ",
+      "name": "欣旺达",
+      "quant_score": 37.049738
+    },
+    {
+      "final_order": 3,
+      "ts_code": "600206.SH",
+      "name": "有研新材",
+      "quant_score": 33.990273
+    },
+    {
+      "final_order": 4,
+      "ts_code": "688271.SH",
+      "name": "联影医疗",
+      "quant_score": 37.417874
+    },
+    {
+      "final_order": 5,
+      "ts_code": "002896.SZ",
+      "name": "中大力德",
+      "quant_score": 35.157554
+    }
   ],
-  "lock_status": "released",
-  "on_time_delivery": false
+  "finished_at": "2026-09-28T10:42:38.742Z"
 }

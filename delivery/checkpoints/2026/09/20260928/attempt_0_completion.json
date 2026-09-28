@@ -1,0 +1,17 @@
+{
+  "run_date": "20260928",
+  "trade_date": "20260928",
+  "role": "primary",
+  "attempt_no": 0,
+  "owner_token": "primary-20260928-1790592066272",
+  "generation": 2,
+  "status": "已完成",
+  "completed_stage": "delivery_ready",
+  "retryable": false,
+  "finished_at": "2026-09-28T10:42:38.742Z",
+  "result_json_path": "review/2026/09/key10_review_20260928.json",
+  "result_json_sha256": "2e104563160615518a9fe9e1f3d33d64372209fb7147437335f9dbdd9a4c0f7e",
+  "text_report_path": "review/2026/09/key10_review_20260928.md",
+  "text_report_sha256": "a32fda4bb77ec8af2836e80da57d47e27e9e3592d076e23994f3ae5244cd677e",
+  "final_delivery_gate": "ready"
+}
