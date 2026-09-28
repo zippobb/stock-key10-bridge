@@ -43,32 +43,32 @@
       "final_order": 1,
       "ts_code": "001211.SZ",
       "name": "双枪科技",
-      "quant_score": 40.864042
+      "quant_score": 40.864379
     },
     {
       "final_order": 2,
       "ts_code": "300207.SZ",
       "name": "欣旺达",
-      "quant_score": 37.049738
+      "quant_score": 37.054493
     },
     {
       "final_order": 3,
       "ts_code": "600206.SH",
       "name": "有研新材",
-      "quant_score": 33.990273
+      "quant_score": 33.987254
     },
     {
       "final_order": 4,
       "ts_code": "688271.SH",
       "name": "联影医疗",
-      "quant_score": 37.417874
+      "quant_score": 37.422689
     },
     {
       "final_order": 5,
       "ts_code": "002896.SZ",
       "name": "中大力德",
-      "quant_score": 35.157554
+      "quant_score": 35.15532
     }
   ],
-  "finished_at": "2026-09-28T10:42:38.742Z"
+  "finished_at": "2026-09-28T10:44:05.679Z"
 }

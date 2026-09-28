@@ -3,16 +3,16 @@
   "trade_date": "20260928",
   "role": "primary",
   "attempt_no": 0,
-  "status": "running",
+  "status": "completed",
   "owner_token": "primary-20260928-1790592227309",
   "generation": 3,
   "started_at": "2026-09-28T10:38:05.222Z",
-  "heartbeat_at": "2026-09-28T10:43:47.309Z",
-  "lease_expires_at": "2026-09-28T10:46:47.309Z",
+  "heartbeat_at": "2026-09-28T10:44:05.679Z",
+  "lease_expires_at": "2026-09-28T10:44:05.679Z",
   "hard_deadline": "2026-09-28T10:49:00Z",
-  "completed_stage": "text_verified",
+  "completed_stage": "delivery_ready",
   "failure_stage": null,
-  "resume_from": "receipt_consistency_correction",
+  "resume_from": null,
   "review_contract_version": "quant_theme_rotation_20260927",
   "contract_commit": "df8dc677523aaed1875b6cddd78446f9f42ef047",
   "input_bundle_sha256": "624002f09d2c16c04ccba17bef25c30c3dc1976c56630ca7a5bde5d3d359640c",
@@ -24,6 +24,6 @@
     "status": "completed",
     "completed_stage": "delivery_ready"
   },
-  "released_at": null,
-  "final_delivery_gate": "blocked"
+  "released_at": "2026-09-28T10:44:05.679Z",
+  "final_delivery_gate": "ready"
 }

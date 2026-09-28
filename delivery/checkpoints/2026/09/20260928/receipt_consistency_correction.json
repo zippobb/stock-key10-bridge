@@ -1,0 +1,7 @@
+{
+  "trade_date": "20260928",
+  "corrected_at": "2026-09-28T10:44:05.679Z",
+  "reason": "receipt_selected_summary_aligned_to_validated_json",
+  "previous_receipt_sha": "3335233148e132a19625c4689c7d2c13b86a24f3",
+  "final_delivery_gate": "ready"
+}
