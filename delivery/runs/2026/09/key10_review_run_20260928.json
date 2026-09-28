@@ -4,17 +4,24 @@
   "role": "primary",
   "attempt_no": 0,
   "status": "running",
-  "owner_token": "primary-20260928-1790591885222",
-  "generation": 1,
+  "owner_token": "primary-20260928-1790592066272",
+  "generation": 2,
   "started_at": "2026-09-28T10:38:05.222Z",
-  "heartbeat_at": "2026-09-28T10:38:05.222Z",
-  "lease_expires_at": "2026-09-28T10:41:05.222Z",
+  "heartbeat_at": "2026-09-28T10:41:06.272Z",
+  "lease_expires_at": "2026-09-28T10:44:06.272Z",
   "hard_deadline": "2026-09-28T10:49:00Z",
   "completed_stage": "input_verified",
   "failure_stage": null,
-  "resume_from": "stage_A_candidate_table",
+  "resume_from": "review_validated_local",
   "review_contract_version": "quant_theme_rotation_20260927",
   "contract_commit": "df8dc677523aaed1875b6cddd78446f9f42ef047",
   "input_bundle_sha256": "624002f09d2c16c04ccba17bef25c30c3dc1976c56630ca7a5bde5d3d359640c",
-  "input_blob_sha": "d0a5fe73514dd9c4491a33114761abd2f744b38b"
+  "input_blob_sha": "d0a5fe73514dd9c4491a33114761abd2f744b38b",
+  "takeover_reason": "previous_lease_expired",
+  "previous_run": {
+    "owner_token": "primary-20260928-1790591885222",
+    "generation": 1,
+    "lease_expires_at": "2026-09-28T10:41:05.222Z",
+    "completed_stage": "input_verified"
+  }
 }
