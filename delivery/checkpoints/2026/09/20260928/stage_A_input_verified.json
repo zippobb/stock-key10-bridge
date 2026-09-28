@@ -1,0 +1,15 @@
+{
+  "trade_date": "20260928",
+  "completed_at": "2026-09-28T10:41:41.139Z",
+  "stage": "input_verified",
+  "review_contract_version": "quant_theme_rotation_20260927",
+  "contract_commit": "df8dc677523aaed1875b6cddd78446f9f42ef047",
+  "input_bundle_sha256": "624002f09d2c16c04ccba17bef25c30c3dc1976c56630ca7a5bde5d3d359640c",
+  "input_blob_sha": "d0a5fe73514dd9c4491a33114761abd2f744b38b",
+  "candidate_counts": {
+    "official": 30,
+    "external": 10
+  },
+  "selection_order_complete": true,
+  "validator_status": "passed"
+}
