@@ -1,0 +1,90 @@
+{
+  "run_date": "20260929",
+  "trade_date": "20260929",
+  "status": "已完成",
+  "role": "primary",
+  "attempt_no": 0,
+  "retryable": false,
+  "review_contract_version": "quant_theme_rotation_20260927",
+  "contract_commit": "afc5f2865f2e060c6a4b951724b90748476fb315",
+  "input_commit": "afc5f2865f2e060c6a4b951724b90748476fb315",
+  "input_bundle_sha256": "899f0e928745fcfeef579447ee31af22133225ae9354126e34d519769e40f664",
+  "input_blob_sha": "6673a9b3e16f6ee81ebc2ac5db8d8e1d90a56fea",
+  "result_json_path": "review/2026/09/key10_review_20260929.json",
+  "result_json_sha256": "9cae6a418173845541b89815ae287d3f6173214c7a5c6cd462b5907359690b90",
+  "text_report_path": "review/2026/09/key10_review_20260929.md",
+  "text_report_sha256": "0317c8b44fb6501f8e65ad637e75fe0415f7426f84ae84102c65f1f9c3fd63ff",
+  "delivery_mode": "text",
+  "text_delivery_status": "persisted_and_verified",
+  "png_delivery_status": "not_required_text_mode",
+  "png_path": null,
+  "final_delivery_gate": "ready",
+  "visible_completion": "pending",
+  "completed_stage": "delivery_ready",
+  "failure_stage": null,
+  "resume_from": null,
+  "evidence_cutoff": "2026-09-29T18:33:20+08:00",
+  "finished_at": "2026-09-29T10:39:48.000Z",
+  "selected_counts": {
+    "official": 6,
+    "external": 2
+  },
+  "status_counts": {
+    "official": {
+      "selected": 6,
+      "watch": 10,
+      "deferred": 14
+    },
+    "external": {
+      "selected": 2,
+      "watch": 5,
+      "deferred": 3
+    }
+  },
+  "validator_sha256": "13e222615d4bad002afe388ad956ce779d8947d9baf804d29cafc3040512d6c2",
+  "schema_sha256": "81e767442dfe75a77aa9d0dc2c4276618550b0d7590a09a8144086dc4e58a5d2",
+  "presentation_override": {
+    "commit": "ff1b6601488b3c03c471fbcd5c44ef41c34b5a1b",
+    "change": "次日动作 display label changed to 我的判断 per user instruction; schema and validation logic unchanged"
+  },
+  "selected_summary": [
+    {
+      "final_order": 1,
+      "ts_code": "688123.SH",
+      "name": "聚辰股份",
+      "quant_score": 40.123366
+    },
+    {
+      "final_order": 2,
+      "ts_code": "001211.SZ",
+      "name": "双枪科技",
+      "quant_score": 40.881715
+    },
+    {
+      "final_order": 3,
+      "ts_code": "301382.SZ",
+      "name": "蜂助手",
+      "quant_score": 40.009756
+    },
+    {
+      "final_order": 4,
+      "ts_code": "601689.SH",
+      "name": "拓普集团",
+      "quant_score": 34.480214
+    },
+    {
+      "final_order": 5,
+      "ts_code": "688082.SH",
+      "name": "盛美上海",
+      "quant_score": 36.972185
+    },
+    {
+      "final_order": 6,
+      "ts_code": "600121.SH",
+      "name": "郑州煤电",
+      "quant_score": 38.323324
+    }
+  ],
+  "owner_token": "primary-20260929-1790678000000",
+  "generation": 1
+}
