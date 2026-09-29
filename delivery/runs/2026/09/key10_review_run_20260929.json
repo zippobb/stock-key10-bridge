@@ -5,13 +5,13 @@
   "owner_token": "primary-20260929-1790678000000",
   "generation": 1,
   "status": "running",
-  "stage": "Persist input checkpoint and user-requested report label",
+  "stage": "Review heartbeat: candidate decisions validated",
   "rule_commit": "afc5f2865f2e060c6a4b951724b90748476fb315",
   "input_commit": "afc5f2865f2e060c6a4b951724b90748476fb315",
   "input_sha256": "899f0e928745fcfeef579447ee31af22133225ae9354126e34d519769e40f664",
   "review_contract_version": "quant_theme_rotation_20260927",
   "evidence_cutoff": "2026-09-29T10:33:20.000Z",
   "started_at": "2026-09-29T10:33:20.000Z",
-  "heartbeat_at": "2026-09-29T10:34:38.000Z",
-  "lease_expires_at": "2026-09-29T10:37:38.000Z"
+  "heartbeat_at": "2026-09-29T10:36:58.000Z",
+  "lease_expires_at": "2026-09-29T10:39:58.000Z"
 }
