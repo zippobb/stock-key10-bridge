@@ -157,7 +157,7 @@ def render(r):
             lines += [f"- {c['name']}（{c['ts_code']}）：{status}；正式序号 {c['final_order']}；上游顺序 {c['selection_order']}；原量化分 {c['quant_score']}／排名 {c['quant_rank']}。",
                       '  题材：'+str(theme.get('primary_theme') or '待分类')+'；路线：'+str(c['input_snapshot'].get('candidate_source',{}).get('routes',[])),
                       '  依据：'+c['reason'], '  风险：'+('；'.join(c['risk_notes']) or '未另列风险，不代表无风险'),
-                      '  次日动作：'+c['next_day_action']]
+                      '  我的判断：'+c['next_day_action']]
             if c['reorder']:
                 lines.append('  改序依据：'+c['reorder']['reason'])
                 lines += ['  来源：'+s['url']+'（'+s['published_at']+'）' for s in c['reorder']['sources']]
