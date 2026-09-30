@@ -3,15 +3,15 @@
   "role": "primary",
   "attempt_no": 0,
   "owner_token": "primary-20260930-1790764504722",
-  "generation": 1,
+  "generation": 2,
   "status": "running",
-  "stage": "input_validated",
+  "stage": "evidence_and_decision",
   "rule_commit": "bdf3967598ea112df7bc89b53697d4821126566b",
   "input_commit": "bdf3967598ea112df7bc89b53697d4821126566b",
   "input_sha256": "1823b4168624e9f522582053c1ade4b8feb4caf139df34ba765ca5c76ecf591d",
   "review_contract_version": "quant_theme_rotation_20260927",
   "evidence_cutoff": "2026-09-30T10:35:04.722Z",
   "started_at": "2026-09-30T10:35:04.722Z",
-  "heartbeat_at": "2026-09-30T10:35:04.722Z",
-  "lease_expires_at": "2026-09-30T10:38:04.722Z"
+  "heartbeat_at": "2026-09-30T10:40:29.606Z",
+  "lease_expires_at": "2026-09-30T10:43:29.606Z"
 }
